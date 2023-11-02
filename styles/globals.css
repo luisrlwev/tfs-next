@@ -12,3 +12,21 @@
 body {
   font-family: 'Poppins', sans-serif;
 }
+
+.bg-header{
+  background-color: var(--secondary);
+}
+
+.text-menu{
+  color: #F8F9FA;
+  text-align: center;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: normal;
+  letter-spacing: .3px;
+  text-transform: uppercase;
+}
+
+.lang-active{
+  color: #BCB08A;
+}
