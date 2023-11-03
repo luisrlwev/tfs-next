@@ -5,6 +5,8 @@
 :root {
   --primary: #BCB08A;
   --secondary: #303030;
+  --tercero: #212121;
+  --cuarto: #474747;
   --black: #000;
   --white: #fff;
 }
@@ -17,16 +19,36 @@ body {
   background-color: var(--secondary);
 }
 
-.text-menu{
-  color: #F8F9FA;
-  text-align: center;
-  font-size: 15px;
-  font-weight: 600;
-  line-height: normal;
-  letter-spacing: .3px;
-  text-transform: uppercase;
+.bg-footer{
+  background-color: var(--tercero);
 }
 
-.lang-active{
-  color: #BCB08A;
+.bg-tfs{
+  background-color: var(--primary);
+}
+
+.bg-cuarto{
+  background-color: var(--cuarto);
+}
+
+.text-menu{
+  color: #F8F9FA;
+  font-size: 15px;
+  letter-spacing: .3px;
+}
+
+.text-tfs{
+  color: var(--primary);
+}
+
+.hover:hover{
+  color: #a59a77;
+}
+
+.hover-bg:hover{
+  background-color: #a59a77;
+}
+
+.letter-spacing-25{
+  letter-spacing: .25em;
 }
