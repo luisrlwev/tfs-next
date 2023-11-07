@@ -7,7 +7,36 @@ export default function Home() {
       title={"Inicio"}
       description={"Tulumfromsky Realtors es líder en la comercialización de desarrollos inmobiliarios en la Riviera Maya, Mérida y Los Cabos."}
     >
-      <h1>Inicio</h1>
+      <Link href={'/departamentos'} className="portada-tulum flex relative justify-center">
+        <div className="h-full w-full top-0 left-0 absolute overflow-hidden z-0">
+          <video src="/video/riviera-maya.mp4" className="absolute video-fondo" autoPlay muted playsInline loop></video>
+        </div>
+        <div className="overlay-tulum h-full w-full absolute">
+        </div>
+        <div className="video flex justify-center items-center relative">
+          <h1 href={'./departamentos'} className="text-white font-bold text-center uppercase text-6xl letter-spacing-25 text-shadow">Riviera Maya</h1>
+        </div>
+      </Link>
+      <Link href={'/merida'} className="portada-merida flex relative justify-center">
+        <div className="h-full w-full top-0 left-0 absolute overflow-hidden z-0">
+          <video src="/video/yucatan.mp4" className="absolute video-fondo" autoPlay muted playsInline loop></video>
+        </div>
+        <div className="overlay-tulum h-full w-full absolute">
+        </div>
+        <div className="video flex justify-center items-center relative">
+          <h1 href={'./departamentos'} className="text-white font-bold text-center uppercase text-6xl letter-spacing-25 text-shadow">Mérida</h1>
+        </div>
+      </Link>
+      <Link href={'/los-cabos'} className="portada-cabos flex relative justify-center">
+        <div className="h-full w-full top-0 left-0 absolute overflow-hidden z-0">
+          <video src="/video/los-cabos.mp4" className="absolute video-fondo" autoPlay muted playsInline loop></video>
+        </div>
+        <div className="overlay-tulum h-full w-full absolute">
+        </div>
+        <div className="video flex justify-center items-center relative">
+          <h1 href={'./departamentos'} className="text-white font-bold text-center uppercase text-6xl letter-spacing-25 text-shadow">Los Cabos</h1>
+        </div>
+      </Link>
     </Layout>
   );
 }
