@@ -14,7 +14,7 @@ export default function Home() {
         <div className="overlay-tulum h-full w-full absolute">
         </div>
         <div className="video flex justify-center items-center relative">
-          <h1 href={'./departamentos'} className="text-white font-bold text-center uppercase text-6xl letter-spacing-25 text-shadow">Riviera Maya</h1>
+          <h1 className="text-white font-bold text-center uppercase text-6xl letter-spacing-25 text-shadow">Riviera Maya</h1>
         </div>
       </Link>
       <Link href={'/merida'} className="portada-merida flex relative justify-center">
@@ -24,7 +24,7 @@ export default function Home() {
         <div className="overlay-tulum h-full w-full absolute">
         </div>
         <div className="video flex justify-center items-center relative">
-          <h1 href={'./departamentos'} className="text-white font-bold text-center uppercase text-6xl letter-spacing-25 text-shadow">Mérida</h1>
+          <h1 className="text-white font-bold text-center uppercase text-6xl letter-spacing-25 text-shadow">Mérida</h1>
         </div>
       </Link>
       <Link href={'/los-cabos'} className="portada-cabos flex relative justify-center">
@@ -34,7 +34,7 @@ export default function Home() {
         <div className="overlay-tulum h-full w-full absolute">
         </div>
         <div className="video flex justify-center items-center relative">
-          <h1 href={'./departamentos'} className="text-white font-bold text-center uppercase text-6xl letter-spacing-25 text-shadow">Los Cabos</h1>
+          <h1 className="text-white font-bold text-center uppercase text-6xl letter-spacing-25 text-shadow">Los Cabos</h1>
         </div>
       </Link>
     </Layout>

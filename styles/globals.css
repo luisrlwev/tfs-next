@@ -7,6 +7,9 @@
   --secondary: #303030;
   --tercero: #212121;
   --cuarto: #474747;
+  --quinto: #F7F7F7;
+  --sexto: #D9D9D933;
+  --septimo: #FFFFFF5C;
   --black: #000;
   --white: #fff;
 }
@@ -29,6 +32,18 @@ body {
 
 .bg-cuarto{
   background-color: var(--cuarto);
+}
+
+.bg-sexto{
+  background-color: var(--sexto);
+}
+
+.bg-septimo{
+  background-color: var(--septimo);
+}
+
+.bg-text{
+  background-color: var(--quinto);
 }
 
 .text-menu{
@@ -55,7 +70,14 @@ body {
 
 .video{
   min-height: 660px;
-  cursor: pointer;
+}
+
+.portada-video{
+  min-height: 464px;
+}
+
+.portada-video-final{
+  min-height: 600px;
 }
 
 .overlay-tulum{
@@ -79,12 +101,34 @@ body {
   background-size: cover;
 }
 
+.portada-depas{
+  background: url('../public/img/departamentos/portada-depas.png') 50% 50%;
+  background-size: cover;
+}
+
+.portada-depas-final{
+  background: url('../public/img/departamentos/portada-depas-final.png') 50% 50%;
+  background-size: cover;
+}
+
 .video-fondo{
   top: 50%;
   left: 50%;
   transform: translate(-50%,-50%);
 }
 
+.video-fondo-portada{
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  height: inherit;
+  object-fit: cover;
+}
+
 .text-shadow{
   text-shadow: 0px 0px 22px rgba(0, 0, 0, 0.50);
+}
+
+.text-40{
+  font-size: 40px;
 }
