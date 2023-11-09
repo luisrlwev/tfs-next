@@ -76,6 +76,10 @@ body {
   min-height: 464px;
 }
 
+.portada-ciudades{
+  min-height: 366px;
+}
+
 .portada-video-final{
   min-height: 600px;
 }
@@ -131,6 +135,18 @@ body {
   background-size: cover;
 }
 
+.portada-merida{
+  background: url('../public/img/merida/portada-merida.jpeg') 50% 50%;
+  background-attachment: fixed;
+  background-position: 0px -444px;
+  background-repeat: no-repeat;
+}
+
+.portada-merida-final{
+  background: url('../public/img/merida/portada-merida-final.jpg') 50% 50%;
+  background-size: cover;
+}
+
 .video-fondo{
   top: 50%;
   left: 50%;
@@ -151,6 +167,10 @@ body {
 
 .text-40{
   font-size: 40px;
+}
+
+.text-160{
+  font-size: 160px;
 }
 
 .mySwiper{

@@ -120,7 +120,7 @@ export default function Casas() {
       <section className="bg-sexto">
         <div className="container mx-auto text-center py-8 text-black uppercase font-bold letter-spacing-25 text-2xl">
           <p>Inversión inmobiliaria rentable con ingresos hoteleros</p>
-          <p>y amplia proyección de plusvalía.</p>
+          <p>y amplia proyección de plusvalía</p>
         </div>
       </section>
       <div className="portada-casas-final flex relative justify-center">
