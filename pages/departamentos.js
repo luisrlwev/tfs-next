@@ -1,6 +1,5 @@
-import Link from "next/link";
-import Image from "next/image";
 import Layout from "@/components/layout";
+import Image from "next/image";
 import Boton from "@/components/boton";
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, Navigation } from 'swiper/modules';
@@ -46,13 +45,14 @@ export default function Departamentos() {
               }}
               modules={[Autoplay, Navigation]}
               loop={true}
+              className="mySwiper"
             >
-              <SwiperSlide><Image src={'/img/departamentos/depas-el-mejor-precio-1.jpg'} width={800} height={407} alt="El mejor precio por metro cuadrado"/></SwiperSlide>
-              <SwiperSlide><Image src={'/img/departamentos/depas-el-mejor-precio-2.jpg'} width={800} height={407} alt="El mejor precio por metro cuadrado"/></SwiperSlide>
-              <SwiperSlide><Image src={'/img/departamentos/depas-el-mejor-precio-3.jpg'} width={800} height={407} alt="El mejor precio por metro cuadrado"/></SwiperSlide>
-              <SwiperSlide><Image src={'/img/departamentos/depas-el-mejor-precio-4.jpg'} width={800} height={407} alt="El mejor precio por metro cuadrado"/></SwiperSlide>
-              <SwiperSlide><Image src={'/img/departamentos/depas-el-mejor-precio-5.jpg'} width={800} height={407} alt="El mejor precio por metro cuadrado"/></SwiperSlide>
-              <SwiperSlide><Image src={'/img/departamentos/depas-el-mejor-precio-6.jpg'} width={800} height={407} alt="El mejor precio por metro cuadrado"/></SwiperSlide>
+              <SwiperSlide><Image src={'/img/departamentos/depas-el-mejor-precio-1.jpg'} width={800} height={407} className="h-full object-cover" alt="El mejor precio por metro cuadrado"/></SwiperSlide>
+              <SwiperSlide><Image src={'/img/departamentos/depas-el-mejor-precio-2.jpg'} width={800} height={407} className="h-full object-cover" alt="El mejor precio por metro cuadrado"/></SwiperSlide>
+              <SwiperSlide><Image src={'/img/departamentos/depas-el-mejor-precio-3.jpg'} width={800} height={407} className="h-full object-cover" alt="El mejor precio por metro cuadrado"/></SwiperSlide>
+              <SwiperSlide><Image src={'/img/departamentos/depas-el-mejor-precio-4.jpg'} width={800} height={407} className="h-full object-cover" alt="El mejor precio por metro cuadrado"/></SwiperSlide>
+              <SwiperSlide><Image src={'/img/departamentos/depas-el-mejor-precio-5.jpg'} width={800} height={407} className="h-full object-cover" alt="El mejor precio por metro cuadrado"/></SwiperSlide>
+              <SwiperSlide><Image src={'/img/departamentos/depas-el-mejor-precio-6.jpg'} width={800} height={407} className="h-full object-cover" alt="El mejor precio por metro cuadrado"/></SwiperSlide>
             </Swiper>
             <p className="py-5 px-7 bg-text">Disfruta de tu propia terraza, jardin privado y rooftop con su propia alberca privada.</p>
           </div>
@@ -72,13 +72,14 @@ export default function Departamentos() {
               }}
               modules={[Autoplay, Navigation]}
               loop={true}
+              className="mySwiper"
             >
-              <SwiperSlide><Image src={'/img/departamentos/depas-entrega-inmediata-1.jpg'} width={800} height={407} alt="El mejor precio por metro cuadrado"/></SwiperSlide>
-              <SwiperSlide><Image src={'/img/departamentos/depas-entrega-inmediata-2.jpg'} width={800} height={407} alt="El mejor precio por metro cuadrado"/></SwiperSlide>
-              <SwiperSlide><Image src={'/img/departamentos/depas-entrega-inmediata-3.jpg'} width={800} height={407} alt="El mejor precio por metro cuadrado"/></SwiperSlide>
-              <SwiperSlide><Image src={'/img/departamentos/depas-entrega-inmediata-4.jpg'} width={800} height={407} alt="El mejor precio por metro cuadrado"/></SwiperSlide>
-              <SwiperSlide><Image src={'/img/departamentos/depas-entrega-inmediata-5.jpg'} width={800} height={407} alt="El mejor precio por metro cuadrado"/></SwiperSlide>
-              <SwiperSlide><Image src={'/img/departamentos/depas-entrega-inmediata-6.jpg'} width={800} height={407} alt="El mejor precio por metro cuadrado"/></SwiperSlide>
+              <SwiperSlide><Image src={'/img/departamentos/depas-entrega-inmediata-1.jpg'} width={800} height={407} className="h-full object-cover" alt="El mejor precio por metro cuadrado"/></SwiperSlide>
+              <SwiperSlide><Image src={'/img/departamentos/depas-entrega-inmediata-2.jpg'} width={800} height={407} className="h-full object-cover" alt="El mejor precio por metro cuadrado"/></SwiperSlide>
+              <SwiperSlide><Image src={'/img/departamentos/depas-entrega-inmediata-3.jpg'} width={800} height={407} className="h-full object-cover" alt="El mejor precio por metro cuadrado"/></SwiperSlide>
+              <SwiperSlide><Image src={'/img/departamentos/depas-entrega-inmediata-4.jpg'} width={800} height={407} className="h-full object-cover" alt="El mejor precio por metro cuadrado"/></SwiperSlide>
+              <SwiperSlide><Image src={'/img/departamentos/depas-entrega-inmediata-5.jpg'} width={800} height={407} className="h-full object-cover" alt="El mejor precio por metro cuadrado"/></SwiperSlide>
+              <SwiperSlide><Image src={'/img/departamentos/depas-entrega-inmediata-6.jpg'} width={800} height={407} className="h-full object-cover" alt="El mejor precio por metro cuadrado"/></SwiperSlide>
             </Swiper>
             <p className="py-5 px-7 bg-text">Tu departamento con vista al mar en Cancún.</p>
           </div>
@@ -87,27 +88,27 @@ export default function Departamentos() {
       <section className="pb-16">
         <div className="container mx-auto grid grid-cols-6 gap-4">
               <div className="grid justify-items-center text-center">
-                <Image src={'/img/departamentos/bares.svg'} className="pb-3" width={68} height={68}/>
+                <Image src={'/img/departamentos/bares.svg'} className="pb-3" width={68} height={68} alt="bares y restaurantes"/>
                 <p>Bares y restaurantes</p>
               </div>
               <div className="grid justify-items-center text-center">
-                <Image src={'/img/departamentos/biblioteca.svg'} className="pb-3" width={68} height={68}/>
+                <Image src={'/img/departamentos/biblioteca.svg'} className="pb-3" width={68} height={68} alt="biblioteca"/>
                 <p>Biblioteca</p>
               </div>
               <div className="grid justify-items-center text-center">
-                <Image src={'/img/departamentos/yoga.svg'} className="pb-3" width={68} height={68}/>
+                <Image src={'/img/departamentos/yoga.svg'} className="pb-3" width={68} height={68} alt="áreas de yoga"/>
                 <p>Áreas de Yoga</p>
               </div>
               <div className="grid justify-items-center text-center">
-                <Image src={'/img/departamentos/gym.svg'} className="pb-3" width={68} height={68}/>
+                <Image src={'/img/departamentos/gym.svg'} className="pb-3" width={68} height={68} alt="gym"/>
                 <p>Gym</p>
               </div>
               <div className="grid justify-items-center text-center">
-                <Image src={'/img/departamentos/coworking.svg'} className="pb-3" width={68} height={68}/>
+                <Image src={'/img/departamentos/coworking.svg'} className="pb-3" width={68} height={68} alt="coworking"/>
                 <p>Coworking</p>
               </div>
               <div className="grid justify-items-center text-center">
-                <Image src={'/img/departamentos/jardin-zen.svg'} className="pb-3" width={68} height={68}/>
+                <Image src={'/img/departamentos/jardin-zen.svg'} className="pb-3" width={68} height={68} alt="jardin zen"/>
                 <p>Jardín Zen</p>
               </div>
         </div>
@@ -118,7 +119,7 @@ export default function Departamentos() {
           <p>áreas comunes con beach pool & beach lounge</p>
         </div>
       </section>
-      <div className="portada-depas flex relative justify-center">
+      <div className="portada-depas-final flex relative justify-center">
         <div className="h-full w-full top-0 left-0 absolute overflow-hidden z-0">
           <video src="/video/depas-final.mp4" className="absolute video-fondo-portada" autoPlay muted playsInline loop></video>
         </div>
