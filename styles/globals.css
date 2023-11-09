@@ -121,6 +121,16 @@ body {
   background-size: cover;
 }
 
+.portada-casas{
+  background: url('../public/img/casas/portada-casas.png') 50% 50%;
+  background-size: cover;
+}
+
+.portada-casas-final{
+  background: url('../public/img/casas/portada-casas-final.png') 50% 50%;
+  background-size: cover;
+}
+
 .video-fondo{
   top: 50%;
   left: 50%;

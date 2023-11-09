@@ -126,7 +126,7 @@ export default function Departamentos() {
         <div className="portada-video-final flex justify-center items-center relative">
           <div className="grid grid-cols-1 justify-items-center">
             <div>
-              <h1 className="text-white font-bold text-center uppercase text-xl letter-spacing-25 text-shado pb-5">Plusvalía, lujo y estilo en Tulum</h1>
+              <h3 className="text-white font-bold text-center uppercase text-xl letter-spacing-25 text-shado pb-5">Plusvalía, lujo y estilo en Tulum</h3>
             </div>
             <div>
               <Boton/>
