@@ -10,6 +10,8 @@
   --quinto: #F7F7F7;
   --sexto: #D9D9D933;
   --septimo: #FFFFFF5C;
+  --octavo: #3C3C434D;
+  --noveno: #F1F1F1;
   --black: #000;
   --white: #fff;
 }
@@ -34,12 +36,24 @@ body {
   background-color: var(--cuarto);
 }
 
+.bg-quinto{
+  background-color: var(--quinto);
+}
+
 .bg-sexto{
   background-color: var(--sexto);
 }
 
 .bg-septimo{
   background-color: var(--septimo);
+}
+
+.bg-octavo{
+  background-color: var(--octavo);
+}
+
+.bg-noveno{
+  background-color: var(--noveno);
 }
 
 .bg-text{
@@ -84,9 +98,19 @@ body {
   min-height: 600px;
 }
 
+.portada-video-construccion{
+  min-height: 244px;
+}
+
 .overlay-tulum{
   background-color: #053E47;
   opacity: 0.28;
+  transition: background 0.3s, border-radius 0.3s, opacity 0.3s;
+}
+
+.overlay-construccion{
+  background-color: #000;
+  opacity: 0.45;
   transition: background 0.3s, border-radius 0.3s, opacity 0.3s;
 }
 
@@ -157,6 +181,17 @@ body {
 .portada-cabos-final{
   background: url('../public/img/cabos/portada-cabos-final.webp') 50% 50%;
   background-size: cover;
+}
+
+.portada-construccion{
+  background: url('../public/img/construccion/portada-construccion.png') 50% 50%;
+  background-repeat: no-repeat;
+}
+
+.portada-construccion-final{
+  background: url('../public/img/construccion/portada-construccion-final.jpg') 50% 50%;
+  background-size: cover;
+  background-attachment: fixed;
 }
 
 .video-fondo{
