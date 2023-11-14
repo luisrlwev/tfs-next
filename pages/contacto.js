@@ -19,21 +19,21 @@ const positions = [
   {
     lat: 20.61314888375765,
     lng: -87.10142210776615,
-    title: "Hola",
-    description: "Descripción del marcador 1",
+    title: "Riviera Maya",
+    description: "El Tigrillo, México 307 112, El Tigrillo, Ejidal, 77712 Playa del Carmen, Q.R.",
     icon: "/img/contacto/marcador.png"
   },
   { lat: 21.035424820790045,
     lng: -89.59469112880805,
-    title: "Hola 2",
-    description: "Descripción del marcador 2",
+    title: "Mérida",
+    description: "Calle 12 A entre calle 14 y 15, número 301 Edificio Amoran one, núm int. 214, Montebello, 97115 Mérida, Yuc.",
     icon: "/img/contacto/marcador.png"
   },
   {
     lat: 22.88617704618445,
     lng: -109.92666954959905,
-    title: "Hola 3",
-    description: "Descripción del marcador 3",
+    title: "Los Cabos",
+    description: "Boulevard Miguel Ángel Herrera, Del Aguila esquina-20, 22, 23472 Cabo San Lucas, B.C.S.",
     icon: "/img/contacto/marcador.png"
   },
 ];
@@ -129,7 +129,7 @@ export default function Contacto() {
                       onCloseClick={() => setSelectedMarker(null)}
                     >
                       <div>
-                        <h2>{selectedMarker.title}</h2>
+                        <h2 className='uppercase font-bold letter-spacing-25 text-tfs text-base'>{selectedMarker.title}</h2>
                         <p>{selectedMarker.description}</p>
                       </div>
                     </InfoWindow>
