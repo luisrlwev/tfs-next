@@ -3,6 +3,9 @@ import Image from "next/image";
 import Boton from "@/components/boton";
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, Navigation } from 'swiper/modules';
+// Import Swiper styles
+import 'swiper/css';
+import 'swiper/css/navigation';
 
 export default function Constructora() {
   return (
@@ -186,7 +189,6 @@ export default function Constructora() {
             <p className="text-white uppercase font-bold text-xl letter-spacing-25 text-center pb-7">Xiik</p>
             <Swiper
               slidesPerView={1}
-              lazy={true}
               navigation={true}
               autoplay={{
                 delay: 5000,
@@ -212,7 +214,6 @@ export default function Constructora() {
             <p className="text-white uppercase font-bold text-xl letter-spacing-25 text-center pb-7">Báalam</p>
             <Swiper
               slidesPerView={1}
-              lazy={true}
               navigation={true}
               autoplay={{
                 delay: 5000,

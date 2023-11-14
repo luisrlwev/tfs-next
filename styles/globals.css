@@ -173,12 +173,12 @@ body {
   background-size: cover;
 }
 
-.portada-merida{
+.portada-merida-inicio{
   background: url('../public/img/index/portada-merida.webp') 50% 50%;
   background-size: cover;
 }
 
-.portada-cabos{
+.portada-cabos-inicio{
   background: url('../public/img/index/portada-cabos.webp') 50% 50%;
   background-size: cover;
 }

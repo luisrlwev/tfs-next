@@ -32,7 +32,6 @@ export default function Lotes() {
             <p className="text-tfs uppercase font-bold text-xl letter-spacing-25 text-center pb-7">Lotes residenciales con <br/>campo de golf</p>
             <Swiper
               slidesPerView={1}
-              lazy={true}
               navigation={true}
               autoplay={{
                 delay: 5000,
@@ -57,7 +56,6 @@ export default function Lotes() {
             <p className="text-tfs uppercase font-bold text-xl letter-spacing-25 text-center pb-7">Terrenos en el residencial más <br/>exclusivo de Tulum</p>
             <Swiper
               slidesPerView={1}
-              lazy={true}
               navigation={true}
               autoplay={{
                 delay: 5000,

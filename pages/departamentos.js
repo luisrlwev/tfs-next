@@ -33,7 +33,6 @@ export default function Departamentos() {
             <p className="text-tfs uppercase font-bold text-xl letter-spacing-25 text-center pb-7">El mejor precio por metro cuadrado</p>
             <Swiper
               slidesPerView={1}
-              lazy={true}
               navigation={true}
               autoplay={{
                 delay: 5000,
@@ -60,7 +59,6 @@ export default function Departamentos() {
             <p className="text-tfs uppercase font-bold text-xl letter-spacing-25 text-center pb-7">Entrega inmediata</p>
             <Swiper
               slidesPerView={1}
-              lazy={true}
               navigation={true}
               autoplay={{
                 delay: 5000,

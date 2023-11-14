@@ -17,7 +17,7 @@ export default function Home() {
           <h1 className="text-white font-bold text-center uppercase text-6xl letter-spacing-25 text-shadow">Riviera Maya</h1>
         </div>
       </Link>
-      <Link href={'/merida'} className="portada-merida flex relative justify-center">
+      <Link href={'/merida'} className="portada-merida-inicio flex relative justify-center">
         <div className="h-full w-full top-0 left-0 absolute overflow-hidden z-0">
           <video src="/video/yucatan.mp4" className="absolute video-fondo" autoPlay muted playsInline loop></video>
         </div>
@@ -27,7 +27,7 @@ export default function Home() {
           <h1 className="text-white font-bold text-center uppercase text-6xl letter-spacing-25 text-shadow">Mérida</h1>
         </div>
       </Link>
-      <Link href={'/los-cabos'} className="portada-cabos flex relative justify-center">
+      <Link href={'/los-cabos'} className="portada-cabos-inicio flex relative justify-center">
         <div className="h-full w-full top-0 left-0 absolute overflow-hidden z-0">
           <video src="/video/los-cabos.mp4" className="absolute video-fondo" autoPlay muted playsInline loop></video>
         </div>

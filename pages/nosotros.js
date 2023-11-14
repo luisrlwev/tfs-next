@@ -3,6 +3,9 @@ import Layout from "@/components/layout";
 import Image from "next/image";
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, Navigation } from 'swiper/modules';
+// Import Swiper styles
+import 'swiper/css';
+import 'swiper/css/navigation';
 
 export default function Nosotros() {
   return (
@@ -144,7 +147,7 @@ export default function Nosotros() {
                   <p className="text-white text-xl italic pb-8">Te dan las mejores opciones del mercado, son muy pacientes y te explican a detalle cómo realizar tu inversión, gracias por la asesoría✨.</p>
                   <p className="text-white font-bold text-2xl">Daniela Estebanez</p>
               </SwiperSlide>
-            </Swiper>
+          </Swiper>
         </div>
       </section>
       <div className="portada-nosotros-final">

@@ -30,7 +30,6 @@ export default function Cabos() {
             <p className="text-tfs uppercase font-bold text-xl letter-spacing-25 text-center pb-7">Entrega inmediata</p>
             <Swiper
               slidesPerView={1}
-              lazy={true}
               navigation={true}
               autoplay={{
                 delay: 5000,
@@ -57,7 +56,6 @@ export default function Cabos() {
             <p className="text-tfs uppercase font-bold text-xl letter-spacing-25 text-center pb-7">Residenciales frente al mar</p>
             <Swiper
               slidesPerView={1}
-              lazy={true}
               navigation={true}
               autoplay={{
                 delay: 5000,

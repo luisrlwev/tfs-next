@@ -62,8 +62,8 @@ export default function Contacto() {
               <li>Atención durante el proceso de venta, hasta el cierre y entrega del inmueble.</li>
             </ul>
             <p className="text-white text-center uppercase font-semibold pb-24"><span className="text-tfs">Contáctanos</span> y permite que nuestros más de 50 asesores inmobiliarios se encarguen de todo lo relacionado con la compra de tu apartamento, casa o terreno.</p>
-            <a href="mailto:sales@tulumfromskyrealtors.com" className="text-center text-tfs flex items-center"><FaRegEnvelope className="mr-1"/>sales@tulumfromskyrealtors.com</a>
-            <a href="tel:+529848035450" className="text-center text-tfs flex items-center"><FaWhatsapp className="mr-1"/>+52 (984) 803 5450</a>
+            <a href="mailto:sales@tulumfromskyrealtors.com" className="text-center text-tfs flex items-center hover"><FaRegEnvelope className="mr-1"/>sales@tulumfromskyrealtors.com</a>
+            <a href="tel:+529848035450" className="text-center text-tfs flex items-center hover"><FaWhatsapp className="mr-1"/>+52 (984) 803 5450</a>
           </div>
         </div>
         <div className="pt-52 px-24 pb-24">
@@ -129,7 +129,7 @@ export default function Contacto() {
                       onCloseClick={() => setSelectedMarker(null)}
                     >
                       <div>
-                        <h2 className='uppercase font-bold letter-spacing-25 text-tfs text-base'>{selectedMarker.title}</h2>
+                        <h2 className='uppercase font-bold text-tfs text-base'>{selectedMarker.title}</h2>
                         <p>{selectedMarker.description}</p>
                       </div>
                     </InfoWindow>
@@ -145,8 +145,8 @@ export default function Contacto() {
                 <div className='col-span-2 flex flex-col gap-1 justify-center'>
                   <h3 className='text-white uppercase font-bold letter-spacing-25 text-2xl'>Riviera Maya</h3>
                   <p className='text-white text-sm'>Carretera Cancún - Tulum Km 307, Mza 329, Lt 9, Locales 42, 43, 44. Colonia El Tigrillo Edificio Terramar, Playa del Carmen, Q. Roo, México.</p>
-                  <a href="mailto:sales@tulumfromskyrealtors.com" className='text-tfs text-sm flex items-center'><FaRegEnvelope className='mr-1'/> sales@tulumfromskyrealtors.com</a>
-                  <a href="tel:+529848035450" className='text-tfs text-sm flex items-center'><FaWhatsapp className='mr-1'/> +52 (984) 803 5450</a>
+                  <a href="mailto:sales@tulumfromskyrealtors.com" className='text-tfs text-sm flex items-center hover'><FaRegEnvelope className='mr-1'/> sales@tulumfromskyrealtors.com</a>
+                  <a href="tel:+529848035450" className='text-tfs text-sm flex items-center hover'><FaWhatsapp className='mr-1'/> +52 (984) 803 5450</a>
                 </div>
               </div>
               <div className="flex py-6 pl-6">
@@ -159,8 +159,8 @@ export default function Contacto() {
                 <div className='col-span-2 flex flex-col gap-1 justify-center'>
                   <h3 className='text-white uppercase font-bold letter-spacing-25 text-2xl'>Mérida</h3>
                   <p className='text-white text-sm'>Calle 12 A entre calle 14 y 15, número 301. Edificio Amora One, num int 214, Colonia Montebello, Mérida, Yucatán, México.</p>
-                  <a href="mailto:sales@tulumfromskyrealtors.com" className='text-tfs text-sm flex items-center'><FaRegEnvelope className='mr-1'/> sales@tulumfromskyrealtors.com</a>
-                  <a href="tel:+529848035450" className='text-tfs text-sm flex items-center'><FaWhatsapp className='mr-1'/> +52 (984) 803 5450</a>
+                  <a href="mailto:sales@tulumfromskyrealtors.com" className='text-tfs text-sm flex items-center hover'><FaRegEnvelope className='mr-1'/> sales@tulumfromskyrealtors.com</a>
+                  <a href="tel:+529848035450" className='text-tfs text-sm flex items-center hover'><FaWhatsapp className='mr-1'/> +52 (984) 803 5450</a>
                 </div>
               </div>
               <div className="flex py-6 pl-6">
@@ -173,8 +173,8 @@ export default function Contacto() {
                 <div className='col-span-2 flex flex-col gap-1 justify-center'>
                   <h3 className='text-white uppercase font-bold letter-spacing-25 text-2xl'>Los Cabos</h3>
                   <p className='text-white text-sm'>Boulevard Miguel Ángel Herrera, Esquina del águila Mza 1 Lt, Locales 18, 20, 22, Colonia Lomas del Cabo, Cabo San Lucas. BCS, México.</p>
-                  <a href="mailto:sales@tulumfromskyrealtors.com" className='text-tfs text-sm flex items-center'><FaRegEnvelope className='mr-1'/> sales@tulumfromskyrealtors.com</a>
-                  <a href="tel:+529848035450" className='text-tfs text-sm flex items-center'><FaWhatsapp className='mr-1'/> +52 (984) 803 5450</a>
+                  <a href="mailto:sales@tulumfromskyrealtors.com" className='text-tfs text-sm flex items-center hover'><FaRegEnvelope className='mr-1'/> sales@tulumfromskyrealtors.com</a>
+                  <a href="tel:+529848035450" className='text-tfs text-sm flex items-center hover'><FaWhatsapp className='mr-1'/> +52 (984) 803 5450</a>
                 </div>
               </div>
             </div>
