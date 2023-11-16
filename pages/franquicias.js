@@ -282,7 +282,7 @@ export default function Franquicias() {
                   <textarea name="mensaje" id="mensaje" cols="30" rows="3" placeholder="¡Cuéntanos que te motiva a ser parte de nuestro equipo!" className="w-full rounded-md bg-decimo text-secondary p-3"></textarea>
                 </div>
                 <div className="col-span-2">
-                  <input type="checkbox" name="condiciones" id="condiciones" required/> Al marcar la casilla y hacer clic en el botón 'Enviar', confirmo que he leído y acepto el <Link href="/aviso-de-privacidad" target="_blank" className="text-tfs hover">Aviso de privacidad</Link>. <span className="text-red-600">*</span>
+                  <input type="checkbox" name="condiciones" id="condiciones" required/> Al marcar la casilla y hacer clic en el botón &apos;Enviar&apos;, confirmo que he leído y acepto el <Link href="/aviso-de-privacidad" target="_blank" className="text-tfs hover">Aviso de privacidad</Link>. <span className="text-red-600">*</span>
                 </div>
                 <div className="col-span-2 pb-6">
                   <p><span className="text-red-600">*</span> Campos obligatorios.</p>
