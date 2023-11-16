@@ -89,18 +89,18 @@ export default function Contacto() {
                   <input type="submit" name="" id="" className="py-2 px-12 bg-tfs uppercase text-white font-bold letter-spacing-25 rounded-md hover-bg"/>
                 </div>
               </div>
-            </form>
-            <h3 className="text-center uppercase letter-spacing-25 text-tfs font-bold text-2xl">Síguenos</h3>
-            <h4 className="font-bold text-tfs text-center pt-3 pb-7">@tulumfromsky</h4>
-            <div className="flex justify-center text-tfs text-2xl gap-4">
-              <a href="https://www.youtube.com/@tulumfromskyrealtors5181" target="_blank"><FaYoutube className="hover"/></a>
-              <a href="https://www.facebook.com/tulumfromskyrealtors/" target="_blank"><FaFacebookF className="hover"/></a>
-              <a href="https://www.instagram.com/tulumfromsky/" target="_blank"><FaInstagram className="hover"/></a>
-              <a href="https://twitter.com/FromskyTulum" target="_blank"><FaXTwitter className="hover"/></a>
-              <a href="https://www.pinterest.com.mx/Tulumfromsky/" target="_blank"><FaPinterestP className="hover"/></a>
-              <a href="https://www.tiktok.com/@tulumfromsky" target="_blank"><FaTiktok className="hover"/></a>
-              <a href="https://www.linkedin.com/company/40900945/admin/" target="_blank"><FaLinkedinIn className="hover"/></a>
-            </div>
+          </form>
+          <h3 className="text-center uppercase letter-spacing-25 text-tfs font-bold text-2xl">Síguenos</h3>
+          <h4 className="font-bold text-tfs text-center pt-3 pb-7">@tulumfromsky</h4>
+          <div className="flex justify-center text-tfs text-2xl gap-4">
+            <a href="https://www.youtube.com/@tulumfromskyrealtors5181" target="_blank"><FaYoutube className="hover"/></a>
+            <a href="https://www.facebook.com/tulumfromskyrealtors/" target="_blank"><FaFacebookF className="hover"/></a>
+            <a href="https://www.instagram.com/tulumfromsky/" target="_blank"><FaInstagram className="hover"/></a>
+            <a href="https://twitter.com/FromskyTulum" target="_blank"><FaXTwitter className="hover"/></a>
+            <a href="https://www.pinterest.com.mx/Tulumfromsky/" target="_blank"><FaPinterestP className="hover"/></a>
+            <a href="https://www.tiktok.com/@tulumfromsky" target="_blank"><FaTiktok className="hover"/></a>
+            <a href="https://www.linkedin.com/company/40900945/admin/" target="_blank"><FaLinkedinIn className="hover"/></a>
+          </div>
         </div>
       </section>
       <section className="bg-cuarto py-20">

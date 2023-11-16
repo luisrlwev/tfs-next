@@ -101,6 +101,10 @@ body {
   background-color: #a59a77;
 }
 
+.hover-bg-2:hover{
+  background-color: var(--decimo);
+}
+
 .letter-spacing-25{
   letter-spacing: .25em;
 }
@@ -165,6 +169,14 @@ body {
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
+  opacity: 1;
+}
+
+.overlay-franquicias{
+  background-image: url('../public/img/franquicias/overlay.svg');
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: auto;
   opacity: 1;
 }
 
@@ -262,6 +274,14 @@ body {
   background-position: center center;
 }
 
+.portada-franquicias-final{
+  background: url('../public/img/franquicias/fondo-franquicias.jpg') 50% 50%;
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
 .video-fondo{
   top: 50%;
   left: 50%;
@@ -302,4 +322,8 @@ body {
 
 .mySwiper{
   height: 407px;
+}
+
+.h-500{
+  height: 500px;
 }
