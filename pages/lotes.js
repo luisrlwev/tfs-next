@@ -18,17 +18,17 @@ export default function Lotes() {
           <video src="/video/lotes-portada.mp4" className="absolute video-fondo-portada" autoPlay muted playsInline loop></video>
         </div>
         <div className="portada-video flex justify-center items-center relative">
-          <h1 className="text-white font-bold text-center uppercase text-40 letter-spacing-25 text-shadow">Terrenos cerca del mar</h1>
+          <h1 className="text-white font-bold text-center uppercase text-40 max-lg:text-3xl letter-spacing-25 text-shadow">Terrenos cerca del mar</h1>
         </div>
       </div>
       <section className="bg-header">
-        <div className="container mx-auto grid justify-center py-10 uppercase text-2xl font-bold letter-spacing-25">
+        <div className="container mx-auto grid justify-center py-10 uppercase text-2xl max-lg:text-base font-bold letter-spacing-25">
           <p className="w-full text-center text-white">Lotes desde: <span className="text-tfs"> $110,000 usd</span></p>
         </div>
       </section>
       <section className="py-16">
-        <div className="container mx-auto grid grid-cols-2 gap-4">
-          <div>
+        <div className="container mx-auto grid grid-cols-2 max-lg:grid-cols-1 max-lg:px-3 gap-4">
+          <div className="max-lg:pb-8">
             <p className="text-tfs uppercase font-bold text-xl letter-spacing-25 text-center pb-7">Lotes residenciales con <br/>campo de golf</p>
             <Swiper
               slidesPerView={1}
@@ -50,7 +50,7 @@ export default function Lotes() {
               <SwiperSlide><Image src={'/img/lotes/lotes-residenciales-3.webp'} width={800} height={407} className="h-full object-cover" alt="Lotes residenciales con campo de golf"/></SwiperSlide>
               <SwiperSlide><Image src={'/img/lotes/lotes-residenciales-4.jpeg'} width={800} height={407} className="h-full object-cover" alt="Lotes residenciales con campo de golf"/></SwiperSlide>
             </Swiper>
-            <p className="py-5 px-7 bg-text">Financiamiento hasta 9 años.</p>
+            <p className="py-5 px-7 bg-text max-lg:text-sm">Financiamiento hasta 9 años.</p>
           </div>
           <div>
             <p className="text-tfs uppercase font-bold text-xl letter-spacing-25 text-center pb-7">Terrenos en el residencial más <br/>exclusivo de Tulum</p>
@@ -74,12 +74,12 @@ export default function Lotes() {
               <SwiperSlide><Image src={'/img/lotes/terrenos-en-el-residencial-3.jpg'} width={800} height={407} className="h-full object-cover" alt="Terrenos en el residencial más exclusivo de Tulum"/></SwiperSlide>
               <SwiperSlide><Image src={'/img/lotes/terrenos-en-el-residencial-4.jpg'} width={800} height={407} className="h-full object-cover" alt="Terrenos en el residencial más exclusivo de Tulum"/></SwiperSlide>
             </Swiper>
-            <p className="py-5 px-7 bg-text">Club de playa privado.</p>
+            <p className="py-5 px-7 bg-text max-lg:text-sm">Club de playa privado.</p>
           </div>
         </div>
       </section>
       <section className="pb-16">
-        <div className="container mx-auto grid grid-cols-7 gap-4">
+        <div className="container mx-auto grid grid-cols-7 max-lg:grid-cols-2 gap-4">
           <div className="grid justify-items-center text-center">
             <Image src={'/img/departamentos/bares.svg'} className="pb-3" width={68} height={68} alt="bares y restaurantes"/>
             <p>Bares y restaurantes</p>
@@ -104,14 +104,14 @@ export default function Lotes() {
             <Image src={'/img/lotes/ciclopistas.svg'} className="pb-3" width={68} height={68} alt="ciclopistas"/>
             <p>Ciclopistas</p>
           </div>
-          <div className="grid justify-items-center text-center">
+          <div className="grid justify-items-center text-center max-lg:col-span-2">
             <Image src={'/img/lotes/campo-golf.svg'} className="pb-3" width={68} height={68} alt="campo de golf"/>
             <p>Campo de Golf GPA</p>
           </div>
         </div>
       </section>
       <section className="bg-sexto">
-        <div className="container mx-auto text-center py-8 text-black uppercase font-bold letter-spacing-25 text-2xl">
+        <div className="container mx-auto text-center py-8 text-black uppercase font-bold letter-spacing-25 text-2xl max-lg:text-base max-lg:px-3">
           <p>Invierte en tu departamento con vista al</p>
           <p>mar en la Riviera Maya</p>
         </div>
@@ -123,7 +123,7 @@ export default function Lotes() {
         <div className="portada-video-final flex justify-center items-center relative">
           <div className="grid grid-cols-1 justify-items-center">
             <div>
-              <h3 className="text-white font-bold text-center uppercase text-xl letter-spacing-25 text-shado pb-5">Exclusividad y lujo en la playa</h3>
+              <h3 className="text-white font-bold text-center uppercase text-xl letter-spacing-25 text-shado pb-5 max-lg:px-4">Exclusividad y lujo en la playa</h3>
             </div>
             <div>
               <Boton/>
