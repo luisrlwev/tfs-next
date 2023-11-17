@@ -329,7 +329,15 @@ body {
 }
 
 @media (max-width: 768px) {
-  .video{
+  .video, .portada-video, .portada-video-final{
     min-height: 300px;
+  }
+
+  .text-40{
+    font-size: 25px;
+  }
+
+  .mySwiper{
+    height: 250px;
   }
 }

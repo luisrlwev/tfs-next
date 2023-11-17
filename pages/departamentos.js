@@ -22,15 +22,15 @@ export default function Departamentos() {
         </div>
       </div>
       <section className="bg-header">
-        <div className="container mx-auto grid justify-center py-10 uppercase text-2xl font-bold letter-spacing-25">
+        <div className="container mx-auto grid justify-center py-10 uppercase text-lg lg:text-2xl font-bold letter-spacing-25">
           <p className="w-full text-center text-tfs">Venta de departamentos de lujo en Tulum</p>
           <p className="w-full text-center text-white">desde: $120,000 USD</p>
         </div>
       </section>
       <section className="py-16">
-        <div className="container mx-auto grid grid-cols-2 gap-4">
-          <div>
-            <p className="text-tfs uppercase font-bold text-xl letter-spacing-25 text-center pb-7">El mejor precio por metro cuadrado</p>
+        <div className="container mx-auto grid grid-cols-1 lg:grid-cols-2 gap-4 max-lg:px-3">
+          <div className="max-lg:pb-8">
+            <p className="text-tfs uppercase font-bold text-xl letter-spacing-25 max-lg:text-2xl text-center pb-7">El mejor precio por metro cuadrado</p>
             <Swiper
               slidesPerView={1}
               navigation={true}
@@ -53,7 +53,7 @@ export default function Departamentos() {
               <SwiperSlide><Image src={'/img/departamentos/depas-el-mejor-precio-5.jpg'} width={800} height={407} className="h-full object-cover" alt="El mejor precio por metro cuadrado"/></SwiperSlide>
               <SwiperSlide><Image src={'/img/departamentos/depas-el-mejor-precio-6.jpg'} width={800} height={407} className="h-full object-cover" alt="El mejor precio por metro cuadrado"/></SwiperSlide>
             </Swiper>
-            <p className="py-5 px-7 bg-text">Disfruta de tu propia terraza, jardin privado y rooftop con su propia alberca privada.</p>
+            <p className="py-5 px-7 bg-text max-lg:text-sm">Disfruta de tu propia terraza, jardin privado y rooftop con su propia alberca privada.</p>
           </div>
           <div>
             <p className="text-tfs uppercase font-bold text-xl letter-spacing-25 text-center pb-7">Entrega inmediata</p>
@@ -79,12 +79,12 @@ export default function Departamentos() {
               <SwiperSlide><Image src={'/img/departamentos/depas-entrega-inmediata-5.jpg'} width={800} height={407} className="h-full object-cover" alt="El mejor precio por metro cuadrado"/></SwiperSlide>
               <SwiperSlide><Image src={'/img/departamentos/depas-entrega-inmediata-6.jpg'} width={800} height={407} className="h-full object-cover" alt="El mejor precio por metro cuadrado"/></SwiperSlide>
             </Swiper>
-            <p className="py-5 px-7 bg-text">Tu departamento con vista al mar en Cancún.</p>
+            <p className="py-5 px-7 bg-text max-lg:text-sm">Tu departamento con vista al mar en Cancún.</p>
           </div>
         </div>
       </section>
       <section className="pb-16">
-        <div className="container mx-auto grid grid-cols-6 gap-4">
+        <div className="container mx-auto grid max-lg:grid-cols-2 grid-cols-6 gap-4">
               <div className="grid justify-items-center text-center">
                 <Image src={'/img/departamentos/bares.svg'} className="pb-3" width={68} height={68} alt="bares y restaurantes"/>
                 <p>Bares y restaurantes</p>
@@ -112,7 +112,7 @@ export default function Departamentos() {
         </div>
       </section>
       <section className="bg-sexto">
-        <div className="container mx-auto text-center py-8 text-black uppercase font-bold letter-spacing-25 text-xl">
+        <div className="container mx-auto text-center py-8 text-black uppercase font-bold letter-spacing-25 max-lg:text-base max-lg:px-2 text-xl">
           <p>Departamentos con alberca privada a tan sólo 4 minutos de la playa</p>
           <p>áreas comunes con beach pool & beach lounge</p>
         </div>
@@ -124,7 +124,7 @@ export default function Departamentos() {
         <div className="portada-video-final flex justify-center items-center relative">
           <div className="grid grid-cols-1 justify-items-center">
             <div>
-              <h3 className="text-white font-bold text-center uppercase text-xl letter-spacing-25 text-shado pb-5">Plusvalía, lujo y estilo en Tulum</h3>
+              <h3 className="text-white font-bold text-center uppercase text-xl letter-spacing-25 text-shado pb-5 max-lg:px-7">Plusvalía, lujo y estilo en Tulum</h3>
             </div>
             <div>
               <Boton/>
