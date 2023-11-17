@@ -327,3 +327,9 @@ body {
 .h-500{
   height: 500px;
 }
+
+@media (max-width: 768px) {
+  .video{
+    min-height: 300px;
+  }
+}
