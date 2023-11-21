@@ -230,6 +230,7 @@ body {
   background-attachment: fixed;
   background-position: 0px -444px;
   background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .portada-merida-final{
@@ -339,5 +340,9 @@ body {
 
   .mySwiper{
     height: 250px;
+  }
+
+  .portada-ciudades{
+    min-height: 200px;
   }
 }
