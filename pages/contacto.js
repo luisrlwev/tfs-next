@@ -6,7 +6,7 @@ import { FaWhatsapp, FaRegEnvelope, FaFacebookF, FaYoutube, FaInstagram, FaXTwit
 import { GoogleMap, LoadScript, Marker, InfoWindow } from '@react-google-maps/api';
 
 const containerStyle = {
-  width: '600px',
+  width: '100%',
   height: '600px'
 };
 
@@ -47,28 +47,28 @@ export default function Contacto() {
       title={"Contacto"}
       description={"Contáctanos para obtener información sobre nuestras propiedades de bienes raíces. Nuestro equipo de expertos está listo para ayudarte a encontrar la propiedad ideal para ti en la Riviera Maya, Los Cabos o Mérida. Ya sea que busques comprar, vender o construir una propiedad, estamos aquí para ayudarte en cada paso del camino. ¡Contáctanos hoy y comienza a hacer realidad tus sueños de bienes raíces en México!"}
     >
-      <section className="grid grid-cols-2">
-        <div className="bg-header pt-52 px-24 pb-24 grid justify-items-center relative">
+      <section className="grid grid-cols-2 max-lg:grid-cols-1">
+        <div className="bg-header pt-52 max-lg:py-8 px-24 max-lg:px-3 pb-24 grid justify-items-center relative">
           <div className="overlay-contacto h-full w-full absolute"></div>
           <div className="grid justify-items-center relative">
-            <h1 className="text-tfs uppercase font-bold letter-spacing-25 pb-12 text-5xl">Contáctanos</h1>
+            <h1 className="text-tfs uppercase font-bold letter-spacing-25 pb-12 max-lg:pb-8 text-5xl max-lg:text-3xl">Contáctanos</h1>
             <h2 className="text-tfs uppercase font-bold letter-spacing-25 pb-8 text-2xl">¿Qué te ofrecemos?</h2>
-            <p className="text-white pb-2">La comercialización de desarrollos inmobiliarios con los siguientes servicios:</p>
-            <ul className="list-disc text-white leading-6 pb-8">
+            <p className="text-white pb-2 max-lg:text-sm">La comercialización de desarrollos inmobiliarios con los siguientes servicios:</p>
+            <ul className="list-disc text-white leading-6 pb-8 max-lg:text-sm">
               <li>Análisis comercial del proyecto.</li>
               <li>Diseño de campañas publicitarias.</li>
               <li>Promoción continua para generar vistas al desarrollo.</li>
               <li>Atención personalizada brindada por un especialista inmobiliario.</li>
               <li>Atención durante el proceso de venta, hasta el cierre y entrega del inmueble.</li>
             </ul>
-            <p className="text-white text-center uppercase font-semibold pb-24"><span className="text-tfs">Contáctanos</span> y permite que nuestros más de 50 asesores inmobiliarios se encarguen de todo lo relacionado con la compra de tu apartamento, casa o terreno.</p>
+            <p className="text-white text-center uppercase font-semibold pb-24 max-lg:pb-8"><span className="text-tfs">Contáctanos</span> y permite que nuestros más de 50 asesores inmobiliarios se encarguen de todo lo relacionado con la compra de tu apartamento, casa o terreno.</p>
             <a href="mailto:sales@tulumfromskyrealtors.com" className="text-center text-tfs flex items-center hover"><FaRegEnvelope className="mr-1"/>sales@tulumfromskyrealtors.com</a>
             <a href="tel:+529848035450" className="text-center text-tfs flex items-center hover"><FaWhatsapp className="mr-1"/>+52 (984) 803 5450</a>
           </div>
         </div>
-        <div className="pt-52 px-24 pb-24">
+        <div className="pt-52 px-24 max-lg:px-3 pb-24 max-lg:py-8">
           <h2 className="uppercase text-secondary font-bold letter-spacing-25 text-xl pb-8 text-center">¿Dudas? Déjanos tu contacto</h2>
-          <form className="w-full pb-24">
+          <form className="w-full pb-24 max-lg:pb-8">
               <div className="grid grid-cols-1 gap-3">
                 <div className="col-span-1">
                   <input type="text" name="nombre" id="nombre" placeholder="Nombre:" className="w-full rounded-md bg-decimo text-secondary p-3" required/>
@@ -103,12 +103,12 @@ export default function Contacto() {
           </div>
         </div>
       </section>
-      <section className="bg-cuarto py-20">
+      <section className="bg-cuarto py-20 max-lg:py-8">
         <div className="container mx-auto">
-          <h2 className="uppercase text-center text-tfs font-bold letter-spacing-25 text-40 pb-16">Nuestras oficinas</h2>
-          <div className="grid grid-cols-2">
-            <div className='flex flex-col items-center'>
-              <h3 className="uppercase text-center text-tfs font-bold letter-spacing-25 text-2xl pb-3">Ubicación</h3>
+          <h2 className="uppercase text-center text-tfs font-bold letter-spacing-25 text-40 pb-16 max-lg:pb-8">Nuestras oficinas</h2>
+          <div className="grid grid-cols-2 max-lg:grid-cols-1 max-lg:px-3">
+            <div className='flex flex-col items-center max-lg:pb-5'>
+              <h3 className="uppercase text-center text-tfs font-bold letter-spacing-25 text-2xl max-lg:text-xl pb-3">Ubicación</h3>
               <LoadScript googleMapsApiKey="AIzaSyCmvGDB4jFjNlVZHzFD6yhoGeIB3LeTD68">
                 <GoogleMap
                   mapContainerStyle={containerStyle}
@@ -149,7 +149,7 @@ export default function Contacto() {
                   <a href="tel:+529848035450" className='text-tfs text-sm flex items-center hover'><FaWhatsapp className='mr-1'/> +52 (984) 803 5450</a>
                 </div>
               </div>
-              <div className="flex py-6 pl-6">
+              <div className="flex py-6 pl-6 max-lg:pl-0">
                 <span className="separador-tfs"></span>
               </div>
               <div className='grid grid-cols-3 gap-3'>
@@ -163,7 +163,7 @@ export default function Contacto() {
                   <a href="tel:+529848035450" className='text-tfs text-sm flex items-center hover'><FaWhatsapp className='mr-1'/> +52 (984) 803 5450</a>
                 </div>
               </div>
-              <div className="flex py-6 pl-6">
+              <div className="flex py-6 pl-6 max-lg:pl-0">
                 <span className="separador-tfs"></span>
               </div>
               <div className='grid grid-cols-3 gap-3'>
