@@ -22,14 +22,14 @@ export default function Casas() {
         </div>
       </div>
       <section className="bg-header">
-        <div className="container mx-auto grid justify-center py-10 uppercase text-2xl font-bold letter-spacing-25">
+        <div className="container mx-auto grid justify-center py-10 uppercase text-2xl max-lg:text-base font-bold letter-spacing-25">
           <p className="w-full text-center text-white">Venta de casas de lujo</p>
           <p className="w-full text-center text-tfs">desde: $300,000 USD</p>
         </div>
       </section>
       <section className="py-16">
-        <div className="container mx-auto grid grid-cols-2 gap-4">
-          <div>
+        <div className="container mx-auto grid grid-cols-2 max-lg:grid-cols-1 max-lg:px-3 gap-4">
+          <div className="max-lg:pb-8">
             <p className="text-tfs uppercase font-bold text-xl letter-spacing-25 text-center pb-7">El mejor precio por metro cuadrado</p>
             <Swiper
               slidesPerView={1}
@@ -53,7 +53,7 @@ export default function Casas() {
               <SwiperSlide><Image src={'/img/casas/5-el-mejor-precio.jpg'} width={800} height={407} className="h-full object-cover" alt="El mejor precio por metro cuadrado"/></SwiperSlide>
               <SwiperSlide><Image src={'/img/casas/6-el-mejor-precio.jpg'} width={800} height={407} className="h-full object-cover" alt="El mejor precio por metro cuadrado"/></SwiperSlide>
             </Swiper>
-            <p className="py-5 px-7 bg-text">Disfruta de tu propia terraza, jardin privado y rooftop con su propia alberca privada.</p>
+            <p className="py-5 px-7 bg-text max-lg:text-sm">Disfruta de tu propia terraza, jardin privado y rooftop con su propia alberca privada.</p>
           </div>
           <div>
             <p className="text-tfs uppercase font-bold text-xl letter-spacing-25 text-center pb-7">Entrega inmediata</p>
@@ -79,12 +79,12 @@ export default function Casas() {
               <SwiperSlide><Image src={'/img/casas/casas-entrega-inmediata-5.jpg'} width={800} height={407} className="h-full object-cover" alt="Entrega inmediata"/></SwiperSlide>
               <SwiperSlide><Image src={'/img/casas/casas-entrega-inmediata-6.jpg'} width={800} height={407} className="h-full object-cover" alt="Entrega inmediata"/></SwiperSlide>
             </Swiper>
-            <p className="py-5 px-7 bg-text">Ganador del premio Península de Arquitectura e Interiorismo.</p>
+            <p className="py-5 px-7 bg-text max-lg:text-sm">Ganador del premio Península de Arquitectura e Interiorismo.</p>
           </div>
         </div>
       </section>
       <section className="pb-16">
-        <div className="container mx-auto grid grid-cols-7 gap-4">
+        <div className="container mx-auto grid grid-cols-7 max-lg:grid-cols-2 gap-4">
           <div className="grid justify-items-center text-center">
             <Image src={'/img/lotes/ciclopistas.svg'} className="pb-3" width={68} height={68} alt="ciclopistas"/>
             <p>Ciclopistas</p>
@@ -109,14 +109,14 @@ export default function Casas() {
             <Image src={'/img/departamentos/yoga.svg'} className="pb-3" width={68} height={68} alt="zonas de yoga"/>
             <p>Zonas de Yoga</p>
           </div>
-          <div className="grid justify-items-center text-center">
+          <div className="grid justify-items-center text-center max-lg:col-span-2">
             <Image src={'/img/lotes/beach-club.svg'} className="pb-3" width={68} height={68} alt="beach club"/>
             <p>Beach Club</p>
           </div>
         </div>
       </section>
       <section className="bg-sexto">
-        <div className="container mx-auto text-center py-8 text-black uppercase font-bold letter-spacing-25 text-2xl">
+        <div className="container mx-auto text-center py-8 text-black uppercase font-bold letter-spacing-25 text-2xl max-lg:text-base max-lg:px-3">
           <p>Inversión inmobiliaria rentable con ingresos hoteleros</p>
           <p>y amplia proyección de plusvalía</p>
         </div>
