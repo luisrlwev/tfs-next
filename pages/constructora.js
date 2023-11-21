@@ -20,23 +20,23 @@ export default function Constructora() {
         <div className="overlay-construccion h-full w-full absolute">
         </div>
         <div className="portada-video-final flex justify-center items-end relative text-white">
-          <div className="grid grid-cols-3 justify-items-center">
+          <div className="grid grid-cols-3 justify-items-center max-lg:px-3">
             <div className="col-span-3">
-              <h1 className="font-bold text-center uppercase letter-spacing-25 text-2xl text-shadow pb-8">Construimos tus sueños transformando tu vida </h1>
+              <h1 className="font-bold text-center uppercase letter-spacing-25 text-2xl max-lg:text-xl text-shadow pb-8 max-lg:pb-5">Construimos tus sueños transformando tu vida </h1>
             </div>
             <div className="col-span-3">
-              <p>Te ofrecemos proyectos de construcción desde la etapa del diseño hasta el proceso de licitación.</p>
+              <p className="text-center max-lg:text-sm">Te ofrecemos proyectos de construcción desde la etapa del diseño hasta el proceso de licitación.</p>
             </div>
-            <div className="col-span-3 pb-48">
-              <p>Optimizamos los tiempos y recursos con la mejor tecnología para la construcción.</p>
+            <div className="col-span-3 pb-48 max-lg:pb-5">
+              <p className="text-center max-lg:text-sm">Optimizamos los tiempos y recursos con la mejor tecnología para la construcción.</p>
             </div>
             <div className="col-span-3">
-              <p className="text-white uppercase font-bold letter-spacing-25 pb-10">Te ofrecemos:</p>
+              <p className="text-white uppercase font-bold letter-spacing-25 pb-10 max-lg:text-sm">Te ofrecemos:</p>
             </div>
           </div>
         </div>
       </div>
-      <section className="grid grid-cols-6">
+      <section className="grid grid-cols-6 max-lg:grid-cols-2">
         <div className="grid justify-items-center py-10 px-5 bg-black">
           <Image src={'/img/construccion/proyecto-ejecutivo.svg'} className="pb-3" width={53} height={54} alt="proyecto ejecutivo"/>
           <p className="text-tfs uppercase font-bold text-sm text-center letter-spacing-25">Proyecto ejecutivo</p>
@@ -62,13 +62,13 @@ export default function Constructora() {
           <p className="text-tfs uppercase font-bold text-sm text-center letter-spacing-25">Construcción a la medida</p>
         </div>
       </section>
-      <section className="py-24">
-        <div className="container mx-auto">
-          <div className="flex pb-6">
+      <section className="py-24 max-lg:py-8">
+        <div className="container mx-auto max-lg:px-3">
+          <div className="flex pb-6 justify-items-center">
             <Image src={'/img/construccion/proyecto.svg'} width={53} height={54} alt="proyecto ejecutivo"/>
             <h2 className="font-bold uppercase letter-spacing-25 text-40 pl-4">Proyecto ejecutivo</h2>
           </div>
-          <div className="grid grid-cols-3 gap-0">
+          <div className="grid grid-cols-3 max-lg:grid-cols-1 gap-0">
             <div className="flex flex-col">
               <div className="py-4 bg-noveno">
                 <h3 className="uppercase letter-spacing-25 text-center font-bold">1. Arquitectónico</h3>
@@ -140,13 +140,13 @@ export default function Constructora() {
         </div>
       </section>
       <section className="bg-footer">
-        <div className="container mx-auto flex justify-center items-center py-16">
+        <div className="container mx-auto flex justify-center items-center py-16 max-lg:py-8 max-lg:px-3">
           <h1 className="text-tfs font-bold letter-spacing-25 text-40 uppercase pr-3">Construcción</h1>
-          <Image src={'/img/construccion/construccion-2.svg'} width={118} height={1180} alt="construcción" />
+          <Image src={'/img/construccion/construccion-2.svg'} width={118} height={1180} alt="construcción" className="max-lg:w-24"/>
         </div>
       </section>
-      <section className="py-24">
-        <div className="container mx-auto">
+      <section className="py-24 max-lg:py-8">
+        <div className="container mx-auto max-lg:px-3">
           <div className="flex pb-6">
             <Image src={'/img/construccion/supervision.svg'} width={46} height={53} alt="supervisión"/>
             <h2 className="font-bold uppercase letter-spacing-25 text-40 pl-4">Supervisión de obra</h2>
@@ -157,7 +157,7 @@ export default function Constructora() {
                 <h3 className="uppercase letter-spacing-25 text-center font-bold">Incluye</h3>
               </div>
             </div>
-            <div className="flex flex-col">
+            <div className="flex flex-col max-lg:col-span-3 max-lg:text-sm">
               <div className="py-4 px-4 leading-7 bg-noveno h-full">
                 <p>Residencia en obra.</p>
                 <p>Calidad de la ejecución en procesos constructivos.</p>
@@ -165,7 +165,7 @@ export default function Constructora() {
                 <p>Requisición de equipo y materiales.</p>
               </div>
             </div>
-            <div className="flex flex-col">
+            <div className="flex flex-col max-lg:col-span-3 max-lg:text-sm">
               <div className="py-4 px-4 leading-7 bg-quinto h-full">
                 <p>Control de mano de obra.</p>
                 <p>Avances físicos.</p>
@@ -173,7 +173,7 @@ export default function Constructora() {
                 <p>Anticipación a problemas de diseño.</p>
               </div>
             </div>
-            <div className="flex flex-col">
+            <div className="flex flex-col max-lg:col-span-3 max-lg:text-sm">
               <div className="py-4 px-4 leading-7 bg-noveno h-full">
                 <p>Reportes fotográficos (cámara de piso y drone).</p>
                 <p>Control de tiempos de entrega.</p>
@@ -184,8 +184,8 @@ export default function Constructora() {
         </div>
       </section>
       <section className="py-20 bg-header">
-        <div className="container mx-auto grid grid-cols-2 gap-4">
-          <div>
+        <div className="container mx-auto grid grid-cols-2 max-lg:grid-cols-1 max-lg:px-3 gap-4">
+          <div className="max-lg:pb-8">
             <p className="text-white uppercase font-bold text-xl letter-spacing-25 text-center pb-7">Xiik</p>
             <Swiper
               slidesPerView={1}
@@ -208,7 +208,7 @@ export default function Constructora() {
               <SwiperSlide><Image src={'/img/construccion/xiik-4.png'} width={800} height={407} className="h-full object-cover" alt="Xiik Tulum"/></SwiperSlide>
               <SwiperSlide><Image src={'/img/construccion/xiik-5.png'} width={800} height={407} className="h-full object-cover" alt="Xiik Tulum"/></SwiperSlide>
             </Swiper>
-            <p className="py-5 px-7 text-white bg-sexto">30 departamentos de lujo en Tulum.</p>
+            <p className="py-5 px-7 text-white bg-sexto max-lg:text-sm">30 departamentos de lujo en Tulum.</p>
           </div>
           <div>
             <p className="text-white uppercase font-bold text-xl letter-spacing-25 text-center pb-7">Báalam</p>
@@ -235,7 +235,7 @@ export default function Constructora() {
               <SwiperSlide><Image src={'/img/construccion/baalam-6.jpg'} width={800} height={407} className="h-full object-cover" alt="Báalam"/></SwiperSlide>
               <SwiperSlide><Image src={'/img/construccion/baalam-7.jpg'} width={800} height={407} className="h-full object-cover" alt="Báalam"/></SwiperSlide>
             </Swiper>
-            <p className="py-5 px-7 text-white bg-sexto">Los mejores Residenciales con campo de Golf y club de playa.</p>
+            <p className="py-5 px-7 text-white bg-sexto max-lg:text-sm">Los mejores Residenciales con campo de Golf y club de playa.</p>
           </div>
         </div>
       </section>
@@ -243,7 +243,7 @@ export default function Constructora() {
         <div className="portada-video-construccion flex justify-center items-center relative">
             <div className="grid grid-cols-1 justify-items-center">
               <div>
-                <h3 className="text-white font-bold uppercase letter-spacing-25 text-4xl bg-octavo px-14 py-3 rounded-md">Contáctanos</h3>
+                <h3 className="text-white font-bold uppercase letter-spacing-25 text-4xl max-lg:text-xl bg-octavo px-14 py-3 rounded-md">Contáctanos</h3>
               </div>
             </div>
         </div>
