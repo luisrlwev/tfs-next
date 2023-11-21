@@ -351,4 +351,12 @@ body {
     background-position: center;
     background-size: cover;
   }
+
+  .portada-video-final-nosotros{
+    min-height: 600px;
+  }
+
+  .overlay-nosotros-final{
+    background-size: 380px auto;
+  }
 }
