@@ -15,18 +15,18 @@ export default function Cabos() {
     >
       <div className="portada-cabos flex relative justify-center">
         <div className="portada-ciudades flex justify-center items-end relative">
-          <h1 className="text-white font-bold text-center uppercase text-160 letter-spacing-25 leading-none z-0 -mb-6">Los Cabos</h1>
+          <h1 className="text-white font-bold text-center uppercase text-160 letter-spacing-25 leading-none z-0 -mb-6 max-lg:text-5xl max-lg:-mb-2">Los Cabos</h1>
         </div>
       </div>
       <section className="bg-header z-10 relative">
-        <div className="container mx-auto grid justify-center py-10 uppercase text-2xl font-bold letter-spacing-25">
+        <div className="container mx-auto grid justify-center py-10 uppercase text-2xl font-bold letter-spacing-25 max-lg:text-base">
           <p className="w-full text-center text-tfs">Venta de departamentos en Cabo San Lucas</p>
           <p className="w-full text-center text-white">desde: $250,000 USD</p>
         </div>
       </section>
       <section className="py-16">
-        <div className="container mx-auto grid grid-cols-2 gap-4">
-          <div>
+        <div className="container mx-auto grid grid-cols-2 max-lg:grid-cols-1 max-lg:px-3 gap-4">
+          <div className="max-lg:pb-8">
             <p className="text-tfs uppercase font-bold text-xl letter-spacing-25 text-center pb-7">Entrega inmediata</p>
             <Swiper
               slidesPerView={1}
@@ -50,7 +50,7 @@ export default function Cabos() {
               <SwiperSlide><Image src={'/img/cabos/los-cabos-entrega-inmediata-5.jpg'} width={800} height={407} className="h-full object-cover" alt="Entrega inmediata"/></SwiperSlide>
               <SwiperSlide><Image src={'/img/cabos/los-cabos-entrega-inmediata-6.jpg'} width={800} height={407} className="h-full object-cover" alt="Entrega inmediata"/></SwiperSlide>
             </Swiper>
-            <p className="py-5 px-7 bg-text">Lujo, arquitectura y diseño.</p>
+            <p className="py-5 px-7 bg-text max-lg:text-sm">Lujo, arquitectura y diseño.</p>
           </div>
           <div>
             <p className="text-tfs uppercase font-bold text-xl letter-spacing-25 text-center pb-7">Residenciales frente al mar</p>
@@ -76,12 +76,12 @@ export default function Cabos() {
               <SwiperSlide><Image src={'/img/cabos/los-cabos-residencias-frente-al-mar-5.jpg'} width={800} height={407} className="h-full object-cover" alt="Residenciales frente al mar"/></SwiperSlide>
               <SwiperSlide><Image src={'/img/cabos/los-cabos-residencias-frente-al-mar-6.jpg'} width={800} height={407} className="h-full object-cover" alt="Residenciales frente al mar"/></SwiperSlide>
             </Swiper>
-            <p className="py-5 px-7 bg-text">Private Golf & Beach Club.</p>
+            <p className="py-5 px-7 bg-text max-lg:text-sm">Private Golf & Beach Club.</p>
           </div>
         </div>
       </section>
       <section className="pb-16">
-        <div className="container mx-auto grid grid-cols-6 gap-4">
+        <div className="container mx-auto grid grid-cols-6 max-lg:grid-cols-2 gap-4">
           <div className="grid justify-items-center text-center">
             <Image src={'/img/lotes/beach-club.svg'} className="pb-3" width={68} height={68} alt="club de playa"/>
             <p>Club de playa</p>
@@ -109,7 +109,7 @@ export default function Cabos() {
         </div>
       </section>
       <section className="bg-sexto">
-        <div className="container mx-auto text-center py-8 text-black uppercase font-bold letter-spacing-25 text-2xl">
+        <div className="container mx-auto text-center py-8 text-black uppercase font-bold letter-spacing-25 text-2xl max-lg:text-base">
           <p className="text-tfs">Venta de casas en los cabos</p>
           <p>desde: $500,000 USD</p>
         </div>
@@ -121,9 +121,9 @@ export default function Cabos() {
         <div className="portada-video-final flex justify-center items-center relative">
             <div className="grid grid-cols-1 justify-items-center">
               <div>
-                <h3 className="text-white font-bold uppercase letter-spacing-25 text-xl pb-6">Oceanview en el destino con mayor plusvalía en México</h3>
+                <h3 className="text-white font-bold uppercase letter-spacing-25 text-xl text-center max-lg:text-base pb-6">Oceanview en el destino con mayor plusvalía en México</h3>
               </div>
-              <div className="pb-10">
+              <div className="pb-10 max-lg:pb-0">
                 <Boton/>
               </div>
             </div>

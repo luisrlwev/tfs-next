@@ -345,4 +345,10 @@ body {
   .portada-ciudades{
     min-height: 200px;
   }
+
+  .portada-merida, .portada-cabos{
+    background-attachment: initial;
+    background-position: center;
+    background-size: cover;
+  }
 }
