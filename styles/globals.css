@@ -359,4 +359,12 @@ body {
   .overlay-nosotros-final{
     background-size: 380px auto;
   }
+
+  .portada-video-final-responsive{
+    min-height: 755px;
+  }
+
+  .boton-contactanos{
+    background-color: var(--sexto);
+  }
 }
