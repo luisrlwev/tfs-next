@@ -137,6 +137,10 @@ body {
   min-height: 926px;
 }
 
+.portada-blog{
+  min-height: 464px;
+}
+
 .overlay-tulum{
   background-color: #053E47;
   opacity: 0.28;
@@ -283,6 +287,11 @@ body {
   background-position: center center;
 }
 
+.portada-blog-fondo{
+  background: url('../public/img/blog/portada-blog.jpg.webp') 50% 50%;
+  background-repeat: no-repeat;
+}
+
 .video-fondo{
   top: 50%;
   left: 50%;
@@ -327,6 +336,14 @@ body {
 
 .h-500{
   height: 500px;
+}
+
+.portadas-blog{
+  height: 300px;
+}
+
+.altura-blog{
+  height: 330px;
 }
 
 @media (max-width: 768px) {

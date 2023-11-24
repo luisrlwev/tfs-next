@@ -25,7 +25,7 @@ export default function Franquicias() {
             <p className="text-center">Nuestro objetivo es acompañarte en los diferentes pasos a</p>
             <p className="text-center pb-24">seguir como parte de la familia Tulumfromsky Realtors.</p>
             <Image src={'/img/logo.png'} width={270} height={162} alt="logo" className="pb-16"/>
-            <a href="#form" className="bg-tfs uppercase letter-spacing-25 font-bold py-2 px-10 text-tercero rounded-md">Contáctanos</a>
+            <a href="#form" className="bg-tfs uppercase letter-spacing-25 font-bold py-2 px-10 text-tercero rounded-md hover-bg">Contáctanos</a>
           </div>
         </div>
       </section>
@@ -233,7 +233,7 @@ export default function Franquicias() {
             </div>
           </div>
           <div className="flex flex-col items-center">
-            <a href="#form" className="bg-tfs uppercase letter-spacing-25 font-bold py-2 px-10 text-tercero rounded-md mt-24 max-lg:mt-10">Contáctanos</a>
+            <a href="#form" className="bg-tfs uppercase letter-spacing-25 font-bold py-2 px-10 text-tercero rounded-md mt-24 max-lg:mt-10 hover-bg">Contáctanos</a>
           </div>
         </div>
       </section>
@@ -345,7 +345,7 @@ export default function Franquicias() {
             </div>
           </div>
           <div className="grid justify-items-center pt-16 max-lg:py-12">
-            <a href="#form" className="text-tercero uppercase letter-spacing-25 font-bold bg-tfs boton-contactanos max-lg:text-white py-3 px-12 rounded-md">Contáctanos</a>
+            <a href="#form" className="text-tercero uppercase letter-spacing-25 font-bold bg-tfs boton-contactanos max-lg:text-white py-3 px-12 rounded-md hover-bg">Contáctanos</a>
           </div>
         </div>
       </div>
@@ -423,7 +423,7 @@ export default function Franquicias() {
                   <p><span className="text-red-600">*</span> Campos obligatorios.</p>
                 </div>
                 <div className="col-span-2 text-center">
-                  <input type="submit" name="" id="" className="py-3 px-32 bg-tfs uppercase text-white font-bold letter-spacing-25 rounded-md hover-bg"/>
+                  <input type="submit" name="" id="" className="py-3 px-32 bg-tfs uppercase text-white font-bold letter-spacing-25 rounded-md hover-bg cursor-pointer"/>
                 </div>
               </div>
           </form>
