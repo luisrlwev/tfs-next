@@ -13,7 +13,7 @@ export default function Blog({posts}) {
         <div className="portada-blog flex justify-center items-center relative text-white">
           <div className="grid grid-cols-3 justify-items-center">
             <div className="col-span-3">
-              <h1 className="font-bold text-center uppercase letter-spacing-25 text-40 text-shadow pb-10">Blog</h1>
+              <h1 className="font-bold text-center uppercase letter-spacing-25 text-40 text-shadow pb-10 max-lg:pb-0 max-lg:text-4xl">Blog</h1>
             </div>
           </div>
         </div>

@@ -14,8 +14,8 @@ export default function Post({post, categorias}) {
       title={title.rendered}
       description={stripHtml(excerpt.rendered)}
     >
-        <article className="container mx-auto grid grid-cols-6 py-16">
-            <div className="col-span-4 px-20 py-16 bg-sexto">
+        <article className="container mx-auto grid grid-cols-6 max-lg:grid-cols-1 py-16 max-lg:py-0">
+            <div className="col-span-4 px-20 max-lg:px-4 py-16 max-lg:py-5 bg-sexto">
               <Image
               src={featured_image_src}
               alt={title.rendered}
@@ -23,17 +23,17 @@ export default function Post({post, categorias}) {
               height={430}
               className="rounded-md mb-6 w-full"
               />
-              <h1 className="text-tfs font-bold mb-4 text-3xl">{title.rendered}</h1>
+              <h1 className="text-tfs font-bold mb-4 text-3xl max-lg:text-2xl">{title.rendered}</h1>
               {/* Utiliza 'dangerouslySetInnerHTML' para renderizar HTML */}
               <div className="text-base text-black pb-4 text-justify leading-relaxed" dangerouslySetInnerHTML={{ __html: content.rendered }}></div>
               <div className="border-t mt-2 mb-2"></div>
               <span className="text-xs text-black pl-4">{formatDate(date)} - {obtenerMensajeComentarios(comments_count)} </span>
             </div>
-            <div className="col-span-2 px-14">
-              <div className="bg-sexto p-6 mb-10">
+            <div className="col-span-2 px-14 max-lg:px-0">
+              <div className="bg-sexto p-6 mb-10 max-lg:mb-0">
                 <h3 className="text-tfs font-bold text-xl">Entradas Recientes</h3>
               </div>
-              <div className="bg-sexto p-6 mb-10">
+              <div className="bg-sexto p-6 mb-10 max-lg:mb-0">
                 <h3 className="text-tfs font-bold text-xl">Comentarios Recientes</h3>
               </div>
               <div className="bg-sexto p-6">

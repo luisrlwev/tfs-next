@@ -8,9 +8,9 @@ export default function Categoria({posts, categoria}) {
       title={`Blogs de ${name}`}
       description={description}
     >
-        <div className="container mx-auto py-14">
-        <h1 className="text-tfs font-bold text-4xl mb-6">Todos los blogs de {name}</h1>
-            <div className="grid grid-cols-3 gap-4">
+        <div className="container mx-auto py-14 max-lg:py-4 max-lg:px-4">
+        <h1 className="text-tfs font-bold text-4xl max-lg:text-2xl mb-6">Todos los blogs de {name}</h1>
+            <div className="grid grid-cols-3 max-lg:grid-cols-1 gap-4">
             {posts?.map(post => (
                 <Post
                     key={post.id}
