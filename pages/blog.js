@@ -1,5 +1,3 @@
-import Link from "next/link";
-import Image from "next/image";
 import Layout from "@/components/layout";
 import Post from "@/components/post";
 
@@ -40,7 +38,7 @@ export default function Blog({posts}) {
 export async function getStaticProps() {
   const respuesta = await fetch(`${process.env.API_URL_BLOG}/posts`)
   const posts = await respuesta.json()
-  console.log(posts);
+
   return {
     props: {
       posts
