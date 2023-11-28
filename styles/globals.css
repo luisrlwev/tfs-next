@@ -75,6 +75,10 @@ body {
   background-color: var(--quinto);
 }
 
+.bg-modal{
+  background-color: #fdf5f1;
+}
+
 .text-menu{
   color: #F8F9FA;
   font-size: 15px;
@@ -338,6 +342,10 @@ body {
   height: 500px;
 }
 
+.w-modal{
+  width: 850px;
+}
+
 .portadas-blog{
   height: 300px;
 }
@@ -383,5 +391,9 @@ body {
 
   .boton-contactanos{
     background-color: var(--sexto);
+  }
+
+  .w-modal{
+    width: 90%;
   }
 }

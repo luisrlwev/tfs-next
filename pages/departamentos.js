@@ -1,6 +1,8 @@
+import { useState } from "react";
 import Layout from "@/components/layout";
 import Image from "next/image";
 import Boton from "@/components/boton";
+import Formulario from "@/components/formulario";
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, Navigation } from 'swiper/modules';
 // Import Swiper styles
@@ -8,12 +10,21 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 
 export default function Departamentos() {
+  const [showModal, setShowModal] = useState(false);
+
+  const abrirModal = () => {
+    setShowModal(true);
+  };
+
+  const cerrarModal = () => {
+    setShowModal(false);
+  };
   return (
     <Layout
       title={"Departamentos"}
       description={"Encuentra los mejores departamentos en la Riviera Maya, Los Cabos y Mérida. Descubre la belleza natural del Caribe mexicano, la tranquilidad de la península de Baja California y la rica cultura de Yucatán. Encuentra opciones en diferentes zonas turísticas, tamaños y precios. ¡Vive en el departamento de tus sueños en México hoy mismo!"}
     >
-      <div className="portada-depas flex relative justify-center">
+      <div className="portada-depas flex relative justify-center cursor-pointer" onClick={abrirModal}>
         <div className="h-full w-full top-0 left-0 absolute overflow-hidden z-0">
           <video src="/video/depas.mp4" className="absolute video-fondo-portada" autoPlay muted playsInline loop></video>
         </div>
@@ -22,7 +33,7 @@ export default function Departamentos() {
         </div>
       </div>
       <section className="bg-header">
-        <div className="container mx-auto grid justify-center py-10 uppercase text-lg lg:text-2xl font-bold letter-spacing-25">
+        <div className="container mx-auto grid justify-center py-10 uppercase text-lg lg:text-2xl font-bold letter-spacing-25 px-4">
           <p className="w-full text-center text-tfs">Venta de departamentos de lujo en Tulum</p>
           <p className="w-full text-center text-white">desde: $120,000 USD</p>
         </div>
@@ -44,7 +55,8 @@ export default function Departamentos() {
               }}
               modules={[Autoplay, Navigation]}
               loop={true}
-              className="mySwiper"
+              className="mySwiper cursor-pointer"
+              onClick={abrirModal}
             >
               <SwiperSlide><Image src={'/img/departamentos/depas-el-mejor-precio-1.jpg'} width={800} height={407} className="h-full object-cover" alt="El mejor precio por metro cuadrado"/></SwiperSlide>
               <SwiperSlide><Image src={'/img/departamentos/depas-el-mejor-precio-2.jpg'} width={800} height={407} className="h-full object-cover" alt="El mejor precio por metro cuadrado"/></SwiperSlide>
@@ -70,7 +82,8 @@ export default function Departamentos() {
               }}
               modules={[Autoplay, Navigation]}
               loop={true}
-              className="mySwiper"
+              className="mySwiper cursor-pointer"
+              onClick={abrirModal}
             >
               <SwiperSlide><Image src={'/img/departamentos/depas-entrega-inmediata-1.jpg'} width={800} height={407} className="h-full object-cover" alt="El mejor precio por metro cuadrado"/></SwiperSlide>
               <SwiperSlide><Image src={'/img/departamentos/depas-entrega-inmediata-2.jpg'} width={800} height={407} className="h-full object-cover" alt="El mejor precio por metro cuadrado"/></SwiperSlide>
@@ -117,7 +130,7 @@ export default function Departamentos() {
           <p>áreas comunes con beach pool & beach lounge</p>
         </div>
       </section>
-      <div className="portada-depas-final flex relative justify-center">
+      <div className="portada-depas-final flex relative justify-center cursor-pointer" onClick={abrirModal}>
         <div className="h-full w-full top-0 left-0 absolute overflow-hidden z-0">
           <video src="/video/depas-final.mp4" className="absolute video-fondo-portada" autoPlay muted playsInline loop></video>
         </div>
@@ -132,6 +145,7 @@ export default function Departamentos() {
           </div>
         </div>
       </div>
+      <Formulario show={showModal} onClose={cerrarModal}/>
     </Layout>
   );
 }

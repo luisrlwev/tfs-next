@@ -1,6 +1,8 @@
+import { useState } from "react";
 import Layout from "@/components/layout";
 import Image from "next/image";
 import Boton from "@/components/boton";
+import Formulario from "@/components/formulario";
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, Navigation } from 'swiper/modules';
 // Import Swiper styles
@@ -8,12 +10,21 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 
 export default function Cabos() {
+  const [showModal, setShowModal] = useState(false);
+
+  const abrirModal = () => {
+    setShowModal(true);
+  };
+
+  const cerrarModal = () => {
+    setShowModal(false);
+  };
   return (
     <Layout
       title={"Los Cabos"}
       description={"Descubre las mejores opciones en bienes raíces en Los Cabos, la joya turística de la península de Baja California. Encuentra casas, departamentos y lotes en diferentes zonas turísticas y precios, desde la tranquilidad de San José del Cabo hasta la animada vida nocturna de Cabo San Lucas. ¡Encuentra la propiedad ideal para ti en Los Cabos hoy mismo!"}
     >
-      <div className="portada-cabos flex relative justify-center">
+      <div className="portada-cabos flex relative justify-center cursor-pointer" onClick={abrirModal}>
         <div className="portada-ciudades flex justify-center items-end relative">
           <h1 className="text-white font-bold text-center uppercase text-160 letter-spacing-25 leading-none z-0 -mb-6 max-lg:text-5xl max-lg:-mb-2">Los Cabos</h1>
         </div>
@@ -41,7 +52,8 @@ export default function Cabos() {
               }}
               modules={[Autoplay, Navigation]}
               loop={true}
-              className="mySwiper"
+              className="mySwiper cursor-pointer"
+              onClick={abrirModal}
             >
               <SwiperSlide><Image src={'/img/cabos/los-cabos-entrega-inmediata-1.jpg'} width={800} height={407} className="h-full object-cover" alt="Entrega inmediata"/></SwiperSlide>
               <SwiperSlide><Image src={'/img/cabos/los-cabos-entrega-inmediata-2.jpg'} width={800} height={407} className="h-full object-cover" alt="Entrega inmediata"/></SwiperSlide>
@@ -67,7 +79,8 @@ export default function Cabos() {
               }}
               modules={[Autoplay, Navigation]}
               loop={true}
-              className="mySwiper"
+              className="mySwiper cursor-pointer"
+              onClick={abrirModal}
             >
               <SwiperSlide><Image src={'/img/cabos/los-cabos-residencias-frente-al-mar-1.jpg'} width={800} height={407} className="h-full object-cover" alt="Residenciales frente al mar"/></SwiperSlide>
               <SwiperSlide><Image src={'/img/cabos/los-cabos-residencias-frente-al-mar-2.jpg'} width={800} height={407} className="h-full object-cover" alt="Residenciales frente al mar"/></SwiperSlide>
@@ -114,7 +127,7 @@ export default function Cabos() {
           <p>desde: $500,000 USD</p>
         </div>
       </section>
-      <div className="portada-cabos-final flex relative justify-center">
+      <div className="portada-cabos-final flex relative justify-center cursor-pointer" onClick={abrirModal}>
         <div className="h-full w-full top-0 left-0 absolute overflow-hidden z-0">
           <video src="/video/cabos-final.mp4" className="absolute video-fondo-portada" autoPlay muted playsInline loop></video>
         </div>
@@ -129,6 +142,7 @@ export default function Cabos() {
             </div>
         </div>
       </div>
+      <Formulario show={showModal} onClose={cerrarModal}/>
     </Layout>
   );
 }

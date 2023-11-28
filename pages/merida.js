@@ -1,6 +1,8 @@
+import { useState } from "react";
 import Layout from "@/components/layout";
 import Image from "next/image";
 import Boton from "@/components/boton";
+import Formulario from "@/components/formulario";
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, Navigation } from 'swiper/modules';
 // Import Swiper styles
@@ -8,12 +10,21 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 
 export default function Merida() {
+  const [showModal, setShowModal] = useState(false);
+
+  const abrirModal = () => {
+    setShowModal(true);
+  };
+
+  const cerrarModal = () => {
+    setShowModal(false);
+  };
   return (
     <Layout
       title={"Mérida"}
       description={"Descubre las mejores opciones en bienes raíces en Mérida, la ciudad colonial más importante del sureste mexicano. Encuentra casas, departamentos y lotes en diferentes zonas y precios. Disfruta de la tranquilidad de la ciudad y la riqueza cultural y gastronómica de Yucatán. ¡Encuentra la propiedad ideal para ti en Mérida hoy mismo!"}
     >
-      <div className="portada-merida flex relative justify-center">
+      <div className="portada-merida flex relative justify-center cursor-pointer" onClick={abrirModal}>
         <div className="portada-ciudades flex justify-center items-end relative">
           <h1 className="text-white font-bold text-center uppercase text-160 letter-spacing-25 leading-none z-0 -mb-6 max-lg:text-5xl max-lg:-mb-2">Mérida</h1>
         </div>
@@ -41,7 +52,8 @@ export default function Merida() {
               }}
               modules={[Autoplay, Navigation]}
               loop={true}
-              className="mySwiper"
+              className="mySwiper cursor-pointer"
+              onClick={abrirModal}
             >
               <SwiperSlide><Image src={'/img/merida/entrega-inmediata-1.jpg'} width={800} height={407} className="h-full object-cover" alt="Entrega inmediata"/></SwiperSlide>
               <SwiperSlide><Image src={'/img/merida/entrega-inmediata-2.jpg'} width={800} height={407} className="h-full object-cover" alt="Entrega inmediata"/></SwiperSlide>
@@ -67,7 +79,8 @@ export default function Merida() {
               }}
               modules={[Autoplay, Navigation]}
               loop={true}
-              className="mySwiper"
+              className="mySwiper cursor-pointer"
+              onClick={abrirModal}
             >
               <SwiperSlide><Image src={'/img/merida/1-disfruta-la-mejor.png'} width={800} height={407} className="h-full object-cover" alt="Disfruta la mejor vista frente al mar"/></SwiperSlide>
               <SwiperSlide><Image src={'/img/merida/2-disfruta-la-mejor.png'} width={800} height={407} className="h-full object-cover" alt="Disfruta la mejor vista frente al mar"/></SwiperSlide>
@@ -114,7 +127,7 @@ export default function Merida() {
           <p className="text-tfs">desde: $2,000,000 MXN</p>
         </div>
       </section>
-      <div className="portada-merida-final flex relative justify-center">
+      <div className="portada-merida-final flex relative justify-center cursor-pointer" onClick={abrirModal}>
         <div className="h-full w-full top-0 left-0 absolute overflow-hidden z-0">
           <video src="/video/merida-final.mp4" className="absolute video-fondo-portada" autoPlay muted playsInline loop></video>
         </div>
@@ -124,6 +137,7 @@ export default function Merida() {
             </div>
         </div>
       </div>
+      <Formulario show={showModal} onClose={cerrarModal}/>
     </Layout>
   );
 }

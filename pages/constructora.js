@@ -1,6 +1,9 @@
+import { useState } from "react";
+import Link from "next/link";
 import Layout from "@/components/layout";
 import Image from "next/image";
 import Boton from "@/components/boton";
+import Formulario from "@/components/formulario";
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, Navigation } from 'swiper/modules';
 // Import Swiper styles
@@ -8,12 +11,21 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 
 export default function Constructora() {
+  const [showModal, setShowModal] = useState(false);
+
+  const abrirModal = () => {
+    setShowModal(true);
+  };
+
+  const cerrarModal = () => {
+    setShowModal(false);
+  };
   return (
     <Layout
       title={"Constructora"}
       description={"Te ofrecemos proyectos de construcción desde la etapa del diseño hasta el proceso de licitación."}
     >
-      <div className="portada-construccion flex relative justify-center">
+      <div className="portada-construccion flex relative justify-center cursor-pointer" onClick={abrirModal}>
         <div className="h-full w-full top-0 left-0 absolute overflow-hidden z-0">
           <video src="/video/construccion-portada.mp4" className="absolute video-fondo-portada" autoPlay muted playsInline loop></video>
         </div>
@@ -68,7 +80,7 @@ export default function Constructora() {
             <Image src={'/img/construccion/proyecto.svg'} width={53} height={54} alt="proyecto ejecutivo"/>
             <h2 className="font-bold uppercase letter-spacing-25 text-40 pl-4">Proyecto ejecutivo</h2>
           </div>
-          <div className="grid grid-cols-3 max-lg:grid-cols-1 gap-0">
+          <div className="grid grid-cols-3 max-lg:grid-cols-1 gap-0 cursor-pointer" onClick={abrirModal}>
             <div className="flex flex-col">
               <div className="py-4 bg-noveno">
                 <h3 className="uppercase letter-spacing-25 text-center font-bold">1. Arquitectónico</h3>
@@ -151,7 +163,7 @@ export default function Constructora() {
             <Image src={'/img/construccion/supervision.svg'} width={46} height={53} alt="supervisión"/>
             <h2 className="font-bold uppercase letter-spacing-25 text-40 pl-4">Supervisión de obra</h2>
           </div>
-          <div className="grid grid-cols-3 gap-0">
+          <div className="grid grid-cols-3 gap-0 cursor-pointer" onClick={abrirModal}>
             <div className="col-span-3">
               <div className="py-4 bg-noveno">
                 <h3 className="uppercase letter-spacing-25 text-center font-bold">Incluye</h3>
@@ -200,7 +212,8 @@ export default function Constructora() {
               }}
               modules={[Autoplay, Navigation]}
               loop={true}
-              className="mySwiper"
+              className="mySwiper cursor-pointer"
+              onClick={abrirModal}
             >
               <SwiperSlide><Image src={'/img/construccion/xiik-1.png'} width={800} height={407} className="h-full object-cover" alt="Xiik Tulum"/></SwiperSlide>
               <SwiperSlide><Image src={'/img/construccion/xiik-2.jpg'} width={800} height={407} className="h-full object-cover" alt="Xiik Tulum"/></SwiperSlide>
@@ -225,7 +238,8 @@ export default function Constructora() {
               }}
               modules={[Autoplay, Navigation]}
               loop={true}
-              className="mySwiper"
+              className="mySwiper cursor-pointer"
+              onClick={abrirModal}
             >
               <SwiperSlide><Image src={'/img/construccion/baalam-1.jpg'} width={800} height={407} className="h-full object-cover" alt="Báalam"/></SwiperSlide>
               <SwiperSlide><Image src={'/img/construccion/baalam-2.jpg'} width={800} height={407} className="h-full object-cover" alt="Báalam"/></SwiperSlide>
@@ -243,11 +257,12 @@ export default function Constructora() {
         <div className="portada-video-construccion flex justify-center items-center relative">
             <div className="grid grid-cols-1 justify-items-center">
               <div>
-                <h3 className="text-white font-bold uppercase letter-spacing-25 text-4xl max-lg:text-xl bg-octavo px-14 py-3 rounded-md">Contáctanos</h3>
+                <Link href={'/contacto'} className="text-white font-bold uppercase letter-spacing-25 text-4xl max-lg:text-xl bg-octavo px-14 py-3 rounded-md">Contáctanos</Link>
               </div>
             </div>
         </div>
       </div>
+      <Formulario show={showModal} onClose={cerrarModal}/>
     </Layout>
   );
 }

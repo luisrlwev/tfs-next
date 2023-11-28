@@ -83,7 +83,7 @@ export default function Contacto() {
                   <textarea name="mensaje" id="mensaje" cols="30" rows="3" placeholder="¿Qué tipo de propiedad buscas?" className="w-full rounded-md bg-decimo text-secondary p-3" required></textarea>
                 </div>
                 <div className="col-span-1 text-secondary">
-                  <input type="checkbox" name="condiciones" id="condiciones" required/> Acepto los <Link href="/aviso-de-privacidad" target="_blank" className="text-tfs hover">términos y condiciones</Link>
+                  <input type="checkbox" name="condiciones" id="condiciones" checked required/> Acepto los <Link href="/aviso-de-privacidad" target="_blank" className="text-tfs hover">términos y condiciones</Link>
                 </div>
                 <div className="col-span-1 text-center">
                   <input type="submit" name="submit" id="submit" className="py-2 px-12 bg-tfs uppercase text-white font-bold letter-spacing-25 rounded-md hover-bg cursor-pointer"/>

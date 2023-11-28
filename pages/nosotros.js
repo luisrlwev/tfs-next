@@ -1,6 +1,8 @@
+import { useState } from "react";
 import Link from "next/link";
 import Layout from "@/components/layout";
 import Image from "next/image";
+import Formulario from "@/components/formulario";
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, Navigation } from 'swiper/modules';
 // Import Swiper styles
@@ -8,12 +10,21 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 
 export default function Nosotros() {
+  const [showModal, setShowModal] = useState(false);
+
+  const abrirModal = () => {
+    setShowModal(true);
+  };
+
+  const cerrarModal = () => {
+    setShowModal(false);
+  };
   return (
     <Layout
       title={"Nosotros"}
       description={"Líder en la comercialización de desarrollos inmobiliarios en la Riviera Maya, Mérida y Los Cabos. Ofrecemos soluciones efectivas para la venta de proyectos de preventa y entrega inmediata."}
     >
-      <div className="portada-nosotros flex relative justify-center">
+      <div className="portada-nosotros flex relative justify-center cursor-pointer" onClick={abrirModal}>
         <div className="overlay-nosotros h-full w-full absolute">
         </div>
         <div className="portada-video-nosotros flex justify-center items-center relative text-white">
@@ -221,6 +232,7 @@ export default function Nosotros() {
           </div>
         </div>
       </div>
+      <Formulario show={showModal} onClose={cerrarModal}/>
     </Layout>
   );
 }

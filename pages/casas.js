@@ -1,6 +1,8 @@
+import { useState } from "react";
 import Layout from "@/components/layout";
 import Image from "next/image";
 import Boton from "@/components/boton";
+import Formulario from "@/components/formulario";
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, Navigation } from 'swiper/modules';
 // Import Swiper styles
@@ -8,12 +10,21 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 
 export default function Casas() {
+  const [showModal, setShowModal] = useState(false);
+
+  const abrirModal = () => {
+    setShowModal(true);
+  };
+
+  const cerrarModal = () => {
+    setShowModal(false);
+  };
   return (
     <Layout
       title={"Casas"}
       description={"Descubre las mejores casas en la Riviera Maya, Los Cabos y Mérida para vivir o invertir en México. Disfruta de la belleza natural del Caribe mexicano, la tranquilidad de la península de Baja California y la rica cultura de Yucatán. Encuentra opciones en diferentes zonas turísticas, tamaños y precios. ¡Vive en la casa de tus sueños en México hoy mismo!"}
     >
-      <div className="portada-casas flex relative justify-center">
+      <div className="portada-casas flex relative justify-center cursor-pointer" onClick={abrirModal}>
         <div className="h-full w-full top-0 left-0 absolute overflow-hidden z-0">
           <video src="/video/casas-portada.mp4" className="absolute video-fondo-portada" autoPlay muted playsInline loop></video>
         </div>
@@ -44,7 +55,8 @@ export default function Casas() {
               }}
               modules={[Autoplay, Navigation]}
               loop={true}
-              className="mySwiper"
+              className="mySwiper cursor-pointer"
+              onClick={abrirModal}
             >
               <SwiperSlide><Image src={'/img/casas/1-el-mejor-precio.jpg'} width={800} height={407} className="h-full object-cover" alt="El mejor precio por metro cuadrado"/></SwiperSlide>
               <SwiperSlide><Image src={'/img/casas/2-el-mejor-precio.jpg'} width={800} height={407} className="h-full object-cover" alt="El mejor precio por metro cuadrado"/></SwiperSlide>
@@ -70,7 +82,8 @@ export default function Casas() {
               }}
               modules={[Autoplay, Navigation]}
               loop={true}
-              className="mySwiper"
+              className="mySwiper cursor-pointer"
+              onClick={abrirModal}
             >
               <SwiperSlide><Image src={'/img/casas/casas-entrega-inmediata-1.jpg'} width={800} height={407} className="h-full object-cover" alt="Entrega inmediata"/></SwiperSlide>
               <SwiperSlide><Image src={'/img/casas/casas-entrega-inmediata-2.jpg'} width={800} height={407} className="h-full object-cover" alt="Entrega inmediata"/></SwiperSlide>
@@ -121,7 +134,7 @@ export default function Casas() {
           <p>y amplia proyección de plusvalía</p>
         </div>
       </section>
-      <div className="portada-casas-final flex relative justify-center">
+      <div className="portada-casas-final flex relative justify-center cursor-pointer" onClick={abrirModal}>
         <div className="h-full w-full top-0 left-0 absolute overflow-hidden z-0">
           <video src="/video/casas-final.mp4" className="absolute video-fondo-portada" autoPlay muted playsInline loop></video>
         </div>
@@ -136,6 +149,7 @@ export default function Casas() {
           </div>
         </div>
       </div>
+      <Formulario show={showModal} onClose={cerrarModal}/>
     </Layout>
   );
 }
