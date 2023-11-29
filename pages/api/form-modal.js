@@ -1,6 +1,6 @@
 import nodemailer from 'nodemailer';
 
-export default async (req, res) => {
+const handler = async (req, res) => {
   const { nombre, email, tel, mensaje, condiciones } = req.body;
 
   // Configura el transporte de Nodemailer
@@ -32,3 +32,5 @@ export default async (req, res) => {
     res.status(200).send("Correo enviado con éxito");
   });
 };
+
+export default handler;

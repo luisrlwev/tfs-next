@@ -1,11 +1,9 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
-}
-
-module.exports = {
-  nextConfig,
   images: {
     domains: ['tulumfromskyrealtors.com'],
-  }
-}
+  },
+};
+
+module.exports = nextConfig;
