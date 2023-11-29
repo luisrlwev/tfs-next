@@ -1,14 +1,16 @@
 import nodemailer from 'nodemailer';
 
 const handler = async (req, res) => {
-  const { nombre, email, tel, mensaje, condiciones } = req.body;
+  try {
+  // Tu lógica de envío de correo...
+  const { nombre, email, tel, mensaje, condiciones, fechaEnvio, horaEnvio, paginaEnvio } = req.body;
 
   // Configura el transporte de Nodemailer
   let transporter = nodemailer.createTransport({
     // Configuración del transporte (usar SMTP, por ejemplo)
-    host: "smtp.gmail.com",
-    port: 587,
-    secure: false, // true para 465, false para otros puertos
+    host: "smtp.hostinger.com",
+    port: 465,
+    secure: true, // true para 465, false para otros puertos
     auth: {
     user: process.env.EMAIL_USER, // Tu dirección de correo
     pass: process.env.EMAIL_PASSWORD, // Tu contraseña de correo
@@ -20,17 +22,22 @@ const handler = async (req, res) => {
     from: process.env.EMAIL_FROM,
     to: process.env.EMAIL_TO,
     subject: 'Formulario TFS',
-    text: `Nombre: ${nombre}\nEmail: ${email}\nTeléfono: ${tel}\nMensaje: ${mensaje}\nCondiciones Aceptadas: ${condiciones}`,
+    text: `Nombre: ${nombre}\nEmail: ${email}\nTeléfono: ${tel}\nMensaje: ${mensaje}\nCondiciones Aceptadas: ${condiciones}\n----------\nFecha de envio: ${fechaEnvio}\nHora de envio: ${horaEnvio}\nPágina de envio: ${paginaEnvio}`,
     // Puedes usar `html` para formatear tu mensaje si lo prefieres
   };
 
   // Envía el correo
   transporter.sendMail(mailOptions, (error, info) => {
     if (error) {
-      return res.status(500).send("Error al enviar el correo: " + error.message);
+      console.error("Error al enviar el correo: ", error);
+      return res.status(500).json({ error: "Error al enviar el correo", details: error.message });
     }
-    res.status(200).send("Correo enviado con éxito");
+    res.status(200).json({ message: "Correo enviado con éxito" });
   });
+  } catch (error) {
+    console.error("Error en el servidor:", error);
+    return res.status(500).json({ error: "Error interno del servidor" });
+  }
 };
 
 export default handler;
