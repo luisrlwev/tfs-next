@@ -4,10 +4,6 @@ import Image from "next/image";
 import { FaXmark } from "react-icons/fa6";
 
 export default function Formulario({ show, onClose }) {
-    if (!show) {
-        return null;
-    }
-
   const [nombre, setNombre] = useState('');
   const [email, setEmail] = useState('');
   const [tel, setTel] = useState('');
@@ -33,6 +29,10 @@ export default function Formulario({ show, onClose }) {
       console.error("Hubo un error al enviar el correo: ", error);
     }
   };
+
+  if (!show) {
+    return null;
+  }
 
   return (
     <div className="fixed inset-0 bg-black bg-opacity-50 overflow-y-auto h-full w-full z-40" onClick={onClose}>
