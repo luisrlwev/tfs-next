@@ -103,7 +103,7 @@ export default function Formulario({ show, onClose }) {
                   <textarea name="mensaje" id="mensaje" cols="30" rows="1" placeholder="¿Qué tipo de propiedad buscas?" className="w-full rounded-md bg-decimo text-secondary placeholder:text-gray-600 p-3" value={mensaje} onChange={(e) => setMensaje(e.target.value)} required></textarea>
                 </div>
                 <div className="col-span-1 text-secondary">
-                  <input type="checkbox" name="condiciones" id="condiciones" checked={condiciones} onChange={handleCheckboxChange} required/> Acepto los <Link href="/aviso-de-privacidad" target="_blank" className="text-tfs hover">términos y condiciones</Link>
+                  <input type="checkbox" name="condiciones" id="condiciones" checked={condiciones} onChange={handleCheckboxChange} required/> Acepto los <Link href="/aviso-de-privacidad" className="text-tfs hover">términos y condiciones</Link>
                 </div>
                 {/* Campos ocultos */}
                 <div className='hidden'>
