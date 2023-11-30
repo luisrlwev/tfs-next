@@ -3,12 +3,7 @@ import nodemailer from 'nodemailer';
 const handler = async (req, res) => {
   try {
   // Tu lógica de envío de correo...
-  const { nombre, email, tel, mensaje, condiciones, fechaEnvio, horaEnvio, paginaEnvio, formularioOrigen } = req.body;
-
-  let subjectLine = 'Formulario TFS';
-  if (formularioOrigen) {
-    subjectLine = `Formulario - ${formularioOrigen}`;
-  }
+  const { nombre, apellido, email, tel, estado, ciudad, mensaje, condiciones, fechaEnvio, horaEnvio, paginaEnvio } = req.body;
 
   // Configura el transporte de Nodemailer
   let transporter = nodemailer.createTransport({
@@ -26,8 +21,8 @@ const handler = async (req, res) => {
   let mailOptions = {
     from: process.env.EMAIL_FROM,
     to: process.env.EMAIL_TO,
-    subject: subjectLine,
-    text: `Nombre: ${nombre}\nEmail: ${email}\nTeléfono: ${tel}\nMensaje: ${mensaje}\nCondiciones Aceptadas: ${condiciones}\n----------\nFecha de envio: ${fechaEnvio}\nHora de envio: ${horaEnvio}\nPágina de envio: ${paginaEnvio}`,
+    subject: "Formulario - Franquicias",
+    text: `Nombre: ${nombre} ${apellido}\nEmail: ${email}\nTeléfono: ${tel}\nEstado: ${estado}\nCiudad: ${ciudad}\nMensaje: ${mensaje}\nCondiciones Aceptadas: ${condiciones}\n----------\nFecha de envio: ${fechaEnvio}\nHora de envio: ${horaEnvio}\nPágina de envio: ${paginaEnvio}`,
     // Puedes usar `html` para formatear tu mensaje si lo prefieres
   };
 

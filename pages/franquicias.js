@@ -1,3 +1,4 @@
+import React, { useState, useEffect } from 'react';
 import Link from "next/link";
 import Layout from "@/components/layout";
 import Image from "next/image";
@@ -8,6 +9,87 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 
 export default function Franquicias() {
+  // Campos formulario
+  const [nombre, setNombre] = useState('');
+  const [apellido, setApellido] = useState('');
+  const [email, setEmail] = useState('');
+  const [tel, setTel] = useState('');
+  const [estado, setEstado] = useState('');
+  const [ciudad, setCiudad] = useState('');
+  const [mensaje, setMensaje] = useState('');
+  const [condiciones, setCondiciones] = useState(true);
+  // campos ocultos
+  const [fechaEnvio, setFechaEnvio] = useState('');
+  const [horaEnvio, setHoraEnvio] = useState('');
+  const [paginaEnvio, setPaginaEnvio] = useState('');
+  // Mensaje de éxito
+  const [mensajeRespuesta, setMensajeRespuesta] = useState('');
+  const [esExito, setEsExito] = useState(false);
+  // Estado del boton de envio
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
+  useEffect(() => {
+    const fechaActual = new Date();
+    setFechaEnvio(fechaActual.toLocaleDateString());
+    setHoraEnvio(fechaActual.toLocaleTimeString());
+    setPaginaEnvio(window.location.href);
+  }, []);
+
+  // Controlador para el cambio en el checkbox
+  const handleCheckboxChange = (e) => {
+    setCondiciones(e.target.checked);
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    // Deshabilitar el botón de envío y limpiar el formulario inmediatamente
+    setIsSubmitting(true);
+    setNombre('');
+    setApellido('');
+    setEmail('');
+    setTel('');
+    setEstado('');
+    setCiudad('');
+    setMensaje('');
+    setCondiciones(true); // o false, dependiendo de tu caso
+
+    try {
+      const respuesta = await fetch('/api/franquicias', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ nombre, apellido, email, tel, estado, ciudad, mensaje, condiciones, fechaEnvio, horaEnvio, paginaEnvio }),
+      });
+      if (respuesta.ok) {
+        console.log("Correo enviado con éxito");
+        // Respuesta exitosa y como limpiar el formulario o mostrar un mensaje
+        setMensajeRespuesta("Formulario enviado con éxito.");
+        setEsExito(true);
+        // Limpiar el formulario restableciendo el estado de cada campo
+        setNombre('');
+        setApellido('');
+        setEmail('');
+        setTel('');
+        setEstado('');
+        setCiudad('');
+        setMensaje('');
+        setCondiciones(true);
+      } else {
+        console.log("Error al enviar el correo");
+        // Manejar errores
+        setMensajeRespuesta("Ha ocurrido un error al enviar el formulario.");
+        setEsExito(false);
+      }
+    } catch (error) {
+      console.error("Hubo un error al enviar el correo: ", error);
+    }
+
+    finally {
+      // Habilitar el botón de envío nuevamente
+      setIsSubmitting(false);
+    }
+  };
+
   return (
     <Layout
       title={"Franquicias"}
@@ -353,27 +435,27 @@ export default function Franquicias() {
         <div className="container mx-auto">
           <h3 className="uppercase letter-spacing-25 font-bold text-center text-2xl pb-5 max-lg:pb-0 max-lg:text-base">Únete a la familia de <span className="max-lg:hidden">franquicias de tulumfromsky</span></h3>
           <p className="uppercase letter-spacing-25 text-center pb-24 max-lg:pb-5">Franquicias de Tulumfromsky</p>
-          <form className="px-36 max-lg:px-3">
+          <form className="px-36 max-lg:px-3" onSubmit={handleSubmit}>
               <div className="grid grid-cols-2 gap-3">
                 <div className="col-span-1 max-lg:col-span-2">
                   <label htmlFor="nombre">Nombre <span className="text-red-600">*</span></label>
-                  <input type="text" name="nombre" id="nombre" placeholder="Escribe tu nombre" className="w-full rounded-md bg-decimo text-secondary p-3" required/>
+                  <input type="text" name="nombre" id="nombre" placeholder="Escribe tu nombre" className="w-full rounded-md bg-decimo text-secondary p-3" value={nombre} onChange={(e) => setNombre(e.target.value)} required/>
                 </div>
                 <div className="col-span-1 max-lg:col-span-2">
                   <label htmlFor="apellido">Apellido <span className="text-red-600">*</span></label>
-                  <input type="text" name="apellido" id="apellido" placeholder="Escribe tu apellido" className="w-full rounded-md bg-decimo text-secondary p-3" required/>
+                  <input type="text" name="apellido" id="apellido" placeholder="Escribe tu apellido" className="w-full rounded-md bg-decimo text-secondary p-3" value={apellido} onChange={(e) => setApellido(e.target.value)} required/>
                 </div>
                 <div className="col-span-1 max-lg:col-span-2">
                   <label htmlFor="tel">Número de teléfono <span className="text-red-600">*</span></label>
-                  <input type="tel" name="tel" id="tel" placeholder="Escribe tu teléfono" className="w-full rounded-md bg-decimo text-secondary p-3" required/>
+                  <input type="tel" name="tel" id="tel" placeholder="Escribe tu teléfono" className="w-full rounded-md bg-decimo text-secondary p-3" value={tel} onChange={(e) => setTel(e.target.value)} required/>
                 </div>
                 <div className="col-span-1 max-lg:col-span-2">
                   <label htmlFor="email">Correo electrónico <span className="text-red-600">*</span></label>
-                  <input type="email" name="email" id="email" placeholder="Escribe tu correo" className="w-full rounded-md bg-decimo text-secondary p-3" required/>
+                  <input type="email" name="email" id="email" placeholder="Escribe tu correo" className="w-full rounded-md bg-decimo text-secondary p-3" value={email} onChange={(e) => setEmail(e.target.value)} required/>
                 </div>
                 <div className="col-span-1 max-lg:col-span-2">
                   <label htmlFor="estado">Estado de interés <span className="text-red-600">*</span></label>
-                  <select name="estado" id="estado" className="w-full rounded-md bg-decimo text-secondary p-3" required>
+                  <select name="estado" id="estado" className="w-full rounded-md bg-decimo text-secondary p-3" value={estado} onChange={(e) => setEstado(e.target.value)} required>
                     <option value="Aguascalientes">Aguascalientes</option>
                     <option value="Baja California">Baja California</option>
                     <option value="Baja California Sur">Baja California Sur</option>
@@ -410,20 +492,31 @@ export default function Franquicias() {
                 </div>
                 <div className="col-span-1 max-lg:col-span-2">
                   <label htmlFor="ciudad">Ciudad de interés <span className="text-red-600">*</span></label>
-                  <input type="text" name="ciudad" id="ciudad" placeholder="Escribe la ciudad" className="w-full rounded-md bg-decimo text-secondary p-3" required/>
+                  <input type="text" name="ciudad" id="ciudad" placeholder="Escribe la ciudad" className="w-full rounded-md bg-decimo text-secondary p-3" value={ciudad} onChange={(e) => setCiudad(e.target.value)} required/>
                 </div>
                 <div className="col-span-2">
                   <label htmlFor="mensaje">Mensaje</label>
-                  <textarea name="mensaje" id="mensaje" cols="30" rows="3" placeholder="¡Cuéntanos que te motiva a ser parte de nuestro equipo!" className="w-full rounded-md bg-decimo text-secondary p-3"></textarea>
+                  <textarea name="mensaje" id="mensaje" cols="30" rows="3" placeholder="¡Cuéntanos que te motiva a ser parte de nuestro equipo!" className="w-full rounded-md bg-decimo text-secondary p-3" value={mensaje} onChange={(e) => setMensaje(e.target.value)}></textarea>
                 </div>
                 <div className="col-span-2 max-lg:text-sm">
-                  <input type="checkbox" name="condiciones" id="condiciones" required/> Al marcar la casilla y hacer clic en el botón &apos;Enviar&apos;, confirmo que he leído y acepto el <Link href="/aviso-de-privacidad" target="_blank" className="text-tfs hover">Aviso de privacidad</Link>. <span className="text-red-600">*</span>
+                  <input type="checkbox" name="condiciones" id="condiciones" checked={condiciones} onChange={handleCheckboxChange} required/> Al marcar la casilla y hacer clic en el botón &apos;Enviar&apos;, confirmo que he leído y acepto el <Link href="/aviso-de-privacidad" target="_blank" className="text-tfs hover">Aviso de privacidad</Link>. <span className="text-red-600">*</span>
+                </div>
+                {/* Campos ocultos */}
+                <div className='hidden'>
+                  <input type="hidden" name="fechaEnvio" value={fechaEnvio} />
+                  <input type="hidden" name="horaEnvio" value={horaEnvio} />
+                  <input type="hidden" name="paginaEnvio" value={paginaEnvio} />
                 </div>
                 <div className="col-span-2 pb-6">
                   <p><span className="text-red-600">*</span> Campos obligatorios.</p>
                 </div>
                 <div className="col-span-2 text-center">
-                  <input type="submit" name="" id="" className="py-3 px-32 bg-tfs uppercase text-white font-bold letter-spacing-25 rounded-md hover-bg cursor-pointer"/>
+                  {mensajeRespuesta && (
+                    <p className={`${esExito ? "text-green-600" : "text-red-600"} pb-2`}>
+                      {mensajeRespuesta}
+                    </p>
+                  )}
+                  <input type="submit" name="submit" id="submit" disabled={isSubmitting} className="py-3 px-32 bg-tfs uppercase text-white font-bold letter-spacing-25 rounded-md hover-bg cursor-pointer"/>
                 </div>
               </div>
           </form>

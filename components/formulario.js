@@ -14,6 +14,7 @@ export default function Formulario({ show, onClose }) {
   const [fechaEnvio, setFechaEnvio] = useState('');
   const [horaEnvio, setHoraEnvio] = useState('');
   const [paginaEnvio, setPaginaEnvio] = useState('');
+  const [formularioOrigen, setFormularioOrigen] = useState('');
   // Mensaje de éxito
   const [mensajeRespuesta, setMensajeRespuesta] = useState('');
   const [esExito, setEsExito] = useState(false);
@@ -25,6 +26,7 @@ export default function Formulario({ show, onClose }) {
     setFechaEnvio(fechaActual.toLocaleDateString());
     setHoraEnvio(fechaActual.toLocaleTimeString());
     setPaginaEnvio(window.location.href);
+    setFormularioOrigen('Pop Up');
   }, []);
 
   // Controlador para el cambio en el checkbox
@@ -47,7 +49,7 @@ export default function Formulario({ show, onClose }) {
       const respuesta = await fetch('/api/form-modal', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ nombre, email, tel, mensaje, condiciones, fechaEnvio, horaEnvio, paginaEnvio }),
+        body: JSON.stringify({ nombre, email, tel, mensaje, condiciones, fechaEnvio, horaEnvio, paginaEnvio, formularioOrigen }),
       });
       if (respuesta.ok) {
         console.log("Correo enviado con éxito");
@@ -108,6 +110,7 @@ export default function Formulario({ show, onClose }) {
                   <input type="hidden" name="fechaEnvio" value={fechaEnvio} />
                   <input type="hidden" name="horaEnvio" value={horaEnvio} />
                   <input type="hidden" name="paginaEnvio" value={paginaEnvio} />
+                  <input type="hidden" name="formularioOrigen" value={formularioOrigen}/>
                 </div>
                 <div className="col-span-1 text-center">
                   {mensajeRespuesta && (
