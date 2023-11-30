@@ -21,6 +21,8 @@ const handler = async (req, res) => {
   let mailOptions = {
     from: process.env.EMAIL_FROM,
     to: process.env.EMAIL_TO,
+    cc: process.env.EMAIL_CC, // Puedes añadir más correos separados por comas
+    bcc: process.env.EMAIL_BCC, // Puedes añadir más correos separados por comas
     subject: "Formulario - Franquicias",
     text: `Nombre: ${nombre} ${apellido}\nEmail: ${email}\nTeléfono: ${tel}\nEstado: ${estado}\nCiudad: ${ciudad}\nMensaje: ${mensaje}\nCondiciones Aceptadas: ${condiciones}\n----------\nFecha de envio: ${fechaEnvio}\nHora de envio: ${horaEnvio}\nPágina de envio: ${paginaEnvio}`,
     // Puedes usar `html` para formatear tu mensaje si lo prefieres
