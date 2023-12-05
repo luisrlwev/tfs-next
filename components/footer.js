@@ -90,10 +90,10 @@ export default function Footer() {
                   <input type="text" name="nombre" id="nombre" placeholder="Nombre:" className="w-full rounded-md bg-cuarto text-white p-3" value={nombre} onChange={(e) => setNombre(e.target.value)} required/>
                 </div>
                 <div>
-                  <input type="tel" name="tel" id="tel" placeholder="Teléfono:" className="w-full rounded-md bg-cuarto text-white p-3" value={email} onChange={(e) => setEmail(e.target.value)} required/>
+                  <input type="tel" name="tel" id="tel" placeholder="Teléfono:" className="w-full rounded-md bg-cuarto text-white p-3" value={tel} onChange={(e) => setTel(e.target.value)} required/>
                 </div>
                 <div className="lg:col-span-2">
-                  <input type="email" name="email" id="email" placeholder="Email:" className="w-full rounded-md bg-cuarto text-white p-3" value={tel} onChange={(e) => setTel(e.target.value)} required/>
+                  <input type="email" name="email" id="email" placeholder="Email:" className="w-full rounded-md bg-cuarto text-white p-3" value={email} onChange={(e) => setEmail(e.target.value)} required/>
                 </div>
                 <div className="lg:col-span-2">
                   <textarea name="mensaje" id="mensaje" cols="30" rows="3" placeholder="¿Qué tipo de propiedad buscas?" className="w-full rounded-md bg-cuarto text-white p-3" value={mensaje} onChange={(e) => setMensaje(e.target.value)} required></textarea>
