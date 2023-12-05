@@ -221,11 +221,11 @@ export default function Home() {
             </div>
           </div>
           <div className="grid justify-items-center">
-            <Link href={'/reclutamiento'} className="text-tercero uppercase letter-spacing-25 font-bold bg-tfs py-3 px-12 rounded-md hover-bg">¡Postúlate ahora!</Link>
+            <a href="#form" className="text-tercero uppercase letter-spacing-25 font-bold bg-tfs py-3 px-12 rounded-md hover-bg">¡Postúlate ahora!</a>
           </div>
         </div>
       </div>
-      <section className="py-28 max-lg:py-9">
+      <section className="py-28 max-lg:py-9" id='form'>
         <h3 className="text-center text-tercero uppercase letter-spacing-25 font-bold text-2xl max-lg:text-lg pb-5">Forma parte del equipo</h3>
         <p className="uppercase letter-spacing-25 text-center">Cumple tu sueño y alcanza tu máximo potencial</p>
         <form onSubmit={handleSubmit} className='flex flex-col items-center pt-24 max-lg:pt-6' encType="multipart/form-data">
@@ -244,7 +244,7 @@ export default function Home() {
             </div>
             <div className='lg:col-span-1'>
               <label htmlFor="curriculum">Mándanos tu CV:</label>
-              <input type="file" name='curriculum' id='curriculum' onChange={handleArchivoChange} className="block w-full text-base text-tercero cursor-pointer file:cursor-pointer file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-base"/>
+              <input type="file" name='curriculum' id='curriculum' onChange={handleArchivoChange} accept=".pdf, .doc, .docx, image/*" className="block w-full text-base text-tercero cursor-pointer file:cursor-pointer file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-base"/>
             </div>
             <div className='lg:col-span-1'>
               <label htmlFor="experiencia" className='block'>¿Cuentas con experiencia? <span className='text-red-600'>*</span></label>

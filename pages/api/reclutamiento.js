@@ -49,12 +49,14 @@ const handler = async (req, res) => {
       text: `Nombre: ${nombre}\nEmail: ${email}\nTeléfono: ${tel}\n¿Cuenta con experiencia?: ${experiencia}\n¿Cuenta con experiencia en bienes raíces?: ${raices}\nNivel de Inglés: ${idioma}\nSucursal a la que aplica: ${sucursal}\nMensaje: ${mensaje}\n----------\nFecha de envio: ${fechaEnvio}\nHora de envio: ${horaEnvio}\nPágina de envio: ${paginaEnvio}`,
     };
 
-    // Añade los attachments si el archivo existe
-    if (curriculum && curriculum.name && curriculum.path) {
+    // Asumiendo que files.curriculum es un arreglo y queremos el primer archivo
+    const curriculumFile = files.curriculum && files.curriculum.length > 0 ? files.curriculum[0] : null;
+
+    if (curriculumFile && curriculumFile.originalFilename && curriculumFile.filepath) {
       mailOptions.attachments = [
         {
-          filename: curriculum.name,
-          path: curriculum.path,
+          filename: curriculumFile.originalFilename,
+          path: curriculumFile.filepath,
         },
       ];
     }
