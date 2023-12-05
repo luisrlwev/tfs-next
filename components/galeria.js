@@ -24,7 +24,7 @@ export default function Galeria() {
     <div className="grid grid-cols-1 md:grid-cols-4 gap-3">
     {images.map((src, index) => (
         <div key={index} className="overflow-hidden shadow-lg relative h-300">
-            <Image src={src} layout="fill" objectFit="cover" alt={`Imagen ${index}`} className="transform hover:scale-110 transition-transform duration-500" />
+            <Image src={src} width={348} height={300} alt={`Imagen ${index}`} className="transform hover:scale-110 transition-transform duration-500 img-full" />
         </div>
     ))}
     </div>
