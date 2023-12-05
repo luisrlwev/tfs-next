@@ -131,7 +131,7 @@ export default function Home() {
             <p>Buscamos personas con liderazgo, ambición y determinación</p>
             <p>para alcanzar el éxito.</p>
             <h2 className="uppercase text-tfs letter-spacing-25 font-bold text-xl text-center pt-60 pb-24">¡Califica para una de<br/>nuestras vacantes!</h2>
-            <a href="#formulario" className="uppercase letter-spacing-25 text-tercero bg-tfs font-bold py-2 px-10 rounded-md">¡Postúlate ahora!</a>
+            <a href="#form" className="uppercase letter-spacing-25 text-tercero bg-tfs font-bold py-2 px-10 rounded-md">¡Postúlate ahora!</a>
         </div>
       </section>
       <section className="bg-header">
