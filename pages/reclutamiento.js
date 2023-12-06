@@ -1,11 +1,15 @@
 import { useState, useEffect } from 'react';
-import Link from "next/link";
 import Image from "next/image";
 import LayoutReclutamiento from "@/components/layout-reclutamiento";
 import Galeria from "@/components/galeria";
-import { FaWhatsapp, FaRegEnvelope, FaFacebookF, FaYoutube, FaInstagram, FaXTwitter, FaPinterestP, FaTiktok, FaLinkedinIn } from "react-icons/fa6";
+import { FaFacebookF, FaYoutube, FaInstagram, FaXTwitter, FaPinterestP, FaTiktok, FaLinkedinIn } from "react-icons/fa6";
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Autoplay, Navigation } from 'swiper/modules';
+// Import Swiper styles
+import 'swiper/css';
+import 'swiper/css/navigation';
 
-export default function Home() {
+export default function Reclutamiento() {
   // Campos formulario
   const [nombre, setNombre] = useState('');
   const [email, setEmail] = useState('');
@@ -116,6 +120,28 @@ export default function Home() {
     }
   };
 
+  const slides = [
+    { src: '/img/reclutamiento/slide-reclutamiento-1.jpg', text: 'Herramientas financieras' },
+    { src: '/img/reclutamiento/slide-reclutamiento-2.jpg', text: '' },
+    { src: '/img/reclutamiento/slide-reclutamiento-3.jpg', text: 'Crecimiento' },
+    { src: '/img/reclutamiento/slide-reclutamiento-4.jpg', text: '' },
+    { src: '/img/reclutamiento/slide-reclutamiento-5.jpg', text: 'Capacitación constante' },
+    { src: '/img/reclutamiento/slide-reclutamiento-6.jpg', text: '' },
+    { src: '/img/reclutamiento/slide-reclutamiento-7.jpg', text: 'Innovación' },
+    { src: '/img/reclutamiento/slide-reclutamiento-8.jpg', text: '' },
+  ];
+
+  const slidesDos = [
+    { src: '/img/reclutamiento/slide-reclutamiento-9.jpg', text: '' },
+    { src: '/img/reclutamiento/slide-reclutamiento-10.jpg', text: 'Unidad' },
+    { src: '/img/reclutamiento/slide-reclutamiento-11.jpg', text: '' },
+    { src: '/img/reclutamiento/slide-reclutamiento-12.jpg', text: 'El mejor equipo' },
+    { src: '/img/reclutamiento/slide-reclutamiento-13.jpg', text: '' },
+    { src: '/img/reclutamiento/slide-reclutamiento-14.jpg', text: 'Desarrollos exclusivos' },
+    { src: '/img/reclutamiento/slide-reclutamiento-15.jpg', text: '' },
+    { src: '/img/reclutamiento/slide-reclutamiento-16.jpg', text: 'Clientes potenciales' },
+  ];
+
   return (
     <LayoutReclutamiento
       title={"Reclutamiento"}
@@ -139,7 +165,54 @@ export default function Home() {
             <h3 className="uppercase text-white letter-spacing-25 font-bold text-3xl text-center pb-5 max-lg:hidden">Es tu momento de crecer</h3>
             <h3 className="uppercase text-white letter-spacing-25 font-bold text-base text-center pb-5 lg:hidden">Asesores inmobiliarios</h3>
             <p className="text-white letter-spacing-25 uppercase text-center lg:pb-16 max-lg:pb-20">¿Qué te ofrecemos?</p>
-            <Galeria/>
+            <div className="max-lg:hidden">
+              <Galeria/>
+            </div>
+            <div className='lg:hidden pb-5'>
+              <Swiper
+                slidesPerView={1}
+                autoplay={{
+                  delay: 5000,
+                  disableOnInteraction: false,
+                }}
+                modules={[Autoplay, Navigation]}
+                loop={true}
+                className="pb-6"
+              >
+                {slides.map((slide, index) => (
+                  <SwiperSlide key={index}>
+                    <div className="relative">
+                      <Image src={slide.src} width={425} height={425} className="h-full object-cover" alt="Reclutamiento TFS" />
+                      <p className="absolute bottom-5 left-0 w-full flex items-end justify-center bg-cinta text-white text-base uppercase letter-spacing-25 font-bold">
+                        {slide.text}
+                      </p>
+                    </div>
+                  </SwiperSlide>
+                ))}
+              </Swiper>
+            </div>
+            <div className='lg:hidden'>
+              <Swiper
+                slidesPerView={1}
+                autoplay={{
+                  delay: 5000,
+                  disableOnInteraction: false,
+                }}
+                modules={[Autoplay, Navigation]}
+                loop={true}
+              >
+                {slidesDos.map((slide, index) => (
+                  <SwiperSlide key={index}>
+                    <div className="relative">
+                      <Image src={slide.src} width={425} height={425} className="h-full object-cover" alt="Reclutamiento TFS" />
+                      <p className="absolute bottom-5 left-0 w-full flex items-end justify-center bg-cinta text-white text-base uppercase letter-spacing-25 font-bold">
+                        {slide.text}
+                      </p>
+                    </div>
+                  </SwiperSlide>
+                ))}
+              </Swiper>
+            </div>
             <div className="flex justify-center text-tfs text-2xl gap-4 pt-11">
               <a href="https://www.youtube.com/@tulumfromskyrealtors5181" target="_blank"><FaYoutube className="hover"/></a>
               <a href="https://www.facebook.com/tulumfromskyrealtors/" target="_blank"><FaFacebookF className="hover"/></a>
@@ -154,7 +227,7 @@ export default function Home() {
             </div>
         </div>
       </section>
-      <div className="portada-nosotros-final">
+      <div className="portada-nosotros-final relative">
         <div className="overlay-nosotros-final h-full w-full absolute">
         </div>
         <div className="container mx-auto portada-video-final-nosotros relative text-white">
