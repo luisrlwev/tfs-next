@@ -55,12 +55,54 @@ export default function Cabos() {
               className="mySwiper cursor-pointer"
               onClick={abrirModal}
             >
-              <SwiperSlide><Image src={'/img/cabos/los-cabos-entrega-inmediata-1.jpg'} width={800} height={407} className="h-full object-cover" alt="Entrega inmediata"/></SwiperSlide>
-              <SwiperSlide><Image src={'/img/cabos/los-cabos-entrega-inmediata-2.jpg'} width={800} height={407} className="h-full object-cover" alt="Entrega inmediata"/></SwiperSlide>
-              <SwiperSlide><Image src={'/img/cabos/los-cabos-entrega-inmediata-3.jpg'} width={800} height={407} className="h-full object-cover" alt="Entrega inmediata"/></SwiperSlide>
-              <SwiperSlide><Image src={'/img/cabos/los-cabos-entrega-inmediata-4.jpg'} width={800} height={407} className="h-full object-cover" alt="Entrega inmediata"/></SwiperSlide>
-              <SwiperSlide><Image src={'/img/cabos/los-cabos-entrega-inmediata-5.jpg'} width={800} height={407} className="h-full object-cover" alt="Entrega inmediata"/></SwiperSlide>
-              <SwiperSlide><Image src={'/img/cabos/los-cabos-entrega-inmediata-6.jpg'} width={800} height={407} className="h-full object-cover" alt="Entrega inmediata"/></SwiperSlide>
+              <SwiperSlide>
+                <div className="relative h-full">
+                  <Image src={'/img/cabos/los-cabos-entrega-inmediata-1.jpg'} width={800} height={407} className="h-full object-cover" alt="Entrega inmediata"/>
+                  <div className="absolute left-0 w-full flex items-end justify-center bottom-4 animate-fade-up animate-once animate-normal">
+                    <Boton/>
+                  </div>
+                </div>
+              </SwiperSlide>
+              <SwiperSlide>
+                <div className="relative h-full">
+                  <Image src={'/img/cabos/los-cabos-entrega-inmediata-2.jpg'} width={800} height={407} className="h-full object-cover" alt="Entrega inmediata"/>
+                  <div className="absolute left-0 w-full flex items-end justify-center bottom-4 animate-fade-up animate-once animate-normal">
+                    <Boton/>
+                  </div>
+                </div>
+              </SwiperSlide>
+              <SwiperSlide>
+                <div className="relative h-full">
+                  <Image src={'/img/cabos/los-cabos-entrega-inmediata-3.jpg'} width={800} height={407} className="h-full object-cover" alt="Entrega inmediata"/>
+                  <div className="absolute left-0 w-full flex items-end justify-center bottom-4 animate-fade-up animate-once animate-normal">
+                    <Boton/>
+                  </div>
+                </div>
+              </SwiperSlide>
+              <SwiperSlide>
+                <div className="relative h-full">
+                  <Image src={'/img/cabos/los-cabos-entrega-inmediata-4.jpg'} width={800} height={407} className="h-full object-cover" alt="Entrega inmediata"/>
+                  <div className="absolute left-0 w-full flex items-end justify-center bottom-4 animate-fade-up animate-once animate-normal">
+                    <Boton/>
+                  </div>
+                </div>
+              </SwiperSlide>
+              <SwiperSlide>
+                <div className="relative h-full">
+                  <Image src={'/img/cabos/los-cabos-entrega-inmediata-5.jpg'} width={800} height={407} className="h-full object-cover" alt="Entrega inmediata"/>
+                  <div className="absolute left-0 w-full flex items-end justify-center bottom-4 animate-fade-up animate-once animate-normal">
+                    <Boton/>
+                  </div>
+                </div>
+              </SwiperSlide>
+              <SwiperSlide>
+                <div className="relative h-full">
+                  <Image src={'/img/cabos/los-cabos-entrega-inmediata-6.jpg'} width={800} height={407} className="h-full object-cover" alt="Entrega inmediata"/>
+                  <div className="absolute left-0 w-full flex items-end justify-center bottom-4 animate-fade-up animate-once animate-normal">
+                    <Boton/>
+                  </div>
+                </div>
+              </SwiperSlide>
             </Swiper>
             <p className="py-5 px-7 bg-text max-lg:text-sm">Lujo, arquitectura y diseño.</p>
           </div>
@@ -82,12 +124,54 @@ export default function Cabos() {
               className="mySwiper cursor-pointer"
               onClick={abrirModal}
             >
-              <SwiperSlide><Image src={'/img/cabos/los-cabos-residencias-frente-al-mar-1.jpg'} width={800} height={407} className="h-full object-cover" alt="Residenciales frente al mar"/></SwiperSlide>
-              <SwiperSlide><Image src={'/img/cabos/los-cabos-residencias-frente-al-mar-2.jpg'} width={800} height={407} className="h-full object-cover" alt="Residenciales frente al mar"/></SwiperSlide>
-              <SwiperSlide><Image src={'/img/cabos/los-cabos-residencias-frente-al-mar-3.jpg'} width={800} height={407} className="h-full object-cover" alt="Residenciales frente al mar"/></SwiperSlide>
-              <SwiperSlide><Image src={'/img/cabos/los-cabos-residencias-frente-al-mar-4.jpg'} width={800} height={407} className="h-full object-cover" alt="Residenciales frente al mar"/></SwiperSlide>
-              <SwiperSlide><Image src={'/img/cabos/los-cabos-residencias-frente-al-mar-5.jpg'} width={800} height={407} className="h-full object-cover" alt="Residenciales frente al mar"/></SwiperSlide>
-              <SwiperSlide><Image src={'/img/cabos/los-cabos-residencias-frente-al-mar-6.jpg'} width={800} height={407} className="h-full object-cover" alt="Residenciales frente al mar"/></SwiperSlide>
+              <SwiperSlide>
+                <div className="relative h-full">
+                  <Image src={'/img/cabos/los-cabos-residencias-frente-al-mar-1.jpg'} width={800} height={407} className="h-full object-cover" alt="Residenciales frente al mar"/>
+                  <div className="absolute left-0 w-full flex items-end justify-center bottom-4 animate-fade-up animate-once animate-normal">
+                    <Boton/>
+                  </div>
+                </div>
+              </SwiperSlide>
+              <SwiperSlide>
+                <div className="relative h-full">
+                  <Image src={'/img/cabos/los-cabos-residencias-frente-al-mar-2.jpg'} width={800} height={407} className="h-full object-cover" alt="Residenciales frente al mar"/>
+                  <div className="absolute left-0 w-full flex items-end justify-center bottom-4 animate-fade-up animate-once animate-normal">
+                    <Boton/>
+                  </div>
+                </div>
+              </SwiperSlide>
+              <SwiperSlide>
+                <div className="relative h-full">
+                  <Image src={'/img/cabos/los-cabos-residencias-frente-al-mar-3.jpg'} width={800} height={407} className="h-full object-cover" alt="Residenciales frente al mar"/>
+                  <div className="absolute left-0 w-full flex items-end justify-center bottom-4 animate-fade-up animate-once animate-normal">
+                    <Boton/>
+                  </div>
+                </div>
+              </SwiperSlide>
+              <SwiperSlide>
+                <div className="relative h-full">
+                  <Image src={'/img/cabos/los-cabos-residencias-frente-al-mar-4.jpg'} width={800} height={407} className="h-full object-cover" alt="Residenciales frente al mar"/>
+                  <div className="absolute left-0 w-full flex items-end justify-center bottom-4 animate-fade-up animate-once animate-normal">
+                    <Boton/>
+                  </div>
+                </div>
+              </SwiperSlide>
+              <SwiperSlide>
+                <div className="relative h-full">
+                  <Image src={'/img/cabos/los-cabos-residencias-frente-al-mar-5.jpg'} width={800} height={407} className="h-full object-cover" alt="Residenciales frente al mar"/>
+                  <div className="absolute left-0 w-full flex items-end justify-center bottom-4 animate-fade-up animate-once animate-normal">
+                    <Boton/>
+                  </div>
+                </div>
+              </SwiperSlide>
+              <SwiperSlide>
+                <div className="relative h-full">
+                  <Image src={'/img/cabos/los-cabos-residencias-frente-al-mar-6.jpg'} width={800} height={407} className="h-full object-cover" alt="Residenciales frente al mar"/>
+                  <div className="absolute left-0 w-full flex items-end justify-center bottom-4 animate-fade-up animate-once animate-normal">
+                    <Boton/>
+                  </div>
+                </div>
+              </SwiperSlide>
             </Swiper>
             <p className="py-5 px-7 bg-text max-lg:text-sm">Private Golf & Beach Club.</p>
           </div>

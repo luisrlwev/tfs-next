@@ -58,12 +58,54 @@ export default function Departamentos() {
               className="mySwiper cursor-pointer"
               onClick={abrirModal}
             >
-              <SwiperSlide><Image src={'/img/departamentos/depas-el-mejor-precio-1.jpg'} width={800} height={407} className="h-full object-cover" alt="El mejor precio por metro cuadrado"/></SwiperSlide>
-              <SwiperSlide><Image src={'/img/departamentos/depas-el-mejor-precio-2.jpg'} width={800} height={407} className="h-full object-cover" alt="El mejor precio por metro cuadrado"/></SwiperSlide>
-              <SwiperSlide><Image src={'/img/departamentos/depas-el-mejor-precio-3.jpg'} width={800} height={407} className="h-full object-cover" alt="El mejor precio por metro cuadrado"/></SwiperSlide>
-              <SwiperSlide><Image src={'/img/departamentos/depas-el-mejor-precio-4.jpg'} width={800} height={407} className="h-full object-cover" alt="El mejor precio por metro cuadrado"/></SwiperSlide>
-              <SwiperSlide><Image src={'/img/departamentos/depas-el-mejor-precio-5.jpg'} width={800} height={407} className="h-full object-cover" alt="El mejor precio por metro cuadrado"/></SwiperSlide>
-              <SwiperSlide><Image src={'/img/departamentos/depas-el-mejor-precio-6.jpg'} width={800} height={407} className="h-full object-cover" alt="El mejor precio por metro cuadrado"/></SwiperSlide>
+              <SwiperSlide>
+                <div className="relative h-full">
+                  <Image src={'/img/departamentos/depas-el-mejor-precio-1.jpg'} width={800} height={407} className="h-full object-cover" alt="El mejor precio por metro cuadrado"/>
+                  <div className="absolute left-0 w-full flex items-end justify-center bottom-4 animate-fade-up animate-once animate-normal">
+                    <Boton/>
+                  </div>
+                </div>
+              </SwiperSlide>
+              <SwiperSlide>
+                  <div className="relative h-full">
+                  <Image src={'/img/departamentos/depas-el-mejor-precio-2.jpg'} width={800} height={407} className="h-full object-cover" alt="El mejor precio por metro cuadrado"/>
+                  <div className="absolute left-0 w-full flex items-end justify-center bottom-4 animate-fade-up animate-once animate-normal">
+                    <Boton/>
+                  </div>
+                </div>
+              </SwiperSlide>
+              <SwiperSlide>
+                  <div className="relative h-full">
+                  <Image src={'/img/departamentos/depas-el-mejor-precio-3.jpg'} width={800} height={407} className="h-full object-cover" alt="El mejor precio por metro cuadrado"/>
+                  <div className="absolute left-0 w-full flex items-end justify-center bottom-4 animate-fade-up animate-once animate-normal">
+                    <Boton/>
+                  </div>
+                </div>
+              </SwiperSlide>
+              <SwiperSlide>
+                  <div className="relative h-full">
+                  <Image src={'/img/departamentos/depas-el-mejor-precio-4.jpg'} width={800} height={407} className="h-full object-cover" alt="El mejor precio por metro cuadrado"/>
+                  <div className="absolute left-0 w-full flex items-end justify-center bottom-4 animate-fade-up animate-once animate-normal">
+                    <Boton/>
+                  </div>
+                </div>
+              </SwiperSlide>
+              <SwiperSlide>
+                  <div className="relative h-full">
+                  <Image src={'/img/departamentos/depas-el-mejor-precio-5.jpg'} width={800} height={407} className="h-full object-cover" alt="El mejor precio por metro cuadrado"/>
+                  <div className="absolute left-0 w-full flex items-end justify-center bottom-4 animate-fade-up animate-once animate-normal">
+                    <Boton/>
+                  </div>
+                </div>
+              </SwiperSlide>
+              <SwiperSlide>
+                  <div className="relative h-full">
+                  <Image src={'/img/departamentos/depas-el-mejor-precio-6.jpg'} width={800} height={407} className="h-full object-cover" alt="El mejor precio por metro cuadrado"/>
+                  <div className="absolute left-0 w-full flex items-end justify-center bottom-4 animate-fade-up animate-once animate-normal">
+                    <Boton/>
+                  </div>
+                </div>
+              </SwiperSlide>
             </Swiper>
             <p className="py-5 px-7 bg-text max-lg:text-sm">Disfruta de tu propia terraza, jardin privado y rooftop con su propia alberca privada.</p>
           </div>
@@ -85,12 +127,54 @@ export default function Departamentos() {
               className="mySwiper cursor-pointer"
               onClick={abrirModal}
             >
-              <SwiperSlide><Image src={'/img/departamentos/depas-entrega-inmediata-1.jpg'} width={800} height={407} className="h-full object-cover" alt="El mejor precio por metro cuadrado"/></SwiperSlide>
-              <SwiperSlide><Image src={'/img/departamentos/depas-entrega-inmediata-2.jpg'} width={800} height={407} className="h-full object-cover" alt="El mejor precio por metro cuadrado"/></SwiperSlide>
-              <SwiperSlide><Image src={'/img/departamentos/depas-entrega-inmediata-3.jpg'} width={800} height={407} className="h-full object-cover" alt="El mejor precio por metro cuadrado"/></SwiperSlide>
-              <SwiperSlide><Image src={'/img/departamentos/depas-entrega-inmediata-4.jpg'} width={800} height={407} className="h-full object-cover" alt="El mejor precio por metro cuadrado"/></SwiperSlide>
-              <SwiperSlide><Image src={'/img/departamentos/depas-entrega-inmediata-5.jpg'} width={800} height={407} className="h-full object-cover" alt="El mejor precio por metro cuadrado"/></SwiperSlide>
-              <SwiperSlide><Image src={'/img/departamentos/depas-entrega-inmediata-6.jpg'} width={800} height={407} className="h-full object-cover" alt="El mejor precio por metro cuadrado"/></SwiperSlide>
+              <SwiperSlide>
+                <div className="relative h-full">
+                  <Image src={'/img/departamentos/depas-entrega-inmediata-1.jpg'} width={800} height={407} className="h-full object-cover" alt="El mejor precio por metro cuadrado"/>
+                  <div className="absolute left-0 w-full flex items-end justify-center bottom-4 animate-fade-up animate-once animate-normal">
+                    <Boton/>
+                  </div>
+                </div>
+              </SwiperSlide>
+              <SwiperSlide>
+                <div className="relative h-full">
+                  <Image src={'/img/departamentos/depas-entrega-inmediata-2.jpg'} width={800} height={407} className="h-full object-cover" alt="El mejor precio por metro cuadrado"/>
+                  <div className="absolute left-0 w-full flex items-end justify-center bottom-4 animate-fade-up animate-once animate-normal">
+                    <Boton/>
+                  </div>
+                </div>
+              </SwiperSlide>
+              <SwiperSlide>
+                <div className="relative h-full">
+                  <Image src={'/img/departamentos/depas-entrega-inmediata-3.jpg'} width={800} height={407} className="h-full object-cover" alt="El mejor precio por metro cuadrado"/>
+                  <div className="absolute left-0 w-full flex items-end justify-center bottom-4 animate-fade-up animate-once animate-normal">
+                    <Boton/>
+                  </div>
+                </div>
+              </SwiperSlide>
+              <SwiperSlide>
+                <div className="relative h-full">
+                  <Image src={'/img/departamentos/depas-entrega-inmediata-4.jpg'} width={800} height={407} className="h-full object-cover" alt="El mejor precio por metro cuadrado"/>
+                  <div className="absolute left-0 w-full flex items-end justify-center bottom-4 animate-fade-up animate-once animate-normal">
+                    <Boton/>
+                  </div>
+                </div>
+              </SwiperSlide>
+              <SwiperSlide>
+                <div className="relative h-full">
+                  <Image src={'/img/departamentos/depas-entrega-inmediata-5.jpg'} width={800} height={407} className="h-full object-cover" alt="El mejor precio por metro cuadrado"/>
+                  <div className="absolute left-0 w-full flex items-end justify-center bottom-4 animate-fade-up animate-once animate-normal">
+                    <Boton/>
+                  </div>
+                </div>
+              </SwiperSlide>
+              <SwiperSlide>
+                <div className="relative h-full">
+                  <Image src={'/img/departamentos/depas-entrega-inmediata-6.jpg'} width={800} height={407} className="h-full object-cover" alt="El mejor precio por metro cuadrado"/>
+                  <div className="absolute left-0 w-full flex items-end justify-center bottom-4 animate-fade-up animate-once animate-normal">
+                    <Boton/>
+                  </div>
+                </div>
+              </SwiperSlide>
             </Swiper>
             <p className="py-5 px-7 bg-text max-lg:text-sm">Tu departamento con vista al mar en Cancún.</p>
           </div>

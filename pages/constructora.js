@@ -215,11 +215,46 @@ export default function Constructora() {
               className="mySwiper cursor-pointer"
               onClick={abrirModal}
             >
-              <SwiperSlide><Image src={'/img/construccion/xiik-1.png'} width={800} height={407} className="h-full object-cover" alt="Xiik Tulum"/></SwiperSlide>
-              <SwiperSlide><Image src={'/img/construccion/xiik-2.jpg'} width={800} height={407} className="h-full object-cover" alt="Xiik Tulum"/></SwiperSlide>
-              <SwiperSlide><Image src={'/img/construccion/xiik-3.png'} width={800} height={407} className="h-full object-cover" alt="Xiik Tulum"/></SwiperSlide>
-              <SwiperSlide><Image src={'/img/construccion/xiik-4.png'} width={800} height={407} className="h-full object-cover" alt="Xiik Tulum"/></SwiperSlide>
-              <SwiperSlide><Image src={'/img/construccion/xiik-5.png'} width={800} height={407} className="h-full object-cover" alt="Xiik Tulum"/></SwiperSlide>
+              <SwiperSlide>
+                <div className="relative h-full">
+                  <Image src={'/img/construccion/xiik-1.png'} width={800} height={407} className="h-full object-cover" alt="Xiik Tulum"/>
+                  <div className="absolute left-0 w-full flex items-end justify-center bottom-4 animate-fade-up animate-once animate-normal">
+                    <Boton/>
+                  </div>
+                </div>
+              </SwiperSlide>
+              <SwiperSlide>
+                <div className="relative h-full">
+                  <Image src={'/img/construccion/xiik-2.jpg'} width={800} height={407} className="h-full object-cover" alt="Xiik Tulum"/>
+                  <div className="absolute left-0 w-full flex items-end justify-center bottom-4 animate-fade-up animate-once animate-normal">
+                    <Boton/>
+                  </div>
+                </div>
+              </SwiperSlide>
+              <SwiperSlide>
+                <div className="relative h-full">
+                  <Image src={'/img/construccion/xiik-3.png'} width={800} height={407} className="h-full object-cover" alt="Xiik Tulum"/>
+                  <div className="absolute left-0 w-full flex items-end justify-center bottom-4 animate-fade-up animate-once animate-normal">
+                    <Boton/>
+                  </div>
+                </div>
+              </SwiperSlide>
+              <SwiperSlide>
+                <div className="relative h-full">
+                  <Image src={'/img/construccion/xiik-4.png'} width={800} height={407} className="h-full object-cover" alt="Xiik Tulum"/>
+                  <div className="absolute left-0 w-full flex items-end justify-center bottom-4 animate-fade-up animate-once animate-normal">
+                    <Boton/>
+                  </div>
+                </div>
+              </SwiperSlide>
+              <SwiperSlide>
+                <div className="relative h-full">
+                  <Image src={'/img/construccion/xiik-5.png'} width={800} height={407} className="h-full object-cover" alt="Xiik Tulum"/>
+                  <div className="absolute left-0 w-full flex items-end justify-center bottom-4 animate-fade-up animate-once animate-normal">
+                    <Boton/>
+                  </div>
+                </div>
+              </SwiperSlide>
             </Swiper>
             <p className="py-5 px-7 text-white bg-sexto max-lg:text-sm">30 departamentos de lujo en Tulum.</p>
           </div>
@@ -241,13 +276,62 @@ export default function Constructora() {
               className="mySwiper cursor-pointer"
               onClick={abrirModal}
             >
-              <SwiperSlide><Image src={'/img/construccion/baalam-1.jpg'} width={800} height={407} className="h-full object-cover" alt="Báalam"/></SwiperSlide>
-              <SwiperSlide><Image src={'/img/construccion/baalam-2.jpg'} width={800} height={407} className="h-full object-cover" alt="Báalam"/></SwiperSlide>
-              <SwiperSlide><Image src={'/img/construccion/baalam-3.jpg'} width={800} height={407} className="h-full object-cover" alt="Báalam"/></SwiperSlide>
-              <SwiperSlide><Image src={'/img/construccion/baalam-4.jpg'} width={800} height={407} className="h-full object-cover" alt="Báalam"/></SwiperSlide>
-              <SwiperSlide><Image src={'/img/construccion/baalam-5.jpg'} width={800} height={407} className="h-full object-cover" alt="Báalam"/></SwiperSlide>
-              <SwiperSlide><Image src={'/img/construccion/baalam-6.jpg'} width={800} height={407} className="h-full object-cover" alt="Báalam"/></SwiperSlide>
-              <SwiperSlide><Image src={'/img/construccion/baalam-7.jpg'} width={800} height={407} className="h-full object-cover" alt="Báalam"/></SwiperSlide>
+              <SwiperSlide>
+                <div className="relative h-full">
+                  <Image src={'/img/construccion/baalam-1.jpg'} width={800} height={407} className="h-full object-cover" alt="Báalam"/>
+                  <div className="absolute left-0 w-full flex items-end justify-center bottom-4 animate-fade-up animate-once animate-normal">
+                    <Boton/>
+                  </div>
+                </div>
+              </SwiperSlide>
+              <SwiperSlide>
+                <div className="relative h-full">
+                  <Image src={'/img/construccion/baalam-2.jpg'} width={800} height={407} className="h-full object-cover" alt="Báalam"/>
+                  <div className="absolute left-0 w-full flex items-end justify-center bottom-4 animate-fade-up animate-once animate-normal">
+                    <Boton/>
+                  </div>
+                </div>
+              </SwiperSlide>
+              <SwiperSlide>
+                <div className="relative h-full">
+                  <Image src={'/img/construccion/baalam-3.jpg'} width={800} height={407} className="h-full object-cover" alt="Báalam"/>
+                  <div className="absolute left-0 w-full flex items-end justify-center bottom-4 animate-fade-up animate-once animate-normal">
+                    <Boton/>
+                  </div>
+                </div>
+              </SwiperSlide>
+              <SwiperSlide>
+                <div className="relative h-full">
+                  <Image src={'/img/construccion/baalam-4.jpg'} width={800} height={407} className="h-full object-cover" alt="Báalam"/>
+                  <div className="absolute left-0 w-full flex items-end justify-center bottom-4 animate-fade-up animate-once animate-normal">
+                    <Boton/>
+                  </div>
+                </div>
+              </SwiperSlide>
+              <SwiperSlide>
+                <div className="relative h-full">
+                  <Image src={'/img/construccion/baalam-5.jpg'} width={800} height={407} className="h-full object-cover" alt="Báalam"/>
+                  <div className="absolute left-0 w-full flex items-end justify-center bottom-4 animate-fade-up animate-once animate-normal">
+                    <Boton/>
+                  </div>
+                </div>
+              </SwiperSlide>
+              <SwiperSlide>
+                <div className="relative h-full">
+                  <Image src={'/img/construccion/baalam-6.jpg'} width={800} height={407} className="h-full object-cover" alt="Báalam"/>
+                  <div className="absolute left-0 w-full flex items-end justify-center bottom-4 animate-fade-up animate-once animate-normal">
+                    <Boton/>
+                  </div>
+                </div>
+              </SwiperSlide>
+              <SwiperSlide>
+                <div className="relative h-full">
+                  <Image src={'/img/construccion/baalam-7.jpg'} width={800} height={407} className="h-full object-cover" alt="Báalam"/>
+                  <div className="absolute left-0 w-full flex items-end justify-center bottom-4 animate-fade-up animate-once animate-normal">
+                    <Boton/>
+                  </div>
+                </div>
+              </SwiperSlide>
             </Swiper>
             <p className="py-5 px-7 text-white bg-sexto max-lg:text-sm">Los mejores Residenciales con campo de Golf y club de playa.</p>
           </div>

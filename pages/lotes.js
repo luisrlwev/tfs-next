@@ -57,10 +57,38 @@ export default function Lotes() {
               className="mySwiper cursor-pointer"
               onClick={abrirModal}
             >
-              <SwiperSlide><Image src={'/img/lotes/lotes-residenciales-1.jpeg'} width={800} height={407} className="h-full object-cover" alt="Lotes residenciales con campo de golf"/></SwiperSlide>
-              <SwiperSlide><Image src={'/img/lotes/lotes-residenciales-2.webp'} width={800} height={407} className="h-full object-cover" alt="Lotes residenciales con campo de golf"/></SwiperSlide>
-              <SwiperSlide><Image src={'/img/lotes/lotes-residenciales-3.webp'} width={800} height={407} className="h-full object-cover" alt="Lotes residenciales con campo de golf"/></SwiperSlide>
-              <SwiperSlide><Image src={'/img/lotes/lotes-residenciales-4.jpeg'} width={800} height={407} className="h-full object-cover" alt="Lotes residenciales con campo de golf"/></SwiperSlide>
+              <SwiperSlide>
+                <div className="relative h-full">
+                  <Image src={'/img/lotes/lotes-residenciales-1.jpeg'} width={800} height={407} className="h-full object-cover" alt="Lotes residenciales con campo de golf"/>
+                  <div className="absolute left-0 w-full flex items-end justify-center bottom-4 animate-fade-up animate-once animate-normal">
+                    <Boton/>
+                  </div>
+                </div>
+              </SwiperSlide>
+              <SwiperSlide>
+                <div className="relative h-full">
+                  <Image src={'/img/lotes/lotes-residenciales-2.webp'} width={800} height={407} className="h-full object-cover" alt="Lotes residenciales con campo de golf"/>
+                  <div className="absolute left-0 w-full flex items-end justify-center bottom-4 animate-fade-up animate-once animate-normal">
+                    <Boton/>
+                  </div>
+                </div>
+              </SwiperSlide>
+              <SwiperSlide>
+                <div className="relative h-full">
+                  <Image src={'/img/lotes/lotes-residenciales-3.webp'} width={800} height={407} className="h-full object-cover" alt="Lotes residenciales con campo de golf"/>
+                  <div className="absolute left-0 w-full flex items-end justify-center bottom-4 animate-fade-up animate-once animate-normal">
+                    <Boton/>
+                  </div>
+                </div>
+              </SwiperSlide>
+              <SwiperSlide>
+                <div className="relative h-full">
+                  <Image src={'/img/lotes/lotes-residenciales-4.jpeg'} width={800} height={407} className="h-full object-cover" alt="Lotes residenciales con campo de golf"/>
+                  <div className="absolute left-0 w-full flex items-end justify-center bottom-4 animate-fade-up animate-once animate-normal">
+                    <Boton/>
+                  </div>
+                </div>
+              </SwiperSlide>
             </Swiper>
             <p className="py-5 px-7 bg-text max-lg:text-sm">Financiamiento hasta 9 años.</p>
           </div>
@@ -82,10 +110,38 @@ export default function Lotes() {
               className="mySwiper cursor-pointer"
               onClick={abrirModal}
             >
-              <SwiperSlide><Image src={'/img/lotes/terrenos-en-el-residencial-1.jpg'} width={800} height={407} className="h-full object-cover" alt="Terrenos en el residencial más exclusivo de Tulum"/></SwiperSlide>
-              <SwiperSlide><Image src={'/img/lotes/terrenos-en-el-residencial-2.jpg'} width={800} height={407} className="h-full object-cover" alt="Terrenos en el residencial más exclusivo de Tulum"/></SwiperSlide>
-              <SwiperSlide><Image src={'/img/lotes/terrenos-en-el-residencial-3.jpg'} width={800} height={407} className="h-full object-cover" alt="Terrenos en el residencial más exclusivo de Tulum"/></SwiperSlide>
-              <SwiperSlide><Image src={'/img/lotes/terrenos-en-el-residencial-4.jpg'} width={800} height={407} className="h-full object-cover" alt="Terrenos en el residencial más exclusivo de Tulum"/></SwiperSlide>
+              <SwiperSlide>
+                <div className="relative h-full">
+                  <Image src={'/img/lotes/terrenos-en-el-residencial-1.jpg'} width={800} height={407} className="h-full object-cover" alt="Terrenos en el residencial más exclusivo de Tulum"/>
+                  <div className="absolute left-0 w-full flex items-end justify-center bottom-4 animate-fade-up animate-once animate-normal">
+                    <Boton/>
+                  </div>
+                </div>
+              </SwiperSlide>
+              <SwiperSlide>
+                <div className="relative h-full">
+                  <Image src={'/img/lotes/terrenos-en-el-residencial-2.jpg'} width={800} height={407} className="h-full object-cover" alt="Terrenos en el residencial más exclusivo de Tulum"/>
+                  <div className="absolute left-0 w-full flex items-end justify-center bottom-4 animate-fade-up animate-once animate-normal">
+                    <Boton/>
+                  </div>
+                </div>
+              </SwiperSlide>
+              <SwiperSlide>
+                <div className="relative h-full">
+                  <Image src={'/img/lotes/terrenos-en-el-residencial-3.jpg'} width={800} height={407} className="h-full object-cover" alt="Terrenos en el residencial más exclusivo de Tulum"/>
+                  <div className="absolute left-0 w-full flex items-end justify-center bottom-4 animate-fade-up animate-once animate-normal">
+                    <Boton/>
+                  </div>
+                </div>
+              </SwiperSlide>
+              <SwiperSlide>
+                <div className="relative h-full">
+                  <Image src={'/img/lotes/terrenos-en-el-residencial-4.jpg'} width={800} height={407} className="h-full object-cover" alt="Terrenos en el residencial más exclusivo de Tulum"/>
+                  <div className="absolute left-0 w-full flex items-end justify-center bottom-4 animate-fade-up animate-once animate-normal">
+                    <Boton/>
+                  </div>
+                </div>
+              </SwiperSlide>
             </Swiper>
             <p className="py-5 px-7 bg-text max-lg:text-sm">Club de playa privado.</p>
           </div>

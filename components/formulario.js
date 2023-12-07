@@ -84,7 +84,7 @@ export default function Formulario({ show, onClose }) {
 
   return (
     <div className="fixed inset-0 bg-black bg-opacity-50 overflow-y-auto h-full w-full z-40" onClick={onClose}>
-      <div className="grid grid-cols-2 max-lg:grid-cols-1 relative top-60 max-lg:top-40 mx-auto p-5 border w-modal shadow-lg bg-modal" onClick={e => e.stopPropagation()}>
+      <div className="grid grid-cols-2 max-lg:grid-cols-1 relative top-40 max-lg:top-10 mx-auto p-5 border w-modal shadow-lg bg-modal" onClick={e => e.stopPropagation()}>
         <button onClick={onClose} className="absolute top-0 right-0 mt-2 mr-2"><FaXmark className="text-2xl text-red-600"/></button>
         <div className="p-4">
             <h2 className='uppercase text-4xl text-secondary font-bold letter-spacing-25 text-center pb-3'>¿Dudas?</h2>
@@ -100,7 +100,7 @@ export default function Formulario({ show, onClose }) {
                   <input type="tel" name="tel" id="tel" placeholder="Teléfono: Ej. +52 984 123 4567" className="w-full rounded-md bg-decimo text-secondary placeholder:text-gray-600 p-3" value={tel} onChange={(e) => setTel(e.target.value)} required/>
                 </div>
                 <div className="col-span-1">
-                  <textarea name="mensaje" id="mensaje" cols="30" rows="1" placeholder="¿Qué tipo de propiedad buscas?" className="w-full rounded-md bg-decimo text-secondary placeholder:text-gray-600 p-3" value={mensaje} onChange={(e) => setMensaje(e.target.value)} required></textarea>
+                  <textarea name="mensaje" id="mensaje" cols="30" rows="2" placeholder="¿Qué tipo de propiedad buscas?" className="w-full rounded-md bg-decimo text-secondary placeholder:text-gray-600 p-3" value={mensaje} onChange={(e) => setMensaje(e.target.value)} required></textarea>
                 </div>
                 <div className="col-span-1 text-secondary">
                   <input type="checkbox" name="condiciones" id="condiciones" checked={condiciones} onChange={handleCheckboxChange} required/> Acepto los <Link href="/aviso-de-privacidad" className="text-tfs hover">términos y condiciones</Link>

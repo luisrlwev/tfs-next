@@ -55,12 +55,54 @@ export default function Merida() {
               className="mySwiper cursor-pointer"
               onClick={abrirModal}
             >
-              <SwiperSlide><Image src={'/img/merida/entrega-inmediata-1.jpg'} width={800} height={407} className="h-full object-cover" alt="Entrega inmediata"/></SwiperSlide>
-              <SwiperSlide><Image src={'/img/merida/entrega-inmediata-2.jpg'} width={800} height={407} className="h-full object-cover" alt="Entrega inmediata"/></SwiperSlide>
-              <SwiperSlide><Image src={'/img/merida/entrega-inmediata-3.jpg'} width={800} height={407} className="h-full object-cover" alt="Entrega inmediata"/></SwiperSlide>
-              <SwiperSlide><Image src={'/img/merida/entrega-inmediata-4.jpeg'} width={800} height={407} className="h-full object-cover" alt="Entrega inmediata"/></SwiperSlide>
-              <SwiperSlide><Image src={'/img/merida/entrega-inmediata-5.jpg'} width={800} height={407} className="h-full object-cover" alt="Entrega inmediata"/></SwiperSlide>
-              <SwiperSlide><Image src={'/img/merida/entrega-inmediata-6.jpg'} width={800} height={407} className="h-full object-cover" alt="Entrega inmediata"/></SwiperSlide>
+              <SwiperSlide>
+                <div className="relative h-full">
+                  <Image src={'/img/merida/entrega-inmediata-1.jpg'} width={800} height={407} className="h-full object-cover" alt="Entrega inmediata"/>
+                  <div className="absolute left-0 w-full flex items-end justify-center bottom-4 animate-fade-up animate-once animate-normal">
+                    <Boton/>
+                  </div>
+                </div>
+              </SwiperSlide>
+              <SwiperSlide>
+                <div className="relative h-full">
+                  <Image src={'/img/merida/entrega-inmediata-2.jpg'} width={800} height={407} className="h-full object-cover" alt="Entrega inmediata"/>
+                  <div className="absolute left-0 w-full flex items-end justify-center bottom-4 animate-fade-up animate-once animate-normal">
+                    <Boton/>
+                  </div>
+                </div>
+              </SwiperSlide>
+              <SwiperSlide>
+                <div className="relative h-full">
+                  <Image src={'/img/merida/entrega-inmediata-3.jpg'} width={800} height={407} className="h-full object-cover" alt="Entrega inmediata"/>
+                  <div className="absolute left-0 w-full flex items-end justify-center bottom-4 animate-fade-up animate-once animate-normal">
+                    <Boton/>
+                  </div>
+                </div>
+              </SwiperSlide>
+              <SwiperSlide>
+                <div className="relative h-full">
+                  <Image src={'/img/merida/entrega-inmediata-4.jpeg'} width={800} height={407} className="h-full object-cover" alt="Entrega inmediata"/>
+                  <div className="absolute left-0 w-full flex items-end justify-center bottom-4 animate-fade-up animate-once animate-normal">
+                    <Boton/>
+                  </div>
+                </div>
+              </SwiperSlide>
+              <SwiperSlide>
+                <div className="relative h-full">
+                  <Image src={'/img/merida/entrega-inmediata-5.jpg'} width={800} height={407} className="h-full object-cover" alt="Entrega inmediata"/>
+                  <div className="absolute left-0 w-full flex items-end justify-center bottom-4 animate-fade-up animate-once animate-normal">
+                    <Boton/>
+                  </div>
+                </div>
+              </SwiperSlide>
+              <SwiperSlide>
+                <div className="relative h-full">
+                  <Image src={'/img/merida/entrega-inmediata-6.jpg'} width={800} height={407} className="h-full object-cover" alt="Entrega inmediata"/>
+                  <div className="absolute left-0 w-full flex items-end justify-center bottom-4 animate-fade-up animate-once animate-normal">
+                    <Boton/>
+                  </div>
+                </div>
+              </SwiperSlide>
             </Swiper>
             <p className="py-5 px-7 bg-text max-lg:text-sm">Espectaculares lagos que se integran en total armonía en la arquitectura moderna.</p>
           </div>
@@ -82,12 +124,54 @@ export default function Merida() {
               className="mySwiper cursor-pointer"
               onClick={abrirModal}
             >
-              <SwiperSlide><Image src={'/img/merida/1-disfruta-la-mejor.png'} width={800} height={407} className="h-full object-cover" alt="Disfruta la mejor vista frente al mar"/></SwiperSlide>
-              <SwiperSlide><Image src={'/img/merida/2-disfruta-la-mejor.png'} width={800} height={407} className="h-full object-cover" alt="Disfruta la mejor vista frente al mar"/></SwiperSlide>
-              <SwiperSlide><Image src={'/img/merida/3-disfruta-la-mejor.png'} width={800} height={407} className="h-full object-cover" alt="Disfruta la mejor vista frente al mar"/></SwiperSlide>
-              <SwiperSlide><Image src={'/img/merida/4-disfruta-la-mejor.png'} width={800} height={407} className="h-full object-cover" alt="Disfruta la mejor vista frente al mar"/></SwiperSlide>
-              <SwiperSlide><Image src={'/img/merida/5-disfruta-la-mejor.jpg'} width={800} height={407} className="h-full object-cover" alt="Disfruta la mejor vista frente al mar"/></SwiperSlide>
-              <SwiperSlide><Image src={'/img/merida/6-disfruta-la-mejor.jpg'} width={800} height={407} className="h-full object-cover" alt="Disfruta la mejor vista frente al mar"/></SwiperSlide>
+              <SwiperSlide>
+                <div className="relative h-full">
+                  <Image src={'/img/merida/1-disfruta-la-mejor.png'} width={800} height={407} className="h-full object-cover" alt="Disfruta la mejor vista frente al mar"/>
+                  <div className="absolute left-0 w-full flex items-end justify-center bottom-4 animate-fade-up animate-once animate-normal">
+                    <Boton/>
+                  </div>
+                </div>
+              </SwiperSlide>
+              <SwiperSlide>
+                <div className="relative h-full">
+                  <Image src={'/img/merida/2-disfruta-la-mejor.png'} width={800} height={407} className="h-full object-cover" alt="Disfruta la mejor vista frente al mar"/>
+                  <div className="absolute left-0 w-full flex items-end justify-center bottom-4 animate-fade-up animate-once animate-normal">
+                    <Boton/>
+                  </div>
+                </div>
+              </SwiperSlide>
+              <SwiperSlide>
+                <div className="relative h-full">
+                  <Image src={'/img/merida/3-disfruta-la-mejor.png'} width={800} height={407} className="h-full object-cover" alt="Disfruta la mejor vista frente al mar"/>
+                  <div className="absolute left-0 w-full flex items-end justify-center bottom-4 animate-fade-up animate-once animate-normal">
+                    <Boton/>
+                  </div>
+                </div>
+              </SwiperSlide>
+              <SwiperSlide>
+                <div className="relative h-full">
+                  <Image src={'/img/merida/4-disfruta-la-mejor.png'} width={800} height={407} className="h-full object-cover" alt="Disfruta la mejor vista frente al mar"/>
+                  <div className="absolute left-0 w-full flex items-end justify-center bottom-4 animate-fade-up animate-once animate-normal">
+                    <Boton/>
+                  </div>
+                </div>
+              </SwiperSlide>
+              <SwiperSlide>
+                <div className="relative h-full">
+                  <Image src={'/img/merida/5-disfruta-la-mejor.jpg'} width={800} height={407} className="h-full object-cover" alt="Disfruta la mejor vista frente al mar"/>
+                  <div className="absolute left-0 w-full flex items-end justify-center bottom-4 animate-fade-up animate-once animate-normal">
+                    <Boton/>
+                  </div>
+                </div>
+              </SwiperSlide>
+              <SwiperSlide>
+                <div className="relative h-full">
+                  <Image src={'/img/merida/6-disfruta-la-mejor.jpg'} width={800} height={407} className="h-full object-cover" alt="Disfruta la mejor vista frente al mar"/>
+                  <div className="absolute left-0 w-full flex items-end justify-center bottom-4 animate-fade-up animate-once animate-normal">
+                    <Boton/>
+                  </div>
+                </div>
+              </SwiperSlide>
             </Swiper>
             <p className="py-5 px-7 bg-text max-lg:text-sm">Frente al mar con increíbles vistas.</p>
           </div>
