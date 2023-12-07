@@ -2,7 +2,9 @@
 const nextConfig = {
   reactStrictMode: true,
   images: {
-    domains: ['tulumfromskyrealtors.com'],
+    remotePatterns: [
+      { protocol: 'https', hostname: 'tulumfromskyrealtors.com' },
+    ],
   },
 };
 
