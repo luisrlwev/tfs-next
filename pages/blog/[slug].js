@@ -1,6 +1,7 @@
 import Layout from "@/components/layout";
 import Categoria from "@/components/categoria";
 import Image from "next/image";
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import { obtenerMensajeComentarios, formatDate, stripHtml } from "@/utils/helpers";
 
 export default function Post({post, categorias}) {
@@ -52,7 +53,7 @@ export default function Post({post, categorias}) {
 }
 
 /* Consultar la API de forma dinamica */
-export async function getServerSideProps({ query: { slug } }) {
+export async function getServerSideProps({ query: { slug }, locale }) {
     const respuesta = await fetch(`${process.env.API_URL_BLOG}/posts?slug=${slug}`);
     const posts = await respuesta.json();
     const post = posts[0]; // Selecciona el primer post del array
@@ -63,7 +64,9 @@ export async function getServerSideProps({ query: { slug } }) {
     return {
         props: {
             post: post || null, // Asegúrate de que 'post' no sea undefined
-            categorias
+            categorias,
+            // Carga y pasa las traducciones necesarias para la página actual y el idioma seleccionado
+            ...(await serverSideTranslations(locale)),
         },
     };
 }

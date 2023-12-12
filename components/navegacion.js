@@ -1,13 +1,17 @@
 import { useRouter } from "next/router";
 import Link from "next/link";
+import { useTranslation } from 'next-i18next'; // Importar useTranslation
 
 export default function Navegacion() {
     const router = useRouter()
+    const { t } = useTranslation(); // Inicializar el hook useTranslation
+    // Depurar la traducción
+    console.log("Traducción de 'departamentos':", t('departamentos'));
   return (
     <>
       <li className="pb-2 lg:py-0">
         <Link href="/departamentos" className={ router.pathname === '/departamentos' ? 'text-tfs' : 'hover'}>
-          Departamentos
+          {t('departamentos')} {/* Usar t para traducir */}
         </Link>
       </li>
       <li className="pb-2 lg:py-0">

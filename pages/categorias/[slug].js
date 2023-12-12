@@ -1,5 +1,6 @@
 import Layout from "@/components/layout"
 import Post from "@/components/post";
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 
 export default function Categoria({posts, categoria}) {
     const { name, description } =  categoria;
@@ -24,7 +25,7 @@ export default function Categoria({posts, categoria}) {
 }
 
 /* Consultar la API de forma dinamica */
-export async function getServerSideProps({ query: { slug } }) {
+export async function getServerSideProps({ query: { slug }, locale }) {
     // Primero obtiene la categoría para obtener el ID
     const respuestaCategoria = await fetch(`${process.env.API_URL_BLOG}/categories?slug=${slug}`);
     const categorias = await respuestaCategoria.json();
@@ -37,7 +38,9 @@ export async function getServerSideProps({ query: { slug } }) {
     return {
         props: {
             posts,
-            categoria
+            categoria,
+            // Carga y pasa las traducciones necesarias para la página actual y el idioma seleccionado
+            ...(await serverSideTranslations(locale)),
         },
     };
 }

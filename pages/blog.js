@@ -1,5 +1,6 @@
 import Layout from "@/components/layout";
 import Post from "@/components/post";
+import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 
 export default function Blog({posts}) {
   return (
@@ -35,12 +36,13 @@ export default function Blog({posts}) {
 
 
 /* Consultar la API de forma estatica */
-export async function getStaticProps() {
+export async function getStaticProps({ locale }) {
   const respuesta = await fetch(`${process.env.API_URL_BLOG}/posts`)
   const posts = await respuesta.json()
 
   return {
     props: {
+      ...(await serverSideTranslations(locale)),
       posts
     }
   };

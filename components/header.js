@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { useRouter } from 'next/router';
 import Image from "next/image";
 import Link from "next/link";
 import { MdMenu } from "react-icons/md";
@@ -7,6 +8,9 @@ import Navegacion from './navegacion';
 export default function Header() {
 
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
+  const router = useRouter();
+  const { locale, pathname, asPath, query } = router;
 
   return (
     <header className="bg-header text-white p-4">
@@ -22,8 +26,14 @@ export default function Header() {
           </ul>
         </nav>
         <div className="hidden lg:flex">
-          <p className="text-tfs">ES</p>|
-          <Link href={'/en/'}>EN</Link>
+            {/* Muestra el idioma actual y proporciona enlaces para cambiar */}
+            <Link href={{ pathname, query }} as={asPath} locale="es" className={`mr-2 ${locale === 'es' ? 'text-tfs font-bold' : ''}`}>
+              ES
+            </Link>
+            |
+            <Link href={{ pathname, query }} as={asPath} locale="en" className={`ml-2 ${locale === 'en' ? 'text-tfs font-bold' : ''}`}>
+              EN
+            </Link>
         </div>
         {/* Botón de menú móvil */}
         <button onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)} className="inline-flex items-center justify-center p-2 rounded-md text-tfs lg:hidden">
