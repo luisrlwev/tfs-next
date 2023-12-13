@@ -1,4 +1,6 @@
 {
+    "inicio": "Inicio",
+    "inicio_descripcion": "Tulumfromsky Realtors es líder en la comercialización de desarrollos inmobiliarios en la Riviera Maya, Mérida y Los Cabos.",
     "departamentos": "Departamentos",
     "lotes": "Lotes",
     "casas": "Casas",
@@ -15,5 +17,25 @@
     "enviar": "Enviar",
     "licencias": "Licencias certificadas",
     "footer": "Tulumfromsky Realtors © 2023 Todos los derechos reservados JAH OLAM SA DE CV",
-    "aviso": "Aviso de privacidad"
+    "aviso": "Aviso de privacidad",
+    "departamentos_descripcion": "Encuentra los mejores departamentos en la Riviera Maya, Los Cabos y Mérida. Descubre la belleza natural del Caribe mexicano, la tranquilidad de la península de Baja California y la rica cultura de Yucatán. Encuentra opciones en diferentes zonas turísticas, tamaños y precios. ¡Vive en el departamento de tus sueños en México hoy mismo!",
+    "venta": "Venta de departamentos de lujo en Tulum",
+    "desde": "desde: $120,000 USD",
+    "el_mejor": "El mejor precio por metro cuadrado",
+    "disfruta": "Disfruta de tu propia terraza, jardin privado y rooftop con su propia alberca privada.",
+    "entrega": "Entrega inmediata",
+    "tu_departamento": "Tu departamento con vista al mar en Cancún.",
+    "bares": "Bares y restaurantes",
+    "biblioteca": "Biblioteca",
+    "yoga": "Áreas de Yoga",
+    "jardin": "Jardín Zen",
+    "departamento_con": "Departamentos con alberca privada a tan sólo 4 minutos de la playa",
+    "areas_comunes": "áreas comunes con beach pool & beach lounge",
+    "plusvalia": "Plusvalía, lujo y estilo en Tulum",
+    "boton": "Más info",
+    "dudas": "¿Dudas?",
+    "nombre_completo": "Nombre completo: Ej. John Doe",
+    "email": "Email: Ej. hola@dominio.com",
+    "telefono_completo": "Teléfono: Ej. +52 984 123 4567",
+    "siguenos": "¡Síguenos!"
 }

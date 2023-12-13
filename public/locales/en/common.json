@@ -1,4 +1,6 @@
 {
+    "inicio": "Home",
+    "inicio_descripcion": "Tulumfromsky Realtors is a leader in the marketing of real estate developments in the Riviera Maya, Mérida, and Los Cabos.",
     "departamentos": "Apartments",
     "lotes": "Lots",
     "casas": "Houses",
@@ -15,5 +17,25 @@
     "enviar": "Send",
     "licencias": "Certified licenses",
     "footer": "Tulumfromsky Realtors © 2023 All rights reserved JAH OLAM SA DE CV",
-    "aviso": "Privacy Notice"
+    "aviso": "Privacy Notice",
+    "departamentos_descripcion": "Find the best apartments in the Riviera Maya, Los Cabos, and Mérida. Discover the natural beauty of the Mexican Caribbean, the tranquility of the Baja California Peninsula, and the rich culture of Yucatán. Find options in different tourist areas, sizes, and prices. Live in the apartment of your dreams in Mexico today!",
+    "venta": "Sale of luxury apartments in Tulum",
+    "desde": "from: $120,000 USD",
+    "el_mejor": "The best price per square meter",
+    "disfruta": "Enjoy your own terrace, private garden, and rooftop with its own private pool.",
+    "entrega": "Immediate delivery",
+    "tu_departamento": "Your apartment with ocean views in Cancun.",
+    "bares": "Bars and restaurants",
+    "biblioteca": "Library",
+    "yoga": "Yoga Areas",
+    "jardin": "Zen Garden",
+    "departamento_con": "Apartments with private pool just 4 minutes from the beach",
+    "areas_comunes": "common areas with beach pool & beach lounge",
+    "plusvalia": "Surplus value, luxury and style in Tulum",
+    "boton": "More info",
+    "dudas": "Questions?",
+    "nombre_completo": "Full name: Eg. John Doe",
+    "email": "Email: Eg. hello@mydomain.com",
+    "telefono_completo": "Phone: Eg. +52 984 123 4567",
+    "siguenos": "Follow us!"
 }

@@ -1,14 +1,14 @@
-import Link from "next/link";
-import Layout from "@/components/layout";
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 import { useTranslation } from 'next-i18next'
+import Link from "next/link";
+import Layout from "@/components/layout";
 
 export default function Home() {
   const { t } = useTranslation()
   return (
     <Layout
-      title={"Inicio"}
-      description={"Tulumfromsky Realtors es líder en la comercialización de desarrollos inmobiliarios en la Riviera Maya, Mérida y Los Cabos."}
+      title={t('inicio')}
+      description={t('inicio_descripcion')}
     >
       <Link href={'/departamentos'} className="portada-tulum flex relative justify-center">
         <div className="h-full w-full top-0 left-0 absolute overflow-hidden z-0">
