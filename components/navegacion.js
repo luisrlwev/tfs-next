@@ -1,27 +1,25 @@
 import { useRouter } from "next/router";
 import Link from "next/link";
-import { useTranslation } from 'next-i18next'; // Importar useTranslation
+import { useTranslation } from 'next-i18next'
 
 export default function Navegacion() {
     const router = useRouter()
     const { t } = useTranslation(); // Inicializar el hook useTranslation
-    // Depurar la traducción
-    console.log("Traducción de 'departamentos':", t('departamentos'));
   return (
     <>
       <li className="pb-2 lg:py-0">
         <Link href="/departamentos" className={ router.pathname === '/departamentos' ? 'text-tfs' : 'hover'}>
-          {t('departamentos')} {/* Usar t para traducir */}
+          {t('departamentos')}
         </Link>
       </li>
       <li className="pb-2 lg:py-0">
         <Link href="/lotes" className={ router.pathname === '/lotes' ? 'text-tfs' : 'hover'}>
-          Lotes
+        {t('lotes')}
         </Link>
       </li>
       <li className="pb-2 lg:py-0">
         <Link href="/casas" className={ router.pathname === '/casas' ? 'text-tfs' : 'hover'}>
-          Casas
+        {t('casas')}
         </Link>
       </li>
       <li className="pb-2 lg:py-0">
@@ -36,12 +34,12 @@ export default function Navegacion() {
       </li>
       <li className="pb-2 lg:py-0">
         <Link href="/constructora" className={ router.pathname === '/constructora' ? 'text-tfs' : 'hover'}>
-          Constructora
+        {t('constructora')}
         </Link>
       </li>
       <li className="pb-2 lg:py-0">
         <Link href="/nosotros" className={ router.pathname === '/nosotros' ? 'text-tfs' : 'hover'}>
-          Nosotros
+        {t('nosotros')}
         </Link>
       </li>
       <li className="pb-2 lg:py-0">
@@ -51,15 +49,14 @@ export default function Navegacion() {
       </li>
       <li className="pb-2 lg:py-0">
         <Link href="/contacto" className={ router.pathname === '/contacto' ? 'text-tfs' : 'hover'}>
-          Contacto
+        {t('contacto')}
         </Link>
       </li>
       <li className="pb-2 lg:py-0">
         <Link href="/franquicias" className={ router.pathname === '/franquicias' ? 'text-tfs' : 'hover'}>
-          Franquicias
+        {t('franquicias')}
         </Link>
       </li>
-      {/* Repite para otros enlaces */}
     </>
   )
 }

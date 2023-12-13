@@ -1,9 +1,11 @@
 import { useState, useEffect } from 'react';
+import { useTranslation } from 'next-i18next'
 import Link from "next/link";
 import Image from "next/image";
 import { FaFacebookF, FaYoutube, FaInstagram, FaXTwitter, FaPinterestP, FaTiktok, FaLinkedinIn, FaWhatsapp } from "react-icons/fa6";
 
 export default function Footer() {
+  const { t } = useTranslation(); // Inicializar el hook useTranslation
   // Campos formulario
   const [nombre, setNombre] = useState('');
   const [email, setEmail] = useState('');
@@ -83,23 +85,23 @@ export default function Footer() {
       <div className="bg-header py-10">
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-3 container mx-auto">
           <div>
-            <h3 className="text-tfs text-center text-xl uppercase font-bold letter-spacing-25 pb-2">Contáctanos</h3>
+            <h3 className="text-tfs text-center text-xl uppercase font-bold letter-spacing-25 pb-2">{t('contactanos')}</h3>
             <form onSubmit={handleSubmit}>
               <div className="grid px-3 lg:grid-cols-2 gap-3">
                 <div>
-                  <input type="text" name="nombre" id="nombre" placeholder="Nombre:" className="w-full rounded-md bg-cuarto text-white p-3" value={nombre} onChange={(e) => setNombre(e.target.value)} required/>
+                  <input type="text" name="nombre" id="nombre" placeholder={t('nombre')} className="w-full rounded-md bg-cuarto text-white p-3" value={nombre} onChange={(e) => setNombre(e.target.value)} required/>
                 </div>
                 <div>
-                  <input type="tel" name="tel" id="tel" placeholder="Teléfono:" className="w-full rounded-md bg-cuarto text-white p-3" value={tel} onChange={(e) => setTel(e.target.value)} required/>
+                  <input type="tel" name="tel" id="tel" placeholder={t('telefono')} className="w-full rounded-md bg-cuarto text-white p-3" value={tel} onChange={(e) => setTel(e.target.value)} required/>
                 </div>
                 <div className="lg:col-span-2">
-                  <input type="email" name="email" id="email" placeholder="Email:" className="w-full rounded-md bg-cuarto text-white p-3" value={email} onChange={(e) => setEmail(e.target.value)} required/>
+                  <input type="email" name="email" id="email" placeholder="Email" className="w-full rounded-md bg-cuarto text-white p-3" value={email} onChange={(e) => setEmail(e.target.value)} required/>
                 </div>
                 <div className="lg:col-span-2">
-                  <textarea name="mensaje" id="mensaje" cols="30" rows="3" placeholder="¿Qué tipo de propiedad buscas?" className="w-full rounded-md bg-cuarto text-white p-3" value={mensaje} onChange={(e) => setMensaje(e.target.value)} required></textarea>
+                  <textarea name="mensaje" id="mensaje" cols="30" rows="3" placeholder={t('tipo_propiedad')} className="w-full rounded-md bg-cuarto text-white p-3" value={mensaje} onChange={(e) => setMensaje(e.target.value)} required></textarea>
                 </div>
                 <div className="lg:col-span-2 text-white">
-                  <input type="checkbox" name="condiciones" id="condiciones" checked={condiciones} onChange={handleCheckboxChange} required/> Acepto los <Link href="/aviso-de-privacidad" className="text-tfs hover">términos y condiciones</Link>
+                  <input type="checkbox" name="condiciones" id="condiciones" checked={condiciones} onChange={handleCheckboxChange} required/> {t('acepto')} <Link href="/aviso-de-privacidad" className="text-tfs hover">{t('terminos')}</Link>
                 </div>
                 {/* Campos ocultos */}
                 <div className='hidden'>
@@ -114,13 +116,13 @@ export default function Footer() {
                       {mensajeRespuesta}
                     </p>
                   )}
-                  <input type="submit" name="submit" id="submit" disabled={isSubmitting} className="py-2 px-12 bg-tfs uppercase text-white font-bold letter-spacing-25 rounded-md hover-bg cursor-pointer"/>
+                  <input type="submit" name="submit" id="submit" value={t('enviar')} disabled={isSubmitting} className="py-2 px-12 bg-tfs uppercase text-white font-bold letter-spacing-25 rounded-md hover-bg cursor-pointer"/>
                 </div>
               </div>
             </form>
           </div>
           <div className="grid content-center px-3 py-8">
-            <p className="text-center text-white uppercase font-bold letter-spacing-25 pb-4 lg:pb-8 w-full text-lg lg:text-base">Licencias Certificadas</p>
+            <p className="text-center text-white uppercase font-bold letter-spacing-25 pb-4 lg:pb-8 w-full text-lg lg:text-base">{t('licencias')}</p>
             <div className="grid grid-cols-3 justify-items-center items-center">
               <Image src={'/img/agente-inmobiliario-persona-juridica-2.png'} width={131} height={72} alt="Agente inmobiliario persona juridica"/>
               <Image src={'/img/AMPI-los-cabos-2.png'} width={131} height={126} alt="AMPI Los Cabos"/>
@@ -145,8 +147,8 @@ export default function Footer() {
         </div>
       </div>
       <div className="text-white text-center text-base py-4 bg-footer">
-        <p className="font-bold uppercase text-footer letter-spacing-25 pb-2 text-xs lg:text-base">Tulumfromsky Realtors © 2023 Todos los derechos reservados JAH OLAM SA DE CV</p>
-        <Link href={'/aviso-de-privacidad'} className="underline text-xs lg:text-base">Aviso de privacidad</Link>
+        <p className="font-bold uppercase text-footer letter-spacing-25 pb-2 text-xs lg:text-base">{t('footer')}</p>
+        <Link href={'/aviso-de-privacidad'} className="underline text-xs lg:text-base">{t('aviso')}</Link>
       </div>
     </footer>
   );

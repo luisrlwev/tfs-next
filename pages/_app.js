@@ -2,7 +2,7 @@ import { appWithTranslation } from 'next-i18next';
 import { Analytics } from '@vercel/analytics/react';
 import '@/styles/globals.css';
 
-function MyApp({ Component, pageProps }) {
+function App({ Component, pageProps }) {
   return (
     <>
       <Component {...pageProps} />
@@ -11,4 +11,4 @@ function MyApp({ Component, pageProps }) {
   );
 }
 
-export default appWithTranslation(MyApp);
+export default appWithTranslation(App);

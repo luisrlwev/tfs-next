@@ -1,7 +1,10 @@
 import Link from "next/link";
 import Layout from "@/components/layout";
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
+import { useTranslation } from 'next-i18next'
 
 export default function Home() {
+  const { t } = useTranslation()
   return (
     <Layout
       title={"Inicio"}
@@ -39,4 +42,16 @@ export default function Home() {
       </Link>
     </Layout>
   );
+}
+
+export async function getStaticProps(context) {
+  // extract the locale identifier from the URL
+  const { locale } = context
+
+  return {
+    props: {
+      // pass the translation props to the page component
+      ...(await serverSideTranslations(locale)),
+    },
+  }
 }
