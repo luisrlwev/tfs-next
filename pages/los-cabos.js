@@ -1,4 +1,6 @@
 import { useState } from "react";
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
+import { useTranslation } from 'next-i18next'
 import Layout from "@/components/layout";
 import Image from "next/image";
 import Boton from "@/components/boton";
@@ -10,6 +12,8 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 
 export default function Cabos() {
+  // Traducciones
+  const { t } = useTranslation()
   const [showModal, setShowModal] = useState(false);
 
   const abrirModal = () => {
@@ -22,7 +26,7 @@ export default function Cabos() {
   return (
     <Layout
       title={"Los Cabos"}
-      description={"Descubre las mejores opciones en bienes raíces en Los Cabos, la joya turística de la península de Baja California. Encuentra casas, departamentos y lotes en diferentes zonas turísticas y precios, desde la tranquilidad de San José del Cabo hasta la animada vida nocturna de Cabo San Lucas. ¡Encuentra la propiedad ideal para ti en Los Cabos hoy mismo!"}
+      description={t('cabos_descripcion')}
     >
       <div className="portada-cabos flex relative justify-center cursor-pointer" onClick={abrirModal}>
         <div className="portada-ciudades flex justify-center items-end relative">
@@ -31,14 +35,14 @@ export default function Cabos() {
       </div>
       <section className="bg-header z-10 relative">
         <div className="container mx-auto grid justify-center py-10 uppercase text-2xl font-bold letter-spacing-25 max-lg:text-base">
-          <p className="w-full text-center text-tfs">Venta de departamentos en Cabo San Lucas</p>
-          <p className="w-full text-center text-white">desde: $250,000 USD</p>
+          <p className="w-full text-center text-tfs">{t('venta_departamentos')}</p>
+          <p className="w-full text-center text-white">{t('desde')} $250,000 USD</p>
         </div>
       </section>
       <section className="py-16">
         <div className="container mx-auto grid grid-cols-2 max-lg:grid-cols-1 max-lg:px-3 gap-4">
           <div className="max-lg:pb-8">
-            <p className="text-tfs uppercase font-bold text-xl letter-spacing-25 text-center pb-7">Entrega inmediata</p>
+            <p className="text-tfs uppercase font-bold text-xl letter-spacing-25 text-center pb-7">{t('entrega')}</p>
             <Swiper
               slidesPerView={1}
               navigation={true}
@@ -104,10 +108,10 @@ export default function Cabos() {
                 </div>
               </SwiperSlide>
             </Swiper>
-            <p className="py-5 px-7 bg-text max-lg:text-sm">Lujo, arquitectura y diseño.</p>
+            <p className="py-5 px-7 bg-text max-lg:text-sm">{t('lujo')}</p>
           </div>
           <div>
-            <p className="text-tfs uppercase font-bold text-xl letter-spacing-25 text-center pb-7">Residenciales frente al mar</p>
+            <p className="text-tfs uppercase font-bold text-xl letter-spacing-25 text-center pb-7">{t('residenciales')}</p>
             <Swiper
               slidesPerView={1}
               navigation={true}
@@ -181,19 +185,19 @@ export default function Cabos() {
         <div className="container mx-auto grid grid-cols-6 max-lg:grid-cols-2 gap-4">
           <div className="grid justify-items-center text-center">
             <Image src={'/img/lotes/beach-club.svg'} className="pb-3" width={68} height={68} alt="club de playa"/>
-            <p>Club de playa</p>
+            <p>Beach Club</p>
           </div>
           <div className="grid justify-items-center text-center">
             <Image src={'/img/lotes/campo-golf.svg'} className="pb-3" width={68} height={68} alt="campo de golf"/>
-            <p>Campo de Golf GPA</p>
+            <p>{t('golf')}</p>
           </div>
           <div className="grid justify-items-center text-center">
             <Image src={'/img/departamentos/bares.svg'} className="pb-3" width={68} height={68} alt="bares y restaurantes"/>
-            <p>Bares y restaurantes</p>
+            <p>{t('bares')}</p>
           </div>
           <div className="grid justify-items-center text-center">
             <Image src={'/img/merida/actividades.svg'} className="pb-3" width={68} height={68} alt="actividades"/>
-            <p>Actividades</p>
+            <p>{t('actividades')}</p>
           </div>
           <div className="grid justify-items-center text-center">
             <Image src={'/img/merida/spa.svg'} className="pb-3" width={68} height={68} alt="spa"/>
@@ -201,14 +205,14 @@ export default function Cabos() {
           </div>
           <div className="grid justify-items-center text-center">
             <Image src={'/img/lotes/ciclopistas.svg'} className="pb-3" width={68} height={68} alt="ciclopistas"/>
-            <p>Ciclopistas</p>
+            <p>{t('ciclopistas')}</p>
           </div>
         </div>
       </section>
       <section className="bg-sexto">
         <div className="container mx-auto text-center py-8 text-black uppercase font-bold letter-spacing-25 text-2xl max-lg:text-base">
-          <p className="text-tfs">Venta de casas en los cabos</p>
-          <p>desde: $500,000 USD</p>
+          <p className="text-tfs">{t('venta_casas_cabos')}</p>
+          <p>{t('desde')} $500,000 USD</p>
         </div>
       </section>
       <div className="portada-cabos-final flex relative justify-center cursor-pointer" onClick={abrirModal}>
@@ -218,7 +222,7 @@ export default function Cabos() {
         <div className="portada-video-final flex justify-center items-center relative">
             <div className="grid grid-cols-1 justify-items-center">
               <div>
-                <h3 className="text-white font-bold uppercase letter-spacing-25 text-xl text-center max-lg:text-base pb-6">Oceanview en el destino con mayor plusvalía en México</h3>
+                <h3 className="text-white font-bold uppercase letter-spacing-25 text-xl text-center max-lg:text-base pb-6">{t('oceanview')}</h3>
               </div>
               <div className="pb-10 max-lg:pb-0">
                 <Boton/>
@@ -229,4 +233,16 @@ export default function Cabos() {
       <Formulario show={showModal} onClose={cerrarModal}/>
     </Layout>
   );
+}
+
+export async function getStaticProps(context) {
+  // extract the locale identifier from the URL
+  const { locale } = context
+
+  return {
+    props: {
+      // pass the translation props to the page component
+      ...(await serverSideTranslations(locale)),
+    },
+  }
 }
