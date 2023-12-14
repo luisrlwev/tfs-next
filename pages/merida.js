@@ -26,7 +26,7 @@ export default function Merida() {
   return (
     <Layout
       title={"Mérida"}
-      description={"Descubre las mejores opciones en bienes raíces en Mérida, la ciudad colonial más importante del sureste mexicano. Encuentra casas, departamentos y lotes en diferentes zonas y precios. Disfruta de la tranquilidad de la ciudad y la riqueza cultural y gastronómica de Yucatán. ¡Encuentra la propiedad ideal para ti en Mérida hoy mismo!"}
+      description={t('merida_descripcion')}
     >
       <div className="portada-merida flex relative justify-center cursor-pointer" onClick={abrirModal}>
         <div className="portada-ciudades flex justify-center items-end relative">
@@ -35,14 +35,14 @@ export default function Merida() {
       </div>
       <section className="bg-header z-10 relative">
         <div className="container mx-auto grid justify-center py-10 uppercase text-2xl font-bold letter-spacing-25 max-lg:text-base">
-          <p className="w-full text-center text-white">Casas en venta cerca de la playa</p>
-          <p className="w-full text-center text-tfs">desde: $3,500,000 MXN</p>
+          <p className="w-full text-center text-white">{t('casas_venta')}</p>
+          <p className="w-full text-center text-tfs">{t('desde')} $3,500,000 MXN</p>
         </div>
       </section>
       <section className="py-16">
         <div className="container mx-auto grid grid-cols-2 max-lg:grid-cols-1 max-lg:px-3 gap-4">
           <div className="max-lg:pb-8">
-            <p className="text-tfs uppercase font-bold text-xl letter-spacing-25 text-center pb-7">Entrega inmediata</p>
+            <p className="text-tfs uppercase font-bold text-xl letter-spacing-25 text-center pb-7">{t('entrega')}</p>
             <Swiper
               slidesPerView={1}
               navigation={true}
@@ -108,10 +108,10 @@ export default function Merida() {
                 </div>
               </SwiperSlide>
             </Swiper>
-            <p className="py-5 px-7 bg-text max-lg:text-sm">Espectaculares lagos que se integran en total armonía en la arquitectura moderna.</p>
+            <p className="py-5 px-7 bg-text max-lg:text-sm">{t('espectaculares')}</p>
           </div>
           <div>
-            <p className="text-tfs uppercase font-bold text-xl letter-spacing-25 text-center pb-7">Disfruta la mejor vista frente al mar</p>
+            <p className="text-tfs uppercase font-bold text-xl letter-spacing-25 text-center pb-7">{t('disfruta_mejor')}</p>
             <Swiper
               slidesPerView={1}
               navigation={true}
@@ -177,7 +177,7 @@ export default function Merida() {
                 </div>
               </SwiperSlide>
             </Swiper>
-            <p className="py-5 px-7 bg-text max-lg:text-sm">Frente al mar con increíbles vistas.</p>
+            <p className="py-5 px-7 bg-text max-lg:text-sm">{t('frente')}</p>
           </div>
         </div>
       </section>
@@ -185,19 +185,19 @@ export default function Merida() {
         <div className="container mx-auto grid grid-cols-6 max-lg:grid-cols-2 gap-4">
           <div className="grid justify-items-center text-center">
             <Image src={'/img/lotes/beach-club.svg'} className="pb-3" width={68} height={68} alt="club de playa"/>
-            <p>Club de playa</p>
+            <p>Beach Club</p>
           </div>
           <div className="grid justify-items-center text-center">
             <Image src={'/img/lotes/campo-golf.svg'} className="pb-3" width={68} height={68} alt="campo de golf"/>
-            <p>Campo de Golf GPA</p>
+            <p>{t('golf')}</p>
           </div>
           <div className="grid justify-items-center text-center">
             <Image src={'/img/departamentos/bares.svg'} className="pb-3" width={68} height={68} alt="bares y restaurantes"/>
-            <p>Bares y restaurantes</p>
+            <p>{t('bares')}</p>
           </div>
           <div className="grid justify-items-center text-center">
             <Image src={'/img/merida/actividades.svg'} className="pb-3" width={68} height={68} alt="actividades"/>
-            <p>Actividades</p>
+            <p>{t('actividades')}</p>
           </div>
           <div className="grid justify-items-center text-center">
             <Image src={'/img/merida/spa.svg'} className="pb-3" width={68} height={68} alt="spa"/>
@@ -205,14 +205,14 @@ export default function Merida() {
           </div>
           <div className="grid justify-items-center text-center">
             <Image src={'/img/lotes/ciclopistas.svg'} className="pb-3" width={68} height={68} alt="ciclopistas"/>
-            <p>Ciclopistas</p>
+            <p>{t('ciclopistas')}</p>
           </div>
         </div>
       </section>
       <section className="bg-sexto">
         <div className="container mx-auto text-center py-8 text-black uppercase font-bold letter-spacing-25 text-2xl max-lg:text-base">
-          <p>Lotes</p>
-          <p className="text-tfs">desde: $2,000,000 MXN</p>
+          <p>{t('lotes')}</p>
+          <p className="text-tfs">{t('desde')} $2,000,000 MXN</p>
         </div>
       </section>
       <div className="portada-merida-final flex relative justify-center cursor-pointer" onClick={abrirModal}>
