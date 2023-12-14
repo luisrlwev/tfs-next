@@ -1,4 +1,6 @@
 import { useState } from "react";
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
+import { useTranslation } from 'next-i18next'
 import Layout from "@/components/layout";
 import Image from "next/image";
 import Boton from "@/components/boton";
@@ -10,6 +12,8 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 
 export default function Merida() {
+  // Traducciones
+  const { t } = useTranslation()
   const [showModal, setShowModal] = useState(false);
 
   const abrirModal = () => {
@@ -224,4 +228,16 @@ export default function Merida() {
       <Formulario show={showModal} onClose={cerrarModal}/>
     </Layout>
   );
+}
+
+export async function getStaticProps(context) {
+  // extract the locale identifier from the URL
+  const { locale } = context
+
+  return {
+    props: {
+      // pass the translation props to the page component
+      ...(await serverSideTranslations(locale)),
+    },
+  }
 }

@@ -39,7 +39,7 @@ export default function Departamentos() {
       <section className="bg-header">
         <div className="container mx-auto grid justify-center py-10 uppercase text-lg lg:text-2xl font-bold letter-spacing-25 px-4">
           <p className="w-full text-center text-tfs">{t('venta')}</p>
-          <p className="w-full text-center text-white">{t('desde')}</p>
+          <p className="w-full text-center text-white">{t('desde')} $120,000 USD</p>
         </div>
       </section>
       <section className="py-16">

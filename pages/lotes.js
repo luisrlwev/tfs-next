@@ -38,7 +38,7 @@ export default function Lotes() {
       </div>
       <section className="bg-header">
         <div className="container mx-auto grid justify-center py-10 uppercase text-2xl max-lg:text-base font-bold letter-spacing-25">
-          <p className="w-full text-center text-white">{t('lotes_desde')} <span className="text-tfs"> $110,000 usd</span></p>
+          <p className="w-full text-center text-white">{t('lotes')} {t('desde')}<span className="text-tfs"> $110,000 usd</span></p>
         </div>
       </section>
       <section className="py-16">
