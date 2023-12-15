@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from 'react';
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
+import { useTranslation } from 'next-i18next'
 import Link from "next/link";
 import Image from "next/image";
 import Layout from "@/components/layout";
@@ -39,6 +41,8 @@ const positions = [
 ];
 
 export default function Contacto() {
+  // Traducciones
+  const { t } = useTranslation()
   // Campos formulario
   const [nombre, setNombre] = useState('');
   const [email, setEmail] = useState('');
@@ -117,46 +121,46 @@ export default function Contacto() {
 
   return (
     <Layout
-      title={"Contacto"}
-      description={"Contáctanos para obtener información sobre nuestras propiedades de bienes raíces. Nuestro equipo de expertos está listo para ayudarte a encontrar la propiedad ideal para ti en la Riviera Maya, Los Cabos o Mérida. Ya sea que busques comprar, vender o construir una propiedad, estamos aquí para ayudarte en cada paso del camino. ¡Contáctanos hoy y comienza a hacer realidad tus sueños de bienes raíces en México!"}
+      title={t('contacto')}
+      description={t('contacto_descripcion')}
     >
       <section className="grid grid-cols-2 max-lg:grid-cols-1">
         <div className="bg-header pt-52 max-lg:py-8 px-24 max-lg:px-3 pb-24 grid justify-items-center relative">
           <div className="overlay-contacto h-full w-full absolute"></div>
           <div className="grid justify-items-center relative">
-            <h1 className="text-tfs uppercase font-bold letter-spacing-25 pb-12 max-lg:pb-8 text-5xl max-lg:text-3xl">Contáctanos</h1>
-            <h2 className="text-tfs uppercase font-bold letter-spacing-25 pb-8 text-2xl">¿Qué te ofrecemos?</h2>
-            <p className="text-white pb-2 max-lg:text-sm">La comercialización de desarrollos inmobiliarios con los siguientes servicios:</p>
+            <h1 className="text-tfs uppercase font-bold letter-spacing-25 pb-12 max-lg:pb-8 text-5xl max-lg:text-3xl">{t('contactanos')}</h1>
+            <h2 className="text-tfs uppercase font-bold letter-spacing-25 pb-8 text-2xl">{t('que_ofrecemos')}</h2>
+            <p className="text-white pb-2 max-lg:text-sm">{t('comercializacion')}</p>
             <ul className="list-disc text-white leading-6 pb-8 max-lg:text-sm">
-              <li>Análisis comercial del proyecto.</li>
-              <li>Diseño de campañas publicitarias.</li>
-              <li>Promoción continua para generar vistas al desarrollo.</li>
-              <li>Atención personalizada brindada por un especialista inmobiliario.</li>
-              <li>Atención durante el proceso de venta, hasta el cierre y entrega del inmueble.</li>
+              <li>{t('analisis')}</li>
+              <li>{t('diseno')}</li>
+              <li>{t('promocion')}</li>
+              <li>{t('atencion_personalizada')}</li>
+              <li>{t('atencion_durante')}</li>
             </ul>
-            <p className="text-white text-center uppercase font-semibold pb-24 max-lg:pb-8"><span className="text-tfs">Contáctanos</span> y permite que nuestros más de 50 asesores inmobiliarios se encarguen de todo lo relacionado con la compra de tu apartamento, casa o terreno.</p>
+            <p className="text-white text-center uppercase font-semibold pb-24 max-lg:pb-8"><span className="text-tfs">{t('contactanos')}</span>{t('permite')}</p>
             <a href="mailto:sales@tulumfromskyrealtors.com" className="text-center text-tfs flex items-center hover"><FaRegEnvelope className="mr-1"/>sales@tulumfromskyrealtors.com</a>
             <a href="tel:+529848035450" className="text-center text-tfs flex items-center hover"><FaWhatsapp className="mr-1"/>+52 (984) 803 5450</a>
           </div>
         </div>
         <div className="pt-52 px-24 max-lg:px-3 pb-24 max-lg:py-8">
-          <h2 className="uppercase text-secondary font-bold letter-spacing-25 text-xl pb-8 text-center">¿Dudas? Déjanos tu contacto</h2>
+          <h2 className="uppercase text-secondary font-bold letter-spacing-25 text-xl pb-8 text-center">{t('dejanos')}</h2>
           <form className="w-full pb-24 max-lg:pb-8" onSubmit={handleSubmit}>
               <div className="grid grid-cols-1 gap-3">
                 <div className="col-span-1">
-                  <input type="text" name="nombre" id="nombre" placeholder="Nombre:" className="w-full rounded-md bg-decimo text-secondary p-3" value={nombre} onChange={(e) => setNombre(e.target.value)} required/>
+                  <input type="text" name="nombre" id="nombre" placeholder={t('nombre')} className="w-full rounded-md bg-decimo text-secondary p-3" value={nombre} onChange={(e) => setNombre(e.target.value)} required/>
                 </div>
                 <div className="col-span-1">
-                  <input type="tel" name="tel" id="tel" placeholder="Teléfono:" className="w-full rounded-md bg-decimo text-secondary p-3" value={tel} onChange={(e) => setTel(e.target.value)} required/>
+                  <input type="tel" name="tel" id="tel" placeholder={t('telefono')} className="w-full rounded-md bg-decimo text-secondary p-3" value={tel} onChange={(e) => setTel(e.target.value)} required/>
                 </div>
                 <div className="col-span-1">
-                  <input type="email" name="email" id="email" placeholder="Email:" className="w-full rounded-md bg-decimo text-secondary p-3" value={email} onChange={(e) => setEmail(e.target.value)} required/>
+                  <input type="email" name="email" id="email" placeholder="Email" className="w-full rounded-md bg-decimo text-secondary p-3" value={email} onChange={(e) => setEmail(e.target.value)} required/>
                 </div>
                 <div className="col-span-1">
-                  <textarea name="mensaje" id="mensaje" cols="30" rows="3" placeholder="¿Qué tipo de propiedad buscas?" className="w-full rounded-md bg-decimo text-secondary p-3" value={mensaje} onChange={(e) => setMensaje(e.target.value)} required></textarea>
+                  <textarea name="mensaje" id="mensaje" cols="30" rows="3" placeholder={t('tipo_propiedad')} className="w-full rounded-md bg-decimo text-secondary p-3" value={mensaje} onChange={(e) => setMensaje(e.target.value)} required></textarea>
                 </div>
                 <div className="col-span-1 text-secondary">
-                  <input type="checkbox" name="condiciones" id="condiciones" checked={condiciones} onChange={handleCheckboxChange} required/> Acepto los <Link href="/aviso-de-privacidad" className="text-tfs hover">términos y condiciones</Link>
+                  <input type="checkbox" name="condiciones" id="condiciones" checked={condiciones} onChange={handleCheckboxChange} required/> {t('acepto')}<Link href="/aviso-de-privacidad" className="text-tfs hover"> {t('terminos')}</Link>
                 </div>
                 {/* Campos ocultos */}
                 <div className='hidden'>
@@ -171,11 +175,11 @@ export default function Contacto() {
                       {mensajeRespuesta}
                     </p>
                   )}
-                  <input type="submit" name="submit" id="submit" disabled={isSubmitting} className="py-2 px-12 bg-tfs uppercase text-white font-bold letter-spacing-25 rounded-md hover-bg cursor-pointer"/>
+                  <input type="submit" name="submit" id="submit" value={t('enviar')} disabled={isSubmitting} className="py-2 px-12 bg-tfs uppercase text-white font-bold letter-spacing-25 rounded-md hover-bg cursor-pointer"/>
                 </div>
               </div>
           </form>
-          <h3 className="text-center uppercase letter-spacing-25 text-tfs font-bold text-2xl">Síguenos</h3>
+          <h3 className="text-center uppercase letter-spacing-25 text-tfs font-bold text-2xl">{t('siguenos')}</h3>
           <h4 className="font-bold text-tfs text-center pt-3 pb-7">@tulumfromsky</h4>
           <div className="flex justify-center text-tfs text-2xl gap-4">
             <a href="https://www.youtube.com/@tulumfromskyrealtors5181" target="_blank"><FaYoutube className="hover"/></a>
@@ -190,10 +194,10 @@ export default function Contacto() {
       </section>
       <section className="bg-cuarto py-20 max-lg:py-8">
         <div className="container mx-auto">
-          <h2 className="uppercase text-center text-tfs font-bold letter-spacing-25 text-40 pb-16 max-lg:pb-8">Nuestras oficinas</h2>
+          <h2 className="uppercase text-center text-tfs font-bold letter-spacing-25 text-40 pb-16 max-lg:pb-8">{t('nuestras')}</h2>
           <div className="grid grid-cols-2 max-lg:grid-cols-1 max-lg:px-3">
             <div className='flex flex-col items-center max-lg:pb-5'>
-              <h3 className="uppercase text-center text-tfs font-bold letter-spacing-25 text-2xl max-lg:text-xl pb-3">Ubicación</h3>
+              <h3 className="uppercase text-center text-tfs font-bold letter-spacing-25 text-2xl max-lg:text-xl pb-3">{t('ubicacion')}</h3>
               <LoadScript googleMapsApiKey="AIzaSyCmvGDB4jFjNlVZHzFD6yhoGeIB3LeTD68">
                 <GoogleMap
                   mapContainerStyle={containerStyle}
@@ -268,4 +272,16 @@ export default function Contacto() {
       </section>
     </Layout>
   );
+}
+
+export async function getStaticProps(context) {
+  // extract the locale identifier from the URL
+  const { locale } = context
+
+  return {
+    props: {
+      // pass the translation props to the page component
+      ...(await serverSideTranslations(locale)),
+    },
+  }
 }
