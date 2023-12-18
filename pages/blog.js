@@ -1,12 +1,15 @@
 import Layout from "@/components/layout";
 import Post from "@/components/post";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
+import { useTranslation } from 'next-i18next'
 
 export default function Blog({posts}) {
+  // Traducciones
+  const { t } = useTranslation()
   return (
     <Layout
       title={"Blog"}
-      description={"Descubre el fascinante mundo de los bienes raíces en La Riviera Maya, Los Cabos y Mérida a través de nuestro blog. Encuentra información detallada sobre propiedades, tendencias del mercado, inversiones y estilo de vida en estos destinos turísticos de México. Además, aprende de expertos en el campo inmobiliario y conoce los secretos de la compra, venta y construcción de propiedades en México. ¡Visítanos hoy y conviértete en un experto en bienes raíces de México!"}
+      description={t('blog_descripcion')}
     >
       <div className="portada-blog-fondo flex relative justify-center">
         <div className="overlay-nosotros h-full w-full absolute">
@@ -20,7 +23,7 @@ export default function Blog({posts}) {
         </div>
       </div>
       <section className="container mx-auto max-lg:px-3">
-        <p className="text-center py-10">Descubre todo lo que necesitas saber sobre el mercado de bienes raíces en la Riviera Maya, Los Cabos y Mérida. En nuestro blog encontrarás consejos, tendencias, noticias y mucho más sobre la compra, venta o renta de propiedades en estas hermosas y prósperas zonas turísticas de México.</p>
+        <p className="text-center py-10">{t('descubre')}</p>
         <div className="grid grid-cols-3 max-lg:grid-cols-1 gap-4 pb-14">
           {posts?.map(post => (
             <Post
