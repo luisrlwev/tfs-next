@@ -165,7 +165,7 @@ export default function Nosotros() {
           </Swiper>
         </div>
       </section>
-      <div className="portada-nosotros-final">
+      <div className="portada-nosotros-final relative">
         <div className="overlay-nosotros-final h-full w-full absolute">
         </div>
         <div className="container mx-auto portada-video-final-nosotros relative text-white">
