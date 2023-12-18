@@ -1,4 +1,6 @@
 import { useState, useEffect } from 'react';
+import { serverSideTranslations } from "next-i18next/serverSideTranslations";
+import { useTranslation } from 'next-i18next'
 import Image from "next/image";
 import LayoutReclutamiento from "@/components/layout-reclutamiento";
 import Galeria from "@/components/galeria";
@@ -10,6 +12,8 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 
 export default function Reclutamiento() {
+  // Traducciones
+  const { t } = useTranslation()
   // Campos formulario
   const [nombre, setNombre] = useState('');
   const [email, setEmail] = useState('');
@@ -144,27 +148,27 @@ export default function Reclutamiento() {
 
   return (
     <LayoutReclutamiento
-      title={"Reclutamiento"}
-      description={"Únete a nuestro equipo de asesores inmobiliarios y conviértete en parte de una exitosa red de profesionales dedicados a brindar soluciones inmobiliarias excepcionales. Descubre oportunidades de crecimiento, capacitación especializada y un entorno colaborativo en el mundo de bienes raíces."}
+      title={t('reclutamiento')}
+      description={t('reclutamiento_descripcion')}
     >
       <section className="container mx-auto grid grid-cols-2 max-lg:grid-cols-1">
         <div className='flex justify-center'>
           <video src="/video/reclutamiento.mp4" autoPlay controls playsInline controlsList="nodownload" poster="/img/reclutamiento/portada-reclutamiento.jpg"></video>
         </div>
         <div className="flex flex-col items-center justify-center max-lg:hidden">
-            <h1 className="uppercase text-tercero font-bold text-3xl letter-spacing-25">Asesores inmobiliarios</h1>
-            <p className="uppercase letter-spacing-25 py-12">¡Estamos contratando!</p>
-            <p>Buscamos personas con liderazgo, ambición y determinación</p>
-            <p>para alcanzar el éxito.</p>
-            <h2 className="uppercase text-tfs letter-spacing-25 font-bold text-xl text-center pt-60 pb-24">¡Califica para una de<br/>nuestras vacantes!</h2>
-            <a href="#form" className="uppercase letter-spacing-25 text-tercero bg-tfs font-bold py-2 px-10 rounded-md">¡Postúlate ahora!</a>
+            <h1 className="uppercase text-tercero font-bold text-3xl letter-spacing-25">{t('asesores')}</h1>
+            <p className="uppercase letter-spacing-25 py-12">{t('estamos')}</p>
+            <p>{t('buscamos')}</p>
+            <p>{t('para')}</p>
+            <h2 className="uppercase text-tfs letter-spacing-25 font-bold text-xl text-center pt-60 pb-24">{t('califica')}<br/>{t('nuestras_vacantes')}</h2>
+            <a href="#form" className="uppercase letter-spacing-25 text-tercero bg-tfs font-bold py-2 px-10 rounded-md">{t('postulate')}</a>
         </div>
       </section>
       <section className="bg-header">
         <div className="container mx-auto py-20">
-            <h3 className="uppercase text-white letter-spacing-25 font-bold text-3xl text-center pb-5 max-lg:hidden">Es tu momento de crecer</h3>
-            <h3 className="uppercase text-white letter-spacing-25 font-bold text-base text-center pb-5 lg:hidden">Asesores inmobiliarios</h3>
-            <p className="text-white letter-spacing-25 uppercase text-center lg:pb-16 max-lg:pb-20">¿Qué te ofrecemos?</p>
+            <h3 className="uppercase text-white letter-spacing-25 font-bold text-3xl text-center pb-5 max-lg:hidden">{t('momento')}</h3>
+            <h3 className="uppercase text-white letter-spacing-25 font-bold text-base text-center pb-5 lg:hidden">{t('asesores')}</h3>
+            <p className="text-white letter-spacing-25 uppercase text-center lg:pb-16 max-lg:pb-20">{t('que_ofrecemos')}</p>
             <div className="max-lg:hidden">
               <Galeria/>
             </div>
@@ -223,7 +227,7 @@ export default function Reclutamiento() {
               <a href="https://www.linkedin.com/company/40900945/admin/" target="_blank"><FaLinkedinIn className="hover"/></a>
             </div>
             <div className="flex justify-center lg:pt-24 max-lg:pt-20">
-              <a href="#form" className="text-tercero bg-tfs py-2 px-10 uppercase font-bold letter-spacing-25 rounded-md hover-bg">¡Postúlate ahora!</a>
+              <a href="#form" className="text-tercero bg-tfs py-2 px-10 uppercase font-bold letter-spacing-25 rounded-md hover-bg">{t('postulate')}</a>
             </div>
         </div>
       </section>
@@ -231,7 +235,7 @@ export default function Reclutamiento() {
         <div className="overlay-nosotros-final h-full w-full absolute">
         </div>
         <div className="container mx-auto portada-video-final-nosotros relative text-white">
-          <h3 className="font-bold text-center uppercase letter-spacing-25 text-3xl max-lg:text-lg text-shadow py-32 max-lg:pt-10 max-lg:pb-5">¡Te estamos buscando!</h3>
+          <h3 className="font-bold text-center uppercase letter-spacing-25 text-3xl max-lg:text-lg text-shadow py-32 max-lg:pt-10 max-lg:pb-5">{t('buscando')}</h3>
           <div className="grid grid-cols-4 max-lg:hidden">
             <div className="grid justify-items-center">
               <Image src={'/img/nosotros/marcador.png'} width={39} height={55} alt="marcador" className="pb-8"/>
@@ -294,33 +298,33 @@ export default function Reclutamiento() {
             </div>
           </div>
           <div className="grid justify-items-center">
-            <a href="#form" className="text-tercero uppercase letter-spacing-25 font-bold bg-tfs py-3 px-12 rounded-md hover-bg">¡Postúlate ahora!</a>
+            <a href="#form" className="text-tercero uppercase letter-spacing-25 font-bold bg-tfs py-3 px-12 rounded-md hover-bg">{t('postulate')}</a>
           </div>
         </div>
       </div>
       <section className="py-28 max-lg:py-9" id='form'>
-        <h3 className="text-center text-tercero uppercase letter-spacing-25 font-bold text-2xl max-lg:text-lg pb-5">Forma parte del equipo</h3>
-        <p className="uppercase letter-spacing-25 text-center">Cumple tu sueño y alcanza tu máximo potencial</p>
+        <h3 className="text-center text-tercero uppercase letter-spacing-25 font-bold text-2xl max-lg:text-lg pb-5">{t('forma')}</h3>
+        <p className="uppercase letter-spacing-25 text-center">{t('cumple')}</p>
         <form onSubmit={handleSubmit} className='flex flex-col items-center pt-24 max-lg:pt-6' encType="multipart/form-data">
           <div className="lg:w-3/4 grid px-3 lg:grid-cols-2 gap-3">
             <div className='lg:col-span-2'>
-              <label htmlFor="nombre">Nombre completo: <span className='text-red-600'>*</span></label>
-              <input type="text" name="nombre" id="nombre" placeholder="Escribe tu nombre completo" className="w-full rounded-md text-tercero bg-decimo p-3" value={nombre} onChange={(e) => setNombre(e.target.value)} required/>
+              <label htmlFor="nombre">{t('nombre')} <span className='text-red-600'>*</span></label>
+              <input type="text" name="nombre" id="nombre" placeholder={t('e_nombre')} className="w-full rounded-md text-tercero bg-decimo p-3" value={nombre} onChange={(e) => setNombre(e.target.value)} required/>
             </div>
             <div className="lg:col-span-2">
-              <label htmlFor="email">Correo: <span className='text-red-600'>*</span></label>
-              <input type="email" name="email" id="email" placeholder="Escribe tu correo" className="w-full rounded-md bg-decimo text-tercero p-3" value={email} onChange={(e) => setEmail(e.target.value)} required/>
+              <label htmlFor="email">Email <span className='text-red-600'>*</span></label>
+              <input type="email" name="email" id="email" placeholder={t('e_email')} className="w-full rounded-md bg-decimo text-tercero p-3" value={email} onChange={(e) => setEmail(e.target.value)} required/>
             </div>
             <div className='lg:col-span-1'>
-              <label htmlFor="tel">Teléfono: <span className='text-red-600'>*</span></label>
-              <input type="tel" name="tel" id="tel" placeholder="Escribe tu teléfono" className="w-full rounded-md bg-decimo text-tercero p-3" value={tel} onChange={(e) => setTel(e.target.value)} required/>
+              <label htmlFor="tel">{t('telefono')} <span className='text-red-600'>*</span></label>
+              <input type="tel" name="tel" id="tel" placeholder={t('e_telefono')} className="w-full rounded-md bg-decimo text-tercero p-3" value={tel} onChange={(e) => setTel(e.target.value)} required/>
             </div>
             <div className='lg:col-span-1'>
-              <label htmlFor="curriculum">Mándanos tu CV:</label>
+              <label htmlFor="curriculum">{t('cv')}</label>
               <input type="file" name='curriculum' id='curriculum' onChange={handleArchivoChange} accept=".pdf, .doc, .docx, image/*" className="block w-full text-base text-tercero cursor-pointer file:cursor-pointer file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-base"/>
             </div>
             <div className='lg:col-span-1'>
-              <label htmlFor="experiencia" className='block'>¿Cuentas con experiencia? <span className='text-red-600'>*</span></label>
+              <label htmlFor="experiencia" className='block'>{t('experiencia')} <span className='text-red-600'>*</span></label>
               <label className="inline-flex items-center">
                 <input
                   type="radio"
@@ -331,7 +335,7 @@ export default function Reclutamiento() {
                   onChange={handleRadio1Change}
                   required
                 />
-                <span className="ml-2">Sí</span>
+                <span className="ml-2">{t('si')}</span>
               </label>
               <label className="inline-flex items-center ml-6">
                 <input
@@ -347,7 +351,7 @@ export default function Reclutamiento() {
               </label>
             </div>
             <div className='lg:col-span-1'>
-              <label htmlFor="raices" className='block'>¿Cuéntas con experiencia en bienes raíces? <span className='text-red-600'>*</span></label>
+              <label htmlFor="raices" className='block'>{t('cuentas')} <span className='text-red-600'>*</span></label>
               <label className="inline-flex items-center">
                 <input
                   type="radio"
@@ -358,7 +362,7 @@ export default function Reclutamiento() {
                   onChange={handleRadio2Change}
                   required
                 />
-                <span className="ml-2">Sí</span>
+                <span className="ml-2">{t('si')}</span>
               </label>
               <label className="inline-flex items-center ml-6">
                 <input
@@ -374,7 +378,7 @@ export default function Reclutamiento() {
               </label>
             </div>
             <div className='lg:col-span-2'>
-              <label htmlFor="idioma" className='block'>¿Cuál es tu nivel de inglés? <span className='text-red-600'>*</span></label>
+              <label htmlFor="idioma" className='block'>{t('ingles')} <span className='text-red-600'>*</span></label>
               <label className="inline-flex items-center">
                 <input
                   type="radio"
@@ -385,7 +389,7 @@ export default function Reclutamiento() {
                   onChange={handleRadio3Change}
                   required
                 />
-                <span className="ml-2">Básico</span>
+                <span className="ml-2">{t('basico')}</span>
               </label>
               <label className="inline-flex items-center ml-6">
                 <input
@@ -397,7 +401,7 @@ export default function Reclutamiento() {
                   onChange={handleRadio3Change}
                   required
                 />
-                <span className="ml-2">Intermedio</span>
+                <span className="ml-2">{t('intermedio')}</span>
               </label>
               <label className="inline-flex items-center ml-6">
                 <input
@@ -409,13 +413,13 @@ export default function Reclutamiento() {
                   onChange={handleRadio3Change}
                   required
                 />
-                <span className="ml-2">Avanzado</span>
+                <span className="ml-2">{t('avanzado')}</span>
               </label>
             </div>
             <div className='lg:col-span-2'>
-              <label htmlFor="sucursal" className='block'>Sucursal a la que aplicas (Presencial tiempo completo. Residencia en sucursal obligatoria.): <span className='text-red-600'>*</span></label>
+              <label htmlFor="sucursal" className='block'>{t('sucursal')} <span className='text-red-600'>*</span></label>
               <select name="sucursal" id="sucursal" className="w-full rounded-md bg-decimo p-3" value={sucursal} onChange={(e) => setSucursal(e.target.value)} required>
-                <option value="">-- Selecciona una opción --</option>
+                <option value="">{t('selecciona')}</option>
                 <option value="Riviera Maya">Riviera Maya</option>
                 <option value="Los Cabos">Los Cabos</option>
                 <option value="Mérida">Mérida</option>
@@ -423,8 +427,8 @@ export default function Reclutamiento() {
               </select>
             </div>
             <div className="lg:col-span-2">
-              <label htmlFor="mensaje" className='block'>Mensaje: </label>
-              <textarea name="mensaje" id="mensaje" cols="30" rows="3" placeholder="¡Cuéntanos que te motiva a ser parte de nuestro equipo!" className="w-full rounded-md bg-decimo p-3" value={mensaje} onChange={(e) => setMensaje(e.target.value)}></textarea>
+              <label htmlFor="mensaje" className='block'>{t('mensaje')} </label>
+              <textarea name="mensaje" id="mensaje" cols="30" rows="3" placeholder={t('e_mensaje')} className="w-full rounded-md bg-decimo p-3" value={mensaje} onChange={(e) => setMensaje(e.target.value)}></textarea>
             </div>
             {/* Campos ocultos */}
             <div className='hidden'>
@@ -439,11 +443,23 @@ export default function Reclutamiento() {
                   {mensajeRespuesta}
                 </p>
               )}
-              <input type="submit" name="submit" id="submit" disabled={isSubmitting} className="py-3 px-24 bg-tfs uppercase text-white font-bold letter-spacing-25 rounded-md hover-bg cursor-pointer"/>
+              <input type="submit" name="submit" id="submit" value={t('enviar')} disabled={isSubmitting} className="py-3 px-24 bg-tfs uppercase text-white font-bold letter-spacing-25 rounded-md hover-bg cursor-pointer"/>
             </div>
           </div>
         </form>
       </section>
     </LayoutReclutamiento>
   );
+}
+
+export async function getStaticProps(context) {
+  // extract the locale identifier from the URL
+  const { locale } = context
+
+  return {
+    props: {
+      // pass the translation props to the page component
+      ...(await serverSideTranslations(locale)),
+    },
+  }
 }

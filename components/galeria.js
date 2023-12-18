@@ -1,9 +1,11 @@
 import { useState } from "react";
+import { useTranslation } from 'next-i18next'
 import Image from "next/image";
 import Lightbox from "yet-another-react-lightbox";
 import 'yet-another-react-lightbox/styles.css';
 
 export default function Galeria() {
+    const { t } = useTranslation(); // Inicializar el hook useTranslation
 
     const [lightboxOpen, setLightboxOpen] = useState(false);
     const [currentImage, setCurrentImage] = useState(0);
@@ -12,7 +14,7 @@ export default function Galeria() {
         // Array de URLs de imágenes
         {
           src: '/img/reclutamiento/slide-reclutamiento-1.jpg',
-          texto: 'Innovación'
+          texto: t('innovacion')
         },
         {
           src: '/img/reclutamiento/slide-reclutamiento-2.jpg',
@@ -20,7 +22,7 @@ export default function Galeria() {
         },
         {
           src: '/img/reclutamiento/slide-reclutamiento-3.jpg',
-          texto: 'Crecimiento'
+          texto: t('crecimiento')
         },
         {
           src: '/img/reclutamiento/slide-reclutamiento-4.jpg',
@@ -32,7 +34,7 @@ export default function Galeria() {
         },
         {
           src: '/img/reclutamiento/slide-reclutamiento-6.jpg',
-          texto: 'Herramientas financieras'
+          texto: t('herramientas')
         },
         {
           src: '/img/reclutamiento/slide-reclutamiento-7.jpg',
@@ -40,11 +42,11 @@ export default function Galeria() {
         },
         {
           src: '/img/reclutamiento/slide-reclutamiento-8.jpg',
-          texto: 'Capacitación constante'
+          texto: t('capacitacion_constante')
         },
         {
           src: '/img/reclutamiento/slide-reclutamiento-9.jpg',
-          texto: 'El mejor equipo'
+          texto: t('equipo')
         },
         {
           src: '/img/reclutamiento/slide-reclutamiento-10.jpg',
@@ -52,7 +54,7 @@ export default function Galeria() {
         },
         {
           src: '/img/reclutamiento/slide-reclutamiento-11.jpg',
-          texto: 'Unidad'
+          texto: t('unidad')
         },
         {
           src: '/img/reclutamiento/slide-reclutamiento-12.jpg',
@@ -64,7 +66,7 @@ export default function Galeria() {
         },
         {
           src: '/img/reclutamiento/slide-reclutamiento-14.jpg',
-          texto: 'Desarrollos exclusivos'
+          texto: t('desarrollos')
         },
         {
           src: '/img/reclutamiento/slide-reclutamiento-15.jpg',
@@ -72,7 +74,7 @@ export default function Galeria() {
         },
         {
           src: '/img/reclutamiento/slide-reclutamiento-16.jpg',
-          texto: 'Clientes potenciales'
+          texto: t('clientes_potenciales')
         }
       ];
 
