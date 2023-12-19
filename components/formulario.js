@@ -100,17 +100,17 @@ export default function Formulario({ show, onClose }) {
         <div className="p-4">
             <h2 className='uppercase text-4xl text-secondary font-bold letter-spacing-25 text-center pb-3'>{t('dudas')}</h2>
             <form className="w-full max-lg:pb-8 text-black" onSubmit={handleSubmit}>
-              <div className="grid gap-3">
-                <div>
+              <div className="grid grid-cols-1 gap-3">
+                <div className="col-span-1">
                   <input type="text" name="nombre" id="nombre" placeholder={t('nombre_completo')} className="w-full rounded-md bg-decimo text-secondary placeholder:text-gray-600 p-2" value={nombre} onChange={(e) => setNombre(e.target.value)} required/>
                 </div>
-                <div>
+                <div className="col-span-1">
                   <PhoneInput international defaultCountry="MX" type="tel" name="tel" id="tel" placeholder={t('telefono_completo')} className="w-full rounded-md bg-decimo text-secondary placeholder:text-gray-600 p-2" value={tel} onChange={setTel} required/>
                 </div>
-                <div>
+                <div className="col-span-1">
                   <input type="email" name="email" id="email" placeholder={t('email')} className="w-full rounded-md bg-decimo text-secondary placeholder:text-gray-600 p-2" value={email} onChange={(e) => setEmail(e.target.value)} required/>
                 </div>
-                <div>
+                <div className="col-span-1">
                   <select name="sucursal" id="sucursal" className="w-full rounded-md bg-decimo text-secondary placeholder:text-gray-600 p-2" value={sucursal} onChange={(e) => setSucursal(e.target.value)} required>
                       <option value="">{t('selecciona_ciudad')}</option>
                       <option value="Tulum">Tulum</option>
@@ -121,7 +121,7 @@ export default function Formulario({ show, onClose }) {
                       <option value="Otra">Otra</option>
                   </select>
                 </div>
-                <div>
+                <div className="col-span-1">
                   <select name="tipo" id="tipo" className="w-full rounded-md bg-decimo text-secondary placeholder:text-gray-600 p-2" value={tipo} onChange={(e) => setTipo(e.target.value)} required>
                       <option value="">{t('tipo_unidad')}</option>
                       <option value="Departamento">{t('departamento')}</option>
@@ -129,7 +129,7 @@ export default function Formulario({ show, onClose }) {
                       <option value="Lote">{t('lote')}</option>
                   </select>
                 </div>
-                <div>
+                <div className="col-span-1">
                   <textarea name="mensaje" id="mensaje" cols="30" rows="2" placeholder={t('tipo_propiedad')} className="w-full rounded-md bg-decimo text-secondary placeholder:text-gray-600 p-2" value={mensaje} onChange={(e) => setMensaje(e.target.value)} required></textarea>
                 </div>
                 <div className="text-secondary">
@@ -142,7 +142,7 @@ export default function Formulario({ show, onClose }) {
                   <input type="hidden" name="paginaEnvio" value={paginaEnvio} />
                   <input type="hidden" name="formularioOrigen" value={formularioOrigen}/>
                 </div>
-                <div className="text-center">
+                <div className="text-center col-span-1">
                   {mensajeRespuesta && (
                     <p className={`${esExito ? "text-green-600" : "text-red-600"} pb-2`}>
                       {mensajeRespuesta}
