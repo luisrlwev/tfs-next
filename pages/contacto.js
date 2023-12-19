@@ -1,11 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 import { useTranslation } from 'next-i18next'
+import PhoneInput from 'react-phone-number-input';
 import Link from "next/link";
 import Image from "next/image";
 import Layout from "@/components/layout";
 import { FaWhatsapp, FaRegEnvelope, FaFacebookF, FaYoutube, FaInstagram, FaXTwitter, FaPinterestP, FaTiktok, FaLinkedinIn } from "react-icons/fa6";
 import { GoogleMap, LoadScript, Marker, InfoWindow } from '@react-google-maps/api';
+import 'react-phone-number-input/style.css';
 
 const containerStyle = {
   width: '100%',
@@ -157,7 +159,7 @@ export default function Contacto() {
                   <input type="text" name="nombre" id="nombre" placeholder={t('nombre')} className="w-full rounded-md bg-decimo text-secondary p-3" value={nombre} onChange={(e) => setNombre(e.target.value)} required/>
                 </div>
                 <div className="col-span-1">
-                  <input type="tel" name="tel" id="tel" placeholder={t('telefono')} className="w-full rounded-md bg-decimo text-secondary p-3" value={tel} onChange={(e) => setTel(e.target.value)} required/>
+                  <PhoneInput international defaultCountry="MX" type="tel" name="tel" id="tel" placeholder={t('telefono')} className="w-full rounded-md bg-decimo text-secondary p-3" value={tel} onChange={setTel} required/>
                 </div>
                 <div className="col-span-2">
                   <input type="email" name="email" id="email" placeholder="Email" className="w-full rounded-md bg-decimo text-secondary p-3" value={email} onChange={(e) => setEmail(e.target.value)} required/>

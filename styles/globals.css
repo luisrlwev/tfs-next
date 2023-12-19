@@ -379,6 +379,10 @@ body {
   width: -webkit-fill-available;
 }
 
+.PhoneInputInput{
+  background-color: transparent;
+}
+
 @media (max-width: 768px) {
   .video, .portada-video, .portada-video-final, .portada-blog{
     min-height: 300px;

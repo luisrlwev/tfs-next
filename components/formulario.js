@@ -1,8 +1,10 @@
 import { useState, useEffect } from 'react';
 import { useTranslation } from 'next-i18next'
+import PhoneInput from 'react-phone-number-input';
 import Link from "next/link";
 import Image from "next/image";
 import { FaXmark } from "react-icons/fa6";
+import 'react-phone-number-input/style.css';
 
 export default function Formulario({ show, onClose }) {
   // Inicializar el hook useTranslation
@@ -103,7 +105,7 @@ export default function Formulario({ show, onClose }) {
                   <input type="text" name="nombre" id="nombre" placeholder={t('nombre_completo')} className="w-full rounded-md bg-decimo text-secondary placeholder:text-gray-600 p-2" value={nombre} onChange={(e) => setNombre(e.target.value)} required/>
                 </div>
                 <div>
-                  <input type="tel" name="tel" id="tel" placeholder={t('telefono_completo')} className="w-full rounded-md bg-decimo text-secondary placeholder:text-gray-600 p-2" value={tel} onChange={(e) => setTel(e.target.value)} required/>
+                  <PhoneInput international defaultCountry="MX" type="tel" name="tel" id="tel" placeholder={t('telefono_completo')} className="w-full rounded-md bg-decimo text-secondary placeholder:text-gray-600 p-2" value={tel} onChange={setTel} required/>
                 </div>
                 <div>
                   <input type="email" name="email" id="email" placeholder={t('email')} className="w-full rounded-md bg-decimo text-secondary placeholder:text-gray-600 p-2" value={email} onChange={(e) => setEmail(e.target.value)} required/>

@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { useTranslation } from 'next-i18next'
+import PhoneInput from 'react-phone-number-input';
 import Image from "next/image";
 import LayoutReclutamiento from "@/components/layout-reclutamiento";
 import Galeria from "@/components/galeria";
@@ -10,6 +11,7 @@ import { Autoplay, Navigation } from 'swiper/modules';
 // Import Swiper styles
 import 'swiper/css';
 import 'swiper/css/navigation';
+import 'react-phone-number-input/style.css';
 
 export default function Reclutamiento() {
   // Traducciones
@@ -125,25 +127,25 @@ export default function Reclutamiento() {
   };
 
   const slides = [
-    { src: '/img/reclutamiento/slide-reclutamiento-1.jpg', text: 'Herramientas financieras' },
+    { src: '/img/reclutamiento/slide-reclutamiento-1.jpg', text: t('herramientas') },
     { src: '/img/reclutamiento/slide-reclutamiento-2.jpg', text: '' },
-    { src: '/img/reclutamiento/slide-reclutamiento-3.jpg', text: 'Crecimiento' },
+    { src: '/img/reclutamiento/slide-reclutamiento-3.jpg', text: t('crecimiento') },
     { src: '/img/reclutamiento/slide-reclutamiento-4.jpg', text: '' },
-    { src: '/img/reclutamiento/slide-reclutamiento-5.jpg', text: 'Capacitación constante' },
+    { src: '/img/reclutamiento/slide-reclutamiento-5.jpg', text: t('capacitacion_constante') },
     { src: '/img/reclutamiento/slide-reclutamiento-6.jpg', text: '' },
-    { src: '/img/reclutamiento/slide-reclutamiento-7.jpg', text: 'Innovación' },
+    { src: '/img/reclutamiento/slide-reclutamiento-7.jpg', text: t('innovacion') },
     { src: '/img/reclutamiento/slide-reclutamiento-8.jpg', text: '' },
   ];
 
   const slidesDos = [
     { src: '/img/reclutamiento/slide-reclutamiento-9.jpg', text: '' },
-    { src: '/img/reclutamiento/slide-reclutamiento-10.jpg', text: 'Unidad' },
+    { src: '/img/reclutamiento/slide-reclutamiento-10.jpg', text: t('unidad') },
     { src: '/img/reclutamiento/slide-reclutamiento-11.jpg', text: '' },
-    { src: '/img/reclutamiento/slide-reclutamiento-12.jpg', text: 'El mejor equipo' },
+    { src: '/img/reclutamiento/slide-reclutamiento-12.jpg', text: t('equipo') },
     { src: '/img/reclutamiento/slide-reclutamiento-13.jpg', text: '' },
-    { src: '/img/reclutamiento/slide-reclutamiento-14.jpg', text: 'Desarrollos exclusivos' },
+    { src: '/img/reclutamiento/slide-reclutamiento-14.jpg', text: t('desarrollos') },
     { src: '/img/reclutamiento/slide-reclutamiento-15.jpg', text: '' },
-    { src: '/img/reclutamiento/slide-reclutamiento-16.jpg', text: 'Clientes potenciales' },
+    { src: '/img/reclutamiento/slide-reclutamiento-16.jpg', text: t('clientes_potenciales') },
   ];
 
   return (
@@ -161,7 +163,7 @@ export default function Reclutamiento() {
             <p>{t('buscamos')}</p>
             <p>{t('para')}</p>
             <h2 className="uppercase text-tfs letter-spacing-25 font-bold text-xl text-center pt-60 pb-24">{t('califica')}<br/>{t('nuestras_vacantes')}</h2>
-            <a href="#form" className="uppercase letter-spacing-25 text-tercero bg-tfs font-bold py-2 px-10 rounded-md">{t('postulate')}</a>
+            <a href="#form" className="uppercase letter-spacing-25 text-tercero bg-tfs font-bold py-2 px-10 rounded-md hover-bg">{t('postulate')}</a>
         </div>
       </section>
       <section className="bg-header">
@@ -317,7 +319,7 @@ export default function Reclutamiento() {
             </div>
             <div className='lg:col-span-1'>
               <label htmlFor="tel">{t('telefono')} <span className='text-red-600'>*</span></label>
-              <input type="tel" name="tel" id="tel" placeholder={t('e_telefono')} className="w-full rounded-md bg-decimo text-tercero p-3" value={tel} onChange={(e) => setTel(e.target.value)} required/>
+              <PhoneInput international defaultCountry="MX" type="tel" name="tel" id="tel" placeholder={t('e_telefono')} className="w-full rounded-md bg-decimo text-tercero p-3" value={tel} onChange={setTel} required/>
             </div>
             <div className='lg:col-span-1'>
               <label htmlFor="curriculum">{t('cv')}</label>

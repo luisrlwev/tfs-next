@@ -1,8 +1,10 @@
 import { useState, useEffect } from 'react';
 import { useTranslation } from 'next-i18next'
+import PhoneInput from 'react-phone-number-input';
 import Link from "next/link";
 import Image from "next/image";
 import { FaFacebookF, FaYoutube, FaInstagram, FaXTwitter, FaPinterestP, FaTiktok, FaLinkedinIn, FaWhatsapp } from "react-icons/fa6";
+import 'react-phone-number-input/style.css';
 
 export default function Footer() {
   const { t } = useTranslation(); // Inicializar el hook useTranslation
@@ -98,7 +100,7 @@ export default function Footer() {
                   <input type="text" name="nombre" id="nombre" placeholder={t('nombre')} className="w-full rounded-md bg-cuarto text-white p-3" value={nombre} onChange={(e) => setNombre(e.target.value)} required/>
                 </div>
                 <div>
-                  <input type="tel" name="tel" id="tel" placeholder={t('telefono')} className="w-full rounded-md bg-cuarto text-white p-3" value={tel} onChange={(e) => setTel(e.target.value)} required/>
+                  <PhoneInput international defaultCountry="MX" type="tel" name="tel" id="tel" placeholder={t('telefono')} className="w-full rounded-md bg-cuarto text-white p-3" value={tel} onChange={setTel} required/>
                 </div>
                 <div className="lg:col-span-2">
                   <input type="email" name="email" id="email" placeholder="Email" className="w-full rounded-md bg-cuarto text-white p-3" value={email} onChange={(e) => setEmail(e.target.value)} required/>

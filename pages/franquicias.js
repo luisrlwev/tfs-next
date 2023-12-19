@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 import { useTranslation } from 'next-i18next'
+import PhoneInput from 'react-phone-number-input';
 import Link from "next/link";
 import Layout from "@/components/layout";
 import Image from "next/image";
@@ -9,6 +10,7 @@ import { Autoplay, Navigation } from 'swiper/modules';
 // Import Swiper styles
 import 'swiper/css';
 import 'swiper/css/navigation';
+import 'react-phone-number-input/style.css';
 
 export default function Franquicias() {
   // Traducciones
@@ -451,7 +453,7 @@ export default function Franquicias() {
                 </div>
                 <div className="col-span-1 max-lg:col-span-2">
                   <label htmlFor="tel">{t('telefono')} <span className="text-red-600">*</span></label>
-                  <input type="tel" name="tel" id="tel" placeholder={t('e_telefono')} className="w-full rounded-md bg-decimo text-secondary p-3" value={tel} onChange={(e) => setTel(e.target.value)} required/>
+                  <PhoneInput international defaultCountry="MX" type="tel" name="tel" id="tel" placeholder={t('e_telefono')} className="w-full rounded-md bg-decimo text-secondary p-3" value={tel} onChange={setTel} required/>
                 </div>
                 <div className="col-span-1 max-lg:col-span-2">
                   <label htmlFor="email">Email <span className="text-red-600">*</span></label>
