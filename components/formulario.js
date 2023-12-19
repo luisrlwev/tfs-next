@@ -111,6 +111,7 @@ export default function Formulario({ show, onClose }) {
                   <input type="email" name="email" id="email" placeholder={t('email')} className="w-full rounded-md bg-decimo text-secondary placeholder:text-gray-600 p-2" value={email} onChange={(e) => setEmail(e.target.value)} required/>
                 </div>
                 <div className="col-span-1">
+                  <label for="sucursal" class="sr-only">Ciudad de interés</label>
                   <select name="sucursal" id="sucursal" className="w-full rounded-md bg-decimo text-secondary placeholder:text-gray-600 p-2" value={sucursal} onChange={(e) => setSucursal(e.target.value)} required>
                       <option value="">{t('selecciona_ciudad')}</option>
                       <option value="Tulum">Tulum</option>
@@ -122,6 +123,7 @@ export default function Formulario({ show, onClose }) {
                   </select>
                 </div>
                 <div className="col-span-1">
+                  <label for="tipo" class="sr-only">Tipo de unidad</label>
                   <select name="tipo" id="tipo" className="w-full rounded-md bg-decimo text-secondary placeholder:text-gray-600 p-2" value={tipo} onChange={(e) => setTipo(e.target.value)} required>
                       <option value="">{t('tipo_unidad')}</option>
                       <option value="Departamento">{t('departamento')}</option>
@@ -133,6 +135,7 @@ export default function Formulario({ show, onClose }) {
                   <textarea name="mensaje" id="mensaje" cols="30" rows="2" placeholder={t('tipo_propiedad')} className="w-full rounded-md bg-decimo text-secondary placeholder:text-gray-600 p-2" value={mensaje} onChange={(e) => setMensaje(e.target.value)} required></textarea>
                 </div>
                 <div className="text-secondary">
+                  <label for="condicones" class="sr-only">Condiciones</label>
                   <input type="checkbox" name="condiciones" id="condiciones" checked={condiciones} onChange={handleCheckboxChange} required/> {t('acepto')} <Link href="/aviso-de-privacidad" className="text-tfs hover">{t('terminos')}</Link>
                 </div>
                 {/* Campos ocultos */}
@@ -148,7 +151,7 @@ export default function Formulario({ show, onClose }) {
                       {mensajeRespuesta}
                     </p>
                   )}
-                  <input type="submit" name="submit" id="submit" value={t('enviar')} disabled={isSubmitting} className="py-2 px-12 bg-tfs uppercase text-white font-bold letter-spacing-25 rounded-md hover-bg cursor-pointer"/>
+                  <input type="submit" name="submit" id="submit" value={t('enviar')} disabled={isSubmitting} className="py-2 px-12 bg-tfs uppercase text-tercero font-bold letter-spacing-25 rounded-md hover-bg cursor-pointer"/>
                 </div>
               </div>
             </form>

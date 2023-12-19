@@ -220,13 +220,13 @@ export default function Reclutamiento() {
               </Swiper>
             </div>
             <div className="flex justify-center text-tfs text-2xl gap-4 pt-11">
-              <a href="https://www.youtube.com/@tulumfromskyrealtors5181" target="_blank"><FaYoutube className="hover"/></a>
-              <a href="https://www.facebook.com/tulumfromskyrealtors/" target="_blank"><FaFacebookF className="hover"/></a>
-              <a href="https://www.instagram.com/tulumfromsky/" target="_blank"><FaInstagram className="hover"/></a>
-              <a href="https://twitter.com/FromskyTulum" target="_blank"><FaXTwitter className="hover"/></a>
-              <a href="https://www.pinterest.com.mx/Tulumfromsky/" target="_blank"><FaPinterestP className="hover"/></a>
-              <a href="https://www.tiktok.com/@tulumfromsky" target="_blank"><FaTiktok className="hover"/></a>
-              <a href="https://www.linkedin.com/company/40900945/admin/" target="_blank"><FaLinkedinIn className="hover"/></a>
+              <a href="https://www.youtube.com/@tulumfromskyrealtors5181" target="_blank"><FaYoutube className="hover" alt="YouTube"/></a>
+              <a href="https://www.facebook.com/tulumfromskyrealtors/" target="_blank"><FaFacebookF className="hover" alt="Facebook"/></a>
+              <a href="https://www.instagram.com/tulumfromsky/" target="_blank"><FaInstagram className="hover" alt="Instagram"/></a>
+              <a href="https://twitter.com/FromskyTulum" target="_blank"><FaXTwitter className="hover" alt="Twitter"/></a>
+              <a href="https://www.pinterest.com.mx/Tulumfromsky/" target="_blank"><FaPinterestP className="hover" alt="Pinterest"/></a>
+              <a href="https://www.tiktok.com/@tulumfromsky" target="_blank"><FaTiktok className="hover" alt="TikTok"/></a>
+              <a href="https://www.linkedin.com/company/40900945/admin/" target="_blank"><FaLinkedinIn className="hover" alt="LinkedIn"/></a>
             </div>
             <div className="flex justify-center lg:pt-24 max-lg:pt-20">
               <a href="#form" className="text-tercero bg-tfs py-2 px-10 uppercase font-bold letter-spacing-25 rounded-md hover-bg">{t('postulate')}</a>
@@ -445,7 +445,7 @@ export default function Reclutamiento() {
                   {mensajeRespuesta}
                 </p>
               )}
-              <input type="submit" name="submit" id="submit" value={t('enviar')} disabled={isSubmitting} className="py-3 px-24 bg-tfs uppercase text-white font-bold letter-spacing-25 rounded-md hover-bg cursor-pointer"/>
+              <input type="submit" name="submit" id="submit" value={t('enviar')} disabled={isSubmitting} className="py-3 px-24 bg-tfs uppercase text-tercero font-bold letter-spacing-25 rounded-md hover-bg cursor-pointer"/>
             </div>
           </div>
         </form>

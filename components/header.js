@@ -37,6 +37,7 @@ export default function Header() {
         </div>
         {/* Botón de menú móvil */}
         <button onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)} className="inline-flex items-center justify-center p-2 rounded-md text-tfs lg:hidden">
+          <span class="sr-only">Menú</span>
           <MdMenu className='text-4xl'/>
         </button>
         {/* Menú móvil */}

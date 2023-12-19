@@ -522,7 +522,7 @@ export default function Franquicias() {
                       {mensajeRespuesta}
                     </p>
                   )}
-                  <input type="submit" name="submit" id="submit" value={t('enviar')} disabled={isSubmitting} className="py-3 px-32 bg-tfs uppercase text-white font-bold letter-spacing-25 rounded-md hover-bg cursor-pointer"/>
+                  <input type="submit" name="submit" id="submit" value={t('enviar')} disabled={isSubmitting} className="py-3 px-32 bg-tfs uppercase text-tercero font-bold letter-spacing-25 rounded-md hover-bg cursor-pointer"/>
                 </div>
               </div>
           </form>

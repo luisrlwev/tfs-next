@@ -147,8 +147,8 @@ export default function Contacto() {
               <li>{t('atencion_durante')}</li>
             </ul>
             <p className="text-white text-center uppercase font-semibold pb-24 max-lg:pb-8"><span className="text-tfs">{t('contactanos')}</span>{t('permite')}</p>
-            <a href="mailto:sales@tulumfromskyrealtors.com" className="text-center text-tfs flex items-center hover"><FaRegEnvelope className="mr-1"/>sales@tulumfromskyrealtors.com</a>
-            <a href="tel:+529848035450" className="text-center text-tfs flex items-center hover"><FaWhatsapp className="mr-1"/>+52 (984) 803 5450</a>
+            <a href="mailto:sales@tulumfromskyrealtors.com" className="text-center text-tfs flex items-center hover"><FaRegEnvelope className="mr-1" alt="mail"/>sales@tulumfromskyrealtors.com</a>
+            <a href="tel:+529848035450" className="text-center text-tfs flex items-center hover"><FaWhatsapp className="mr-1" alt="WhatsApp"/>+52 (984) 803 5450</a>
           </div>
         </div>
         <div className="pt-52 px-24 max-lg:px-3 pb-24 max-lg:py-8">
@@ -165,6 +165,7 @@ export default function Contacto() {
                   <input type="email" name="email" id="email" placeholder="Email" className="w-full rounded-md bg-decimo text-secondary p-3" value={email} onChange={(e) => setEmail(e.target.value)} required/>
                 </div>
                 <div className="col-span-1">
+                  <label for="sucursal" class="sr-only">Ciudad de interés</label>
                   <select name="sucursal" id="sucursal" className="w-full rounded-md bg-decimo text-secondary p-3" value={sucursal} onChange={(e) => setSucursal(e.target.value)} required>
                       <option value="">{t('selecciona_ciudad')}</option>
                       <option value="Tulum">Tulum</option>
@@ -176,6 +177,7 @@ export default function Contacto() {
                   </select>
                 </div>
                 <div className="col-span-1">
+                  <label for="tipo" class="sr-only">Tipo de unidad</label>
                   <select name="tipo" id="tipo" className="w-full rounded-md bg-decimo text-secondary p-3" value={tipo} onChange={(e) => setTipo(e.target.value)} required>
                       <option value="">{t('tipo_unidad')}</option>
                       <option value="Departamento">{t('departamento')}</option>
@@ -187,6 +189,7 @@ export default function Contacto() {
                   <textarea name="mensaje" id="mensaje" cols="30" rows="3" placeholder={t('tipo_propiedad')} className="w-full rounded-md bg-decimo text-secondary p-3" value={mensaje} onChange={(e) => setMensaje(e.target.value)} required></textarea>
                 </div>
                 <div className="col-span-2 text-secondary">
+                  <label for="condicones" class="sr-only">Condiciones</label>
                   <input type="checkbox" name="condiciones" id="condiciones" checked={condiciones} onChange={handleCheckboxChange} required/> {t('acepto')}<Link href="/aviso-de-privacidad" className="text-tfs hover"> {t('terminos')}</Link>
                 </div>
                 {/* Campos ocultos */}
@@ -209,13 +212,13 @@ export default function Contacto() {
           <h3 className="text-center uppercase letter-spacing-25 text-tfs font-bold text-2xl">{t('siguenos')}</h3>
           <h4 className="font-bold text-tfs text-center pt-3 pb-7">@tulumfromsky</h4>
           <div className="flex justify-center text-tfs text-2xl gap-4">
-            <a href="https://www.youtube.com/@tulumfromskyrealtors5181" target="_blank"><FaYoutube className="hover"/></a>
-            <a href="https://www.facebook.com/tulumfromskyrealtors/" target="_blank"><FaFacebookF className="hover"/></a>
-            <a href="https://www.instagram.com/tulumfromsky/" target="_blank"><FaInstagram className="hover"/></a>
-            <a href="https://twitter.com/FromskyTulum" target="_blank"><FaXTwitter className="hover"/></a>
-            <a href="https://www.pinterest.com.mx/Tulumfromsky/" target="_blank"><FaPinterestP className="hover"/></a>
-            <a href="https://www.tiktok.com/@tulumfromsky" target="_blank"><FaTiktok className="hover"/></a>
-            <a href="https://www.linkedin.com/company/40900945/admin/" target="_blank"><FaLinkedinIn className="hover"/></a>
+            <a href="https://www.youtube.com/@tulumfromskyrealtors5181" target="_blank"><FaYoutube className="hover" alt="YouTube"/></a>
+            <a href="https://www.facebook.com/tulumfromskyrealtors/" target="_blank"><FaFacebookF className="hover" alt="Facebook"/></a>
+            <a href="https://www.instagram.com/tulumfromsky/" target="_blank"><FaInstagram className="hover" alt="Instagram"/></a>
+            <a href="https://twitter.com/FromskyTulum" target="_blank"><FaXTwitter className="hover" alt="Twitter"/></a>
+            <a href="https://www.pinterest.com.mx/Tulumfromsky/" target="_blank"><FaPinterestP className="hover" alt="Pinterest"/></a>
+            <a href="https://www.tiktok.com/@tulumfromsky" target="_blank"><FaTiktok className="hover" alt="TikTok"/></a>
+            <a href="https://www.linkedin.com/company/40900945/admin/" target="_blank"><FaLinkedinIn className="hover" alt="LinkedIn"/></a>
           </div>
         </div>
       </section>
