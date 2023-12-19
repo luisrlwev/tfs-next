@@ -10,6 +10,8 @@ export default function Footer() {
   const [nombre, setNombre] = useState('');
   const [email, setEmail] = useState('');
   const [tel, setTel] = useState('');
+  const [sucursal, setSucursal] = useState('');
+  const [tipo, setTipo] = useState('');
   const [mensaje, setMensaje] = useState('');
   const [condiciones, setCondiciones] = useState(true);
   // campos ocultos
@@ -44,6 +46,8 @@ export default function Footer() {
     setNombre('');
     setEmail('');
     setTel('');
+    setSucursal('');
+    setTipo('');
     setMensaje('');
     setCondiciones(true); // o false, dependiendo de tu caso
 
@@ -51,7 +55,7 @@ export default function Footer() {
       const respuesta = await fetch('/api/form-modal', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ nombre, email, tel, mensaje, condiciones, fechaEnvio, horaEnvio, paginaEnvio, formularioOrigen }),
+        body: JSON.stringify({ nombre, email, tel, sucursal, tipo, mensaje, condiciones, fechaEnvio, horaEnvio, paginaEnvio, formularioOrigen }),
       });
       if (respuesta.ok) {
         console.log("Correo enviado con éxito");
@@ -62,6 +66,8 @@ export default function Footer() {
         setNombre('');
         setEmail('');
         setTel('');
+        setSucursal('');
+        setTipo('');
         setMensaje('');
         setCondiciones(true);
       } else {
@@ -96,6 +102,25 @@ export default function Footer() {
                 </div>
                 <div className="lg:col-span-2">
                   <input type="email" name="email" id="email" placeholder="Email" className="w-full rounded-md bg-cuarto text-white p-3" value={email} onChange={(e) => setEmail(e.target.value)} required/>
+                </div>
+                <div>
+                  <select name="sucursal" id="sucursal" className="w-full rounded-md bg-cuarto text-white p-3" value={sucursal} onChange={(e) => setSucursal(e.target.value)} required>
+                    <option value="">{t('selecciona_ciudad')}</option>
+                    <option value="Tulum">Tulum</option>
+                    <option value="Cancún">Cancún</option>
+                    <option value="Los Cabos">Los Cabos</option>
+                    <option value="Mérida">Mérida</option>
+                    <option value="Puerto Vallarta">Puerto Vallarta</option>
+                    <option value="Otra">Otra</option>
+                </select>
+                </div>
+                <div>
+                  <select name="tipo" id="tipo" className="w-full rounded-md bg-cuarto text-white p-3" value={tipo} onChange={(e) => setTipo(e.target.value)} required>
+                      <option value="">{t('tipo_unidad')}</option>
+                      <option value="Departamento">{t('departamento')}</option>
+                      <option value="Casa">{t('casa')}</option>
+                      <option value="Lote">{t('lote')}</option>
+                  </select>
                 </div>
                 <div className="lg:col-span-2">
                   <textarea name="mensaje" id="mensaje" cols="30" rows="3" placeholder={t('tipo_propiedad')} className="w-full rounded-md bg-cuarto text-white p-3" value={mensaje} onChange={(e) => setMensaje(e.target.value)} required></textarea>

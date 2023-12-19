@@ -353,5 +353,10 @@
     "aviso_99": "o mediante escrito al domicilio que se señala para oír y recibir notificaciones en el primer párrafo de este comunicado.",
     "aviso_100": "XI. Tratamiento indebido de sus datos personales.",
     "aviso_101": "Si usted considera que su derecho de protección de datos personales ha sido lesionado por alguna conducta de la Empresa o presume que en el tratamiento de sus datos personales existe alguna violación a las disposiciones previstas en la Ley, usted podrá promover la queja o denuncia correspondiente ante el Instituto Nacional de Acceso a la Información (INAI).",
-    "aviso_102": "Para mayor información respecto a este tema le invitamos a visitar el sitio web del INAI, el cual es el siguiente:"
+    "aviso_102": "Para mayor información respecto a este tema le invitamos a visitar el sitio web del INAI, el cual es el siguiente:",
+    "selecciona_ciudad": "Ciudad de interés",
+    "tipo_unidad": "Tipo de unidad",
+    "departamento": "Departamento",
+    "casa": "Casa",
+    "lote": "Lote"
 }

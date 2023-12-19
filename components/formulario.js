@@ -11,6 +11,8 @@ export default function Formulario({ show, onClose }) {
   const [nombre, setNombre] = useState('');
   const [email, setEmail] = useState('');
   const [tel, setTel] = useState('');
+  const [sucursal, setSucursal] = useState('');
+  const [tipo, setTipo] = useState('');
   const [mensaje, setMensaje] = useState('');
   const [condiciones, setCondiciones] = useState(true);
   // campos ocultos
@@ -45,6 +47,8 @@ export default function Formulario({ show, onClose }) {
     setNombre('');
     setEmail('');
     setTel('');
+    setSucursal('');
+    setTipo('');
     setMensaje('');
     setCondiciones(true); // o false, dependiendo de tu caso
 
@@ -52,7 +56,7 @@ export default function Formulario({ show, onClose }) {
       const respuesta = await fetch('/api/form-modal', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ nombre, email, tel, mensaje, condiciones, fechaEnvio, horaEnvio, paginaEnvio, formularioOrigen }),
+        body: JSON.stringify({ nombre, email, tel, sucursal, tipo, mensaje, condiciones, fechaEnvio, horaEnvio, paginaEnvio, formularioOrigen }),
       });
       if (respuesta.ok) {
         console.log("Correo enviado con éxito");
@@ -63,6 +67,8 @@ export default function Formulario({ show, onClose }) {
         setNombre('');
         setEmail('');
         setTel('');
+        setSucursal('');
+        setTipo('');
         setMensaje('');
         setCondiciones(true);
       } else {
@@ -91,21 +97,40 @@ export default function Formulario({ show, onClose }) {
         <button onClick={onClose} className="absolute top-0 right-0 mt-2 mr-2"><FaXmark className="text-2xl text-red-600"/></button>
         <div className="p-4">
             <h2 className='uppercase text-4xl text-secondary font-bold letter-spacing-25 text-center pb-3'>{t('dudas')}</h2>
-            <form className="w-full pb-5 max-lg:pb-8 text-black" onSubmit={handleSubmit}>
-              <div className="grid grid-cols-1 gap-3">
-                <div className="col-span-1">
-                  <input type="text" name="nombre" id="nombre" placeholder={t('nombre_completo')} className="w-full rounded-md bg-decimo text-secondary placeholder:text-gray-600 p-3" value={nombre} onChange={(e) => setNombre(e.target.value)} required/>
+            <form className="w-full max-lg:pb-8 text-black" onSubmit={handleSubmit}>
+              <div className="grid gap-3">
+                <div>
+                  <input type="text" name="nombre" id="nombre" placeholder={t('nombre_completo')} className="w-full rounded-md bg-decimo text-secondary placeholder:text-gray-600 p-2" value={nombre} onChange={(e) => setNombre(e.target.value)} required/>
                 </div>
-                <div className="col-span-1">
-                  <input type="email" name="email" id="email" placeholder={t('email')} className="w-full rounded-md bg-decimo text-secondary placeholder:text-gray-600 p-3" value={email} onChange={(e) => setEmail(e.target.value)} required/>
+                <div>
+                  <input type="tel" name="tel" id="tel" placeholder={t('telefono_completo')} className="w-full rounded-md bg-decimo text-secondary placeholder:text-gray-600 p-2" value={tel} onChange={(e) => setTel(e.target.value)} required/>
                 </div>
-                <div className="col-span-1">
-                  <input type="tel" name="tel" id="tel" placeholder={t('telefono_completo')} className="w-full rounded-md bg-decimo text-secondary placeholder:text-gray-600 p-3" value={tel} onChange={(e) => setTel(e.target.value)} required/>
+                <div>
+                  <input type="email" name="email" id="email" placeholder={t('email')} className="w-full rounded-md bg-decimo text-secondary placeholder:text-gray-600 p-2" value={email} onChange={(e) => setEmail(e.target.value)} required/>
                 </div>
-                <div className="col-span-1">
-                  <textarea name="mensaje" id="mensaje" cols="30" rows="2" placeholder={t('tipo_propiedad')} className="w-full rounded-md bg-decimo text-secondary placeholder:text-gray-600 p-3" value={mensaje} onChange={(e) => setMensaje(e.target.value)} required></textarea>
+                <div>
+                  <select name="sucursal" id="sucursal" className="w-full rounded-md bg-decimo text-secondary placeholder:text-gray-600 p-2" value={sucursal} onChange={(e) => setSucursal(e.target.value)} required>
+                      <option value="">{t('selecciona_ciudad')}</option>
+                      <option value="Tulum">Tulum</option>
+                      <option value="Cancún">Cancún</option>
+                      <option value="Los Cabos">Los Cabos</option>
+                      <option value="Mérida">Mérida</option>
+                      <option value="Puerto Vallarta">Puerto Vallarta</option>
+                      <option value="Otra">Otra</option>
+                  </select>
                 </div>
-                <div className="col-span-1 text-secondary">
+                <div>
+                  <select name="tipo" id="tipo" className="w-full rounded-md bg-decimo text-secondary placeholder:text-gray-600 p-2" value={tipo} onChange={(e) => setTipo(e.target.value)} required>
+                      <option value="">{t('tipo_unidad')}</option>
+                      <option value="Departamento">{t('departamento')}</option>
+                      <option value="Casa">{t('casa')}</option>
+                      <option value="Lote">{t('lote')}</option>
+                  </select>
+                </div>
+                <div>
+                  <textarea name="mensaje" id="mensaje" cols="30" rows="2" placeholder={t('tipo_propiedad')} className="w-full rounded-md bg-decimo text-secondary placeholder:text-gray-600 p-2" value={mensaje} onChange={(e) => setMensaje(e.target.value)} required></textarea>
+                </div>
+                <div className="text-secondary">
                   <input type="checkbox" name="condiciones" id="condiciones" checked={condiciones} onChange={handleCheckboxChange} required/> {t('acepto')} <Link href="/aviso-de-privacidad" className="text-tfs hover">{t('terminos')}</Link>
                 </div>
                 {/* Campos ocultos */}
@@ -115,7 +140,7 @@ export default function Formulario({ show, onClose }) {
                   <input type="hidden" name="paginaEnvio" value={paginaEnvio} />
                   <input type="hidden" name="formularioOrigen" value={formularioOrigen}/>
                 </div>
-                <div className="col-span-1 text-center">
+                <div className="text-center">
                   {mensajeRespuesta && (
                     <p className={`${esExito ? "text-green-600" : "text-red-600"} pb-2`}>
                       {mensajeRespuesta}
@@ -125,8 +150,6 @@ export default function Formulario({ show, onClose }) {
                 </div>
               </div>
             </form>
-          <h4 className="uppercase letter-spacing-25 text-tfs text-center font-bold pb-4">{t('siguenos')}</h4>
-          <p className="text-center text-secondary font-bold text-sm">@tulumfromsky</p>
         </div>
         <div className="flex max-lg:hidden">
             <Image src={'/img/portada-modal.webp'} width={415} height={490} alt="imagen modal" />

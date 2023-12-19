@@ -47,6 +47,8 @@ export default function Contacto() {
   const [nombre, setNombre] = useState('');
   const [email, setEmail] = useState('');
   const [tel, setTel] = useState('');
+  const [sucursal, setSucursal] = useState('');
+  const [tipo, setTipo] = useState('');
   const [mensaje, setMensaje] = useState('');
   const [condiciones, setCondiciones] = useState(true);
   // campos ocultos
@@ -83,6 +85,8 @@ export default function Contacto() {
     setNombre('');
     setEmail('');
     setTel('');
+    setSucursal('');
+    setTipo('');
     setMensaje('');
     setCondiciones(true); // o false, dependiendo de tu caso
 
@@ -90,7 +94,7 @@ export default function Contacto() {
       const respuesta = await fetch('/api/form-modal', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ nombre, email, tel, mensaje, condiciones, fechaEnvio, horaEnvio, paginaEnvio, formularioOrigen }),
+        body: JSON.stringify({ nombre, email, tel, sucursal, tipo, mensaje, condiciones, fechaEnvio, horaEnvio, paginaEnvio, formularioOrigen }),
       });
       if (respuesta.ok) {
         console.log("Correo enviado con éxito");
@@ -101,6 +105,8 @@ export default function Contacto() {
         setNombre('');
         setEmail('');
         setTel('');
+        setSucursal('');
+        setTipo('');
         setMensaje('');
         setCondiciones(true);
       } else {
@@ -146,20 +152,39 @@ export default function Contacto() {
         <div className="pt-52 px-24 max-lg:px-3 pb-24 max-lg:py-8">
           <h2 className="uppercase text-secondary font-bold letter-spacing-25 text-xl pb-8 text-center">{t('dejanos')}</h2>
           <form className="w-full pb-24 max-lg:pb-8" onSubmit={handleSubmit}>
-              <div className="grid grid-cols-1 gap-3">
+              <div className="grid grid-cols-2 gap-3">
                 <div className="col-span-1">
                   <input type="text" name="nombre" id="nombre" placeholder={t('nombre')} className="w-full rounded-md bg-decimo text-secondary p-3" value={nombre} onChange={(e) => setNombre(e.target.value)} required/>
                 </div>
                 <div className="col-span-1">
                   <input type="tel" name="tel" id="tel" placeholder={t('telefono')} className="w-full rounded-md bg-decimo text-secondary p-3" value={tel} onChange={(e) => setTel(e.target.value)} required/>
                 </div>
-                <div className="col-span-1">
+                <div className="col-span-2">
                   <input type="email" name="email" id="email" placeholder="Email" className="w-full rounded-md bg-decimo text-secondary p-3" value={email} onChange={(e) => setEmail(e.target.value)} required/>
                 </div>
                 <div className="col-span-1">
+                  <select name="sucursal" id="sucursal" className="w-full rounded-md bg-decimo text-secondary p-3" value={sucursal} onChange={(e) => setSucursal(e.target.value)} required>
+                      <option value="">{t('selecciona_ciudad')}</option>
+                      <option value="Tulum">Tulum</option>
+                      <option value="Cancún">Cancún</option>
+                      <option value="Los Cabos">Los Cabos</option>
+                      <option value="Mérida">Mérida</option>
+                      <option value="Puerto Vallarta">Puerto Vallarta</option>
+                      <option value="Otra">Otra</option>
+                  </select>
+                </div>
+                <div className="col-span-1">
+                  <select name="tipo" id="tipo" className="w-full rounded-md bg-decimo text-secondary p-3" value={tipo} onChange={(e) => setTipo(e.target.value)} required>
+                      <option value="">{t('tipo_unidad')}</option>
+                      <option value="Departamento">{t('departamento')}</option>
+                      <option value="Casa">{t('casa')}</option>
+                      <option value="Lote">{t('lote')}</option>
+                  </select>
+                </div>
+                <div className="col-span-2">
                   <textarea name="mensaje" id="mensaje" cols="30" rows="3" placeholder={t('tipo_propiedad')} className="w-full rounded-md bg-decimo text-secondary p-3" value={mensaje} onChange={(e) => setMensaje(e.target.value)} required></textarea>
                 </div>
-                <div className="col-span-1 text-secondary">
+                <div className="col-span-2 text-secondary">
                   <input type="checkbox" name="condiciones" id="condiciones" checked={condiciones} onChange={handleCheckboxChange} required/> {t('acepto')}<Link href="/aviso-de-privacidad" className="text-tfs hover"> {t('terminos')}</Link>
                 </div>
                 {/* Campos ocultos */}
@@ -169,7 +194,7 @@ export default function Contacto() {
                   <input type="hidden" name="paginaEnvio" value={paginaEnvio} />
                   <input type="hidden" name="formularioOrigen" value={formularioOrigen}/>
                 </div>
-                <div className="col-span-1 text-center">
+                <div className="col-span-2 text-center">
                   {mensajeRespuesta && (
                     <p className={`${esExito ? "text-green-600" : "text-red-600"} pb-2`}>
                       {mensajeRespuesta}
