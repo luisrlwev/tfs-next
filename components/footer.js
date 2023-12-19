@@ -162,13 +162,13 @@ export default function Footer() {
           <div className="grid justify-center items-center">
             <Link href={'/'} className="h-max pb-10"><Image src={'/img/logo.svg'} width={354} height={201} alt="Logo TFS"/></Link>
             <div className="grid grid-cols-7 justify-items-center text-tfs text-3xl h-max pb-8 lg:pb-0">
-              <a href="https://www.youtube.com/@tulumfromskyrealtors5181" target="_blank"><FaYoutube className="hover" alt="YouTube"/></a>
-              <a href="https://www.facebook.com/tulumfromskyrealtors/" target="_blank"><FaFacebookF className="hover" alt="Facebook"/></a>
-              <a href="https://www.instagram.com/tulumfromsky/" target="_blank"><FaInstagram className="hover" alt="Instagram"/></a>
-              <a href="https://twitter.com/FromskyTulum" target="_blank"><FaXTwitter className="hover" alt="Twitter"/></a>
-              <a href="https://www.pinterest.com.mx/Tulumfromsky/" target="_blank"><FaPinterestP className="hover" alt="Pinterest"/></a>
-              <a href="https://www.tiktok.com/@tulumfromsky" target="_blank"><FaTiktok className="hover" alt="TikTok"/></a>
-              <a href="https://www.linkedin.com/company/40900945/admin/" target="_blank"><FaLinkedinIn className="hover" alt="LinkedIn"/></a>
+              <a href="https://www.youtube.com/@tulumfromskyrealtors5181" target="_blank" aria-label="YouTube"><FaYoutube className="hover"/></a>
+              <a href="https://www.facebook.com/tulumfromskyrealtors/" target="_blank" aria-label="Facebook"><FaFacebookF className="hover"/></a>
+              <a href="https://www.instagram.com/tulumfromsky/" target="_blank" aria-label="Instagram"><FaInstagram className="hover"/></a>
+              <a href="https://twitter.com/FromskyTulum" target="_blank" aria-label="Twitter"><FaXTwitter className="hover"/></a>
+              <a href="https://www.pinterest.com.mx/Tulumfromsky/" target="_blank" aria-label="Pinterest"><FaPinterestP className="hover"/></a>
+              <a href="https://www.tiktok.com/@tulumfromsky" target="_blank" aria-label="TikTok"><FaTiktok className="hover"/></a>
+              <a href="https://www.linkedin.com/company/40900945/admin/" target="_blank" aria-label="LinkedIn"><FaLinkedinIn className="hover"/></a>
             </div>
             <div className="flex justify-center align-center text-tfs h-max">
               <a href="https://wa.me/529848035450" className="flex items-center w-fit h-fit hover"><FaWhatsapp className="pr-1 text-xl"/> +52 (984) 803 5450</a>
