@@ -189,8 +189,7 @@ export default function Contacto() {
                   <textarea name="mensaje" id="mensaje" cols="30" rows="3" placeholder={t('tipo_propiedad')} className="w-full rounded-md bg-decimo text-secondary p-3" value={mensaje} onChange={(e) => setMensaje(e.target.value)} required></textarea>
                 </div>
                 <div className="col-span-2 text-secondary">
-                  <label for="condicones" class="sr-only">Condiciones</label>
-                  <input type="checkbox" name="condiciones" id="condiciones" checked={condiciones} onChange={handleCheckboxChange} required/> {t('acepto')}<Link href="/aviso-de-privacidad" className="text-tfs hover"> {t('terminos')}</Link>
+                  <input type="checkbox" name="condiciones" id="condiciones" aria-label='condiciones' checked={condiciones} onChange={handleCheckboxChange} required/> {t('acepto')}<Link href="/aviso-de-privacidad" className="text-tfs hover"> {t('terminos')}</Link>
                 </div>
                 {/* Campos ocultos */}
                 <div className='hidden'>

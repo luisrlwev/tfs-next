@@ -505,7 +505,7 @@ export default function Franquicias() {
                   <textarea name="mensaje" id="mensaje" cols="30" rows="3" placeholder={t('e_mensaje')} className="w-full rounded-md bg-decimo text-secondary p-3" value={mensaje} onChange={(e) => setMensaje(e.target.value)}></textarea>
                 </div>
                 <div className="col-span-2 max-lg:text-sm">
-                  <input type="checkbox" name="condiciones" id="condiciones" checked={condiciones} onChange={handleCheckboxChange} required/> {t('casilla')} <Link href="/aviso-de-privacidad" target="_blank" className="text-tfs hover">{t('aviso')}</Link>. <span className="text-red-600">*</span>
+                  <input type="checkbox" name="condiciones" id="condiciones" aria-label='condiciones' checked={condiciones} onChange={handleCheckboxChange} required/> {t('casilla')} <Link href="/aviso-de-privacidad" target="_blank" className="text-tfs hover">{t('aviso')}</Link>. <span className="text-red-600">*</span>
                 </div>
                 {/* Campos ocultos */}
                 <div className='hidden'>

@@ -232,7 +232,7 @@ export default function Nosotros() {
             </div>
           </div>
           <div className="grid justify-items-center">
-            <Link href={'/reclutamiento'} className="text-tercero uppercase letter-spacing-25 font-bold bg-tfs py-3 px-12 rounded-md">{t('postulate')}</Link>
+            <Link href={'/reclutamiento'} className="text-tercero uppercase letter-spacing-25 font-bold bg-tfs py-3 px-12 rounded-md hover-bg">{t('postulate')}</Link>
           </div>
         </div>
       </div>
