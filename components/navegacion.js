@@ -4,6 +4,7 @@ import { useTranslation } from 'next-i18next'
 
 export default function Navegacion() {
     const router = useRouter()
+    const { locale, pathname, asPath, query } = router;
     const { t } = useTranslation(); // Inicializar el hook useTranslation
   return (
     <>
@@ -55,6 +56,16 @@ export default function Navegacion() {
       <li className="pb-2 lg:py-0">
         <Link href="/franquicias" className={ router.pathname === '/franquicias' ? 'text-tfs' : 'hover'}>
         {t('franquicias')}
+        </Link>
+      </li>
+      <li className="pb-2 lg:py-0 hidden max-lg:flex">
+        {/* Muestra el idioma actual y proporciona enlaces para cambiar */}
+        <Link href={{ pathname, query }} as={asPath} locale="es" className={`mr-2 ${locale === 'es' ? 'text-tfs font-bold' : ''}`}>
+          ES
+        </Link>
+        |
+        <Link href={{ pathname, query }} as={asPath} locale="en" className={`ml-2 ${locale === 'en' ? 'text-tfs font-bold' : ''}`}>
+          EN
         </Link>
       </li>
     </>

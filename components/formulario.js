@@ -86,7 +86,7 @@ export default function Formulario({ show, onClose }) {
   }
 
   return (
-    <div className="fixed inset-0 bg-black bg-opacity-50 overflow-y-auto h-full w-full z-40" onClick={onClose}>
+    <div className="fixed inset-0 bg-black bg-opacity-50 overflow-y-auto h-full w-full z-50" onClick={onClose}>
       <div className="grid grid-cols-2 max-lg:grid-cols-1 relative top-40 max-lg:top-10 mx-auto p-5 border w-modal shadow-lg bg-modal" onClick={e => e.stopPropagation()}>
         <button onClick={onClose} className="absolute top-0 right-0 mt-2 mr-2"><FaXmark className="text-2xl text-red-600"/></button>
         <div className="p-4">

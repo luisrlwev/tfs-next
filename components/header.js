@@ -13,7 +13,7 @@ export default function Header() {
   const { locale, pathname, asPath, query } = router;
 
   return (
-    <header className="bg-header text-white p-4">
+    <header className="bg-header text-white p-4 sticky top-0 z-40">
       <div className="container mx-auto flex justify-between items-center text-menu text-center font-semibold uppercase">
          {/* ... Logo y botón de menú ... */}
         <Link href={'/'}>
