@@ -112,7 +112,7 @@ export default function Franquicias() {
             <p className="uppercase letter-spacing-25 text-tercero text-center text-xl font-bold pb-20">{t('franquicias_inmobiliarias')}</p>
             <p className="text-center">{t('nuestro')}</p>
             <p className="text-center pb-24">{t('seguir')}</p>
-            <Image src={'/img/logo.png'} width={270} height={162} alt="logo" className="pb-16"/>
+            <Image src={'/img/logo-2.svg'} width={270} height={162} alt="logo" className="pb-16"/>
             <a href="#form" className="bg-tfs uppercase letter-spacing-25 font-bold py-2 px-10 text-tercero rounded-md hover-bg">{t('contactanos')}</a>
           </div>
         </div>
