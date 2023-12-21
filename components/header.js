@@ -42,7 +42,7 @@ export default function Header() {
         </button>
         {/* Menú móvil */}
         {isMobileMenuOpen && (
-          <nav className="absolute top-24 left-0 w-full lg:hidden bg-header z-20">
+          <nav className="absolute top-20 left-0 w-full lg:hidden bg-header z-20">
             <ul className="flex flex-col items-center gap-3">
               <Navegacion/>
             </ul>
