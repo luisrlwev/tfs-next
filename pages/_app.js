@@ -1,5 +1,6 @@
 import { appWithTranslation } from 'next-i18next';
 import { Analytics } from '@vercel/analytics/react';
+import { SpeedInsights } from '@vercel/speed-insights/next';
 import Script from 'next/script';
 import '@/styles/globals.css';
 
@@ -11,6 +12,7 @@ function App({ Component, pageProps }) {
       <div id="fb-customer-chat" className="fb-customerchat"></div>
 
       <Component {...pageProps} />
+      <SpeedInsights />
       <Analytics />
       {/* Google Tag Manager - gtag.js */}
       <Script
