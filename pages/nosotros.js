@@ -50,12 +50,12 @@ export default function Nosotros() {
           <div className="bg-header text-white text-center px-24 max-lg:px-5 max-lg:py-7 pt-20 pb-24 flex flex-col items-center justify-center">
             <Image src={'/img/nosotros/vision.png'} width={62} height={50} alt="Visión" className="pb-5"/>
             <h2 className="text-4xl uppercase font-bold letter-spacing-25 pb-5 max-lg:text-2xl">{t('vision')}</h2>
-            <p>{t('en')} <b>Tulumfromsky Realtors</b>{t('vision_texto')}</p>
+            <p>{t('en')} <b>Fromsky Realtors</b>{t('vision_texto')}</p>
           </div>
           <div className="bg-sexto text-secondary text-center px-24 max-lg:px-5 max-lg:py-7 pt-20 pb-24 flex flex-col items-center">
             <Image src={'/img/nosotros/mision.png'} width={62} height={82} alt="Misión" className="pb-5"/>
             <h2 className="text-4xl uppercase font-bold letter-spacing-25 pb-5 max-lg:text-2xl">{t('mision')}</h2>
-            <p>{t('en')} <strong>Tulumfromsky Realtors</strong>{t('mision_texto')}</p>
+            <p>{t('en')} <strong>Fromsky Realtors</strong>{t('mision_texto')}</p>
           </div>
         </div>
       </section>
