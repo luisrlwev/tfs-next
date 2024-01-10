@@ -100,7 +100,8 @@ export default function Footer() {
                   <input type="text" name="nombre" id="nombre" placeholder={t('nombre')} className="w-full rounded-md bg-cuarto text-white p-3" value={nombre} onChange={(e) => setNombre(e.target.value)} required/>
                 </div>
                 <div>
-                  <PhoneInput international defaultCountry="MX" type="tel" name="tel" id="tel" placeholder={t('telefono')} className="w-full rounded-md bg-cuarto text-white p-3" value={tel} onChange={setTel} required/>
+                  <PhoneInput international type="tel" name="tel" id="tel" placeholder={t('telefono')} className="w-full rounded-md bg-cuarto text-white p-3" value={tel} onChange={setTel} required/>
+                  <p className='text-white text-sm italic'>{t('leyenda_tel')}</p>
                 </div>
                 <div className="lg:col-span-2">
                   <input type="email" name="email" id="email" placeholder="Email" className="w-full rounded-md bg-cuarto text-white p-3" value={email} onChange={(e) => setEmail(e.target.value)} required/>

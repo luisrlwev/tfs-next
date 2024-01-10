@@ -36,7 +36,7 @@
     "dudas": "Questions?",
     "nombre_completo": "Full name: Eg. John Doe",
     "email": "Email: Eg. hello@mydomain.com",
-    "telefono_completo": "Phone: Eg. +52 984 123 4567",
+    "telefono_completo": "Phone: Eg. +1 408 123 4567",
     "siguenos": "Follow us!",
     "lotes_descripcion": "Discover the best lots in the Riviera Maya, Los Cabos, and Mérida to build your dream home or invest in the future. Enjoy the natural beauty of Mexico and investment opportunities in different tourist areas. Find options in various sizes and prices. Take advantage of this unique opportunity to build your dream home in Mexico today!",
     "terrenos": "Land near the sea",
@@ -358,5 +358,6 @@
     "tipo_unidad": "Type of unit",
     "departamento": "Apartment",
     "casa": "House",
-    "lote": "Lot"
+    "lote": "Lot",
+    "leyenda_tel": "Eg. +1 408 123 4567"
 }

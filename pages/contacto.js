@@ -159,7 +159,8 @@ export default function Contacto() {
                   <input type="text" name="nombre" id="nombre" placeholder={t('nombre')} className="w-full rounded-md bg-decimo text-secondary p-3" value={nombre} onChange={(e) => setNombre(e.target.value)} required/>
                 </div>
                 <div className="col-span-1">
-                  <PhoneInput international defaultCountry="MX" type="tel" name="tel" id="tel" placeholder={t('telefono')} className="w-full rounded-md bg-decimo text-secondary p-3" value={tel} onChange={setTel} required/>
+                  <PhoneInput international type="tel" name="tel" id="tel" placeholder={t('telefono')} className="w-full rounded-md bg-decimo text-secondary p-3" value={tel} onChange={setTel} required/>
+                  <p className='text-secondary text-sm italic'>{t('leyenda_tel')}</p>
                 </div>
                 <div className="col-span-2">
                   <input type="email" name="email" id="email" placeholder="Email" className="w-full rounded-md bg-decimo text-secondary p-3" value={email} onChange={(e) => setEmail(e.target.value)} required/>

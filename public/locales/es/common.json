@@ -358,5 +358,6 @@
     "tipo_unidad": "Tipo de unidad",
     "departamento": "Departamento",
     "casa": "Casa",
-    "lote": "Lote"
+    "lote": "Lote",
+    "leyenda_tel": "Ej. +52 984 123 4567"
 }

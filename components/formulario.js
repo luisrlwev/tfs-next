@@ -105,7 +105,8 @@ export default function Formulario({ show, onClose }) {
                   <input type="text" name="nombre" id="nombre" placeholder={t('nombre_completo')} className="w-full rounded-md bg-decimo text-secondary placeholder:text-gray-600 p-2" value={nombre} onChange={(e) => setNombre(e.target.value)} required/>
                 </div>
                 <div className="col-span-1">
-                  <PhoneInput international defaultCountry="MX" type="tel" name="tel" id="tel" placeholder={t('telefono_completo')} className="w-full rounded-md bg-decimo text-secondary placeholder:text-gray-600 p-2" value={tel} onChange={setTel} required/>
+                  <PhoneInput international type="tel" name="tel" id="tel" placeholder={t('telefono_completo')} className="w-full rounded-md bg-decimo text-secondary placeholder:text-gray-600 p-2" value={tel} onChange={setTel} required/>
+                  <p className='text-secondary text-sm italic'>{t('leyenda_tel')}</p>
                 </div>
                 <div className="col-span-1">
                   <input type="email" name="email" id="email" placeholder={t('email')} className="w-full rounded-md bg-decimo text-secondary placeholder:text-gray-600 p-2" value={email} onChange={(e) => setEmail(e.target.value)} required/>
