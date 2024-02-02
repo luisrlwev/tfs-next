@@ -425,7 +425,7 @@ export default function Reclutamiento() {
                 <option value="Riviera Maya">Riviera Maya</option>
                 <option value="Los Cabos">Los Cabos</option>
                 <option value="Mérida">Mérida</option>
-                <option value="Tulum">Tulum</option>
+                <option value="Vallarta">Vallarta</option>
               </select>
             </div>
             <div className="lg:col-span-2">
