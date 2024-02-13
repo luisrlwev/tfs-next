@@ -26,7 +26,7 @@ export default function Vallarta() {
   return (
     <Layout
       title={"Vallarta"}
-      description={t('cabos_descripcion')}
+      description={t('vallarta_descripcion')}
     >
       <div className="portada-vallarta-inicio flex relative justify-center cursor-pointer" onClick={abrirModal}>
         <div className="portada-ciudades flex justify-center items-end relative">
