@@ -34,6 +34,11 @@ export default function Navegacion() {
         </Link>
       </li>
       <li className="pb-2 lg:py-0">
+        <Link href="/vallarta" className={ router.pathname === '/vallarta' ? 'text-tfs' : 'hover'}>
+          Vallarta
+        </Link>
+      </li>
+      <li className="pb-2 lg:py-0">
         <Link href="/constructora" className={ router.pathname === '/constructora' ? 'text-tfs' : 'hover'}>
         {t('constructora')}
         </Link>

@@ -42,7 +42,7 @@
     "terrenos": "Terrenos cerca del mar",
     "lotes_desde": "Lotes desde:",
     "lotes_residenciales": "Lotes residenciales con",
-    "campo": "campo de golf",
+    "campo": "Campo de Golf",
     "financiamiento": "Financiamiento hasta 9 años.",
     "terrenos_residencial": "Terrenos en el residencial más",
     "exclusivos": "exclusivo de Tulum",
@@ -359,5 +359,8 @@
     "departamento": "Departamento",
     "casa": "Casa",
     "lote": "Lote",
-    "leyenda_tel": "Ej. +52 984 123 4567"
+    "leyenda_tel": "Ej. +52 984 123 4567",
+    "vista_mar": "Vista al mar",
+    "serenidad": "Serenidad entre la naturaleza y vistas espectaculares.",
+    "preventa": "Preventa frente a la playa con vista al mar"
 }

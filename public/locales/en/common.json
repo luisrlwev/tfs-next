@@ -359,5 +359,8 @@
     "departamento": "Apartment",
     "casa": "House",
     "lote": "Lot",
-    "leyenda_tel": "Eg. +1 408 123 4567"
+    "leyenda_tel": "Eg. +1 408 123 4567",
+    "vista_mar": "Ocean view",
+    "serenidad": "Serenity amidst nature and spectacular views.",
+    "preventa": "Presale beachfront with ocean view"
 }

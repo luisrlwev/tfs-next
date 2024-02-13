@@ -33,23 +33,7 @@ function App({ Component, pageProps }) {
           `,
         }}
       />
-      {/* TikTok Pixel */}
-      <Script
-        id="tiktok-pixel"
-        strategy="afterInteractive"
-        dangerouslySetInnerHTML={{
-          __html: `
-            !function(w, d, t){
-              w.TiktokAnalyticsObject=t;var ttq=w[t]=w[t]||[];
-              ttq.methods=["page","track","identify","instances","debug","on","off","once","ready","alias","group","enableCookie","disableCookie"];
-              ttq.setAndDefer=function(t,e){t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}};
-              for(var i=0;i<ttq.methods.length;i++)ttq.setAndDefer(ttq,ttq.methods[i]);
-              ttq.load('CGQ3SGRC77U5U41DLFT0');
-              ttq.page();
-            }(window, document, 'ttq');
-          `,
-        }}
-      />
+      
       {/* Google Tag Manager - gtag.js */}
       <Script
         src="https://www.googletagmanager.com/gtag/js?id=G-1B2H5H35RB"

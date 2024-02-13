@@ -220,6 +220,11 @@ body {
   background-size: cover;
 }
 
+.portada-vallarta-inicio{
+  background: url('../public/img/vallarta/portada-vallarta.jpg') 50% 50%;
+  background-size: cover;
+}
+
 .portada-depas{
   background: url('../public/img/departamentos/portada-depas.png') 50% 50%;
   background-size: cover;
@@ -272,6 +277,11 @@ body {
 
 .portada-cabos-final{
   background: url('../public/img/cabos/portada-cabos-final.webp') 50% 50%;
+  background-size: cover;
+}
+
+.portada-vallarta-final{
+  background: url('../public/img/vallarta/video-vallarta.jpg') 50% 50%;
   background-size: cover;
 }
 
