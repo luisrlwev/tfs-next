@@ -41,7 +41,7 @@ export default function Vallarta() {
       </section>
       <section className="py-16">
         <div className="container mx-auto grid grid-cols-2 max-lg:grid-cols-1 max-lg:px-3 gap-4">
-          <div className="max-lg:pb-8">
+          <div className="max-lg:pb-8 max-lg:order-last">
             <p className="text-tfs uppercase font-bold text-xl letter-spacing-25 text-center pb-7">{t('campo')}</p>
             <Swiper
               slidesPerView={1}
