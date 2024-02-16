@@ -65,7 +65,7 @@ export default function Aviso() {
             <p className="text-sm text-justify leading-6 pb-6">{t('aviso_92')}</p>
             <p className="text-sm text-justify leading-6 font-bold">{t('aviso_93')}</p>
             <p className="text-sm text-justify leading-6">{t('aviso_94')}</p>
-            <p className="text-sm text-justify leading-6">{t('aviso_95')} <a href="http://www.tulumfromskyrealtors.com.mx/" target="_blank" className="text-tfs hover" rel="noopener" data-auto-recognition="true">www.tulumfromskyrealtors.com.mx</a></p>
+            <p className="text-sm text-justify leading-6">{t('aviso_95')} <a href="http://www.fromskyrealtors.com/" target="_blank" className="text-tfs hover" rel="noopener" data-auto-recognition="true">www.fromskyrealtors.com</a></p>
             <p className="text-sm text-justify leading-6 pb-6">{t('aviso_96')}</p>
             <p className="text-sm text-justify leading-6 font-bold">{t('aviso_97')}</p>
             <p className="text-sm text-justify leading-6 pb-6">{t('aviso_98')} <a href="mailto:sales@tulumfromskyrealtors.com" className="text-tfs hover" target="_self">sales@tulumfromskyrealtors.com</a> {t('aviso_99')}</p>
