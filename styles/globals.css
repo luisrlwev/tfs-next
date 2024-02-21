@@ -288,6 +288,14 @@ body {
   background-size: cover;
 }
 
+.portada-cancun-inicio{
+  background: url('../public/img/cancun/portada-cancun.jpg') 50% 50%;
+  background-attachment: fixed;
+  background-position: 0px 20px;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
 .portada-franquicias-cancun-inicio{
   background: url('../public/img/cancun/portada-franquicias-cancun.jpg') 50% 50%;
   background-attachment: fixed;
