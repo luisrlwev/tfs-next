@@ -89,26 +89,41 @@ export default function Footer() {
   };
 
   return (
-    <footer>
-      <div className="bg-header py-10">
+    <footer className='bg-footer-2 '>
+      <div className="py-10 overlay-footer-final">
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-3 container mx-auto">
+          <div className="grid justify-center items-center">
+            <Link href={'/'} className="h-max pb-10"><Image src={'/img/logo.svg'} width={354} height={201} alt="Logo TFS"/></Link>
+            <div className="flex justify-center align-center text-tfs h-max">
+              <a href="https://wa.me/529848035450" className="flex items-center w-fit h-fit hover"><FaWhatsapp className="mr-3 text-3xl"/> +52 (984) 803 5450</a>
+            </div>
+            <div className="grid grid-cols-7 justify-items-center text-tfs text-3xl h-max pb-8 lg:pb-0">
+              <a href="https://www.facebook.com/tulumfromskyrealtors/" target="_blank" aria-label="Facebook"><FaFacebookF className="hover"/></a>
+              <a href="https://www.instagram.com/fromskyrealtors/" target="_blank" aria-label="Instagram"><FaInstagram className="hover"/></a>
+              <a href="https://www.tiktok.com/@tulumfromsky" target="_blank" aria-label="TikTok"><FaTiktok className="hover"/></a>
+              <a href="https://twitter.com/FromskyTulum" target="_blank" aria-label="Twitter"><FaXTwitter className="hover"/></a>
+              <a href="https://www.pinterest.com.mx/Tulumfromsky/" target="_blank" aria-label="Pinterest"><FaPinterestP className="hover"/></a>
+              <a href="https://www.linkedin.com/company/tulumfromskyrealtors/" target="_blank" aria-label="LinkedIn"><FaLinkedinIn className="hover"/></a>
+              <a href="https://www.youtube.com/@tulumfromskyrealtors" target="_blank" aria-label="YouTube"><FaYoutube className="hover"/></a>
+            </div>
+          </div>
           <div>
-            <p className="text-tfs text-center text-xl uppercase font-bold letter-spacing-25 pb-2">{t('contactanos')}</p>
-            <form onSubmit={handleSubmit}>
+            <p className="text-white text-center text-xl uppercase font-bold letter-spacing-25 pb-2">{t('contactanos')}</p>
+            <form onSubmit={handleSubmit} className='z-50'>
               <div className="grid px-3 lg:grid-cols-2 gap-3">
                 <div>
-                  <input type="text" name="nombre" id="nombre" placeholder={t('nombre')} className="w-full rounded-md bg-cuarto text-white p-3" value={nombre} onChange={(e) => setNombre(e.target.value)} required/>
+                  <input type="text" name="nombre" id="nombre" placeholder={t('nombre')} className="w-full bg-transparent border-b text-white p-3" value={nombre} onChange={(e) => setNombre(e.target.value)} required/>
                 </div>
                 <div>
-                  <PhoneInput international type="tel" name="tel" id="tel" placeholder={t('telefono')} className="w-full rounded-md bg-cuarto text-white p-3" value={tel} onChange={setTel} required/>
+                  <PhoneInput international type="tel" name="tel" id="tel" placeholder={t('telefono')} className="w-full bg-transparent border-b text-white p-3" value={tel} onChange={setTel} required/>
                   <p className='text-white text-sm italic'>{t('leyenda_tel')}</p>
                 </div>
                 <div className="lg:col-span-2">
-                  <input type="email" name="email" id="email" placeholder="Email" className="w-full rounded-md bg-cuarto text-white p-3" value={email} onChange={(e) => setEmail(e.target.value)} required/>
+                  <input type="email" name="email" id="email" placeholder="Email" className="w-full bg-transparent border-b text-white p-3" value={email} onChange={(e) => setEmail(e.target.value)} required/>
                 </div>
                 <div>
                   <label for="sucursal" class="sr-only">Ciudad de interés</label>
-                  <select name="sucursal" id="sucursal" className="w-full rounded-md bg-cuarto text-white p-3" value={sucursal} onChange={(e) => setSucursal(e.target.value)} required>
+                  <select name="sucursal" id="sucursal" className="w-full bg-transparent border-b text-white p-3" value={sucursal} onChange={(e) => setSucursal(e.target.value)} required>
                     <option value="">{t('selecciona_ciudad')}</option>
                     <option value="Tulum">Tulum</option>
                     <option value="Cancún">Cancún</option>
@@ -120,7 +135,7 @@ export default function Footer() {
                 </div>
                 <div>
                   <label for="tipo" class="sr-only">Tipo de unidad</label>
-                  <select name="tipo" id="tipo" className="w-full rounded-md bg-cuarto text-white p-3" value={tipo} onChange={(e) => setTipo(e.target.value)} required>
+                  <select name="tipo" id="tipo" className="w-full bg-transparent border-b text-white p-3" value={tipo} onChange={(e) => setTipo(e.target.value)} required>
                       <option value="">{t('tipo_unidad')}</option>
                       <option value="Departamento">{t('departamento')}</option>
                       <option value="Casa">{t('casa')}</option>
@@ -128,7 +143,7 @@ export default function Footer() {
                   </select>
                 </div>
                 <div className="lg:col-span-2">
-                  <textarea name="mensaje" id="mensaje" cols="30" rows="3" placeholder={t('tipo_propiedad')} className="w-full rounded-md bg-cuarto text-white p-3" value={mensaje} onChange={(e) => setMensaje(e.target.value)} required></textarea>
+                  <textarea name="mensaje" id="mensaje" cols="30" rows="3" placeholder={t('tipo_propiedad')} className="w-full bg-transparent border-b text-white p-3" value={mensaje} onChange={(e) => setMensaje(e.target.value)} required></textarea>
                 </div>
                 <div className="lg:col-span-2 text-white">
                   <input type="checkbox" name="condiciones" id="condiciones" aria-label='condiciones' checked={condiciones} onChange={handleCheckboxChange} required/> {t('acepto')} <Link href="/aviso-de-privacidad" className="text-tfs hover">{t('terminos')}</Link>
@@ -146,7 +161,7 @@ export default function Footer() {
                       {mensajeRespuesta}
                     </p>
                   )}
-                  <input type="submit" name="submit" id="submit" value={t('enviar')} disabled={isSubmitting} className="py-2 px-12 bg-tfs uppercase text-tercero font-bold letter-spacing-25 rounded-md hover-bg cursor-pointer"/>
+                  <input type="submit" name="submit" id="submit" value={t('enviar')} disabled={isSubmitting} className="py-2 px-12 bg-tfs uppercase text-tercero font-bold letter-spacing-25 hover-bg cursor-pointer"/>
                 </div>
               </div>
             </form>
@@ -160,25 +175,10 @@ export default function Footer() {
               <Image src={'/img/realtor.png'} width={86} height={100} alt="Realtor"/>
             </div>
           </div>
-          <div className="grid justify-center items-center">
-            <Link href={'/'} className="h-max pb-10"><Image src={'/img/logo.svg'} width={354} height={201} alt="Logo TFS"/></Link>
-            <div className="grid grid-cols-7 justify-items-center text-tfs text-3xl h-max pb-8 lg:pb-0">
-              <a href="https://www.youtube.com/@tulumfromskyrealtors" target="_blank" aria-label="YouTube"><FaYoutube className="hover"/></a>
-              <a href="https://www.facebook.com/tulumfromskyrealtors/" target="_blank" aria-label="Facebook"><FaFacebookF className="hover"/></a>
-              <a href="https://www.instagram.com/fromskyrealtors/" target="_blank" aria-label="Instagram"><FaInstagram className="hover"/></a>
-              <a href="https://twitter.com/FromskyTulum" target="_blank" aria-label="Twitter"><FaXTwitter className="hover"/></a>
-              <a href="https://www.pinterest.com.mx/Tulumfromsky/" target="_blank" aria-label="Pinterest"><FaPinterestP className="hover"/></a>
-              <a href="https://www.tiktok.com/@tulumfromsky" target="_blank" aria-label="TikTok"><FaTiktok className="hover"/></a>
-              <a href="https://www.linkedin.com/company/tulumfromskyrealtors/" target="_blank" aria-label="LinkedIn"><FaLinkedinIn className="hover"/></a>
-            </div>
-            <div className="flex justify-center align-center text-tfs h-max">
-              <a href="https://wa.me/529848035450" className="flex items-center w-fit h-fit hover"><FaWhatsapp className="pr-1 text-xl"/> +52 (984) 803 5450</a>
-            </div>
-          </div>
         </div>
       </div>
-      <div className="text-white text-center text-base py-4 bg-footer">
-        <p className="font-bold uppercase text-footer letter-spacing-25 pb-2 text-xs lg:text-base">{t('footer')}</p>
+      <div className="text-white text-center text-base py-4 bg-footer relative">
+        <p className="uppercase text-footer letter-spacing-25 pb-2 text-xs lg:text-base">{t('footer')}</p>
         <Link href={'/aviso-de-privacidad'} className="underline text-xs lg:text-base">{t('aviso')}</Link>
       </div>
     </footer>

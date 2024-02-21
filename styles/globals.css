@@ -43,6 +43,11 @@ body {
   background-color: var(--tercero);
 }
 
+.bg-footer-2{
+  background: rgb(0,0,0);
+  background: linear-gradient(45deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0.83) 100%);
+}
+
 .bg-tfs{
   background-color: var(--primary);
 }
@@ -187,6 +192,13 @@ body {
   background-size: auto;
   opacity: 0.5;
   transition: background 0.3s, border-radius 0.3s, opacity 0.3s;
+}
+
+.overlay-footer-final{
+  background-image: url('../public/img/bg-footer.png');
+  background-position: center left;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .overlay-contacto{

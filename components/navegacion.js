@@ -14,11 +14,6 @@ export default function Navegacion() {
         </Link>
       </li>
       <li className="pb-2 lg:py-0">
-        <Link href="/lotes" className={ router.pathname === '/lotes' ? 'text-tfs' : 'hover'}>
-        {t('lotes')}
-        </Link>
-      </li>
-      <li className="pb-2 lg:py-0">
         <Link href="/casas" className={ router.pathname === '/casas' ? 'text-tfs' : 'hover'}>
         {t('casas')}
         </Link>
