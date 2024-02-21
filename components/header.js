@@ -17,7 +17,7 @@ export default function Header() {
       <div className="container mx-auto flex justify-between items-center text-menu text-center font-semibold uppercase">
          {/* ... Logo y botón de menú ... */}
         <Link href={'/'}>
-          <Image src="/img/logo.svg" alt="Tulumfromsky Logo" width={123} height={70}/>
+          <Image src="/img/logo.svg" alt="Fromsky Logo" width={123} height={70}/>
         </Link>
         {/* Menú de escritorio */}
         <nav className="hidden lg:block">

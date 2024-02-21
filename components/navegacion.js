@@ -24,18 +24,23 @@ export default function Navegacion() {
         </Link>
       </li>
       <li className="pb-2 lg:py-0">
+        <Link href="/cancun" className={ router.pathname === '/cancun' ? 'text-tfs' : 'hover'}>
+          Cancún
+        </Link>
+      </li>
+      <li className="pb-2 lg:py-0">
         <Link href="/merida" className={ router.pathname === '/merida' ? 'text-tfs' : 'hover'}>
           Mérida
         </Link>
       </li>
       <li className="pb-2 lg:py-0">
-        <Link href="/los-cabos" className={ router.pathname === '/los-cabos' ? 'text-tfs' : 'hover'}>
-          Los Cabos
+        <Link href="/vallarta" className={ router.pathname === '/vallarta' ? 'text-tfs' : 'hover'}>
+          Vallarta
         </Link>
       </li>
       <li className="pb-2 lg:py-0">
-        <Link href="/vallarta" className={ router.pathname === '/vallarta' ? 'text-tfs' : 'hover'}>
-          Vallarta
+        <Link href="/los-cabos" className={ router.pathname === '/los-cabos' ? 'text-tfs' : 'hover'}>
+          Los Cabos
         </Link>
       </li>
       <li className="pb-2 lg:py-0">
