@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 import { useTranslation } from 'next-i18next'
-import Layout from "@/components/layout";
+import LayoutFranquiciaCancun from "@/components/layout";
 import Image from "next/image";
 import Boton from "@/components/boton";
 import Formulario from "@/components/formulario";
@@ -24,7 +24,7 @@ export default function FranquiciaCancun() {
     setShowModal(false);
   };
   return (
-    <Layout
+    <LayoutFranquiciaCancun
       title={"Cancún"}
       description={t('cancun_descripcion')}
     >
@@ -214,7 +214,7 @@ export default function FranquiciaCancun() {
         </div>
       </div>
       <Formulario show={showModal} onClose={cerrarModal}/>
-    </Layout>
+    </LayoutFranquiciaCancun>
   );
 }
 
