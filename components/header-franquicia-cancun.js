@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { useRouter } from 'next/router';
 import Image from "next/image";
 import Link from "next/link";
+import { FaWhatsapp, FaEnvelope } from "react-icons/fa6";
 
 export default function HeaderFranquiciaCancun() {
 
