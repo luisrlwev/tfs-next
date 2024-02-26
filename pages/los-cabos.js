@@ -31,6 +31,7 @@ export default function Cabos() {
     >
       {/* Evento de pixel de Cabos */}
       <Script
+        id="script-pixel-cabos"
         strategy="afterInteractive"
         dangerouslySetInnerHTML={{
           __html: `

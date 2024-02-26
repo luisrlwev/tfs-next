@@ -31,6 +31,7 @@ export default function Vallarta() {
     >
       {/* Evento de pixel de Vallarta */}
       <Script
+        id="script-pixel-vallarta"
         strategy="afterInteractive"
         dangerouslySetInnerHTML={{
           __html: `

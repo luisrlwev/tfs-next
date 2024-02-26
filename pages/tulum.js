@@ -31,6 +31,7 @@ export default function Tulum() {
     >
       {/* Evento de pixel de Tulum */}
       <Script
+        id="script-pixel-tulum"
         strategy="afterInteractive"
         dangerouslySetInnerHTML={{
           __html: `

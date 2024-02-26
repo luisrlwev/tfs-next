@@ -31,6 +31,7 @@ export default function Cancun() {
     >
       {/* Evento de pixel de Cancun */}
       <Script
+        id="script-pixel-cancun"
         strategy="afterInteractive"
         dangerouslySetInnerHTML={{
           __html: `

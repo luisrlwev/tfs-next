@@ -31,6 +31,7 @@ export default function Merida() {
     >
       {/* Evento de pixel de Merida */}
       <Script
+        id="script-pixel-merida"
         strategy="afterInteractive"
         dangerouslySetInnerHTML={{
           __html: `
