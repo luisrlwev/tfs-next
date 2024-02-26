@@ -20,7 +20,7 @@ function App({ Component, pageProps }) {
         strategy="afterInteractive"
         async
       />
-
+      {/* Google Analytics */}
       <Script
         id="google-analytics"
         strategy="afterInteractive"
@@ -40,6 +40,7 @@ function App({ Component, pageProps }) {
         strategy="afterInteractive"
         async
       />
+      {/* Google Analytics */}
       <Script
         id="google-analytics"
         strategy="afterInteractive"
@@ -86,6 +87,7 @@ function App({ Component, pageProps }) {
         strategy="afterInteractive"
         async
       />
+      {/* Google Analytics */}
       <Script
         id="google-analytics"
         strategy="afterInteractive"

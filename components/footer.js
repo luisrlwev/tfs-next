@@ -94,17 +94,17 @@ export default function Footer() {
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-3 container mx-auto">
           <div className="grid justify-center items-center">
             <Link href={'/'} className="h-max pb-10"><Image src={'/img/logo.svg'} width={354} height={201} alt="Logo TFS"/></Link>
-            <div className="flex justify-center align-center text-tfs h-max">
+            <div className="flex justify-center align-center text-tfs h-max max-lg:pb-8">
               <a href="https://wa.me/529848035450" className="flex items-center w-fit h-fit hover"><FaWhatsapp className="mr-3 text-3xl"/> +52 (984) 803 5450</a>
             </div>
             <div className="grid grid-cols-7 justify-items-center text-tfs text-3xl h-max pb-8 lg:pb-0">
-              <a href="https://www.facebook.com/tulumfromskyrealtors/" target="_blank" aria-label="Facebook"><FaFacebookF className="hover"/></a>
+              <a href="https://www.facebook.com/FromskyRealtors/" target="_blank" aria-label="Facebook"><FaFacebookF className="hover"/></a>
               <a href="https://www.instagram.com/fromskyrealtors/" target="_blank" aria-label="Instagram"><FaInstagram className="hover"/></a>
-              <a href="https://www.tiktok.com/@tulumfromsky" target="_blank" aria-label="TikTok"><FaTiktok className="hover"/></a>
+              <a href="https://www.tiktok.com/@fromskyrealtors" target="_blank" aria-label="TikTok"><FaTiktok className="hover"/></a>
               <a href="https://twitter.com/FromskyTulum" target="_blank" aria-label="Twitter"><FaXTwitter className="hover"/></a>
-              <a href="https://www.pinterest.com.mx/Tulumfromsky/" target="_blank" aria-label="Pinterest"><FaPinterestP className="hover"/></a>
-              <a href="https://www.linkedin.com/company/tulumfromskyrealtors/" target="_blank" aria-label="LinkedIn"><FaLinkedinIn className="hover"/></a>
-              <a href="https://www.youtube.com/@tulumfromskyrealtors" target="_blank" aria-label="YouTube"><FaYoutube className="hover"/></a>
+              <a href="https://www.pinterest.com.mx/FromskyRealtors/" target="_blank" aria-label="Pinterest"><FaPinterestP className="hover"/></a>
+              <a href="https://www.linkedin.com/company/fromskyrealtors/" target="_blank" aria-label="LinkedIn"><FaLinkedinIn className="hover"/></a>
+              <a href="https://www.youtube.com/@fromskyrealtors" target="_blank" aria-label="YouTube"><FaYoutube className="hover"/></a>
             </div>
           </div>
           <div>
@@ -145,9 +145,6 @@ export default function Footer() {
                 <div className="lg:col-span-2">
                   <textarea name="mensaje" id="mensaje" cols="30" rows="3" placeholder={t('tipo_propiedad')} className="w-full bg-transparent border-b text-white p-3" value={mensaje} onChange={(e) => setMensaje(e.target.value)} required></textarea>
                 </div>
-                <div className="lg:col-span-2 text-white">
-                  <input type="checkbox" name="condiciones" id="condiciones" aria-label='condiciones' checked={condiciones} onChange={handleCheckboxChange} required/> {t('acepto')} <Link href="/aviso-de-privacidad" className="text-tfs hover">{t('terminos')}</Link>
-                </div>
                 {/* Campos ocultos */}
                 <div className='hidden'>
                   <input type="hidden" name="fechaEnvio" value={fechaEnvio} />
@@ -155,13 +152,18 @@ export default function Footer() {
                   <input type="hidden" name="paginaEnvio" value={paginaEnvio} />
                   <input type="hidden" name="formularioOrigen" value={formularioOrigen}/>
                 </div>
-                <div className="lg:col-span-2 text-center">
+                <div className="lg:col-span-1 text-white">
+                  <input type="checkbox" name="condiciones" id="condiciones" aria-label='condiciones' checked={condiciones} onChange={handleCheckboxChange} required/> {t('acepto')} <Link href="/aviso-de-privacidad" className="text-tfs hover">{t('terminos')}</Link>
+                </div>
+                <div className="lg:col-span-1 lg:text-right max-lg:text-center">
+                  <input type="submit" name="submit" id="submit" value={t('enviar')} disabled={isSubmitting} className="py-1 px-8 bg-tfs uppercase text-tercero font-bold letter-spacing-25 hover-bg cursor-pointer"/>
+                </div>
+                <div className='col-span-2'>
                   {mensajeRespuesta && (
                     <p className={`${esExito ? "text-green-600" : "text-red-600"} pb-2`}>
                       {mensajeRespuesta}
                     </p>
                   )}
-                  <input type="submit" name="submit" id="submit" value={t('enviar')} disabled={isSubmitting} className="py-2 px-12 bg-tfs uppercase text-tercero font-bold letter-spacing-25 hover-bg cursor-pointer"/>
                 </div>
               </div>
             </form>
@@ -177,8 +179,8 @@ export default function Footer() {
           </div>
         </div>
       </div>
-      <div className="text-white text-center text-base py-4 bg-footer relative">
-        <p className="uppercase text-footer letter-spacing-25 pb-2 text-xs lg:text-base">{t('footer')}</p>
+      <div className="text-white text-center text-base p-6 bg-footer relative lg:flex justify-between">
+        <p className="uppercase text-footer letter-spacing-25 text-xs lg:text-base">{t('footer')}</p>
         <Link href={'/aviso-de-privacidad'} className="underline text-xs lg:text-base">{t('aviso')}</Link>
       </div>
     </footer>

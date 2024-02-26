@@ -220,13 +220,13 @@ export default function Reclutamiento() {
               </Swiper>
             </div>
             <div className="flex justify-center text-tfs text-2xl gap-4 pt-11">
-              <a href="https://www.youtube.com/@tulumfromskyrealtors" target="_blank" aria-label="YouTube"><FaYoutube className="hover"/></a>
-              <a href="https://www.facebook.com/tulumfromskyrealtors/" target="_blank" aria-label="Facebook"><FaFacebookF className="hover"/></a>
+              <a href="https://www.facebook.com/FromskyRealtors/" target="_blank" aria-label="Facebook"><FaFacebookF className="hover"/></a>
               <a href="https://www.instagram.com/fromskyrealtors/" target="_blank" aria-label="Instagram"><FaInstagram className="hover"/></a>
+              <a href="https://www.tiktok.com/@fromskyrealtors" target="_blank" aria-label="TikTok"><FaTiktok className="hover"/></a>
               <a href="https://twitter.com/FromskyTulum" target="_blank" aria-label="Twitter"><FaXTwitter className="hover"/></a>
-              <a href="https://www.pinterest.com.mx/Tulumfromsky/" target="_blank" aria-label="Pinterest"><FaPinterestP className="hover"/></a>
-              <a href="https://www.tiktok.com/@tulumfromsky" target="_blank" aria-label="TikTok"><FaTiktok className="hover"/></a>
-              <a href="https://www.linkedin.com/company/tulumfromskyrealtors/" target="_blank" aria-label="LinkedIn"><FaLinkedinIn className="hover"/></a>
+              <a href="https://www.pinterest.com.mx/FromskyRealtors/" target="_blank" aria-label="Pinterest"><FaPinterestP className="hover"/></a>
+              <a href="https://www.linkedin.com/company/fromskyrealtors/" target="_blank" aria-label="LinkedIn"><FaLinkedinIn className="hover"/></a>
+              <a href="https://www.youtube.com/@fromskyrealtors" target="_blank" aria-label="YouTube"><FaYoutube className="hover"/></a>
             </div>
             <div className="flex justify-center lg:pt-24 max-lg:pt-20">
               <a href="#form" className="text-tercero bg-tfs py-2 px-10 uppercase font-bold letter-spacing-25 rounded-md hover-bg">{t('postulate')}</a>

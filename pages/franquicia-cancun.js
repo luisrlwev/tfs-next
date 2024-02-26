@@ -1,10 +1,10 @@
 import { useState } from "react";
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 import { useTranslation } from 'next-i18next'
-import LayoutFranquiciaCancun from "@/components/layout";
+import LayoutFranquiciaCancun from "@/components/layout-franquicia-cancun";
 import Image from "next/image";
 import Boton from "@/components/boton";
-import Formulario from "@/components/formulario";
+import FormularioFranquiciaCancun from "@/components/formulario-franquicia-cancun";
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, Navigation } from 'swiper/modules';
 // Import Swiper styles
@@ -213,7 +213,7 @@ export default function FranquiciaCancun() {
             </div>
         </div>
       </div>
-      <Formulario show={showModal} onClose={cerrarModal}/>
+      <FormularioFranquiciaCancun show={showModal} onClose={cerrarModal}/>
     </LayoutFranquiciaCancun>
   );
 }

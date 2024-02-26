@@ -212,13 +212,13 @@ export default function Contacto() {
           <h3 className="text-center uppercase letter-spacing-25 text-tfs font-bold text-2xl">{t('siguenos')}</h3>
           <h4 className="font-bold text-tfs text-center pt-3 pb-7">@tulumfromsky</h4>
           <div className="flex justify-center text-tfs text-2xl gap-4">
-            <a href="https://www.youtube.com/@tulumfromskyrealtors" target="_blank" aria-label="YouTube"><FaYoutube className="hover"/></a>
-            <a href="https://www.facebook.com/tulumfromskyrealtors/" target="_blank" aria-label="Facebook"><FaFacebookF className="hover"/></a>
+            <a href="https://www.facebook.com/FromskyRealtors/" target="_blank" aria-label="Facebook"><FaFacebookF className="hover"/></a>
             <a href="https://www.instagram.com/fromskyrealtors/" target="_blank" aria-label="Instagram"><FaInstagram className="hover"/></a>
+            <a href="https://www.tiktok.com/@fromskyrealtors" target="_blank" aria-label="TikTok"><FaTiktok className="hover"/></a>
             <a href="https://twitter.com/FromskyTulum" target="_blank" aria-label="Twitter"><FaXTwitter className="hover"/></a>
-            <a href="https://www.pinterest.com.mx/Tulumfromsky/" target="_blank" aria-label="Pinterest"><FaPinterestP className="hover"/></a>
-            <a href="https://www.tiktok.com/@tulumfromsky" target="_blank" aria-label="TikTok"><FaTiktok className="hover"/></a>
-            <a href="https://www.linkedin.com/company/tulumfromskyrealtors/" target="_blank" aria-label="LinkedIn"><FaLinkedinIn className="hover"/></a>
+            <a href="https://www.pinterest.com.mx/FromskyRealtors/" target="_blank" aria-label="Pinterest"><FaPinterestP className="hover"/></a>
+            <a href="https://www.linkedin.com/company/fromskyrealtors/" target="_blank" aria-label="LinkedIn"><FaLinkedinIn className="hover"/></a>
+            <a href="https://www.youtube.com/@fromskyrealtors" target="_blank" aria-label="YouTube"><FaYoutube className="hover"/></a>
           </div>
         </div>
       </section>
