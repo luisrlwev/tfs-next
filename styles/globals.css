@@ -311,7 +311,7 @@ body {
 .portada-franquicias-cancun-inicio{
   background: url('../public/img/cancun/portada-franquicias-cancun.jpg') 50% 50%;
   background-attachment: fixed;
-  background-position: 0px -200px;
+  background-position: 0px -80px;
   background-size: cover;
   background-repeat: no-repeat;
 }

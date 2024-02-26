@@ -3,7 +3,7 @@ import { useTranslation } from 'next-i18next'
 import PhoneInput from 'react-phone-number-input';
 import Link from "next/link";
 import Image from "next/image";
-import { FaFacebookF, FaYoutube, FaInstagram, FaXTwitter, FaPinterestP, FaTiktok, FaLinkedinIn, FaWhatsapp } from "react-icons/fa6";
+import { FaFacebookF, FaInstagram, FaWhatsapp } from "react-icons/fa6";
 import 'react-phone-number-input/style.css';
 
 export default function FooterFranquiciaCancun() {
@@ -12,7 +12,6 @@ export default function FooterFranquiciaCancun() {
   const [nombre, setNombre] = useState('');
   const [email, setEmail] = useState('');
   const [tel, setTel] = useState('');
-  const [sucursal, setSucursal] = useState('');
   const [tipo, setTipo] = useState('');
   const [mensaje, setMensaje] = useState('');
   const [condiciones, setCondiciones] = useState(true);
@@ -48,16 +47,15 @@ export default function FooterFranquiciaCancun() {
     setNombre('');
     setEmail('');
     setTel('');
-    setSucursal('');
     setTipo('');
     setMensaje('');
     setCondiciones(true); // o false, dependiendo de tu caso
 
     try {
-      const respuesta = await fetch('/api/form-modal', {
+      const respuesta = await fetch('/api/form-modal-franquicia-cancun', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ nombre, email, tel, sucursal, tipo, mensaje, condiciones, fechaEnvio, horaEnvio, paginaEnvio, formularioOrigen }),
+        body: JSON.stringify({ nombre, email, tel, tipo, mensaje, condiciones, fechaEnvio, horaEnvio, paginaEnvio, formularioOrigen }),
       });
       if (respuesta.ok) {
         console.log("Correo enviado con éxito");
@@ -68,7 +66,6 @@ export default function FooterFranquiciaCancun() {
         setNombre('');
         setEmail('');
         setTel('');
-        setSucursal('');
         setTipo('');
         setMensaje('');
         setCondiciones(true);
@@ -93,18 +90,11 @@ export default function FooterFranquiciaCancun() {
       <div className="py-10 overlay-footer-final">
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-3 container mx-auto">
           <div className="grid justify-center items-center">
-            <Link href={'/'} className="h-max pb-10"><Image src={'/img/logo.svg'} width={354} height={201} alt="Logo TFS"/></Link>
-            <div className="flex justify-center align-center text-tfs h-max">
+            <div className="h-max max-lg:pb-10"><Image src={'/img/logo.svg'} width={354} height={201} alt="Logo TFS"/></div>
+            <div className="flex justify-center items-center gap-3 text-tfs h-max max-lg:pb-8">
+              <a href="https://www.instagram.com/cancunfromskyrealtors/" target="_blank" aria-label="Instagram"><FaInstagram className="hover text-3xl"/></a>
+              <a href="https://www.facebook.com/people/Canc%C3%BAn-Fromsky/61556689523996/" target="_blank" aria-label="Facebook"><FaFacebookF className="hover text-3xl"/></a>
               <a href="https://wa.me/529848035450" className="flex items-center w-fit h-fit hover"><FaWhatsapp className="mr-3 text-3xl"/> +52 (984) 803 5450</a>
-            </div>
-            <div className="grid grid-cols-7 justify-items-center text-tfs text-3xl h-max pb-8 lg:pb-0">
-              <a href="https://www.facebook.com/tulumfromskyrealtors/" target="_blank" aria-label="Facebook"><FaFacebookF className="hover"/></a>
-              <a href="https://www.instagram.com/fromskyrealtors/" target="_blank" aria-label="Instagram"><FaInstagram className="hover"/></a>
-              <a href="https://www.tiktok.com/@tulumfromsky" target="_blank" aria-label="TikTok"><FaTiktok className="hover"/></a>
-              <a href="https://twitter.com/FromskyTulum" target="_blank" aria-label="Twitter"><FaXTwitter className="hover"/></a>
-              <a href="https://www.pinterest.com.mx/Tulumfromsky/" target="_blank" aria-label="Pinterest"><FaPinterestP className="hover"/></a>
-              <a href="https://www.linkedin.com/company/tulumfromskyrealtors/" target="_blank" aria-label="LinkedIn"><FaLinkedinIn className="hover"/></a>
-              <a href="https://www.youtube.com/@tulumfromskyrealtors" target="_blank" aria-label="YouTube"><FaYoutube className="hover"/></a>
             </div>
           </div>
           <div>
@@ -118,20 +108,8 @@ export default function FooterFranquiciaCancun() {
                   <PhoneInput international type="tel" name="tel" id="tel" placeholder={t('telefono')} className="w-full bg-transparent border-b text-white p-3" value={tel} onChange={setTel} required/>
                   <p className='text-white text-sm italic'>{t('leyenda_tel')}</p>
                 </div>
-                <div className="lg:col-span-2">
-                  <input type="email" name="email" id="email" placeholder="Email" className="w-full bg-transparent border-b text-white p-3" value={email} onChange={(e) => setEmail(e.target.value)} required/>
-                </div>
                 <div>
-                  <label for="sucursal" class="sr-only">Ciudad de interés</label>
-                  <select name="sucursal" id="sucursal" className="w-full bg-transparent border-b text-white p-3" value={sucursal} onChange={(e) => setSucursal(e.target.value)} required>
-                    <option value="">{t('selecciona_ciudad')}</option>
-                    <option value="Tulum">Tulum</option>
-                    <option value="Cancún">Cancún</option>
-                    <option value="Los Cabos">Los Cabos</option>
-                    <option value="Mérida">Mérida</option>
-                    <option value="Puerto Vallarta">Puerto Vallarta</option>
-                    <option value="Otra">Otra</option>
-                </select>
+                  <input type="email" name="email" id="email" placeholder="Email" className="w-full bg-transparent border-b text-white p-3" value={email} onChange={(e) => setEmail(e.target.value)} required/>
                 </div>
                 <div>
                   <label for="tipo" class="sr-only">Tipo de unidad</label>
@@ -145,9 +123,6 @@ export default function FooterFranquiciaCancun() {
                 <div className="lg:col-span-2">
                   <textarea name="mensaje" id="mensaje" cols="30" rows="3" placeholder={t('tipo_propiedad')} className="w-full bg-transparent border-b text-white p-3" value={mensaje} onChange={(e) => setMensaje(e.target.value)} required></textarea>
                 </div>
-                <div className="lg:col-span-2 text-white">
-                  <input type="checkbox" name="condiciones" id="condiciones" aria-label='condiciones' checked={condiciones} onChange={handleCheckboxChange} required/> {t('acepto')} <Link href="/aviso-de-privacidad" className="text-tfs hover">{t('terminos')}</Link>
-                </div>
                 {/* Campos ocultos */}
                 <div className='hidden'>
                   <input type="hidden" name="fechaEnvio" value={fechaEnvio} />
@@ -155,13 +130,18 @@ export default function FooterFranquiciaCancun() {
                   <input type="hidden" name="paginaEnvio" value={paginaEnvio} />
                   <input type="hidden" name="formularioOrigen" value={formularioOrigen}/>
                 </div>
-                <div className="lg:col-span-2 text-center">
+                <div className="lg:col-span-1 text-white">
+                  <input type="checkbox" name="condiciones" id="condiciones" aria-label='condiciones' checked={condiciones} onChange={handleCheckboxChange} required/> {t('acepto')} <Link href="/aviso-de-privacidad" className="text-tfs hover">{t('terminos')}</Link>
+                </div>
+                <div className="lg:col-span-1 lg:text-right max-lg:text-center">
+                  <input type="submit" name="submit" id="submit" value={t('enviar')} disabled={isSubmitting} className="py-1 px-8 bg-tfs uppercase text-tercero font-bold letter-spacing-25 hover-bg cursor-pointer"/>
+                </div>
+                <div className='col-span-2'>
                   {mensajeRespuesta && (
                     <p className={`${esExito ? "text-green-600" : "text-red-600"} pb-2`}>
                       {mensajeRespuesta}
                     </p>
                   )}
-                  <input type="submit" name="submit" id="submit" value={t('enviar')} disabled={isSubmitting} className="py-2 px-12 bg-tfs uppercase text-tercero font-bold letter-spacing-25 hover-bg cursor-pointer"/>
                 </div>
               </div>
             </form>
@@ -177,8 +157,8 @@ export default function FooterFranquiciaCancun() {
           </div>
         </div>
       </div>
-      <div className="text-white text-center text-base py-4 bg-footer relative">
-        <p className="uppercase text-footer letter-spacing-25 pb-2 text-xs lg:text-base">{t('footer')}</p>
+      <div className="text-white text-center text-base p-6 bg-footer relative lg:flex justify-between">
+        <p className="uppercase text-footer letter-spacing-25 text-xs lg:text-base">{t('footer')}</p>
         <Link href={'/aviso-de-privacidad'} className="underline text-xs lg:text-base">{t('aviso')}</Link>
       </div>
     </footer>
