@@ -9,13 +9,8 @@ export default function Navegacion() {
   return (
     <>
       <li className="pb-2 lg:py-0">
-        <Link href="/departamentos" className={ router.pathname === '/departamentos' ? 'text-tfs' : 'hover'}>
-          {t('departamentos')}
-        </Link>
-      </li>
-      <li className="pb-2 lg:py-0">
-        <Link href="/casas" className={ router.pathname === '/casas' ? 'text-tfs' : 'hover'}>
-        {t('casas')}
+        <Link href="/tulum" className={ router.pathname === '/tulum' ? 'text-tfs' : 'hover'}>
+          Tulum
         </Link>
       </li>
       <li className="pb-2 lg:py-0">
@@ -44,6 +39,11 @@ export default function Navegacion() {
         </Link>
       </li>
       <li className="pb-2 lg:py-0">
+        <Link href="/franquicias" className={ router.pathname === '/franquicias' ? 'text-tfs' : 'hover'}>
+        {t('franquicias')}
+        </Link>
+      </li>
+      <li className="pb-2 lg:py-0">
         <Link href="/nosotros" className={ router.pathname === '/nosotros' ? 'text-tfs' : 'hover'}>
         {t('nosotros')}
         </Link>
@@ -56,11 +56,6 @@ export default function Navegacion() {
       <li className="pb-2 lg:py-0">
         <Link href="/contacto" className={ router.pathname === '/contacto' ? 'text-tfs' : 'hover'}>
         {t('contacto')}
-        </Link>
-      </li>
-      <li className="pb-2 lg:py-0">
-        <Link href="/franquicias" className={ router.pathname === '/franquicias' ? 'text-tfs' : 'hover'}>
-        {t('franquicias')}
         </Link>
       </li>
       <li className="pb-2 lg:py-0 hidden max-lg:flex">
