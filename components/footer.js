@@ -158,7 +158,7 @@ export default function Footer() {
                 <div className="lg:col-span-1 lg:text-right max-lg:text-center">
                   <input type="submit" name="submit" id="submit" value={t('enviar')} disabled={isSubmitting} className="py-1 px-8 bg-tfs uppercase text-tercero font-bold letter-spacing-25 hover-bg cursor-pointer"/>
                 </div>
-                <div className='col-span-2'>
+                <div className='lg:col-span-2'>
                   {mensajeRespuesta && (
                     <p className={`${esExito ? "text-green-600" : "text-red-600"} pb-2`}>
                       {mensajeRespuesta}
