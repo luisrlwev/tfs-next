@@ -10,7 +10,7 @@ export default function Home() {
       title={t('inicio')}
       description={t('inicio_descripcion')}
     >
-      <Link href={'/departamentos'} className="portada-tulum flex relative justify-center">
+      <Link href={'/tulum'} className="portada-tulum flex relative justify-center">
         <div className="h-full w-full top-0 left-0 absolute overflow-hidden z-0">
           <video src="/video/riviera-maya.mp4" className="absolute video-fondo video object-cover" autoPlay muted playsInline loop></video>
         </div>
