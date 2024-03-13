@@ -218,9 +218,9 @@ export default function Cancun() {
           <p>{t('exclusivos_departamentos')}</p>
         </div>
       </section>
-      <div className="portada-franquicias-cancun-final flex relative justify-center cursor-pointer" onClick={abrirModal}>
+      <div className="portada-cancun-final flex relative justify-center cursor-pointer" onClick={abrirModal}>
         <div className="h-full w-full top-0 left-0 absolute overflow-hidden z-0">
-          <video src="/video/" className="absolute video-fondo-portada" autoPlay muted playsInline loop></video>
+          <video src="/video/cancun-final.mp4" className="absolute video-fondo-portada" autoPlay muted playsInline loop></video>
         </div>
         <div className="portada-video-final flex justify-center items-center relative">
             <div className="grid grid-cols-1 justify-items-center">

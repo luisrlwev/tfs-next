@@ -236,12 +236,12 @@ export default function Vallarta() {
       </section>
       <div className="portada-vallarta-final flex relative justify-center cursor-pointer" onClick={abrirModal}>
         <div className="h-full w-full top-0 left-0 absolute overflow-hidden z-0">
-          <video src="/video/" className="absolute video-fondo-portada" autoPlay muted playsInline loop></video>
+          <video src="/video/vallarta-final.mp4" className="absolute video-fondo-portada" autoPlay muted playsInline loop></video>
         </div>
         <div className="portada-video-final flex justify-center items-center relative">
             <div className="grid grid-cols-1 justify-items-center">
               <div>
-                <h3 className="text-white font-bold uppercase letter-spacing-25 text-xl text-center max-lg:text-base pb-6"></h3>
+                <h3 className="text-white font-bold uppercase letter-spacing-25 text-xl text-center max-lg:text-base pb-6">{t('villas')}</h3>
               </div>
               <div className="pb-10 max-lg:pb-0">
                 <Boton/>

@@ -296,7 +296,7 @@ body {
 }
 
 .portada-vallarta-final{
-  background: url('../public/img/vallarta/video-vallarta.jpg') 50% 50%;
+  background: url('../public/img/vallarta/vallarta-final.png') 50% 50%;
   background-size: cover;
 }
 
@@ -306,6 +306,11 @@ body {
   background-position: 0px 20px;
   background-size: cover;
   background-repeat: no-repeat;
+}
+
+.portada-cancun-final{
+  background: url('../public/img/cancun/cancun-final.png') 50% 50%;
+  background-size: cover;
 }
 
 .portada-tulum-inicio{
@@ -454,7 +459,7 @@ body {
     min-height: 200px;
   }
 
-  .portada-merida, .portada-cabos, .portada-construccion-final, .portada-nosotros, .portada-nosotros-final, .portada-franquicias-final{
+  .portada-merida, .portada-cabos, .portada-construccion-final, .portada-nosotros, .portada-nosotros-final, .portada-franquicias-final, .portada-vallarta-inicio, .portada-tulum-inicio, .portada-cancun-inicio{
     background-attachment: initial;
     background-position: center;
     background-size: cover;
