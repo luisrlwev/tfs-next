@@ -14,6 +14,7 @@
   --noveno: #F1F1F1;
   --decimo: #D9D9D966;
   --onceavo: #637381;
+  --doce: #AEAEB2;
   --black: #000;
   --white: #fff;
 }
@@ -132,6 +133,10 @@ body {
 
 .text-onceavo{
   color: var(--onceavo);
+}
+
+.text-doce{
+  color: var(--doce);
 }
 
 .hover:hover{

@@ -244,6 +244,29 @@ export default function Home() {
           </div>
         </div>
       </section>
+      <section className="container mx-auto py-10">
+        <h3 className="uppercase font-bold text-center text-doce text-2xl pb-4">@FromskyRealtors</h3>
+        <div className="grid grid-cols-6 gap-2">
+          <div>
+            <Image src={'/img/index/instagram-1.jpg'} width={300} height={300} alt={'Instagram'} className=""/>
+          </div>
+          <div>
+            <Image src={'/img/index/instagram-2.jpg'} width={300} height={300} alt={'Instagram'} className=""/>
+          </div>
+          <div>
+            <Image src={'/img/index/instagram-3.jpg'} width={300} height={300} alt={'Instagram'} className=""/>
+          </div>
+          <div>
+            <Image src={'/img/index/instagram-4.jpg'} width={300} height={300} alt={'Instagram'} className=""/>
+          </div>
+          <div>
+            <Image src={'/img/index/instagram-5.jpg'} width={300} height={300} alt={'Instagram'} className=""/>
+          </div>
+          <div>
+            <Image src={'/img/index/instagram-6.jpg'} width={300} height={300} alt={'Instagram'} className=""/>
+          </div>
+        </div>
+      </section>
       <Formulario show={showModal} onClose={cerrarModal}/>
     </Layout>
   );
