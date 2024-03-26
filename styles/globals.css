@@ -13,6 +13,7 @@
   --octavo: #3C3C434D;
   --noveno: #F1F1F1;
   --decimo: #D9D9D966;
+  --onceavo: #637381;
   --black: #000;
   --white: #fff;
 }
@@ -80,6 +81,10 @@ body {
   background-color: var(--decimo);
 }
 
+.bg-onceavo{
+  background-color: var(--onceavo);
+}
+
 .bg-text{
   background-color: var(--quinto);
 }
@@ -101,6 +106,12 @@ body {
   background-color: #3C3C434D;
 }
 
+.bg-banner-whats{
+  background-image: url('../public/img/index/banner-whats.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 .text-menu{
   color: #F8F9FA;
   font-size: 15px;
@@ -117,6 +128,10 @@ body {
 
 .text-tercero{
   color: var(--secondary);
+}
+
+.text-onceavo{
+  color: var(--onceavo);
 }
 
 .hover:hover{
@@ -188,6 +203,15 @@ body {
 .overlay-nosotros-final{
   background-image: url('../public/img/nosotros/overlar.png');
   background-position: center left;
+  background-repeat: no-repeat;
+  background-size: auto;
+  opacity: 0.5;
+  transition: background 0.3s, border-radius 0.3s, opacity 0.3s;
+}
+
+.overlay-home{
+  background-image: url('../public/img/index/overlay.png');
+  background-position: 100%;
   background-repeat: no-repeat;
   background-size: auto;
   opacity: 0.5;
@@ -420,6 +444,10 @@ body {
 
 .h-500{
   height: 500px;
+}
+
+.h-600{
+  height: 600px;
 }
 
 .w-modal{
