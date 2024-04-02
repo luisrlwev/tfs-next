@@ -113,6 +113,12 @@ body {
   background-size: cover;
 }
 
+.bg-slide-cabos{
+  background-image: url('../public/img/index/los-cabos.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 .text-menu{
   color: #F8F9FA;
   font-size: 15px;

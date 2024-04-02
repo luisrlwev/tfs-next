@@ -78,146 +78,146 @@ export default function Home() {
             <hr className="h-0.5 bg-decimo"/>
           </div>
           <div className="col-span-12">
-          <Swiper
-              slidesPerView={1}
-              navigation={true}
-              autoplay={{
-                delay: 5000,
-                disableOnInteraction: true,
-              }}
-              style={{
-                '--swiper-navigation-color': '#fff',
-                '--swiper-pagination-color': '#fff',
-              }}
-              modules={[Autoplay, Navigation]}
-              loop={true}
-            >
-              <SwiperSlide>
-                <div className="grid grid-cols-12">
-                  <div className="col-span-5 pr-8 flex items-center" onClick={abrirModal}>
-                    <div>
-                      <p className="flex gap-2 uppercase font-semibold text-tfs pb-4"><FaLocationDot/> Cabo San Lucas, B.C.S.</p>
-                      <h3 className="text-5xl font-bold uppercase text-tercero pb-4">Panorama</h3>
-                      <p className="font-medium text-onceavo pb-4">Condominios de 2 y 3 recámaras.<br/>Equipamiento incluido y sistema lock off.</p>
-                      <p className="text-xl pb-16">Las mejores vistas panorámicas al mar y arco ubicado en la zona más alta de El Tezal en Cabo san lucas, desarrollo único de 27 unidades ideal para inversión con ubicación estratégica.</p>
-                      <div className="flex justify-center">
-                        <BotonDos/>
+            <Swiper
+                slidesPerView={1}
+                navigation={true}
+                autoplay={{
+                  delay: 5000,
+                  disableOnInteraction: true,
+                }}
+                style={{
+                  '--swiper-navigation-color': '#fff',
+                  '--swiper-pagination-color': '#fff',
+                }}
+                modules={[Autoplay, Navigation]}
+                loop={true}
+              >
+                <SwiperSlide>
+                  <div className="grid grid-cols-12">
+                    <div className="col-span-5 pr-8 flex items-center" onClick={abrirModal}>
+                      <div>
+                        <p className="flex gap-2 uppercase font-semibold text-tfs pb-4"><FaLocationDot/> Cabo San Lucas, B.C.S.</p>
+                        <h3 className="text-5xl font-bold uppercase text-tercero pb-4">Panorama</h3>
+                        <p className="font-medium text-onceavo pb-4">Condominios de 2 y 3 recámaras.<br/>Equipamiento incluido y sistema lock off.</p>
+                        <p className="text-xl pb-16">Las mejores vistas panorámicas al mar y arco ubicado en la zona más alta de El Tezal en Cabo san lucas, desarrollo único de 27 unidades ideal para inversión con ubicación estratégica.</p>
+                        <div className="flex justify-center">
+                          <BotonDos/>
+                        </div>
                       </div>
                     </div>
-                  </div>
-                  <div className="col-span-7">
-                    <GaleriaPanorama/>
-                  </div>
-                </div>
-              </SwiperSlide>
-              <SwiperSlide>
-                <div className="grid grid-cols-12">
-                  <div className="col-span-5 pr-8 flex items-center" onClick={abrirModal}>
-                    <div>
-                      <p className="flex gap-2 uppercase font-semibold text-tfs pb-4"><FaLocationDot/> Cabo San Lucas, B.C.S.</p>
-                      <h3 className="text-5xl font-bold uppercase text-tercero pb-4">6 Ríos</h3>
-                      <p className="font-medium text-onceavo pb-4">4 tipologías de casas.<br/>3 Recámaras | 6 Baños | Terrazas</p>
-                      <p className="text-xl pb-16">Forma parte de una comunidad consolidada que encarna la excelencia en diseño y construcción. Cada hogar cuenta con terrazas, asadores, alberca, jardín privado y mucho más. Desde aquí, disfrutarás de vistas panorámicas que pintan el horizonte con puestas de sol gloriosas y escenas inspiradoras al arco de los cabos.</p>
-                      <div className="flex justify-center">
-                        <BotonDos/>
-                      </div>
+                    <div className="col-span-7">
+                      <GaleriaPanorama/>
                     </div>
                   </div>
-                  <div className="col-span-7">
-                    <GaleriaPanorama/>
-                  </div>
-                </div>
-              </SwiperSlide>
-              <SwiperSlide>
-                <div className="grid grid-cols-12">
-                  <div className="col-span-5 pr-8 flex items-center" onClick={abrirModal}>
-                    <div>
-                      <p className="flex gap-2 uppercase font-semibold text-tfs pb-4"><FaLocationDot/> Yucatán, México</p>
-                      <h3 className="text-5xl font-bold uppercase text-tercero pb-4">Villas</h3>
-                      <p className="font-medium text-onceavo pb-4">11 exclusivas villas a pasos de la playa.<br/>3 Niveles | 3 Recámaras | 6 Baños | Rooftop</p>
-                      <p className="text-xl pb-16">Exclusivo complejo que te brindará el confort que mereces para gozar una vida tranquila en la costa de Yucatán, rodeado de amenidades, bellezas naturales y servicios indispensables. Único desarrollo en la zona que cuenta con cableado subterráneo de electricidad y cableado de voz y datos.</p>
-                      <div className="flex justify-center">
-                        <BotonDos/>
+                </SwiperSlide>
+                <SwiperSlide>
+                  <div className="grid grid-cols-12">
+                    <div className="col-span-5 pr-8 flex items-center" onClick={abrirModal}>
+                      <div>
+                        <p className="flex gap-2 uppercase font-semibold text-tfs pb-4"><FaLocationDot/> Cabo San Lucas, B.C.S.</p>
+                        <h3 className="text-5xl font-bold uppercase text-tercero pb-4">6 Ríos</h3>
+                        <p className="font-medium text-onceavo pb-4">4 tipologías de casas.<br/>3 Recámaras | 6 Baños | Terrazas</p>
+                        <p className="text-xl pb-16">Forma parte de una comunidad consolidada que encarna la excelencia en diseño y construcción. Cada hogar cuenta con terrazas, asadores, alberca, jardín privado y mucho más. Desde aquí, disfrutarás de vistas panorámicas que pintan el horizonte con puestas de sol gloriosas y escenas inspiradoras al arco de los cabos.</p>
+                        <div className="flex justify-center">
+                          <BotonDos/>
+                        </div>
                       </div>
                     </div>
-                  </div>
-                  <div className="col-span-7">
-                    <GaleriaPanorama/>
-                  </div>
-                </div>
-              </SwiperSlide>
-              <SwiperSlide>
-                <div className="grid grid-cols-12">
-                  <div className="col-span-5 pr-8 flex items-center" onClick={abrirModal}>
-                    <div>
-                      <p className="flex gap-2 uppercase font-semibold text-tfs pb-4"><FaLocationDot/> Tulum, Quintana Roo</p>
-                      <h3 className="text-5xl font-bold uppercase text-tercero pb-4">Balché</h3>
-                      <p className="font-medium text-onceavo pb-4">3 departamentos Swim Up y 15 departamentos tipo estudio.<br/>1 recámara | 1 baño | 1 plunge pool</p>
-                      <p className="text-xl pb-16">Descubre Balché, un asombroso desarrollo ubicado a solo 10 minutos de la playa. Este impresionante proyecto ofrece una variedad de opciones residenciales, incluyendo 3 departamentos “Swim Up” y 15 estudios con terraza y plunge pool privados. Además, Balché te brinda acceso a exclusivas amenidades que complementarán tu estilo de vida.</p>
-                      <div className="flex justify-center">
-                        <BotonDos/>
-                      </div>
+                    <div className="col-span-7">
+                      <GaleriaPanorama/>
                     </div>
                   </div>
-                  <div className="col-span-7">
-                    <GaleriaPanorama/>
-                  </div>
-                </div>
-              </SwiperSlide>
-              <SwiperSlide>
-                <div className="grid grid-cols-12">
-                  <div className="col-span-5 pr-8 flex items-center" onClick={abrirModal}>
-                    <div>
-                      <p className="flex gap-2 uppercase font-semibold text-tfs pb-4"><FaLocationDot/> Tulum, Quintana Roo</p>
-                      <h3 className="text-5xl font-bold uppercase text-tercero pb-4">Casa Harmony</h3>
-                      <p className="font-medium text-onceavo pb-4">3 Habitaciones | Alberca privada <br/></p>
-                      <p className="text-xl pb-16">Casa residencial dentro de uno de los campos de golf PGA más reconocidos de México, cuenta con club de playa, piscina privada, gimnasio, restaurantes, cenotes, temazcal, zonas de yoga, casino, farmacia, iglesia, ciclo pistas y mucho más. Experimenta un estilo de vida donde el lujo y la tranquilidad son la prioridad.</p>
-                      <div className="flex justify-center">
-                        <BotonDos/>
+                </SwiperSlide>
+                <SwiperSlide>
+                  <div className="grid grid-cols-12">
+                    <div className="col-span-5 pr-8 flex items-center" onClick={abrirModal}>
+                      <div>
+                        <p className="flex gap-2 uppercase font-semibold text-tfs pb-4"><FaLocationDot/> Yucatán, México</p>
+                        <h3 className="text-5xl font-bold uppercase text-tercero pb-4">Villas</h3>
+                        <p className="font-medium text-onceavo pb-4">11 exclusivas villas a pasos de la playa.<br/>3 Niveles | 3 Recámaras | 6 Baños | Rooftop</p>
+                        <p className="text-xl pb-16">Exclusivo complejo que te brindará el confort que mereces para gozar una vida tranquila en la costa de Yucatán, rodeado de amenidades, bellezas naturales y servicios indispensables. Único desarrollo en la zona que cuenta con cableado subterráneo de electricidad y cableado de voz y datos.</p>
+                        <div className="flex justify-center">
+                          <BotonDos/>
+                        </div>
                       </div>
                     </div>
-                  </div>
-                  <div className="col-span-7">
-                    <GaleriaPanorama/>
-                  </div>
-                </div>
-              </SwiperSlide>
-              <SwiperSlide>
-                <div className="grid grid-cols-12">
-                  <div className="col-span-5 pr-8 flex items-center" onClick={abrirModal}>
-                    <div>
-                      <p className="flex gap-2 uppercase font-semibold text-tfs pb-4"><FaLocationDot/> Cancún, Quintana Roo</p>
-                      <h3 className="text-5xl font-bold uppercase text-tercero pb-4">Las mejores vistas de Cancún</h3>
-                      <p className="font-medium text-onceavo pb-4">1 a 3 Habitaciones | 4 Baños | Alberca privada <br/></p>
-                      <p className="text-xl pb-16">Impresionantes Torres de 21 niveles con vistas panorámicas a la Laguna de Nichupté y zona Hotelera de Cancún. Más de 30 increíbles amenidades necesarias para un estilo de vida ideal con albercas, gimnasio, spa, boliche y mucho más. Inmejorable ubicación a 10 minutos del aeropuerto, estación del tren maya y zona hotelera.</p>
-                      <div className="flex justify-center">
-                        <BotonDos/>
-                      </div>
+                    <div className="col-span-7">
+                      <GaleriaPanorama/>
                     </div>
                   </div>
-                  <div className="col-span-7">
-                    <GaleriaPanorama/>
-                  </div>
-                </div>
-              </SwiperSlide>
-              <SwiperSlide>
-                <div className="grid grid-cols-12">
-                  <div className="col-span-5 pr-8 flex items-center" onClick={abrirModal}>
-                    <div>
-                      <p className="flex gap-2 uppercase font-semibold text-tfs pb-4"><FaLocationDot/> Nuevo Vallarta, Nayarit</p>
-                      <h3 className="text-5xl font-bold uppercase text-tercero pb-4">Villas Privadas</h3>
-                      <p className="font-medium text-onceavo pb-4">4, 5 y 8 Recámaras | 1 y 2 Niveles | Alberca tipo infinity<br/></p>
-                      <p className="text-xl pb-16">En un escenario espectacular a menos de una hora de Puerto Vallarta, Colección de 55 villas en un escenario que une la jungla tropical, el océano y las montañas en una experiencia de vida singular.</p>
-                      <div className="flex justify-center">
-                        <BotonDos/>
+                </SwiperSlide>
+                <SwiperSlide>
+                  <div className="grid grid-cols-12">
+                    <div className="col-span-5 pr-8 flex items-center" onClick={abrirModal}>
+                      <div>
+                        <p className="flex gap-2 uppercase font-semibold text-tfs pb-4"><FaLocationDot/> Tulum, Quintana Roo</p>
+                        <h3 className="text-5xl font-bold uppercase text-tercero pb-4">Balché</h3>
+                        <p className="font-medium text-onceavo pb-4">3 departamentos Swim Up y 15 departamentos tipo estudio.<br/>1 recámara | 1 baño | 1 plunge pool</p>
+                        <p className="text-xl pb-16">Descubre Balché, un asombroso desarrollo ubicado a solo 10 minutos de la playa. Este impresionante proyecto ofrece una variedad de opciones residenciales, incluyendo 3 departamentos “Swim Up” y 15 estudios con terraza y plunge pool privados. Además, Balché te brinda acceso a exclusivas amenidades que complementarán tu estilo de vida.</p>
+                        <div className="flex justify-center">
+                          <BotonDos/>
+                        </div>
                       </div>
                     </div>
+                    <div className="col-span-7">
+                      <GaleriaPanorama/>
+                    </div>
                   </div>
-                  <div className="col-span-7">
-                    <GaleriaPanorama/>
+                </SwiperSlide>
+                <SwiperSlide>
+                  <div className="grid grid-cols-12">
+                    <div className="col-span-5 pr-8 flex items-center" onClick={abrirModal}>
+                      <div>
+                        <p className="flex gap-2 uppercase font-semibold text-tfs pb-4"><FaLocationDot/> Tulum, Quintana Roo</p>
+                        <h3 className="text-5xl font-bold uppercase text-tercero pb-4">Casa Harmony</h3>
+                        <p className="font-medium text-onceavo pb-4">3 Habitaciones | Alberca privada <br/></p>
+                        <p className="text-xl pb-16">Casa residencial dentro de uno de los campos de golf PGA más reconocidos de México, cuenta con club de playa, piscina privada, gimnasio, restaurantes, cenotes, temazcal, zonas de yoga, casino, farmacia, iglesia, ciclo pistas y mucho más. Experimenta un estilo de vida donde el lujo y la tranquilidad son la prioridad.</p>
+                        <div className="flex justify-center">
+                          <BotonDos/>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="col-span-7">
+                      <GaleriaPanorama/>
+                    </div>
                   </div>
-                </div>
-              </SwiperSlide>
+                </SwiperSlide>
+                <SwiperSlide>
+                  <div className="grid grid-cols-12">
+                    <div className="col-span-5 pr-8 flex items-center" onClick={abrirModal}>
+                      <div>
+                        <p className="flex gap-2 uppercase font-semibold text-tfs pb-4"><FaLocationDot/> Cancún, Quintana Roo</p>
+                        <h3 className="text-5xl font-bold uppercase text-tercero pb-4">Las mejores vistas de Cancún</h3>
+                        <p className="font-medium text-onceavo pb-4">1 a 3 Habitaciones | 4 Baños | Alberca privada <br/></p>
+                        <p className="text-xl pb-16">Impresionantes Torres de 21 niveles con vistas panorámicas a la Laguna de Nichupté y zona Hotelera de Cancún. Más de 30 increíbles amenidades necesarias para un estilo de vida ideal con albercas, gimnasio, spa, boliche y mucho más. Inmejorable ubicación a 10 minutos del aeropuerto, estación del tren maya y zona hotelera.</p>
+                        <div className="flex justify-center">
+                          <BotonDos/>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="col-span-7">
+                      <GaleriaPanorama/>
+                    </div>
+                  </div>
+                </SwiperSlide>
+                <SwiperSlide>
+                  <div className="grid grid-cols-12">
+                    <div className="col-span-5 pr-8 flex items-center" onClick={abrirModal}>
+                      <div>
+                        <p className="flex gap-2 uppercase font-semibold text-tfs pb-4"><FaLocationDot/> Nuevo Vallarta, Nayarit</p>
+                        <h3 className="text-5xl font-bold uppercase text-tercero pb-4">Villas Privadas</h3>
+                        <p className="font-medium text-onceavo pb-4">4, 5 y 8 Recámaras | 1 y 2 Niveles | Alberca tipo infinity<br/></p>
+                        <p className="text-xl pb-16">En un escenario espectacular a menos de una hora de Puerto Vallarta, Colección de 55 villas en un escenario que une la jungla tropical, el océano y las montañas en una experiencia de vida singular.</p>
+                        <div className="flex justify-center">
+                          <BotonDos/>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="col-span-7">
+                      <GaleriaPanorama/>
+                    </div>
+                  </div>
+                </SwiperSlide>
             </Swiper>
           </div>
           <div className="col-span-2 py-10">
@@ -244,26 +244,83 @@ export default function Home() {
           </div>
         </div>
       </section>
+      <section className="container mx-auto">
+        <div className="grid grid-cols-12">
+          <div className="col-span-4 py-10">
+            <p className="text-onceavo">Mejores ubicaciones para invertir en México</p>
+          </div>
+          <div className="col-span-8 grid content-center">
+            <hr className="h-0.5 bg-decimo"/>
+          </div>
+          <div className="col-span-12 pb-10">
+            <Swiper
+                slidesPerView={1}
+                navigation={true}
+                autoplay={{
+                  delay: 5000,
+                  disableOnInteraction: true,
+                }}
+                style={{
+                  '--swiper-navigation-color': '#fff',
+                  '--swiper-pagination-color': '#fff',
+                }}
+                modules={[Autoplay, Navigation]}
+                loop={true}
+              >
+                <SwiperSlide>
+                  <div className="grid grid-cols-12">
+                    <div className="col-span-6 flex items-center justify-center bg-slide-cabos">
+                      <div className="h-500 py-11 flex flex-col justify-between">
+                        <div>
+                          <p className="flex gap-2 uppercase font-semibold text-tfs pb-3"><FaLocationDot/> Baja California Sur</p>
+                          <h3 className="text-5xl font-bold uppercase text-tercero pb-4">Cabo San Lucas</h3>
+                        </div>
+                        <div className="flex justify-center" onClick={abrirModal}>
+                          <BotonDos/>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="col-span-6 flex items-center">
+                      <div className="pl-8">
+                        <p className="font-medium text-onceavo pb-4">Consulta los diferentes tipos de desarrollos y encuentra tu inversión ideal.</p>
+                        <h3 className="text-3xl font-bold uppercase text-tercero pb-4 letter-spacing-25">Boom Inmobiliario</h3>
+                        <p className="text-sm pb-10 text-secondary text-justify">Durante los últimos cinco años, Puerto Vallarta ha experimentado un sólido auge en el sector inmobiliario. El precio promedio de venta de condominios ha experimentado un notable incremento en este período, y se proyecta un aumento adicional del 30% en los próximos cinco años.<br/>
+                        Conocido como uno de los destinos de jubilación más populares de México, Puerto Vallarta atrae a una amplia población multicultural. Se estima que más de 50,000 extranjeros han adquirido propiedades en la zona, con un gran número de migrantes procedentes de Canadá y Estados Unidos. Ya sea para jubilarse, buscar nuevas oportunidades o establecer un hogar para trabajar desde casa, Puerto Vallarta ofrece una variedad de opciones de estilo de vida.<br/>
+                        El mercado inmobiliario de Puerto Vallarta está estrechamente ligado al sector turístico, ya que la ciudad costera se ha convertido en un destino de vacaciones de primer nivel para norteamericanos y canadienses. La presencia de residentes extranjeros ha fortalecido aún más el mercado, respaldado por una economía saludable que sustenta la demanda de viviendas en la región.</p>
+                        <div className="flex justify-center">
+                          <Link href={'/los-cabos'} className='py-1 px-20 bg-tfs text-white text-sm flex items-center gap-3'>Conoce los desarrollos</Link>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </SwiperSlide>
+            </Swiper>
+          </div>
+          <div className="col-span-12 grid content-center">
+            <hr className="h-0.5 bg-decimo"/>
+          </div>
+        </div>
+      </section>
       <section className="container mx-auto py-10">
         <h3 className="uppercase font-bold text-center text-doce text-2xl pb-4">@FromskyRealtors</h3>
         <div className="grid grid-cols-6 gap-2">
           <div>
-            <Image src={'/img/index/instagram-1.jpg'} width={300} height={300} alt={'Instagram'} className=""/>
+            <Image src={'/img/index/instagram-1.jpg'} width={300} height={300} alt={'Instagram'}/>
           </div>
           <div>
-            <Image src={'/img/index/instagram-2.jpg'} width={300} height={300} alt={'Instagram'} className=""/>
+            <Image src={'/img/index/instagram-2.jpg'} width={300} height={300} alt={'Instagram'}/>
           </div>
           <div>
-            <Image src={'/img/index/instagram-3.jpg'} width={300} height={300} alt={'Instagram'} className=""/>
+            <Image src={'/img/index/instagram-3.jpg'} width={300} height={300} alt={'Instagram'}/>
           </div>
           <div>
-            <Image src={'/img/index/instagram-4.jpg'} width={300} height={300} alt={'Instagram'} className=""/>
+            <Image src={'/img/index/instagram-4.jpg'} width={300} height={300} alt={'Instagram'}/>
           </div>
           <div>
-            <Image src={'/img/index/instagram-5.jpg'} width={300} height={300} alt={'Instagram'} className=""/>
+            <Image src={'/img/index/instagram-5.jpg'} width={300} height={300} alt={'Instagram'}/>
           </div>
           <div>
-            <Image src={'/img/index/instagram-6.jpg'} width={300} height={300} alt={'Instagram'} className=""/>
+            <Image src={'/img/index/instagram-6.jpg'} width={300} height={300} alt={'Instagram'}/>
           </div>
         </div>
       </section>
