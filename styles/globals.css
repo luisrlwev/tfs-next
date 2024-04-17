@@ -252,6 +252,11 @@ body {
   opacity: 1;
 }
 
+.portada-new-home{
+  background: url('../public/img/index/new-home.jpg') 50% 50%;
+  background-size: cover;
+}
+
 .portada-tulum{
   background: url('../public/img/index/portada-riviera-maya.webp') 50% 50%;
   background-size: cover;
