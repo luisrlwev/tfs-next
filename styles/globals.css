@@ -161,7 +161,7 @@ body {
   letter-spacing: .25em;
 }
 
-.video{
+.video, .video-new{
   min-height: 660px;
 }
 
@@ -489,6 +489,10 @@ body {
 @media (max-width: 768px) {
   .video, .portada-video, .portada-video-final, .portada-blog{
     min-height: 300px;
+  }
+
+  .video-new{
+    min-height: 450px;
   }
 
   .text-40{
