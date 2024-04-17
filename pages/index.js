@@ -1,45 +1,75 @@
+import { useState } from "react";
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 import { useTranslation } from 'next-i18next'
 import Link from "next/link";
 import Layout from "@/components/layout";
+import Image from "next/image";
+import { FaLocationDot, FaWhatsapp } from "react-icons/fa6";
+import Boton from "@/components/boton";
+import BotonDos from "@/components/boton-dos";
+import Formulario from "@/components/formulario";
+import GaleriaPanorama from "@/components/galeria-panorama";
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Autoplay, Navigation } from 'swiper/modules';
+// Import Swiper styles
+import 'swiper/css';
+import 'swiper/css/navigation';
 
 export default function Home() {
   const { t } = useTranslation()
+
+  const [showModal, setShowModal] = useState(false);
+
+  const abrirModal = () => {
+    setShowModal(true);
+  };
+
+  const cerrarModal = () => {
+    setShowModal(false);
+  };
   return (
     <Layout
       title={t('inicio')}
       description={t('inicio_descripcion')}
     >
-      <Link href={'/tulum'} className="portada-tulum flex relative justify-center">
+      <section className="portada-new-home flex relative justify-center">
         <div className="h-full w-full top-0 left-0 absolute overflow-hidden z-0">
-          <video src="/video/riviera-maya.mp4" className="absolute video-fondo video object-cover" autoPlay muted playsInline loop></video>
+          <video src="/video/new-home.mp4" className="absolute video-fondo video-new object-cover" autoPlay muted playsInline loop></video>
         </div>
         <div className="overlay-tulum h-full w-full absolute">
         </div>
-        <div className="video flex justify-center items-center relative">
-          <h1 className="text-white font-bold text-center uppercase text-3xl lg:text-6xl letter-spacing-25 text-shadow">Riviera Maya</h1>
+        <div className="video-new flex flex-col justify-center items-center relative xl:w-3/4 2xl:w-2/4">
+          <h1 className="text-white font-bold text-center uppercase text-3xl lg:text-6xl letter-spacing-25 text-shadow mb-6 lg:mb-24">Encontremos tu camino juntos</h1>
+          <div className="container mx-auto grid lg:grid-cols-2 gap-5">
+            <div className="grid max-md:justify-center lg:justify-end" onClick={abrirModal}>
+              <Boton/>
+            </div>
+            <div className='grid max-md:justify-center lg:justify-start'>
+              <Link href={'/nosotros'} className='uppercase py-3 px-20 font-bold bg-septimo text-lg letter-spacing-25'>Conócenos</Link>
+            </div>
+          </div>
         </div>
-      </Link>
-      <Link href={'/merida'} className="portada-merida-inicio flex relative justify-center">
-        <div className="h-full w-full top-0 left-0 absolute overflow-hidden z-0">
-          <video src="/video/yucatan.mp4" className="absolute video-fondo video object-cover" autoPlay muted playsInline loop></video>
+        <div className='absolute bottom-0 mb-6 border-b-2 w-full'>
+          <div className='container mx-auto grid max-md:grid-cols-2 lg:grid-cols-5 text-center xl:w-3/4 2xl:w-2/4'>
+            <div>
+              <Link href={'/vallarta'} className='uppercase font-bold text-white letter-spacing-25 hover:border-b-4'>Vallarta</Link>
+            </div>
+            <div>
+              <Link href={'/los-cabos'} className='uppercase font-bold text-white letter-spacing-25 hover:border-b-4'>Los Cabos</Link>
+            </div>
+            <div>
+              <Link href={'/merida'} className='uppercase font-bold text-white letter-spacing-25 hover:border-b-4'>Mérida</Link>
+            </div>
+            <div>
+              <Link href={'/tulum'} className='uppercase font-bold text-white letter-spacing-25 hover:border-b-4'>Tulum</Link>
+            </div>
+            <div className="max-md:col-span-2">
+              <Link href={'/cancun'} className='uppercase font-bold text-white letter-spacing-25 hover:border-b-4'>Cancún</Link>
+            </div>
+          </div>
         </div>
-        <div className="overlay-tulum h-full w-full absolute">
-        </div>
-        <div className="video flex justify-center items-center relative">
-          <h1 className="text-white font-bold text-center uppercase text-3xl lg:text-6xl letter-spacing-25 text-shadow">Mérida</h1>
-        </div>
-      </Link>
-      <Link href={'/los-cabos'} className="portada-cabos-inicio flex relative justify-center">
-        <div className="h-full w-full top-0 left-0 absolute overflow-hidden z-0">
-          <video src="/video/los-cabos.mp4" className="absolute video-fondo video object-cover" autoPlay muted playsInline loop></video>
-        </div>
-        <div className="overlay-tulum h-full w-full absolute">
-        </div>
-        <div className="video flex justify-center items-center relative">
-          <h1 className="text-white font-bold text-center uppercase text-3xl lg:text-6xl letter-spacing-25 text-shadow">Los Cabos</h1>
-        </div>
-      </Link>
+      </section>
+      <Formulario show={showModal} onClose={cerrarModal}/>
     </Layout>
   );
 }

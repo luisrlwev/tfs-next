@@ -13,6 +13,8 @@
   --octavo: #3C3C434D;
   --noveno: #F1F1F1;
   --decimo: #D9D9D966;
+  --onceavo: #637381;
+  --doce: #AEAEB2;
   --black: #000;
   --white: #fff;
 }
@@ -80,6 +82,10 @@ body {
   background-color: var(--decimo);
 }
 
+.bg-onceavo{
+  background-color: var(--onceavo);
+}
+
 .bg-text{
   background-color: var(--quinto);
 }
@@ -101,6 +107,18 @@ body {
   background-color: #3C3C434D;
 }
 
+.bg-banner-whats{
+  background-image: url('../public/img/index/banner-whats.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.bg-slide-cabos{
+  background-image: url('../public/img/index/los-cabos.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 .text-menu{
   color: #F8F9FA;
   font-size: 15px;
@@ -119,6 +137,14 @@ body {
   color: var(--secondary);
 }
 
+.text-onceavo{
+  color: var(--onceavo);
+}
+
+.text-doce{
+  color: var(--doce);
+}
+
 .hover:hover{
   color: #a59a77;
 }
@@ -135,7 +161,7 @@ body {
   letter-spacing: .25em;
 }
 
-.video{
+.video, .video-new{
   min-height: 660px;
 }
 
@@ -194,6 +220,15 @@ body {
   transition: background 0.3s, border-radius 0.3s, opacity 0.3s;
 }
 
+.overlay-home{
+  background-image: url('../public/img/index/overlay.png');
+  background-position: 100%;
+  background-repeat: no-repeat;
+  background-size: auto;
+  opacity: 0.5;
+  transition: background 0.3s, border-radius 0.3s, opacity 0.3s;
+}
+
 .overlay-footer-final{
   background-image: url('../public/img/bg-footer.png');
   background-position: center left;
@@ -215,6 +250,11 @@ body {
   background-repeat: no-repeat;
   background-size: auto;
   opacity: 1;
+}
+
+.portada-new-home{
+  background: url('../public/img/index/new-home.jpg') 50% 50%;
+  background-size: cover;
 }
 
 .portada-tulum{
@@ -422,6 +462,10 @@ body {
   height: 500px;
 }
 
+.h-600{
+  height: 600px;
+}
+
 .w-modal{
   width: 850px;
 }
@@ -445,6 +489,10 @@ body {
 @media (max-width: 768px) {
   .video, .portada-video, .portada-video-final, .portada-blog{
     min-height: 300px;
+  }
+
+  .video-new{
+    min-height: 450px;
   }
 
   .text-40{
