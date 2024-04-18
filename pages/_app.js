@@ -1,5 +1,3 @@
-import { useEffect } from 'react';
-import { useRouter } from 'next/router';
 import { appWithTranslation } from 'next-i18next';
 import { Analytics } from '@vercel/analytics/react';
 import { SpeedInsights } from '@vercel/speed-insights/next';
@@ -7,16 +5,6 @@ import Script from 'next/script';
 import '@/styles/globals.css';
 
 function App({ Component, pageProps }) {
-
-  const router = useRouter();
-
-  useEffect(() => {
-    // Importamos Hotjar de forma dinámica solo en el cliente
-    import('@hotjar/browser').then(hotjar => {
-      hotjar.init(4950303, 6);
-    });
-  }, [router.asPath]);  // Re-inicializa Hotjar cada vez que cambia la ruta
-
   return (
     <>
       {/* Messenger Plugin de chat */}
@@ -165,6 +153,23 @@ function App({ Component, pageProps }) {
             chatbox.setAttribute("page_id", "185162308789540");
             chatbox.setAttribute("attribution", "biz_inbox");
           `,
+        }}
+      />
+      {/* Hotjar Tracking Code */}
+      <Script
+        id="hotjar-script"
+        strategy="afterInteractive"
+        dangerouslySetInnerHTML={{
+          __html: `
+            (function(h,o,t,j,a,r){
+              h.hj = h.hj || function(){(h.hj.q = h.hj.q || []).push(arguments)};
+              h._hjSettings = {hjid:4950303, hjsv:6};
+              a = o.getElementsByTagName('head')[0];
+              r = o.createElement('script'); r.async = 1;
+              r.src = t + h._hjSettings.hjid + j + h._hjSettings.hjsv;
+              a.appendChild(r);
+            })(window, document, 'https://static.hotjar.com/c/hotjar-', '.js?sv=');
+          `
         }}
       />
     </>

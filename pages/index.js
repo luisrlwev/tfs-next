@@ -7,6 +7,7 @@ import Image from "next/image";
 import { FaLocationDot, FaWhatsapp } from "react-icons/fa6";
 import Boton from "@/components/boton";
 import BotonDos from "@/components/boton-dos";
+import BotonTres from "@/components/boton-tres";
 import Formulario from "@/components/formulario";
 import GaleriaPanorama from "@/components/galeria-panorama";
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -39,13 +40,13 @@ export default function Home() {
         <div className="overlay-tulum h-full w-full absolute">
         </div>
         <div className="video-new flex flex-col justify-center items-center relative xl:w-3/4 2xl:w-2/4">
-          <h1 className="text-white font-bold text-center uppercase text-3xl lg:text-6xl letter-spacing-25 text-shadow mb-6 lg:mb-24">Encontremos tu camino juntos</h1>
+          <h1 className="text-white font-bold text-center uppercase text-3xl lg:text-6xl letter-spacing-25 text-shadow mb-6 lg:mb-24">{t('encontremos')}</h1>
           <div className="container mx-auto grid lg:grid-cols-2 gap-5">
             <div className="grid max-md:justify-center lg:justify-end" onClick={abrirModal}>
-              <Boton/>
+              <BotonTres/>
             </div>
             <div className='grid max-md:justify-center lg:justify-start'>
-              <Link href={'/nosotros'} className='uppercase py-3 px-20 font-bold bg-septimo text-lg letter-spacing-25'>Conócenos</Link>
+              <Link href={'/nosotros'} className='uppercase py-3 px-20 font-bold bg-septimo text-lg letter-spacing-25'>{t('conocenos')}</Link>
             </div>
           </div>
         </div>

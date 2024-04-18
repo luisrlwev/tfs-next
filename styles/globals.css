@@ -161,8 +161,12 @@ body {
   letter-spacing: .25em;
 }
 
-.video, .video-new{
+.video{
   min-height: 660px;
+}
+
+.video-new{
+  min-height: 850px;
 }
 
 .portada-video{
