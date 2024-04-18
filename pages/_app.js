@@ -1,3 +1,5 @@
+import { useEffect } from 'react';
+import { useRouter } from 'next/router';
 import { appWithTranslation } from 'next-i18next';
 import { Analytics } from '@vercel/analytics/react';
 import { SpeedInsights } from '@vercel/speed-insights/next';
@@ -5,6 +7,16 @@ import Script from 'next/script';
 import '@/styles/globals.css';
 
 function App({ Component, pageProps }) {
+
+  const router = useRouter();
+
+  useEffect(() => {
+    // Importamos Hotjar de forma dinámica solo en el cliente
+    import('@hotjar/browser').then(hotjar => {
+      hotjar.init(4950303, 6);
+    });
+  }, [router.asPath]);  // Re-inicializa Hotjar cada vez que cambia la ruta
+
   return (
     <>
       {/* Messenger Plugin de chat */}
