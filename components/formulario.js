@@ -41,8 +41,16 @@ export default function Formulario({ show, onClose }) {
     setCondiciones(e.target.checked);
   };
 
-  const handleSubmit = async (e) => {
+  const handleSubmitForm = async (e) => {
     e.preventDefault();
+
+    // Deshabilitar el botón de envío y limpiar el formulario inmediatamente
+    setIsSubmitting(true);
+
+    // Aquí agregamos el seguimiento del evento de TikTok antes de proceder a enviar el formulario
+    if (window.ttq) {
+      window.ttq.track("SubmitForm");
+    }
 
     // Deshabilitar el botón de envío y limpiar el formulario inmediatamente
     setIsSubmitting(true);
@@ -99,7 +107,7 @@ export default function Formulario({ show, onClose }) {
         <button onClick={onClose} className="absolute top-0 right-0 mt-2 mr-2"><FaXmark className="text-2xl text-red-600"/></button>
         <div className="p-4">
             <h2 className='uppercase text-4xl text-secondary font-bold letter-spacing-25 text-center pb-3'>{t('dudas')}</h2>
-            <form className="w-full max-lg:pb-8 text-black" onSubmit={handleSubmit}>
+            <form className="w-full max-lg:pb-8 text-black" onSubmit={handleSubmitForm}>
               <div className="grid grid-cols-1 gap-3">
                 <div className="col-span-1">
                   <input type="text" name="nombre" id="nombre" placeholder={t('nombre_completo')} className="w-full rounded-md bg-decimo text-secondary placeholder:text-gray-600 p-2" value={nombre} onChange={(e) => setNombre(e.target.value)} required/>

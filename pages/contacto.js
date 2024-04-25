@@ -86,8 +86,16 @@ export default function Contacto() {
     setCondiciones(e.target.checked);
   };
 
-  const handleSubmit = async (e) => {
+  const handleFormContacto = async (e) => {
     e.preventDefault();
+
+    // Deshabilitar el botón de envío y limpiar el formulario inmediatamente
+    setIsSubmitting(true);
+
+    // Aquí agregamos el seguimiento del evento de TikTok antes de proceder a enviar el formulario
+    if (window.ttq) {
+      window.ttq.track("FormContacto");
+    }
 
     // Deshabilitar el botón de envío y limpiar el formulario inmediatamente
     setIsSubmitting(true);
@@ -160,7 +168,7 @@ export default function Contacto() {
         </div>
         <div className="pt-52 px-24 max-lg:px-3 pb-24 max-lg:py-8">
           <h2 className="uppercase text-secondary font-bold letter-spacing-25 text-xl pb-8 text-center">{t('dejanos')}</h2>
-          <form className="w-full pb-24 max-lg:pb-8" onSubmit={handleSubmit}>
+          <form className="w-full pb-24 max-lg:pb-8" onSubmit={handleFormContacto}>
               <div className="grid grid-cols-2 gap-3">
                 <div className="col-span-1">
                   <input type="text" name="nombre" id="nombre" placeholder={t('nombre')} className="w-full rounded-md bg-decimo text-secondary p-3" value={nombre} onChange={(e) => setNombre(e.target.value)} required/>
