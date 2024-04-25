@@ -9,6 +9,12 @@ import Boton from "@/components/boton";
 import BotonDos from "@/components/boton-dos";
 import Formulario from "@/components/formulario";
 import GaleriaPanorama from "@/components/galeria-panorama";
+import GaleriaAurora from "@/components/galeria-aurora";
+import GaleriaCasaHarmony from "@/components/galeria-casa-harmony";
+import GaleriaOneOnly from "@/components/galeria-one-only";
+import GaleriaVillas from "@/components/galeria-villas";
+import Galeria6Rios from "@/components/galeria-6-rios";
+import GaleriaBalche from "@/components/galeria-balche";
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, Navigation } from 'swiper/modules';
 // Import Swiper styles
@@ -114,53 +120,17 @@ export default function Home() {
                   <div className="grid grid-cols-12">
                     <div className="col-span-5 pr-8 flex items-center" onClick={abrirModal}>
                       <div>
-                        <p className="flex gap-2 uppercase font-semibold text-tfs pb-4"><FaLocationDot/> Cabo San Lucas, B.C.S.</p>
-                        <h3 className="text-5xl font-bold uppercase text-tercero pb-4">6 Ríos</h3>
-                        <p className="font-medium text-onceavo pb-4">4 tipologías de casas.<br/>3 Recámaras | 6 Baños | Terrazas</p>
-                        <p className="text-xl pb-16">Forma parte de una comunidad consolidada que encarna la excelencia en diseño y construcción. Cada hogar cuenta con terrazas, asadores, alberca, jardín privado y mucho más. Desde aquí, disfrutarás de vistas panorámicas que pintan el horizonte con puestas de sol gloriosas y escenas inspiradoras al arco de los cabos.</p>
+                        <p className="flex gap-2 uppercase font-semibold text-tfs pb-4"><FaLocationDot/> Cancún, Quintana Roo</p>
+                        <h3 className="text-5xl font-bold uppercase text-tercero pb-4">Las mejores vistas de Cancún</h3>
+                        <p className="font-medium text-onceavo pb-4">1 a 3 Habitaciones | 4 Baños | Alberca privada <br/></p>
+                        <p className="text-xl pb-16">Impresionantes Torres de 21 niveles con vistas panorámicas a la Laguna de Nichupté y zona Hotelera de Cancún. Más de 30 increíbles amenidades necesarias para un estilo de vida ideal con albercas, gimnasio, spa, boliche y mucho más. Inmejorable ubicación a 10 minutos del aeropuerto, estación del tren maya y zona hotelera.</p>
                         <div className="flex justify-center">
                           <BotonDos/>
                         </div>
                       </div>
                     </div>
                     <div className="col-span-7">
-                      <GaleriaPanorama/>
-                    </div>
-                  </div>
-                </SwiperSlide>
-                <SwiperSlide>
-                  <div className="grid grid-cols-12">
-                    <div className="col-span-5 pr-8 flex items-center" onClick={abrirModal}>
-                      <div>
-                        <p className="flex gap-2 uppercase font-semibold text-tfs pb-4"><FaLocationDot/> Yucatán, México</p>
-                        <h3 className="text-5xl font-bold uppercase text-tercero pb-4">Villas</h3>
-                        <p className="font-medium text-onceavo pb-4">11 exclusivas villas a pasos de la playa.<br/>3 Niveles | 3 Recámaras | 6 Baños | Rooftop</p>
-                        <p className="text-xl pb-16">Exclusivo complejo que te brindará el confort que mereces para gozar una vida tranquila en la costa de Yucatán, rodeado de amenidades, bellezas naturales y servicios indispensables. Único desarrollo en la zona que cuenta con cableado subterráneo de electricidad y cableado de voz y datos.</p>
-                        <div className="flex justify-center">
-                          <BotonDos/>
-                        </div>
-                      </div>
-                    </div>
-                    <div className="col-span-7">
-                      <GaleriaPanorama/>
-                    </div>
-                  </div>
-                </SwiperSlide>
-                <SwiperSlide>
-                  <div className="grid grid-cols-12">
-                    <div className="col-span-5 pr-8 flex items-center" onClick={abrirModal}>
-                      <div>
-                        <p className="flex gap-2 uppercase font-semibold text-tfs pb-4"><FaLocationDot/> Tulum, Quintana Roo</p>
-                        <h3 className="text-5xl font-bold uppercase text-tercero pb-4">Balché</h3>
-                        <p className="font-medium text-onceavo pb-4">3 departamentos Swim Up y 15 departamentos tipo estudio.<br/>1 recámara | 1 baño | 1 plunge pool</p>
-                        <p className="text-xl pb-16">Descubre Balché, un asombroso desarrollo ubicado a solo 10 minutos de la playa. Este impresionante proyecto ofrece una variedad de opciones residenciales, incluyendo 3 departamentos “Swim Up” y 15 estudios con terraza y plunge pool privados. Además, Balché te brinda acceso a exclusivas amenidades que complementarán tu estilo de vida.</p>
-                        <div className="flex justify-center">
-                          <BotonDos/>
-                        </div>
-                      </div>
-                    </div>
-                    <div className="col-span-7">
-                      <GaleriaPanorama/>
+                      <GaleriaAurora/>
                     </div>
                   </div>
                 </SwiperSlide>
@@ -178,7 +148,7 @@ export default function Home() {
                       </div>
                     </div>
                     <div className="col-span-7">
-                      <GaleriaPanorama/>
+                      <GaleriaCasaHarmony/>
                     </div>
                   </div>
                 </SwiperSlide>
@@ -186,17 +156,53 @@ export default function Home() {
                   <div className="grid grid-cols-12">
                     <div className="col-span-5 pr-8 flex items-center" onClick={abrirModal}>
                       <div>
-                        <p className="flex gap-2 uppercase font-semibold text-tfs pb-4"><FaLocationDot/> Cancún, Quintana Roo</p>
-                        <h3 className="text-5xl font-bold uppercase text-tercero pb-4">Las mejores vistas de Cancún</h3>
-                        <p className="font-medium text-onceavo pb-4">1 a 3 Habitaciones | 4 Baños | Alberca privada <br/></p>
-                        <p className="text-xl pb-16">Impresionantes Torres de 21 niveles con vistas panorámicas a la Laguna de Nichupté y zona Hotelera de Cancún. Más de 30 increíbles amenidades necesarias para un estilo de vida ideal con albercas, gimnasio, spa, boliche y mucho más. Inmejorable ubicación a 10 minutos del aeropuerto, estación del tren maya y zona hotelera.</p>
+                        <p className="flex gap-2 uppercase font-semibold text-tfs pb-4"><FaLocationDot/> Cabo San Lucas, B.C.S.</p>
+                        <h3 className="text-5xl font-bold uppercase text-tercero pb-4">6 Ríos</h3>
+                        <p className="font-medium text-onceavo pb-4">4 tipologías de casas.<br/>3 Recámaras | 6 Baños | Terrazas</p>
+                        <p className="text-xl pb-16">Forma parte de una comunidad consolidada que encarna la excelencia en diseño y construcción. Cada hogar cuenta con terrazas, asadores, alberca, jardín privado y mucho más. Desde aquí, disfrutarás de vistas panorámicas que pintan el horizonte con puestas de sol gloriosas y escenas inspiradoras al arco de los cabos.</p>
                         <div className="flex justify-center">
                           <BotonDos/>
                         </div>
                       </div>
                     </div>
                     <div className="col-span-7">
-                      <GaleriaPanorama/>
+                      <Galeria6Rios/>
+                    </div>
+                  </div>
+                </SwiperSlide>
+                <SwiperSlide>
+                  <div className="grid grid-cols-12">
+                    <div className="col-span-5 pr-8 flex items-center" onClick={abrirModal}>
+                      <div>
+                        <p className="flex gap-2 uppercase font-semibold text-tfs pb-4"><FaLocationDot/> Yucatán, México</p>
+                        <h3 className="text-5xl font-bold uppercase text-tercero pb-4">Villas</h3>
+                        <p className="font-medium text-onceavo pb-4">11 exclusivas villas a pasos de la playa.<br/>3 Niveles | 3 Recámaras | 6 Baños | Rooftop</p>
+                        <p className="text-xl pb-16">Exclusivo complejo que te brindará el confort que mereces para gozar una vida tranquila en la costa de Yucatán, rodeado de amenidades, bellezas naturales y servicios indispensables. Único desarrollo en la zona que cuenta con cableado subterráneo de electricidad y cableado de voz y datos.</p>
+                        <div className="flex justify-center">
+                          <BotonDos/>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="col-span-7">
+                      <GaleriaOneOnly/>
+                    </div>
+                  </div>
+                </SwiperSlide>
+                <SwiperSlide>
+                  <div className="grid grid-cols-12">
+                    <div className="col-span-5 pr-8 flex items-center" onClick={abrirModal}>
+                      <div>
+                        <p className="flex gap-2 uppercase font-semibold text-tfs pb-4"><FaLocationDot/> Tulum, Quintana Roo</p>
+                        <h3 className="text-5xl font-bold uppercase text-tercero pb-4">Balché</h3>
+                        <p className="font-medium text-onceavo pb-4">3 departamentos Swim Up y 15 departamentos tipo estudio.<br/>1 recámara | 1 baño | 1 plunge pool</p>
+                        <p className="text-xl pb-16">Descubre Balché, un asombroso desarrollo ubicado a solo 10 minutos de la playa. Este impresionante proyecto ofrece una variedad de opciones residenciales, incluyendo 3 departamentos “Swim Up” y 15 estudios con terraza y plunge pool privados. Además, Balché te brinda acceso a exclusivas amenidades que complementarán tu estilo de vida.</p>
+                        <div className="flex justify-center">
+                          <BotonDos/>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="col-span-7">
+                      <GaleriaBalche/>
                     </div>
                   </div>
                 </SwiperSlide>
@@ -214,7 +220,7 @@ export default function Home() {
                       </div>
                     </div>
                     <div className="col-span-7">
-                      <GaleriaPanorama/>
+                      <GaleriaVillas/>
                     </div>
                   </div>
                 </SwiperSlide>
@@ -270,8 +276,8 @@ export default function Home() {
                 <SwiperSlide>
                   <div className="grid grid-cols-12">
                     <div className="col-span-6 flex items-center justify-center bg-slide-cabos">
-                      <div className="h-500 py-11 flex flex-col justify-between">
-                        <div>
+                      <div className="h-500 w-full bg-white-line py-11 flex flex-col justify-between">
+                        <div className="pl-16">
                           <p className="flex gap-2 uppercase font-semibold text-tfs pb-3"><FaLocationDot/> Baja California Sur</p>
                           <h3 className="text-5xl font-bold uppercase text-tercero pb-4">Cabo San Lucas</h3>
                         </div>
@@ -296,9 +302,9 @@ export default function Home() {
                 </SwiperSlide>
                 <SwiperSlide>
                   <div className="grid grid-cols-12">
-                    <div className="col-span-6 flex items-center justify-center bg-slide-cabos">
-                      <div className="h-500 py-11 flex flex-col justify-between">
-                        <div>
+                    <div className="col-span-6 flex items-center justify-center bg-slide-vallarta">
+                      <div className="h-500 w-full bg-white-line py-11 flex flex-col justify-between">
+                        <div className="pl-16">
                           <p className="flex gap-2 uppercase font-semibold text-tfs pb-3"><FaLocationDot/> Jalisco</p>
                           <h3 className="text-5xl font-bold uppercase text-tercero pb-4">PUERTO VALLARTA</h3>
                         </div>
@@ -323,9 +329,9 @@ export default function Home() {
                 </SwiperSlide>
                 <SwiperSlide>
                   <div className="grid grid-cols-12">
-                    <div className="col-span-6 flex items-center justify-center bg-slide-cabos">
-                      <div className="h-500 py-11 flex flex-col justify-between">
-                        <div>
+                    <div className="col-span-6 flex items-center justify-center bg-slide-cancun">
+                      <div className="h-500 w-full bg-white-line py-11 flex flex-col justify-between">
+                        <div className="pl-16">
                           <p className="flex gap-2 uppercase font-semibold text-tfs pb-3"><FaLocationDot/> Qintana Roo</p>
                           <h3 className="text-5xl font-bold uppercase text-tercero pb-4">Cancún</h3>
                         </div>
@@ -350,9 +356,9 @@ export default function Home() {
                 </SwiperSlide>
                 <SwiperSlide>
                   <div className="grid grid-cols-12">
-                    <div className="col-span-6 flex items-center justify-center bg-slide-cabos">
-                      <div className="h-500 py-11 flex flex-col justify-between">
-                        <div>
+                    <div className="col-span-6 flex items-center justify-center bg-slide-tulum">
+                      <div className="h-500 w-full bg-white-line py-11 flex flex-col justify-between">
+                        <div className="pl-16">
                           <p className="flex gap-2 uppercase font-semibold text-tfs pb-3"><FaLocationDot/> Qintana Roo</p>
                           <h3 className="text-5xl font-bold uppercase text-tercero pb-4">Tulum</h3>
                         </div>
@@ -377,9 +383,9 @@ export default function Home() {
                 </SwiperSlide>
                 <SwiperSlide>
                   <div className="grid grid-cols-12">
-                    <div className="col-span-6 flex items-center justify-center bg-slide-cabos">
-                      <div className="h-500 py-11 flex flex-col justify-between">
-                        <div>
+                    <div className="col-span-6 flex items-center justify-center bg-slide-pdc">
+                      <div className="h-500 w-full bg-white-line py-11 flex flex-col justify-between">
+                        <div className="pl-16">
                           <p className="flex gap-2 uppercase font-semibold text-tfs pb-3"><FaLocationDot/> Qintana Roo</p>
                           <h3 className="text-5xl font-bold uppercase text-tercero pb-4">Playa de Carmen </h3>
                         </div>
@@ -404,9 +410,9 @@ export default function Home() {
                 </SwiperSlide>
                 <SwiperSlide>
                   <div className="grid grid-cols-12">
-                    <div className="col-span-6 flex items-center justify-center bg-slide-cabos">
-                      <div className="h-500 py-11 flex flex-col justify-between">
-                        <div>
+                    <div className="col-span-6 flex items-center justify-center bg-slide-merida">
+                      <div className="h-500 w-full bg-white-line py-11 flex flex-col justify-between">
+                        <div className="pl-16">
                           <p className="flex gap-2 uppercase font-semibold text-tfs pb-3"><FaLocationDot/> Yucatán</p>
                           <h3 className="text-5xl font-bold uppercase text-tercero pb-4">Mérida </h3>
                         </div>

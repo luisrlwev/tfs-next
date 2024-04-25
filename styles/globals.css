@@ -114,9 +114,44 @@ body {
 }
 
 .bg-slide-cabos{
-  background-image: url('../public/img/index/los-cabos.jpg');
+  background-image: url('../public/img/index/mejores-los-cabos.jpg');
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+.bg-slide-vallarta{
+  background-image: url('../public/img/index/mejores-vallarta.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.bg-slide-cancun{
+  background-image: url('../public/img/index/mejores-cancun.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.bg-slide-tulum{
+  background-image: url('../public/img/index/mejores-tulum.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.bg-slide-pdc{
+  background-image: url('../public/img/index/mejores-pdc.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.bg-slide-merida{
+  background-image: url('../public/img/index/mejores-merida.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.bg-white-line{
+  background: rgb(255, 255, 255);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 1) 28%, rgba(0, 0, 0, 0) 40%);
 }
 
 .text-menu{

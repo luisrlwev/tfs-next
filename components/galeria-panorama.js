@@ -7,9 +7,9 @@ import 'yet-another-react-lightbox/styles.css';
 
 // Define tus slides aquí
 const slides = [
-    { src: '/img/index/panorama-1.jpg', type: 'image' },
-    { src: '/img/index/panorama-2.jpg', type: 'image' },
-    { src: '/video/riviera-maya.mp4', type: 'video', poster: '/img/index/panorama-3.jpg' },
+    { src: '/img/index/panorama/panorama-1.jpg', type: 'image' },
+    { src: '/img/index/panorama/panorama-2.jpg', type: 'image' },
+    { src: '/video/panorama.mp4', type: 'video', poster: '/img/index/panorama/panorama-3.jpg' },
   ];
 
 export default function GaleriaPanorama() {
@@ -42,7 +42,7 @@ export default function GaleriaPanorama() {
                         type: slide.type === 'video' ? 'video' : 'image',
                         sources: [
                             {
-                              src: "/video/riviera-maya.mp4",
+                              src: "/video/panorama.mp4",
                               type: "video/mp4",
                             },
                         ],
