@@ -1,3 +1,7 @@
+<<<<<<< Updated upstream
+=======
+import i18n from '@/i18n';
+>>>>>>> Stashed changes
 import { appWithTranslation } from 'next-i18next';
 import { Analytics } from '@vercel/analytics/react';
 import { SpeedInsights } from '@vercel/speed-insights/next';

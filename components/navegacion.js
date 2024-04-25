@@ -11,6 +11,16 @@ export default function Navegacion() {
       <li className="pb-2 lg:py-0">
         <Link href="/tulum" className={ router.pathname === '/tulum' ? 'text-tfs' : 'hover'}>
           Tulum
+import { useTranslation } from "next-i18next";
+
+export default function Navegacion() {
+    const router = useRouter()
+    const { t } = useTranslation('common');
+  return (
+    <>
+      <li className="pb-2 lg:py-0">
+        <Link href="/departamentos" className={ router.pathname === '/departamentos' ? 'text-tfs' : 'hover'}>
+          {t('departamentos')}
         </Link>
       </li>
       <li className="pb-2 lg:py-0">
