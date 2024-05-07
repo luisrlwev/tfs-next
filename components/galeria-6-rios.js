@@ -20,15 +20,24 @@ export default function Galeria6Rios() {
         <div className="grid grid-rows-2 grid-flow-col gap-4 h-600">
                 {slides.map((slide, index) => (
                     <div key={index} className={`${index === 0 ? "row-span-1" : index === 1 ? "col-span-1" : "row-span-2 col-span-1"} cursor-pointer relative`}>
+                        <div onClick={() => { setCurrentIndex(index); setIsOpen(true); }} className="relative w-full h-full">
                         <Image
                             src={slide.type === 'image' ? slide.src : slide.poster}
                             alt={`Slide ${index}`}
-                            onClick={() => {
-                                setCurrentIndex(index);
-                                setIsOpen(true);
-                            }}
                             layout="fill"
                         />
+                        {slide.type === "video" && (
+                            <div className="absolute inset-0 flex justify-center items-center">
+                            <Image
+                                src="/img/index/play.png" // Cambia esto por la ruta real de tu imagen
+                                alt="Play"
+                                width={100} // Ajusta el tamaño según necesites
+                                height={100} // Ajusta el tamaño según necesites
+                                className="cursor-pointer animate-pulse"
+                            />
+                            </div>
+                        )}
+                        </div>
                     </div>
                 ))}
             </div>
@@ -53,5 +62,5 @@ export default function Galeria6Rios() {
                 />
             )}
     </>
-  )
+  );
 }

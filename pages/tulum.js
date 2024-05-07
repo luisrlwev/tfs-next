@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
-import { useTranslation } from 'next-i18next'
 import Script from "next/script";
 import Layout from "@/components/layout";
 import Image from "next/image";
@@ -13,14 +12,9 @@ import { Autoplay, Navigation } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/navigation';
 
-<<<<<<< Updated upstream:pages/tulum.js
 export default function Tulum() {
   // Traducciones
   const { t } = useTranslation()
-=======
-export default function Departamentos() {
-  const { t } = useTranslation('common');
->>>>>>> Stashed changes:pages/departamentos.js
   const [showModal, setShowModal] = useState(false);
 
   const abrirModal = () => {
@@ -35,7 +29,6 @@ export default function Departamentos() {
       title={t('Tulum')}
       description={t('tulum_descripcion')}
     >
-<<<<<<< Updated upstream:pages/tulum.js
       {/* Evento de pixel de Tulum */}
       <Script
         id="script-pixel-tulum"
@@ -58,14 +51,6 @@ export default function Departamentos() {
       <div className="portada-tulum-inicio flex relative justify-center cursor-pointer" onClick={abrirModal}>
         <div className="portada-ciudades flex justify-center items-end relative">
           <h1 className="text-white font-bold text-center uppercase text-160 letter-spacing-25 leading-none z-0 -mb-6 max-lg:text-5xl max-lg:-mb-2">Tulum</h1>
-=======
-      <div className="portada-depas flex relative justify-center cursor-pointer" onClick={abrirModal}>
-        <div className="h-full w-full top-0 left-0 absolute overflow-hidden z-0">
-          <video src="/video/depas.mp4" className="absolute video-fondo-portada" autoPlay muted playsInline loop></video>
-        </div>
-        <div className="portada-video flex justify-center items-center relative">
-          <h1 className="text-white font-bold text-center uppercase text-40 letter-spacing-25 text-shadow">{t('departamentos')}</h1>
->>>>>>> Stashed changes:pages/departamentos.js
         </div>
       </div>
       <section className="bg-header">

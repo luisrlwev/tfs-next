@@ -484,6 +484,13 @@ body {
   height: 407px;
 }
 
+.swiper-pagination-fraction{
+  display: flex;
+  justify-content: center;
+  padding-top: 20px;
+  color:var(--doce)
+}
+
 .h-300{
   height: 300px;
 }
@@ -514,6 +521,30 @@ body {
 
 .PhoneInputInput{
   background-color: transparent;
+}
+
+.glow{
+  -webkit-animation: glowing 1.5s infinite;
+  -moz-animation: glowing 1.5s infinite;
+  -o-animation: glowing 1.5s infinite;
+  animation: glowing 1.5s infinite;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.nuevos-desarrollos-prev, .nuevos-desarrollos-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+}
+
+.nuevos-desarrollos-prev {
+  left: 10px;
+}
+
+.nuevos-desarrollos-next {
+  right: 10px;
 }
 
 @media (max-width: 768px) {
