@@ -4,7 +4,7 @@ import { useTranslation } from 'next-i18next'
 import Link from "next/link";
 import Layout from "@/components/layout";
 import Image from "next/image";
-import { FaLocationDot, FaWhatsapp } from "react-icons/fa6";
+import { FaLocationDot, FaWhatsapp, FaAngleLeft, FaAngleRight } from "react-icons/fa6";
 import Boton from "@/components/boton";
 import BotonDos from "@/components/boton-dos";
 import Formulario from "@/components/formulario";
@@ -48,6 +48,8 @@ export default function Home() {
       swiperInstance.slideTo(index);
     }
   };
+
+  const [mySwiper, setMySwiper] = useState(null);
 
   return (
     <Layout
@@ -101,9 +103,10 @@ export default function Home() {
           </div>
           <div className="col-span-12">
             <Swiper
+                onSwiper={setMySwiper}
                 className="nuevos-desarrollos"
                 slidesPerView={1}
-                navigation={true}
+                navigation={false}
                 autoplay={{
                   delay: 5000,
                   disableOnInteraction: true,
@@ -244,6 +247,8 @@ export default function Home() {
             </Swiper>
           </div>
           <div className="col-span-2 py-10">
+            <button className='absolute z-30 boton-prev' onClick={() => mySwiper?.slidePrev()}><FaAngleLeft className='text-tfs text-3xl'/></button>
+            <button className='absolute z-30 boton-next' onClick={() => mySwiper?.slideNext()}><FaAngleRight className='text-tfs text-3xl'/></button>
             <p className="text-onceavo">Preventa Exclusiva</p>
           </div>
           <div className="col-span-10 grid content-center">

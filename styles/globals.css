@@ -490,6 +490,16 @@ body {
   padding-top: 20px;
   color:var(--doce)
 }
+/* Botón Prev a la izquierda */
+.boton-prev{
+  bottom: -230px;
+  left: 35px;
+}
+/* Botón Next a la derecha */
+.boton-next{
+  right: 35px;
+  bottom: -230px;
+}
 
 .h-300{
   height: 300px;
@@ -530,21 +540,6 @@ body {
   animation: glowing 1.5s infinite;
   border-radius: 50%;
   cursor: pointer;
-}
-
-.nuevos-desarrollos-prev, .nuevos-desarrollos-next {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  z-index: 10;
-}
-
-.nuevos-desarrollos-prev {
-  left: 10px;
-}
-
-.nuevos-desarrollos-next {
-  right: 10px;
 }
 
 @media (max-width: 768px) {
