@@ -40,8 +40,16 @@ export default function Footer() {
     setCondiciones(e.target.checked);
   };
 
-  const handleSubmit = async (e) => {
+  const handleCompleteRegistration = async (e) => {
     e.preventDefault();
+
+    // Deshabilitar el botón de envío y limpiar el formulario inmediatamente
+    setIsSubmitting(true);
+
+    // Aquí agregamos el seguimiento del evento de TikTok antes de proceder a enviar el formulario
+    if (window.ttq) {
+      window.ttq.track("CompleteRegistration");
+    }
 
     // Deshabilitar el botón de envío y limpiar el formulario inmediatamente
     setIsSubmitting(true);
@@ -109,7 +117,7 @@ export default function Footer() {
           </div>
           <div>
             <p className="text-white text-center text-xl uppercase font-bold letter-spacing-25 pb-2">{t('contactanos')}</p>
-            <form onSubmit={handleSubmit} className='z-50'>
+            <form onSubmit={handleCompleteRegistration} className='z-50'>
               <div className="grid px-3 lg:grid-cols-2 gap-3">
                 <div>
                   <input type="text" name="nombre" id="nombre" placeholder={t('nombre')} className="w-full bg-transparent border-b text-white p-3" value={nombre} onChange={(e) => setNombre(e.target.value)} required/>

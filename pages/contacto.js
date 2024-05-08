@@ -11,7 +11,7 @@ import 'react-phone-number-input/style.css';
 
 const containerStyle = {
   width: '100%',
-  height: '600px'
+  height: '700px'
 };
 
 const center = {
@@ -38,6 +38,13 @@ const positions = [
     lng: -109.92666954959905,
     title: "Los Cabos",
     description: "Boulevard Miguel Ángel Herrera, Del Aguila esquina-20, 22, 23472 Cabo San Lucas, B.C.S.",
+    icon: "/img/contacto/marcador.png"
+  },
+  {
+    lat: 20.638347273537082,
+    lng: -105.22181244517246,
+    title: "Vallarta",
+    description: "Parota Center, Av. Francisco Villa 1010-local 35, Jardines de Las Gaviotas, 48328 Puerto Vallarta, Jal.",
     icon: "/img/contacto/marcador.png"
   },
 ];
@@ -79,8 +86,16 @@ export default function Contacto() {
     setCondiciones(e.target.checked);
   };
 
-  const handleSubmit = async (e) => {
+  const handleFormContacto = async (e) => {
     e.preventDefault();
+
+    // Deshabilitar el botón de envío y limpiar el formulario inmediatamente
+    setIsSubmitting(true);
+
+    // Aquí agregamos el seguimiento del evento de TikTok antes de proceder a enviar el formulario
+    if (window.ttq) {
+      window.ttq.track("FormContacto");
+    }
 
     // Deshabilitar el botón de envío y limpiar el formulario inmediatamente
     setIsSubmitting(true);
@@ -153,7 +168,7 @@ export default function Contacto() {
         </div>
         <div className="pt-52 px-24 max-lg:px-3 pb-24 max-lg:py-8">
           <h2 className="uppercase text-secondary font-bold letter-spacing-25 text-xl pb-8 text-center">{t('dejanos')}</h2>
-          <form className="w-full pb-24 max-lg:pb-8" onSubmit={handleSubmit}>
+          <form className="w-full pb-24 max-lg:pb-8" onSubmit={handleFormContacto}>
               <div className="grid grid-cols-2 gap-3">
                 <div className="col-span-1">
                   <input type="text" name="nombre" id="nombre" placeholder={t('nombre')} className="w-full rounded-md bg-decimo text-secondary p-3" value={nombre} onChange={(e) => setNombre(e.target.value)} required/>
@@ -292,6 +307,20 @@ export default function Contacto() {
                 <div className='col-span-2 flex flex-col gap-1 justify-center'>
                   <h3 className='text-white uppercase font-bold letter-spacing-25 text-2xl'>Los Cabos</h3>
                   <p className='text-white text-sm'>Boulevard Miguel Ángel Herrera, Esquina del águila Mza 1 Lt, Locales 18, 20, 22, Colonia Lomas del Cabo, Cabo San Lucas. BCS, México.</p>
+                  <a href="mailto:sales@tulumfromskyrealtors.com" className='text-tfs text-sm flex items-center hover'><FaRegEnvelope className='mr-1'/> sales@tulumfromskyrealtors.com</a>
+                  <a href="tel:+529848035450" className='text-tfs text-sm flex items-center hover'><FaWhatsapp className='mr-1'/> +52 (984) 803 5450</a>
+                </div>
+              </div>
+              <div className="flex py-6 pl-6 max-lg:pl-0">
+                <span className="separador-tfs"></span>
+              </div>
+              <div className='grid grid-cols-3 gap-3'>
+                <div className='col-span-1 grid justify-items-center'>
+                  <Image src={'/img/contacto/vallarta.jpg'} width={154} height={154} alt={'Foto sede'}/>
+                </div>
+                <div className='col-span-2 flex flex-col gap-1 justify-center'>
+                  <h3 className='text-white uppercase font-bold letter-spacing-25 text-2xl'>Vallarta</h3>
+                  <p className='text-white text-sm'>Parota Center, Av. Francisco Villa 1010-local 35, Jardines de Las Gaviotas, 48328 Puerto Vallarta, Jal.</p>
                   <a href="mailto:sales@tulumfromskyrealtors.com" className='text-tfs text-sm flex items-center hover'><FaRegEnvelope className='mr-1'/> sales@tulumfromskyrealtors.com</a>
                   <a href="tel:+529848035450" className='text-tfs text-sm flex items-center hover'><FaWhatsapp className='mr-1'/> +52 (984) 803 5450</a>
                 </div>
