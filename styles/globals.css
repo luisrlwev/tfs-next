@@ -487,18 +487,18 @@ body {
 .swiper-pagination-fraction{
   display: flex;
   justify-content: center;
-  padding-top: 20px;
   color:var(--doce)
 }
+
 /* Botón Prev a la izquierda */
 .boton-prev{
-  bottom: -230px;
+  bottom: -290px;
   left: 35px;
 }
 /* Botón Next a la derecha */
 .boton-next{
   right: 35px;
-  bottom: -230px;
+  bottom: -290px;
 }
 
 .h-300{
@@ -511,6 +511,10 @@ body {
 
 .h-600{
   height: 600px;
+}
+
+.h-700{
+  height: 700px;
 }
 
 .w-modal{
