@@ -104,10 +104,10 @@ export default function Home() {
       </section>
       <section className="container mx-auto">
         <div className="grid grid-cols-12">
-          <div className="col-span-2 py-10">
+          <div className="col-span-2 py-10 max-md:col-span-6 max-md:pl-4">
             <p className="text-onceavo">{t('nuevos_desarrollos')}</p>
           </div>
-          <div className="col-span-10 grid content-center">
+          <div className="col-span-10 grid content-center max-md:col-span-6 max-md:pr-4">
             <hr className="h-0.5 bg-decimo"/>
           </div>
           <div className="col-span-12">
@@ -129,152 +129,152 @@ export default function Home() {
               >
                 <SwiperSlide>
                   <div className="grid grid-cols-12">
-                    <div className="col-span-5 pr-16 flex" onClick={abrirModal}>
+                    <div className="col-span-5 pr-16 flex max-md:col-span-12 max-md:px-4 max-md:pb-12" onClick={abrirModal}>
                       <div>
-                        <p className="flex gap-2 uppercase font-semibold text-tfs pb-10"><FaLocationDot/> Cabo San Lucas, B.C.S.</p>
-                        <h3 className="text-5xl font-bold uppercase text-tercero pb-10">Panorama</h3>
-                        <p className="font-medium text-onceavo pb-10">{t('condos_2_3')}<br/>{t('equipamiento_incluido')}</p>
-                        <p className="text-xl pb-16">{t('las_mejores_vistas')}</p>
+                        <p className="flex gap-2 uppercase font-semibold text-tfs pb-10 max-md:pb-3"><FaLocationDot/> Cabo San Lucas, B.C.S.</p>
+                        <h3 className="text-5xl font-bold uppercase text-tercero pb-10 max-md:text-3xl max-md:pb-3 max-md:text-3xl">Panorama</h3>
+                        <p className="font-medium text-onceavo pb-10 max-md:pb-3">{t('condos_2_3')}<br/>{t('equipamiento_incluido')}</p>
+                        <p className="text-xl pb-16 max-md:pb-8 max-md:text-lg">{t('las_mejores_vistas')}</p>
                         <div className="flex justify-center">
                           <BotonDos/>
                         </div>
                       </div>
                     </div>
-                    <div className="col-span-7">
+                    <div className="col-span-7 max-md:col-span-12 max-md:px-4">
                       <GaleriaPanorama/>
                     </div>
                   </div>
                 </SwiperSlide>
                 <SwiperSlide>
                   <div className="grid grid-cols-12">
-                    <div className="col-span-5 pr-16 flex" onClick={abrirModal}>
+                    <div className="col-span-5 pr-16 flex max-md:col-span-12 max-md:px-4 max-md:pb-12" onClick={abrirModal}>
                       <div>
-                        <p className="flex gap-2 uppercase font-semibold text-tfs pb-10"><FaLocationDot/> Cancún, Quintana Roo</p>
-                        <h3 className="text-5xl font-bold uppercase text-tercero pb-10">{t('las_mejores_vistas_cancun')}</h3>
-                        <p className="font-medium text-onceavo pb-10">{t('1_3_habitaciones')}</p>
-                        <p className="text-xl pb-16">{t('impresionantes_torres')}</p>
+                        <p className="flex gap-2 uppercase font-semibold text-tfs pb-10 max-md:pb-3"><FaLocationDot/> Cancún, Quintana Roo</p>
+                        <h3 className="text-5xl font-bold uppercase text-tercero pb-10 max-md:text-3xl max-md:pb-3 max-md:text-3xl">{t('las_mejores_vistas_cancun')}</h3>
+                        <p className="font-medium text-onceavo pb-10 max-md:pb-3">{t('1_3_habitaciones')}</p>
+                        <p className="text-xl pb-16 max-md:pb-8 max-md:text-lg">{t('impresionantes_torres')}</p>
                         <div className="flex justify-center">
                           <BotonDos/>
                         </div>
                       </div>
                     </div>
-                    <div className="col-span-7">
+                    <div className="col-span-7 max-md:col-span-12 max-md:px-4">
                       <GaleriaAurora/>
                     </div>
                   </div>
                 </SwiperSlide>
                 <SwiperSlide>
                   <div className="grid grid-cols-12">
-                    <div className="col-span-5 pr-16 flex" onClick={abrirModal}>
+                    <div className="col-span-5 pr-16 flex max-md:col-span-12 max-md:px-4 max-md:pb-12" onClick={abrirModal}>
                       <div>
-                        <p className="flex gap-2 uppercase font-semibold text-tfs pb-10"><FaLocationDot/> Tulum, Quintana Roo</p>
-                        <h3 className="text-5xl font-bold uppercase text-tercero pb-10">{t('casa_harmony')}</h3>
-                        <p className="font-medium text-onceavo pb-10">{t('3_habitaciones')}</p>
-                        <p className="text-xl pb-16">{t('casa_residencial')}</p>
+                        <p className="flex gap-2 uppercase font-semibold text-tfs pb-10 max-md:pb-3"><FaLocationDot/> Tulum, Quintana Roo</p>
+                        <h3 className="text-5xl font-bold uppercase text-tercero pb-10 max-md:text-3xl max-md:pb-3 max-md:text-3xl">{t('casa_harmony')}</h3>
+                        <p className="font-medium text-onceavo pb-10 max-md:pb-3">{t('3_habitaciones')}</p>
+                        <p className="text-xl pb-16 max-md:pb-8 max-md:text-lg">{t('casa_residencial')}</p>
                         <div className="flex justify-center">
                           <BotonDos/>
                         </div>
                       </div>
                     </div>
-                    <div className="col-span-7">
+                    <div className="col-span-7 max-md:col-span-12 max-md:px-4">
                       <GaleriaCasaHarmony/>
                     </div>
                   </div>
                 </SwiperSlide>
                 <SwiperSlide>
                   <div className="grid grid-cols-12">
-                    <div className="col-span-5 pr-16 flex" onClick={abrirModal}>
+                    <div className="col-span-5 pr-16 flex max-md:col-span-12 max-md:px-4 max-md:pb-12" onClick={abrirModal}>
                       <div>
-                        <p className="flex gap-2 uppercase font-semibold text-tfs pb-10"><FaLocationDot/> Cabo San Lucas, B.C.S.</p>
-                        <h3 className="text-5xl font-bold uppercase text-tercero pb-10">6 Ríos</h3>
-                        <p className="font-medium text-onceavo pb-10">{t('4_topologias')}<br/>{t('3_rec')}</p>
-                        <p className="text-xl pb-16">{t('forma_parte')}</p>
+                        <p className="flex gap-2 uppercase font-semibold text-tfs pb-10 max-md:pb-3"><FaLocationDot/> Cabo San Lucas, B.C.S.</p>
+                        <h3 className="text-5xl font-bold uppercase text-tercero pb-10 max-md:text-3xl max-md:pb-3 max-md:text-3xl">6 Ríos</h3>
+                        <p className="font-medium text-onceavo pb-10 max-md:pb-3">{t('4_topologias')}<br/>{t('3_rec')}</p>
+                        <p className="text-xl pb-16 max-md:pb-8 max-md:text-lg">{t('forma_parte')}</p>
                         <div className="flex justify-center">
                           <BotonDos/>
                         </div>
                       </div>
                     </div>
-                    <div className="col-span-7">
+                    <div className="col-span-7 max-md:col-span-12 max-md:px-4">
                       <Galeria6Rios/>
                     </div>
                   </div>
                 </SwiperSlide>
                 <SwiperSlide>
                   <div className="grid grid-cols-12">
-                    <div className="col-span-5 pr-16 flex" onClick={abrirModal}>
+                    <div className="col-span-5 pr-16 flex max-md:col-span-12 max-md:px-4 max-md:pb-12" onClick={abrirModal}>
                       <div>
-                        <p className="flex gap-2 uppercase font-semibold text-tfs pb-10"><FaLocationDot/> Yucatán, México</p>
-                        <h3 className="text-5xl font-bold uppercase text-tercero pb-10">{t('villas_solo')}</h3>
-                        <p className="font-medium text-onceavo pb-10">{t('11_exclusivas')}<br/>{t('3_recamaras')}</p>
-                        <p className="text-xl pb-16">{t('exclusivo_complejo')}</p>
+                        <p className="flex gap-2 uppercase font-semibold text-tfs pb-10 max-md:pb-3"><FaLocationDot/> Yucatán, México</p>
+                        <h3 className="text-5xl font-bold uppercase text-tercero pb-10 max-md:text-3xl max-md:pb-3 max-md:text-3xl">{t('villas_solo')}</h3>
+                        <p className="font-medium text-onceavo pb-10 max-md:pb-3">{t('11_exclusivas')}<br/>{t('3_recamaras')}</p>
+                        <p className="text-xl pb-16 max-md:pb-8 max-md:text-lg">{t('exclusivo_complejo')}</p>
                         <div className="flex justify-center">
                           <BotonDos/>
                         </div>
                       </div>
                     </div>
-                    <div className="col-span-7">
+                    <div className="col-span-7 max-md:col-span-12 max-md:px-4">
                       <GaleriaOneOnly/>
                     </div>
                   </div>
                 </SwiperSlide>
                 <SwiperSlide>
                   <div className="grid grid-cols-12">
-                    <div className="col-span-5 pr-16 flex" onClick={abrirModal}>
+                    <div className="col-span-5 pr-16 flex max-md:col-span-12 max-md:px-4 max-md:pb-12" onClick={abrirModal}>
                       <div>
-                        <p className="flex gap-2 uppercase font-semibold text-tfs pb-10"><FaLocationDot/> Tulum, Quintana Roo</p>
-                        <h3 className="text-5xl font-bold uppercase text-tercero pb-10">Balché</h3>
-                        <p className="font-medium text-onceavo pb-10">{t('3_departamentos')}<br/>{t('1_rec')}</p>
-                        <p className="text-xl pb-16">{t('descubre_balche')}</p>
+                        <p className="flex gap-2 uppercase font-semibold text-tfs pb-10 max-md:pb-3"><FaLocationDot/> Tulum, Quintana Roo</p>
+                        <h3 className="text-5xl font-bold uppercase text-tercero pb-10 max-md:text-3xl max-md:pb-3 max-md:text-3xl">Balché</h3>
+                        <p className="font-medium text-onceavo pb-10 max-md:pb-3">{t('3_departamentos')}<br/>{t('1_rec')}</p>
+                        <p className="text-xl pb-16 max-md:pb-8 max-md:text-lg">{t('descubre_balche')}</p>
                         <div className="flex justify-center">
                           <BotonDos/>
                         </div>
                       </div>
                     </div>
-                    <div className="col-span-7">
+                    <div className="col-span-7 max-md:col-span-12 max-md:px-4">
                       <GaleriaBalche/>
                     </div>
                   </div>
                 </SwiperSlide>
                 <SwiperSlide>
                   <div className="grid grid-cols-12">
-                    <div className="col-span-5 pr-16 flex" onClick={abrirModal}>
+                    <div className="col-span-5 pr-16 flex max-md:col-span-12 max-md:px-4 max-md:pb-12" onClick={abrirModal}>
                       <div>
-                        <p className="flex gap-2 uppercase font-semibold text-tfs pb-10"><FaLocationDot/> Nuevo Vallarta, Nayarit</p>
-                        <h3 className="text-5xl font-bold uppercase text-tercero pb-10">{t('villas_privadas')}</h3>
-                        <p className="font-medium text-onceavo pb-10">{t('4_5_rec')}</p>
-                        <p className="text-xl pb-16">{t('escenario_espectacular')}</p>
+                        <p className="flex gap-2 uppercase font-semibold text-tfs pb-10 max-md:pb-3"><FaLocationDot/> Nuevo Vallarta, Nayarit</p>
+                        <h3 className="text-5xl font-bold uppercase text-tercero pb-10 max-md:text-3xl max-md:pb-3 max-md:text-3xl">{t('villas_privadas')}</h3>
+                        <p className="font-medium text-onceavo pb-10 max-md:pb-3">{t('4_5_rec')}</p>
+                        <p className="text-xl pb-16 max-md:pb-8 max-md:text-lg">{t('escenario_espectacular')}</p>
                         <div className="flex justify-center">
                           <BotonDos/>
                         </div>
                       </div>
                     </div>
-                    <div className="col-span-7">
+                    <div className="col-span-7 max-md:col-span-12 max-md:px-4">
                       <GaleriaVillas/>
                     </div>
                   </div>
                 </SwiperSlide>
             </Swiper>
           </div>
-          <div className="col-span-2 py-10">
-            <button className='absolute z-30 boton-prev' onClick={() => mySwiper?.slidePrev()}><FaAngleLeft className='text-tfs text-3xl'/></button>
-            <button className='absolute z-30 boton-next' onClick={() => mySwiper?.slideNext()}><FaAngleRight className='text-tfs text-3xl'/></button>
+          <div className="col-span-2 py-10 max-md:col-span-6 max-md:pl-4">
+            <button className='absolute z-30 boton-prev max-md:hidden' onClick={() => mySwiper?.slidePrev()}><FaAngleLeft className='text-tfs text-3xl'/></button>
+            <button className='absolute z-30 boton-next max-md:hidden' onClick={() => mySwiper?.slideNext()}><FaAngleRight className='text-tfs text-3xl'/></button>
             <p className="text-onceavo">{t('preventa_exclusiva')}</p>
           </div>
-          <div className="col-span-10 grid content-center">
+          <div className="col-span-10 grid content-center max-md:col-span-6 max-md:pr-4">
             <hr className="h-0.5 bg-decimo"/>
           </div>
         </div>
       </section>
-      <section className="bg-banner-whats relative">
+      <section className="bg-banner-whats relative max-md:py-10">
         <div className="overlay-home h-full w-full absolute bg-right"></div>
         <div className="container mx-auto grid grid-cols-12 h-80 relative">
-          <div className="col-span-8 flex items-center">
+          <div className="col-span-8 flex items-center max-md:col-span-12 max-md:px-4">
             <div className="text-white">
-              <p>{t('desarrollos_noticias')}</p>
-              <h3 className="font-bold text-4xl pt-5">{t('unete_nuestro')}</h3>
+              <p className='max-md:text-center'>{t('desarrollos_noticias')}</p>
+              <h3 className="font-bold text-4xl pt-5 max-md:text-2xl max-md:text-center max-md:pt-8">{t('unete_nuestro')}</h3>
             </div>
           </div>
-          <div className="col-span-4 flex justify-center items-center">
+          <div className="col-span-4 flex justify-center items-center max-md:col-span-12 max-md:px-4">
             <div>
               <a href="https://wa.me/529848035450" className="flex items-center px-5 py-2 text-white bg-green-500 rounded-md text-sm"><FaWhatsapp className="mr-2"/> {t('encuentranos')}</a>
             </div>
@@ -283,10 +283,10 @@ export default function Home() {
       </section>
       <section className="container mx-auto">
         <div className="grid grid-cols-12">
-          <div className="col-span-4 py-10">
+          <div className="col-span-4 py-10 max-md:col-span-8 max-md:pl-4">
             <p className="text-onceavo">{t('mejores')}</p>
           </div>
-          <div className="col-span-8 grid content-center">
+          <div className="col-span-8 grid content-center max-md:col-span-4 max-md:pr-4">
             <hr className="h-0.5 bg-decimo"/>
           </div>
           <div className="col-span-12">
@@ -307,23 +307,23 @@ export default function Home() {
               >
                 <SwiperSlide>
                   <div className="grid grid-cols-12">
-                    <div className="col-span-6 flex items-center justify-center bg-slide-cabos">
-                      <div className="h-600 w-full py-11 flex flex-col justify-between">
-                        <div className="pl-16">
+                    <div className="col-span-6 flex items-center justify-center bg-slide-cabos max-md:col-span-12">
+                      <div className="h-600 w-full py-11 flex flex-col justify-between galeria-responsive">
+                        <div className="pl-16 max-md:pl-6">
                           <p className="flex gap-2 uppercase font-semibold text-tfs pb-3"><FaLocationDot/> Baja California Sur</p>
-                          <h3 className="text-5xl font-bold uppercase text-tercero pb-4">Cabo San Lucas</h3>
+                          <h3 className="text-5xl font-bold uppercase text-tercero pb-4 max-md:text-3xl">Cabo San Lucas</h3>
                         </div>
                         <div className="flex justify-center" onClick={abrirModal}>
                           <button className='py-2 px-8 bg-tfs text-white text-sm'>{t('contactanos')}</button>
                         </div>
                       </div>
                     </div>
-                    <div className="col-span-6 flex items-center">
-                      <div className="pl-16">
+                    <div className="col-span-6 flex items-center max-md:col-span-12 max-md:px-4 max-md:pt-6">
+                      <div className="pl-16 max-md:pl-0">
                         <p className="font-medium text-onceavo pb-4">{t('consulta')}</p>
-                        <h3 className="text-3xl font-bold uppercase text-tercero pb-4 letter-spacing-25">{t('iman')}</h3>
-                        <p className="text-sm pb-3 text-secondary text-justify">{t('los_cabos_emerge')}</p>
-                        <p className="text-sm pb-3 text-secondary text-justify">{t('este_destino')}</p>
+                        <h3 className="text-3xl font-bold uppercase text-tercero pb-4 letter-spacing-25 max-md:text-2xl">{t('iman')}</h3>
+                        <p className="text-sm pb-3 text-secondary text-justify max-md:text-base">{t('los_cabos_emerge')}</p>
+                        <p className="text-sm pb-3 text-secondary text-justify max-md:text-base">{t('este_destino')}</p>
                         <p className="text-sm pb-10 text-secondary text-justify">{t('la_region')}</p>
                         <div className="flex justify-center">
                           <Link href={'/los-cabos'} className='py-3 px-6 bg-tfs text-white text-sm'>{t('conoce')}</Link>
@@ -334,23 +334,23 @@ export default function Home() {
                 </SwiperSlide>
                 <SwiperSlide>
                   <div className="grid grid-cols-12">
-                    <div className="col-span-6 flex items-center justify-center bg-slide-vallarta">
-                      <div className="h-600 w-full py-11 flex flex-col justify-between">
-                        <div className="pl-16">
+                    <div className="col-span-6 flex items-center justify-center bg-slide-vallarta max-md:col-span-12">
+                      <div className="h-600 w-full py-11 flex flex-col justify-between galeria-responsive">
+                        <div className="pl-16 max-md:pl-6">
                           <p className="flex gap-2 uppercase font-semibold text-tfs pb-3"><FaLocationDot/> Jalisco</p>
-                          <h3 className="text-5xl font-bold uppercase text-tercero pb-4">PUERTO VALLARTA</h3>
+                          <h3 className="text-5xl font-bold uppercase text-tercero pb-4 max-md:text-3xl">PUERTO VALLARTA</h3>
                         </div>
                         <div className="flex justify-center" onClick={abrirModal}>
                           <button className='py-2 px-8 bg-tfs text-white text-sm'>{t('contactanos')}</button>
                         </div>
                       </div>
                     </div>
-                    <div className="col-span-6 flex items-center">
-                      <div className="pl-16">
+                    <div className="col-span-6 flex items-center max-md:col-span-12 max-md:px-4 max-md:pt-6">
+                      <div className="pl-16 max-md:pl-0">
                         <p className="font-medium text-onceavo pb-4">{t('consulta')}</p>
-                        <h3 className="text-3xl font-bold uppercase text-tercero pb-4 letter-spacing-25">{t('boom_inmobiliario')}</h3>
-                        <p className="text-sm pb-3 text-secondary text-justify">{t('durante')}</p>
-                        <p className="text-sm pb-3 text-secondary text-justify">{t('conocido')}</p>
+                        <h3 className="text-3xl font-bold uppercase text-tercero pb-4 letter-spacing-25 max-md:text-2xl">{t('boom_inmobiliario')}</h3>
+                        <p className="text-sm pb-3 text-secondary text-justify max-md:text-base">{t('durante')}</p>
+                        <p className="text-sm pb-3 text-secondary text-justify max-md:text-base">{t('conocido')}</p>
                         <p className="text-sm pb-10 text-secondary text-justify">{t('el_mercado')}</p>
                         <div className="flex justify-center">
                           <Link href={'/vallarta'} className='py-3 px-6 bg-tfs text-white text-sm'>{t('conoce')}</Link>
@@ -361,23 +361,23 @@ export default function Home() {
                 </SwiperSlide>
                 <SwiperSlide>
                   <div className="grid grid-cols-12">
-                    <div className="col-span-6 flex items-center justify-center bg-slide-cancun">
-                      <div className="h-600 w-full py-11 flex flex-col justify-between">
-                        <div className="pl-16">
+                    <div className="col-span-6 flex items-center justify-center bg-slide-cancun max-md:col-span-12">
+                      <div className="h-600 w-full py-11 flex flex-col justify-between galeria-responsive">
+                        <div className="pl-16 max-md:pl-6">
                           <p className="flex gap-2 uppercase font-semibold text-tfs pb-3"><FaLocationDot/> Qintana Roo</p>
-                          <h3 className="text-5xl font-bold uppercase text-tercero pb-4">Cancún</h3>
+                          <h3 className="text-5xl font-bold uppercase text-tercero pb-4 max-md:text-3xl">Cancún</h3>
                         </div>
                         <div className="flex justify-center" onClick={abrirModal}>
                           <button className='py-2 px-8 bg-tfs text-white text-sm'>{t('contactanos')}</button>
                         </div>
                       </div>
                     </div>
-                    <div className="col-span-6 flex items-center">
-                      <div className="pl-16">
+                    <div className="col-span-6 flex items-center max-md:col-span-12 max-md:px-4 max-md:pt-6">
+                      <div className="pl-16 max-md:pl-0">
                         <p className="font-medium text-onceavo pb-4">{t('consulta')}</p>
-                        <h3 className="text-3xl font-bold uppercase text-tercero pb-4 letter-spacing-25">{t('crecimiento_exponencial')}</h3>
-                        <p className="text-sm pb-3 text-secondary text-justify">{t('el_ambito')}</p>
-                        <p className="text-sm pb-3 text-secondary text-justify">{t('un_ejemplo')}</p>
+                        <h3 className="text-3xl font-bold uppercase text-tercero pb-4 letter-spacing-25 max-md:text-2xl">{t('crecimiento_exponencial')}</h3>
+                        <p className="text-sm pb-3 text-secondary text-justify max-md:text-base">{t('el_ambito')}</p>
+                        <p className="text-sm pb-3 text-secondary text-justify max-md:text-base">{t('un_ejemplo')}</p>
                         <p className="text-sm pb-10 text-secondary text-justify">{t('estas_inversiones')}</p>
                         <div className="flex justify-center">
                           <Link href={'/cancun'} className='py-3 px-6 bg-tfs text-white text-sm'>{t('conoce')}</Link>
@@ -388,23 +388,23 @@ export default function Home() {
                 </SwiperSlide>
                 <SwiperSlide>
                   <div className="grid grid-cols-12">
-                    <div className="col-span-6 flex items-center justify-center bg-slide-tulum">
-                      <div className="h-600 w-full py-11 flex flex-col justify-between">
-                        <div className="pl-16">
+                    <div className="col-span-6 flex items-center justify-center bg-slide-tulum max-md:col-span-12">
+                      <div className="h-600 w-full py-11 flex flex-col justify-between galeria-responsive">
+                        <div className="pl-16 max-md:pl-6">
                           <p className="flex gap-2 uppercase font-semibold text-tfs pb-3"><FaLocationDot/> Qintana Roo</p>
-                          <h3 className="text-5xl font-bold uppercase text-tercero pb-4">Tulum</h3>
+                          <h3 className="text-5xl font-bold uppercase text-tercero pb-4 max-md:text-3xl">Tulum</h3>
                         </div>
                         <div className="flex justify-center" onClick={abrirModal}>
                           <button className='py-2 px-8 bg-tfs text-white text-sm'>{t('contactanos')}</button>
                         </div>
                       </div>
                     </div>
-                    <div className="col-span-6 flex items-center">
-                      <div className="pl-16">
+                    <div className="col-span-6 flex items-center max-md:col-span-12 max-md:px-4 max-md:pt-6">
+                      <div className="pl-16 max-md:pl-0">
                         <p className="font-medium text-onceavo pb-4">{t('consulta')}</p>
-                        <h3 className="text-3xl font-bold uppercase text-tercero pb-4 letter-spacing-25">{t('joya')}</h3>
-                        <p className="text-sm pb-3 text-secondary text-justify">{t('tulum_emergiendo')}</p>
-                        <p className="text-sm pb-3 text-secondary text-justify">{t('con_un_precio')}</p>
+                        <h3 className="text-3xl font-bold uppercase text-tercero pb-4 letter-spacing-25 max-md:text-2xl">{t('joya')}</h3>
+                        <p className="text-sm pb-3 text-secondary text-justify max-md:text-base">{t('tulum_emergiendo')}</p>
+                        <p className="text-sm pb-3 text-secondary text-justify max-md:text-base">{t('con_un_precio')}</p>
                         <p className="text-sm pb-10 text-secondary text-justify">{t('la_plusvalia')}</p>
                         <div className="flex justify-center">
                           <Link href={'/tulum'} className='py-3 px-6 bg-tfs text-white text-sm'>{t('conoce')}</Link>
@@ -415,23 +415,23 @@ export default function Home() {
                 </SwiperSlide>
                 <SwiperSlide>
                   <div className="grid grid-cols-12">
-                    <div className="col-span-6 flex items-center justify-center bg-slide-pdc">
-                      <div className="h-600 w-full py-11 flex flex-col justify-between">
-                        <div className="pl-16">
+                    <div className="col-span-6 flex items-center justify-center bg-slide-pdc max-md:col-span-12">
+                      <div className="h-600 w-full py-11 flex flex-col justify-between galeria-responsive">
+                        <div className="pl-16 max-md:pl-6">
                           <p className="flex gap-2 uppercase font-semibold text-tfs pb-3"><FaLocationDot/> Qintana Roo</p>
-                          <h3 className="text-5xl font-bold uppercase text-tercero pb-4">Playa de Carmen </h3>
+                          <h3 className="text-5xl font-bold uppercase text-tercero pb-4 max-md:text-3xl">Playa de Carmen </h3>
                         </div>
                         <div className="flex justify-center" onClick={abrirModal}>
                           <button className='py-2 px-8 bg-tfs text-white text-sm'>{t('contactanos')}</button>
                         </div>
                       </div>
                     </div>
-                    <div className="col-span-6 flex items-center">
-                      <div className="pl-16">
+                    <div className="col-span-6 flex items-center max-md:col-span-12 max-md:px-4 max-md:pt-6">
+                      <div className="pl-16 max-md:pl-0">
                         <p className="font-medium text-onceavo pb-4">{t('consulta')}</p>
-                        <h3 className="text-3xl font-bold uppercase text-tercero pb-4 letter-spacing-25">{t('referente')}</h3>
-                        <p className="text-sm pb-3 text-secondary text-justify">{t('en_el_2023')}</p>
-                        <p className="text-sm pb-3 text-secondary text-justify">{t('pdc')}</p>
+                        <h3 className="text-3xl font-bold uppercase text-tercero pb-4 letter-spacing-25 max-md:text-2xl">{t('referente')}</h3>
+                        <p className="text-sm pb-3 text-secondary text-justify max-md:text-base">{t('en_el_2023')}</p>
+                        <p className="text-sm pb-3 text-secondary text-justify max-md:text-base">{t('pdc')}</p>
                         <p className="text-sm pb-10 text-secondary text-justify">{t('demanda_solida')}</p>
                         <div className="flex justify-center">
                           <Link href={'/tulum'} className='py-3 px-6 bg-tfs text-white text-sm'>{t('conoce')}</Link>
@@ -442,23 +442,23 @@ export default function Home() {
                 </SwiperSlide>
                 <SwiperSlide>
                   <div className="grid grid-cols-12">
-                    <div className="col-span-6 flex items-center justify-center bg-slide-merida">
-                      <div className="h-600 w-full py-11 flex flex-col justify-between">
-                        <div className="pl-16">
+                    <div className="col-span-6 flex items-center justify-center bg-slide-merida max-md:col-span-12">
+                      <div className="h-600 w-full py-11 flex flex-col justify-between galeria-responsive">
+                        <div className="pl-16 max-md:pl-6">
                           <p className="flex gap-2 uppercase font-semibold text-tfs pb-3"><FaLocationDot/> Yucatán</p>
-                          <h3 className="text-5xl font-bold uppercase text-tercero pb-4">Mérida </h3>
+                          <h3 className="text-5xl font-bold uppercase text-tercero pb-4 max-md:text-3xl">Mérida </h3>
                         </div>
                         <div className="flex justify-center" onClick={abrirModal}>
                           <button className='py-2 px-8 bg-tfs text-white text-sm'>{t('contactanos')}</button>
                         </div>
                       </div>
                     </div>
-                    <div className="col-span-6 flex items-center">
-                      <div className="pl-16">
+                    <div className="col-span-6 flex items-center max-md:col-span-12 max-md:px-4 max-md:pt-6">
+                      <div className="pl-16 max-md:pl-0">
                         <p className="font-medium text-onceavo pb-4">{t('consulta')}</p>
-                        <h3 className="text-3xl font-bold uppercase text-tercero pb-4 letter-spacing-25">{t('ciudad_segura')}</h3>
-                        <p className="text-sm pb-3 text-secondary text-justify">{t('el_mercado_yucateco')}</p>
-                        <p className="text-sm pb-3 text-secondary text-justify">{t('yucatan')}</p>
+                        <h3 className="text-3xl font-bold uppercase text-tercero pb-4 letter-spacing-25 max-md:text-2xl">{t('ciudad_segura')}</h3>
+                        <p className="text-sm pb-3 text-secondary text-justify max-md:text-base">{t('el_mercado_yucateco')}</p>
+                        <p className="text-sm pb-3 text-secondary text-justify max-md:text-base">{t('yucatan')}</p>
                         <p className="text-sm pb-10 text-secondary text-justify">{t('la_ubicacion')}</p>
                         <div className="flex justify-center">
                           <Link href={'/merida'} className='py-3 px-6 bg-tfs text-white text-sm'>{t('conoce')}</Link>
@@ -469,10 +469,8 @@ export default function Home() {
                 </SwiperSlide>
             </Swiper>
           </div>
-          <div className='col-span-12 py-10'>
+          <div className='col-span-12 py-10 max-md:px-4'>
             <Swiper
-                  slidesPerView={5}
-                  spaceBetween={15}
                   pagination={{
                     type: 'fraction',
                     el: '.custom-swiper-pagination' // Asegura que Swiper use este elemento para la paginación
@@ -488,6 +486,19 @@ export default function Home() {
                   }}
                   modules={[Navigation, Pagination, Autoplay]}
                   loop={true}
+                  // Responsive breakpoints
+                  breakpoints={{
+                    // when window width is >= 320px
+                    320: {
+                      slidesPerView: 1,
+                      spaceBetween: 20
+                    },
+                    // when window width is >= 640px
+                    640: {
+                      slidesPerView: 5,
+                      spaceBetween: 15
+                    }
+                  }}
                 >
                   <SwiperSlide onClick={() => goToSlide(0)} className='bg-slate-50 content-center py-5 hover:text-gray-700 text-slate-300 cursor-pointer'>
                     <div className='flex gap-4 font-bold justify-center'><FaLocationDot/>Cabo San Lucas</div>
@@ -514,14 +525,14 @@ export default function Home() {
               <button onClick={() => mySwiperDos?.slideNext()}><FaArrowRightLong className='text-gray-200 text-3xl'/></button>
             </div>
           </div>
-          <div className="col-span-12 grid content-center">
+          <div className="col-span-12 grid content-center max-md:px-4">
             <hr className="h-0.5 bg-decimo"/>
           </div>
         </div>
       </section>
       <section className="container mx-auto py-10">
         <h3 className="uppercase font-bold text-center text-doce text-2xl pb-4">@FromskyRealtors</h3>
-        <div className="grid grid-cols-6 gap-2">
+        <div className="grid grid-cols-6 gap-2 max-md:grid-cols-2 max-md:px-4">
           <div>
             <a href="https://www.instagram.com/fromskyrealtors/" target="_blank"><Image src={'/img/index/instagram-1.jpg'} width={300} height={300} alt={'Instagram'}/></a>
           </div>

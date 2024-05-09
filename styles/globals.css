@@ -561,7 +561,7 @@ body {
   }
 
   .video-new{
-    min-height: 450px;
+    min-height: 600px;
   }
 
   .text-40{
@@ -600,5 +600,9 @@ body {
 
   .w-modal{
     width: 90%;
+  }
+
+  .galeria-responsive{
+    height: 370px;
   }
 }

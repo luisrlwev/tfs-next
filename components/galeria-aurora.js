@@ -17,7 +17,7 @@ export default function GaleriaAurora() {
     const [currentIndex, setCurrentIndex] = useState(0);
   return (
     <>
-        <div className="grid grid-rows-2 grid-flow-col gap-4 h-700">
+        <div className="grid grid-rows-2 grid-flow-col gap-4 h-700 galeria-responsive">
                 {slides.map((slide, index) => (
                     <div key={index} className={`${index === 0 ? "row-span-1" : index === 1 ? "col-span-1" : "row-span-2 col-span-1"} cursor-pointer relative`}>
                         <div onClick={() => { setCurrentIndex(index); setIsOpen(true); }} className="relative w-full h-full">
