@@ -283,7 +283,7 @@ export default function Home() {
       </section>
       <section className="container mx-auto">
         <div className="grid grid-cols-12">
-          <div className="col-span-4 py-10 max-md:col-span-8 max-md:pl-4">
+          <div className="col-span-4 py-20 max-md:col-span-8 max-md:pl-4 max-md:py-10">
             <p className="text-onceavo">{t('mejores')}</p>
           </div>
           <div className="col-span-8 grid content-center max-md:col-span-4 max-md:pr-4">
