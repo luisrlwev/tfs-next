@@ -132,7 +132,7 @@ export default function Home() {
                     <div className="col-span-5 pr-16 flex max-md:col-span-12 max-md:px-4 max-md:pb-12" onClick={abrirModal}>
                       <div>
                         <p className="flex gap-2 uppercase font-semibold text-tfs pb-10 max-md:pb-3"><FaLocationDot/> Cabo San Lucas, B.C.S.</p>
-                        <h3 className="text-5xl font-bold uppercase text-tercero pb-10 max-md:text-3xl max-md:pb-3 max-md:text-3xl">Panorama</h3>
+                        <h3 className="text-5xl font-bold uppercase text-tercero pb-10 max-md:text-3xl max-md:pb-3">Panorama</h3>
                         <p className="font-medium text-onceavo pb-10 max-md:pb-3">{t('condos_2_3')}<br/>{t('equipamiento_incluido')}</p>
                         <p className="text-xl pb-16 max-md:pb-8 max-md:text-lg">{t('las_mejores_vistas')}</p>
                         <div className="flex justify-center">
@@ -150,7 +150,7 @@ export default function Home() {
                     <div className="col-span-5 pr-16 flex max-md:col-span-12 max-md:px-4 max-md:pb-12" onClick={abrirModal}>
                       <div>
                         <p className="flex gap-2 uppercase font-semibold text-tfs pb-10 max-md:pb-3"><FaLocationDot/> Cancún, Quintana Roo</p>
-                        <h3 className="text-5xl font-bold uppercase text-tercero pb-10 max-md:text-3xl max-md:pb-3 max-md:text-3xl">{t('las_mejores_vistas_cancun')}</h3>
+                        <h3 className="text-5xl font-bold uppercase text-tercero pb-10 max-md:text-3xl max-md:pb-3">{t('las_mejores_vistas_cancun')}</h3>
                         <p className="font-medium text-onceavo pb-10 max-md:pb-3">{t('1_3_habitaciones')}</p>
                         <p className="text-xl pb-16 max-md:pb-8 max-md:text-lg">{t('impresionantes_torres')}</p>
                         <div className="flex justify-center">
@@ -168,7 +168,7 @@ export default function Home() {
                     <div className="col-span-5 pr-16 flex max-md:col-span-12 max-md:px-4 max-md:pb-12" onClick={abrirModal}>
                       <div>
                         <p className="flex gap-2 uppercase font-semibold text-tfs pb-10 max-md:pb-3"><FaLocationDot/> Tulum, Quintana Roo</p>
-                        <h3 className="text-5xl font-bold uppercase text-tercero pb-10 max-md:text-3xl max-md:pb-3 max-md:text-3xl">{t('casa_harmony')}</h3>
+                        <h3 className="text-5xl font-bold uppercase text-tercero pb-10 max-md:text-3xl max-md:pb-3">{t('casa_harmony')}</h3>
                         <p className="font-medium text-onceavo pb-10 max-md:pb-3">{t('3_habitaciones')}</p>
                         <p className="text-xl pb-16 max-md:pb-8 max-md:text-lg">{t('casa_residencial')}</p>
                         <div className="flex justify-center">
@@ -186,7 +186,7 @@ export default function Home() {
                     <div className="col-span-5 pr-16 flex max-md:col-span-12 max-md:px-4 max-md:pb-12" onClick={abrirModal}>
                       <div>
                         <p className="flex gap-2 uppercase font-semibold text-tfs pb-10 max-md:pb-3"><FaLocationDot/> Cabo San Lucas, B.C.S.</p>
-                        <h3 className="text-5xl font-bold uppercase text-tercero pb-10 max-md:text-3xl max-md:pb-3 max-md:text-3xl">6 Ríos</h3>
+                        <h3 className="text-5xl font-bold uppercase text-tercero pb-10 max-md:text-3xl max-md:pb-3">6 Ríos</h3>
                         <p className="font-medium text-onceavo pb-10 max-md:pb-3">{t('4_topologias')}<br/>{t('3_rec')}</p>
                         <p className="text-xl pb-16 max-md:pb-8 max-md:text-lg">{t('forma_parte')}</p>
                         <div className="flex justify-center">
@@ -204,7 +204,7 @@ export default function Home() {
                     <div className="col-span-5 pr-16 flex max-md:col-span-12 max-md:px-4 max-md:pb-12" onClick={abrirModal}>
                       <div>
                         <p className="flex gap-2 uppercase font-semibold text-tfs pb-10 max-md:pb-3"><FaLocationDot/> Yucatán, México</p>
-                        <h3 className="text-5xl font-bold uppercase text-tercero pb-10 max-md:text-3xl max-md:pb-3 max-md:text-3xl">{t('villas_solo')}</h3>
+                        <h3 className="text-5xl font-bold uppercase text-tercero pb-10 max-md:text-3xl max-md:pb-3">{t('villas_solo')}</h3>
                         <p className="font-medium text-onceavo pb-10 max-md:pb-3">{t('11_exclusivas')}<br/>{t('3_recamaras')}</p>
                         <p className="text-xl pb-16 max-md:pb-8 max-md:text-lg">{t('exclusivo_complejo')}</p>
                         <div className="flex justify-center">
@@ -222,7 +222,7 @@ export default function Home() {
                     <div className="col-span-5 pr-16 flex max-md:col-span-12 max-md:px-4 max-md:pb-12" onClick={abrirModal}>
                       <div>
                         <p className="flex gap-2 uppercase font-semibold text-tfs pb-10 max-md:pb-3"><FaLocationDot/> Tulum, Quintana Roo</p>
-                        <h3 className="text-5xl font-bold uppercase text-tercero pb-10 max-md:text-3xl max-md:pb-3 max-md:text-3xl">Balché</h3>
+                        <h3 className="text-5xl font-bold uppercase text-tercero pb-10 max-md:text-3xl max-md:pb-3">Balché</h3>
                         <p className="font-medium text-onceavo pb-10 max-md:pb-3">{t('3_departamentos')}<br/>{t('1_rec')}</p>
                         <p className="text-xl pb-16 max-md:pb-8 max-md:text-lg">{t('descubre_balche')}</p>
                         <div className="flex justify-center">
@@ -240,7 +240,7 @@ export default function Home() {
                     <div className="col-span-5 pr-16 flex max-md:col-span-12 max-md:px-4 max-md:pb-12" onClick={abrirModal}>
                       <div>
                         <p className="flex gap-2 uppercase font-semibold text-tfs pb-10 max-md:pb-3"><FaLocationDot/> Nuevo Vallarta, Nayarit</p>
-                        <h3 className="text-5xl font-bold uppercase text-tercero pb-10 max-md:text-3xl max-md:pb-3 max-md:text-3xl">{t('villas_privadas')}</h3>
+                        <h3 className="text-5xl font-bold uppercase text-tercero pb-10 max-md:text-3xl max-md:pb-3">{t('villas_privadas')}</h3>
                         <p className="font-medium text-onceavo pb-10 max-md:pb-3">{t('4_5_rec')}</p>
                         <p className="text-xl pb-16 max-md:pb-8 max-md:text-lg">{t('escenario_espectacular')}</p>
                         <div className="flex justify-center">
