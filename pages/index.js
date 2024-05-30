@@ -364,7 +364,7 @@ export default function Home() {
                     <div className="col-span-6 flex items-center justify-center bg-slide-cancun max-md:col-span-12">
                       <div className="h-600 w-full py-11 flex flex-col justify-between galeria-responsive">
                         <div className="pl-16 max-md:pl-6">
-                          <p className="flex gap-2 uppercase font-semibold text-tfs pb-3"><FaLocationDot/> Qintana Roo</p>
+                          <p className="flex gap-2 uppercase font-semibold text-tfs pb-3"><FaLocationDot/> Quintana Roo</p>
                           <h3 className="text-5xl font-bold uppercase text-tercero pb-4 max-md:text-3xl">Cancún</h3>
                         </div>
                         <div className="flex justify-center" onClick={abrirModal}>
@@ -391,7 +391,7 @@ export default function Home() {
                     <div className="col-span-6 flex items-center justify-center bg-slide-tulum max-md:col-span-12">
                       <div className="h-600 w-full py-11 flex flex-col justify-between galeria-responsive">
                         <div className="pl-16 max-md:pl-6">
-                          <p className="flex gap-2 uppercase font-semibold text-tfs pb-3"><FaLocationDot/> Qintana Roo</p>
+                          <p className="flex gap-2 uppercase font-semibold text-tfs pb-3"><FaLocationDot/> Quintana Roo</p>
                           <h3 className="text-5xl font-bold uppercase text-tercero pb-4 max-md:text-3xl">Tulum</h3>
                         </div>
                         <div className="flex justify-center" onClick={abrirModal}>
@@ -418,7 +418,7 @@ export default function Home() {
                     <div className="col-span-6 flex items-center justify-center bg-slide-pdc max-md:col-span-12">
                       <div className="h-600 w-full py-11 flex flex-col justify-between galeria-responsive">
                         <div className="pl-16 max-md:pl-6">
-                          <p className="flex gap-2 uppercase font-semibold text-tfs pb-3"><FaLocationDot/> Qintana Roo</p>
+                          <p className="flex gap-2 uppercase font-semibold text-tfs pb-3"><FaLocationDot/> Quintana Roo</p>
                           <h3 className="text-5xl font-bold uppercase text-tercero pb-4 max-md:text-3xl">Playa de Carmen </h3>
                         </div>
                         <div className="flex justify-center" onClick={abrirModal}>
