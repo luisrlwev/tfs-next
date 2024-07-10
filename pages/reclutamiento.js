@@ -21,7 +21,6 @@ export default function Reclutamiento() {
   const [email, setEmail] = useState('');
   const [tel, setTel] = useState('');
   const [curriculum, setCurriculum] = useState(null);
-  const [experiencia, setExperiencia] = useState('');
   const [raices, setRaices] = useState('');
   const [idioma, setIdioma] = useState('');
   const [sucursal, setSucursal] = useState('');
@@ -52,11 +51,6 @@ export default function Reclutamiento() {
   };
 
   // Controlador para el cambio en el radio
-  const handleRadio1Change = (e) => {
-    setExperiencia(e.target.value);
-  };
-
-  // Controlador para el cambio en el radio
   const handleRadio2Change = (e) => {
     setRaices(e.target.value);
   };
@@ -81,7 +75,6 @@ export default function Reclutamiento() {
     if (curriculum) {
       formData.append('curriculum', curriculum, curriculum.name);
     }
-    formData.append('experiencia', experiencia);
     formData.append('raices', raices);
     formData.append('idioma', idioma);
     formData.append('sucursal', sucursal);
@@ -106,7 +99,6 @@ export default function Reclutamiento() {
         setEmail('');
         setTel('');
         setCurriculum(null);
-        setExperiencia('');
         setRaices('');
         setIdioma('');
         setSucursal('');
@@ -326,33 +318,6 @@ export default function Reclutamiento() {
               <input type="file" name='curriculum' id='curriculum' onChange={handleArchivoChange} accept=".pdf, .doc, .docx, image/*" className="block w-full text-base text-tercero cursor-pointer file:cursor-pointer file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-base"/>
             </div>
             <div className='lg:col-span-1'>
-              <label htmlFor="experiencia" className='block'>{t('experiencia')} <span className='text-red-600'>*</span></label>
-              <label className="inline-flex items-center">
-                <input
-                  type="radio"
-                  name='experiencia'
-                  className="form-radio h-5 w-5"
-                  value="Sí"
-                  checked={experiencia === 'Sí'}
-                  onChange={handleRadio1Change}
-                  required
-                />
-                <span className="ml-2">{t('si')}</span>
-              </label>
-              <label className="inline-flex items-center ml-6">
-                <input
-                  type="radio"
-                  name='experiencia'
-                  className="form-radio h-5 w-5"
-                  value="No"
-                  checked={experiencia === 'No'}
-                  onChange={handleRadio1Change}
-                  required
-                />
-                <span className="ml-2">No</span>
-              </label>
-            </div>
-            <div className='lg:col-span-1'>
               <label htmlFor="raices" className='block'>{t('cuentas')} <span className='text-red-600'>*</span></label>
               <label className="inline-flex items-center">
                 <input
@@ -379,7 +344,7 @@ export default function Reclutamiento() {
                 <span className="ml-2">No</span>
               </label>
             </div>
-            <div className='lg:col-span-2'>
+            <div className='lg:col-span-1'>
               <label htmlFor="idioma" className='block'>{t('ingles')} <span className='text-red-600'>*</span></label>
               <label className="inline-flex items-center">
                 <input

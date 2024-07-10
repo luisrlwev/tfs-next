@@ -46,7 +46,7 @@ const handler = async (req, res) => {
       cc: `${process.env.EMAIL_CC},talentohumano@tulumfromskyrealtors.com`, // Puedes añadir más correos separados por comas
       bcc: process.env.EMAIL_BCC, // Puedes añadir más correos separados por comas
       subject: "Formulario - Reclutamiento",
-      text: `Nombre: ${nombre}\nEmail: ${email}\nTeléfono: ${tel}\n¿Cuenta con experiencia?: ${experiencia}\n¿Cuenta con experiencia en bienes raíces?: ${raices}\nNivel de Inglés: ${idioma}\nSucursal a la que aplica: ${sucursal}\nMensaje: ${mensaje}\n----------\nFecha de envio: ${fechaEnvio}\nHora de envio: ${horaEnvio}\nPágina de envio: ${paginaEnvio}`,
+      text: `Nombre: ${nombre}\nEmail: ${email}\nTeléfono: ${tel}\n¿Cuenta con experiencia en bienes raíces?: ${raices}\nNivel de Inglés: ${idioma}\nSucursal a la que aplica: ${sucursal}\nMensaje: ${mensaje}\n----------\nFecha de envio: ${fechaEnvio}\nHora de envio: ${horaEnvio}\nPágina de envio: ${paginaEnvio}`,
     };
 
     // Asumiendo que files.curriculum es un arreglo y queremos el primer archivo
