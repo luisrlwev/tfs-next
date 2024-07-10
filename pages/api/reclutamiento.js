@@ -24,7 +24,7 @@ const handler = async (req, res) => {
     const { fields, files } = data;
     console.log(fields);
     console.log(files);
-    const { nombre, email, tel, experiencia, raices, idioma, sucursal, mensaje, fechaEnvio, horaEnvio, paginaEnvio } = fields;
+    const { nombre, email, tel, raices, idioma, sucursal, mensaje, fechaEnvio, horaEnvio, paginaEnvio } = fields;
     const curriculum = files.curriculum; // Suponiendo que el campo del archivo se llama 'curriculum'
 
   // Configura el transporte de Nodemailer
