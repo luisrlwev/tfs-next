@@ -178,11 +178,11 @@ export default function Footer() {
           </div>
           <div className="grid content-center px-3 py-8">
             <p className="text-center text-white uppercase font-bold letter-spacing-25 pb-4 lg:pb-8 w-full text-lg lg:text-base">{t('licencias')}</p>
-            <div className="grid grid-cols-4 justify-items-center items-center">
+            <div className="grid grid-cols-2 justify-items-center items-center">
               <Image src={'/img/agente-inmobiliario-persona-juridica-2.png'} width={131} height={72} alt="Agente inmobiliario persona juridica"/>
-              <Image src={'/img/ampi.png'} width={73} height={100} alt="AMPI Los Cabos"/>
               <Image src={'/img/credencial-asesor-2.png'} width={131} height={76} alt="Credencial de asesor"/>
-              <Image src={'/img/realtor.png'} width={86} height={100} alt="Realtor"/>
+              <Image src={'/img/ampi-los-cabos.png'} className='mt-5' width={131} height={100} alt="AMPI Los Cabos"/>
+              <Image src={'/img/realtor.png'} className='mt-5' width={86} height={100} alt="Realtor"/>
             </div>
           </div>
         </div>
