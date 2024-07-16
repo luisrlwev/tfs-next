@@ -276,7 +276,7 @@ export default function Home() {
           </div>
           <div className="col-span-4 flex justify-center items-center max-md:col-span-12 max-md:px-4">
             <div>
-              <a href="https://wa.me/529848035450" className="flex items-center px-5 py-2 text-white bg-green-500 rounded-md text-sm"><FaWhatsapp className="mr-2"/> {t('contactanos')}</a>
+              <a href="https://wa.me/529842091457" target='_blank' className="flex items-center px-5 py-2 text-white bg-green-500 rounded-md text-sm"><FaWhatsapp className="mr-2"/> {t('contactanos')}</a>
             </div>
           </div>
         </div>

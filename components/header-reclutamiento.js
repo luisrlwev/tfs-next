@@ -20,7 +20,7 @@ export default function HeaderReclutamiento() {
         <nav className="flex items-center text-black">
             <p className="uppercase letter-spacing-25 font-normal text-base">{t('contactanos')}</p>
             <div className='flex items-center text-xl gap-2 px-4 max-lg:px-2'>
-                <a href="mailto:sales@tulumfromskyrealtors.com"><FaEnvelope /></a><a href="https://wa.me/529841798206" target='_blank'><FaWhatsapp /></a>
+                <a href="mailto:sales@tulumfromskyrealtors.com"><FaEnvelope /></a><a href="https://wa.me/529842595053" target='_blank'><FaWhatsapp /></a>
             </div>
             {/* Muestra el idioma actual y proporciona enlaces para cambiar */}
             <Link href={{ pathname, query }} as={asPath} locale="es" className={`mr-2 ${locale === 'es' ? 'text-tfs font-bold' : ''}`}>

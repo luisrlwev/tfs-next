@@ -103,7 +103,7 @@ export default function Footer() {
           <div className="grid justify-center items-center">
             <Link href={'/'} className="h-max pb-10"><Image src={'/img/logo.svg'} width={354} height={201} alt="Logo TFS"/></Link>
             <div className="flex justify-center align-center text-tfs h-max max-lg:pb-8">
-              <a href="https://wa.me/529848035450" className="flex items-center w-fit h-fit hover"><FaWhatsapp className="mr-3 text-3xl"/> +52 (984) 803 5450</a>
+              <a href="https://wa.me/529842091457" target='_blank' className="flex items-center w-fit h-fit hover"><FaWhatsapp className="mr-3 text-3xl"/> +52 (984) 209 1457</a>
             </div>
             <div className="grid grid-cols-7 justify-items-center text-tfs text-3xl h-max pb-8 lg:pb-0">
               <a href="https://www.facebook.com/FromskyRealtors/" target="_blank" aria-label="Facebook"><FaFacebookF className="hover"/></a>
