@@ -4,7 +4,7 @@ import React from 'react';
 const WhatsAppButton = () => {
   return (
     <a
-      href="https://wa.me/529842091457?text=Hola,%20me%20gustaría%20recibir%20más%20información%20acerca%20de%20sus%20propiedades."
+      href="https://wa.me/529841798206?text=Hola,%20me%20gustaría%20recibir%20más%20información%20acerca%20de%20sus%20propiedades."
       target="_blank"
       rel="noopener noreferrer"
       className="whatsapp-button"

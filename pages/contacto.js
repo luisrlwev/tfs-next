@@ -163,7 +163,7 @@ export default function Contacto() {
             </ul>
             <p className="text-white text-center uppercase font-semibold pb-24 max-lg:pb-8"><span className="text-tfs">{t('contactanos')}</span>{t('permite')}</p>
             <a href="mailto:sales@tulumfromskyrealtors.com" className="text-center text-tfs flex items-center hover"><FaRegEnvelope className="mr-1" alt="mail"/>sales@tulumfromskyrealtors.com</a>
-            <a href="https://wa.me/529842091457" target='_blank' className="text-center text-tfs flex items-center hover"><FaWhatsapp className="mr-1" alt="WhatsApp"/>+52 (984) 209 1457</a>
+            <a href="https://wa.me/529841798206" target='_blank' className="text-center text-tfs flex items-center hover"><FaWhatsapp className="mr-1" alt="WhatsApp"/>+52 (984) 179 8206</a>
           </div>
         </div>
         <div className="pt-52 px-24 max-lg:px-3 pb-24 max-lg:py-8">
@@ -280,7 +280,7 @@ export default function Contacto() {
                   <h3 className='text-white uppercase font-bold letter-spacing-25 text-2xl'>Riviera Maya</h3>
                   <p className='text-white text-sm'>Carretera Cancún - Tulum Km 307, Mza 329, Lt 9, Locales 42, 43, 44. Colonia El Tigrillo Edificio Terramar, Playa del Carmen, Q. Roo, México.</p>
                   <a href="mailto:sales@tulumfromskyrealtors.com" className='text-tfs text-sm flex items-center hover'><FaRegEnvelope className='mr-1'/> sales@tulumfromskyrealtors.com</a>
-                  <a href="tel:+529842091457" className='text-tfs text-sm flex items-center hover'><FaWhatsapp className='mr-1'/> +52 (984) 209 1457</a>
+                  <a href="tel:+529841798206" className='text-tfs text-sm flex items-center hover'><FaWhatsapp className='mr-1'/> +52 (984) 179 8206</a>
                 </div>
               </div>
               <div className="flex py-6 pl-6 max-lg:pl-0">
@@ -294,7 +294,7 @@ export default function Contacto() {
                   <h3 className='text-white uppercase font-bold letter-spacing-25 text-2xl'>Mérida</h3>
                   <p className='text-white text-sm'>Calle 12 A entre calle 14 y 15, número 301. Edificio Amora One, num int 214, Colonia Montebello, Mérida, Yucatán, México.</p>
                   <a href="mailto:sales@tulumfromskyrealtors.com" className='text-tfs text-sm flex items-center hover'><FaRegEnvelope className='mr-1'/> sales@tulumfromskyrealtors.com</a>
-                  <a href="tel:+529842091457" className='text-tfs text-sm flex items-center hover'><FaWhatsapp className='mr-1'/> +52 (984) 209 1457</a>
+                  <a href="tel:+529841798206" className='text-tfs text-sm flex items-center hover'><FaWhatsapp className='mr-1'/> +52 (984) 179 8206</a>
                 </div>
               </div>
               <div className="flex py-6 pl-6 max-lg:pl-0">
@@ -308,7 +308,7 @@ export default function Contacto() {
                   <h3 className='text-white uppercase font-bold letter-spacing-25 text-2xl'>Los Cabos</h3>
                   <p className='text-white text-sm'>Boulevard Miguel Ángel Herrera, Esquina del águila Mza 1 Lt, Locales 18, 20, 22, Colonia Lomas del Cabo, Cabo San Lucas. BCS, México.</p>
                   <a href="mailto:sales@tulumfromskyrealtors.com" className='text-tfs text-sm flex items-center hover'><FaRegEnvelope className='mr-1'/> sales@tulumfromskyrealtors.com</a>
-                  <a href="tel:+529842091457" className='text-tfs text-sm flex items-center hover'><FaWhatsapp className='mr-1'/> +52 (984) 209 1457</a>
+                  <a href="tel:+529841798206" className='text-tfs text-sm flex items-center hover'><FaWhatsapp className='mr-1'/> +52 (984) 179 8206</a>
                 </div>
               </div>
               <div className="flex py-6 pl-6 max-lg:pl-0">
@@ -322,7 +322,7 @@ export default function Contacto() {
                   <h3 className='text-white uppercase font-bold letter-spacing-25 text-2xl'>Vallarta</h3>
                   <p className='text-white text-sm'>Parota Center, Av. Francisco Villa 1010-local 35, Jardines de Las Gaviotas, 48328 Puerto Vallarta, Jal.</p>
                   <a href="mailto:sales@tulumfromskyrealtors.com" className='text-tfs text-sm flex items-center hover'><FaRegEnvelope className='mr-1'/> sales@tulumfromskyrealtors.com</a>
-                  <a href="tel:+529842091457" className='text-tfs text-sm flex items-center hover'><FaWhatsapp className='mr-1'/> +52 (984) 209 1457</a>
+                  <a href="tel:+529841798206" className='text-tfs text-sm flex items-center hover'><FaWhatsapp className='mr-1'/> +52 (984) 179 8206</a>
                 </div>
               </div>
             </div>
