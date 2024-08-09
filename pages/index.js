@@ -5,7 +5,6 @@ import Link from "next/link";
 import Layout from "@/components/layout";
 import Image from "next/image";
 import { FaLocationDot, FaWhatsapp, FaAngleLeft, FaAngleRight, FaArrowLeftLong, FaArrowRightLong } from "react-icons/fa6";
-import Boton from "@/components/boton";
 import BotonDos from "@/components/boton-dos";
 import BotonTres from "@/components/boton-tres";
 import Formulario from "@/components/formulario";

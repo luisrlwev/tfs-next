@@ -4,7 +4,13 @@ import PhoneInput from 'react-phone-number-input';
 import Link from "next/link";
 import Image from "next/image";
 import { FaFacebookF, FaYoutube, FaInstagram, FaXTwitter, FaPinterestP, FaTiktok, FaLinkedinIn, FaWhatsapp } from "react-icons/fa6";
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Navigation, Pagination, Autoplay } from 'swiper/modules';
 import 'react-phone-number-input/style.css';
+// Import Swiper styles
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/autoplay';
 
 export default function Footer() {
   const { t } = useTranslation(); // Inicializar el hook useTranslation
@@ -101,7 +107,7 @@ export default function Footer() {
       <div className="py-10 overlay-footer-final">
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-3 container mx-auto">
           <div className="grid justify-center items-center">
-            <Link href={'/'} className="h-max pb-10"><Image src={'/img/logo.svg'} width={354} height={201} alt="Logo TFS"/></Link>
+            <Link href={'/'} className="h-max pb-10"><Image src={'/img/logo-gif.gif'} width={354} height={201} alt="Logo TFS"/></Link>
             <div className="flex justify-center align-center text-tfs h-max max-lg:pb-8">
               <a href="https://wa.me/529841798206" target='_blank' className="flex items-center w-fit h-fit hover"><FaWhatsapp className="mr-3 text-3xl"/> +52 (984) 179 8206</a>
             </div>
@@ -176,13 +182,47 @@ export default function Footer() {
               </div>
             </form>
           </div>
-          <div className="grid content-center px-3 py-8">
-            <p className="text-center text-white uppercase font-bold letter-spacing-25 pb-4 lg:pb-8 w-full text-lg lg:text-base">{t('licencias')}</p>
-            <div className="grid grid-cols-2 justify-items-center items-center">
-              <Image src={'/img/agente-inmobiliario-persona-juridica-2.png'} width={131} height={72} alt="Agente inmobiliario persona juridica"/>
-              <Image src={'/img/credencial-asesor-2.png'} width={131} height={76} alt="Credencial de asesor"/>
-              <Image src={'/img/ampi-los-cabos.png'} className='mt-5' width={131} height={100} alt="AMPI Los Cabos"/>
-              <Image src={'/img/realtor.png'} className='mt-5' width={86} height={100} alt="Realtor"/>
+          <div className="flex flex-col px-3 py-8">
+            <div>
+              <p className="text-center text-white uppercase font-bold letter-spacing-25 pb-4 lg:pb-8 w-full text-lg lg:text-base">{t('licencias')}</p>
+            </div>
+            <div>
+              <Swiper
+                slidesPerView={1}
+                navigation={true}
+                autoplay={{
+                  delay: 5000,
+                  disableOnInteraction: true,
+                }}
+                style={{
+                  '--swiper-navigation-color': '#BCB08A',
+                  '--swiper-pagination-color': '#BCB08A',
+                }}
+                modules={[Autoplay, Navigation]}
+                loop={true}
+                className='h-52'
+              >
+                <SwiperSlide>
+                  <div className='flex justify-center items-center h-full'>
+                    <Image src={'/img/agente-inmobiliario-persona-juridica-2.png'} width={185} height={102} alt="Agente inmobiliario persona juridica"/>
+                  </div>
+                </SwiperSlide>
+                <SwiperSlide>
+                  <div className='flex justify-center items-center h-full'>
+                    <Image src={'/img/matricula.jpeg'} width={110} height={175} alt="Credencial de asesor"/>
+                  </div>
+                </SwiperSlide>
+                <SwiperSlide>
+                  <div className='flex justify-center items-center h-full'>
+                    <Image src={'/img/ampi-los-cabos.png'} width={250} height={87} alt="AMPI Los Cabos"/>
+                  </div>
+                </SwiperSlide>
+                <SwiperSlide>
+                  <div className='flex justify-center items-center h-full'>
+                    <Image src={'/img/realtor.png'} width={150} height={175} alt="Realtor"/>
+                  </div>
+                </SwiperSlide>
+              </Swiper>
             </div>
           </div>
         </div>
