@@ -150,7 +150,7 @@ export default function Merida() {
             >
               <SwiperSlide>
                 <div className="relative h-full">
-                  <Image src={'/img/merida/1-disfruta-la-mejor.png'} width={800} height={407} className="h-full object-cover" alt="Disfruta la mejor vista frente al mar"/>
+                  <Image src={'/img/merida/1-disfruta-la-mejor.jpg'} width={800} height={407} className="h-full object-cover" alt="Disfruta la mejor vista frente al mar"/>
                   <div className="absolute left-0 w-full flex items-end justify-center bottom-4 animate-fade-up animate-once animate-normal">
                     <Boton/>
                   </div>
@@ -158,7 +158,7 @@ export default function Merida() {
               </SwiperSlide>
               <SwiperSlide>
                 <div className="relative h-full">
-                  <Image src={'/img/merida/2-disfruta-la-mejor.png'} width={800} height={407} className="h-full object-cover" alt="Disfruta la mejor vista frente al mar"/>
+                  <Image src={'/img/merida/2-disfruta-la-mejor.jpg'} width={800} height={407} className="h-full object-cover" alt="Disfruta la mejor vista frente al mar"/>
                   <div className="absolute left-0 w-full flex items-end justify-center bottom-4 animate-fade-up animate-once animate-normal">
                     <Boton/>
                   </div>
@@ -166,7 +166,7 @@ export default function Merida() {
               </SwiperSlide>
               <SwiperSlide>
                 <div className="relative h-full">
-                  <Image src={'/img/merida/3-disfruta-la-mejor.png'} width={800} height={407} className="h-full object-cover" alt="Disfruta la mejor vista frente al mar"/>
+                  <Image src={'/img/merida/3-disfruta-la-mejor.jpg'} width={800} height={407} className="h-full object-cover" alt="Disfruta la mejor vista frente al mar"/>
                   <div className="absolute left-0 w-full flex items-end justify-center bottom-4 animate-fade-up animate-once animate-normal">
                     <Boton/>
                   </div>
@@ -174,7 +174,7 @@ export default function Merida() {
               </SwiperSlide>
               <SwiperSlide>
                 <div className="relative h-full">
-                  <Image src={'/img/merida/4-disfruta-la-mejor.png'} width={800} height={407} className="h-full object-cover" alt="Disfruta la mejor vista frente al mar"/>
+                  <Image src={'/img/merida/4-disfruta-la-mejor.jpg'} width={800} height={407} className="h-full object-cover" alt="Disfruta la mejor vista frente al mar"/>
                   <div className="absolute left-0 w-full flex items-end justify-center bottom-4 animate-fade-up animate-once animate-normal">
                     <Boton/>
                   </div>

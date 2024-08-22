@@ -221,7 +221,7 @@ export default function Constructora() {
             >
               <SwiperSlide>
                 <div className="relative h-full">
-                  <Image src={'/img/construccion/xiik-1.png'} width={800} height={407} className="h-full object-cover" alt="Xiik Tulum"/>
+                  <Image src={'/img/construccion/xiik-1.jpg'} width={800} height={407} className="h-full object-cover" alt="Xiik Tulum"/>
                   <div className="absolute left-0 w-full flex items-end justify-center bottom-4 animate-fade-up animate-once animate-normal">
                     <Boton/>
                   </div>
@@ -237,7 +237,7 @@ export default function Constructora() {
               </SwiperSlide>
               <SwiperSlide>
                 <div className="relative h-full">
-                  <Image src={'/img/construccion/xiik-3.png'} width={800} height={407} className="h-full object-cover" alt="Xiik Tulum"/>
+                  <Image src={'/img/construccion/xiik-3.jpg'} width={800} height={407} className="h-full object-cover" alt="Xiik Tulum"/>
                   <div className="absolute left-0 w-full flex items-end justify-center bottom-4 animate-fade-up animate-once animate-normal">
                     <Boton/>
                   </div>
@@ -245,7 +245,7 @@ export default function Constructora() {
               </SwiperSlide>
               <SwiperSlide>
                 <div className="relative h-full">
-                  <Image src={'/img/construccion/xiik-4.png'} width={800} height={407} className="h-full object-cover" alt="Xiik Tulum"/>
+                  <Image src={'/img/construccion/xiik-4.jpg'} width={800} height={407} className="h-full object-cover" alt="Xiik Tulum"/>
                   <div className="absolute left-0 w-full flex items-end justify-center bottom-4 animate-fade-up animate-once animate-normal">
                     <Boton/>
                   </div>
@@ -253,7 +253,7 @@ export default function Constructora() {
               </SwiperSlide>
               <SwiperSlide>
                 <div className="relative h-full">
-                  <Image src={'/img/construccion/xiik-5.png'} width={800} height={407} className="h-full object-cover" alt="Xiik Tulum"/>
+                  <Image src={'/img/construccion/xiik-5.jpg'} width={800} height={407} className="h-full object-cover" alt="Xiik Tulum"/>
                   <div className="absolute left-0 w-full flex items-end justify-center bottom-4 animate-fade-up animate-once animate-normal">
                     <Boton/>
                   </div>

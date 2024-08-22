@@ -375,7 +375,7 @@ body {
 }
 
 .portada-vallarta-final{
-  background: url('../public/img/vallarta/vallarta-final.png') 50% 50%;
+  background: url('../public/img/vallarta/vallarta-final.jpg') 50% 50%;
   background-size: cover;
 }
 
@@ -388,7 +388,7 @@ body {
 }
 
 .portada-cancun-final{
-  background: url('../public/img/cancun/cancun-final.png') 50% 50%;
+  background: url('../public/img/cancun/cancun-final.jpg') 50% 50%;
   background-size: cover;
 }
 
@@ -414,7 +414,7 @@ body {
 }
 
 .portada-construccion{
-  background: url('../public/img/construccion/portada-construccion.png') 50% 50%;
+  background: url('../public/img/construccion/portada-construccion.jpg') 50% 50%;
   background-repeat: no-repeat;
 }
 
