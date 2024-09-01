@@ -344,7 +344,7 @@ body {
 .portada-merida{
   background: url('../public/img/merida/portada-merida.jpeg') 50% 50%;
   background-attachment: fixed;
-  background-position: 0px -444px;
+  background-position: 0px -260px;
   background-repeat: no-repeat;
   background-size: cover;
 }
