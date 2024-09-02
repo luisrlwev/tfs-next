@@ -38,15 +38,16 @@ export default function Blog({posts}) {
 }
 
 
-/* Consultar la API de forma estatica */
+/* Consultar la API de forma estática con ISR */
 export async function getStaticProps({ locale }) {
-  const respuesta = await fetch(`${process.env.API_URL_BLOG}/posts`)
-  const posts = await respuesta.json()
+  const respuesta = await fetch(`${process.env.API_URL_BLOG}/posts`);
+  const posts = await respuesta.json();
 
   return {
     props: {
       ...(await serverSideTranslations(locale)),
-      posts
-    }
+      posts,
+    },
+    revalidate: 3600, // Revalida cada hora
   };
 }
