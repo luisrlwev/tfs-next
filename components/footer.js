@@ -209,7 +209,7 @@ export default function Footer() {
                 </SwiperSlide>
                 <SwiperSlide>
                   <div className='flex justify-center items-center h-full'>
-                    <Image src={'/img/matricula.jpeg'} width={110} height={175} alt="Credencial de asesor"/>
+                    <Image src={'/img/matricula.jpg'} width={110} height={175} alt="Credencial de asesor"/>
                   </div>
                 </SwiperSlide>
                 <SwiperSlide>
